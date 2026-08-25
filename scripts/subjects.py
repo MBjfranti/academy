@@ -649,6 +649,7 @@ DISHES = [
     ("roast-duck-for-the-gods-table", "a whole roasted duck, its skin dark and glazed and "
      "glassy, lying on a shallow offering dish with whole dates and green onions laid "
      "around it in a deliberate ring"),
+    ("hillside-greens-with-soured-milk", "a wide shallow bowl of thick white soured milk streaked through with crisp green purslane and dark wilted leaves, a heavy dusting of dark red sumac over the top, cracked green-gold nuts and torn purple figs scattered on it, olive oil pooling at the edge"),
     ("caravan-pot-with-dried-curd", "a plain round-bellied cooking pot of thick pale "
      "cracked-wheat porridge streaked with white soured curd, sliced onion and torn dried "
      "apricots through it, a scatter of cumin seed on top"),

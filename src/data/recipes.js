@@ -322,6 +322,94 @@ export const recipes = [
     ],
   },
   {
+    slug: 'hillside-greens-with-soured-milk',
+    title: 'Hillside Greens in Soured Milk, with Sumac',
+    ancient: 'Ú',
+    translit: 'šammū',
+    language: 'Akkadian, written with the Sumerian logogram Ú',
+    region: 'levant',
+    category: 'Pulses & Vegetables',
+    siglum: 'Amanus foothills · pastoral',
+    provenance: 'A shepherds’ camp southeast of the Belan pass',
+    period: 'Late Bronze Age',
+    date: 'c. 1250 BC',
+    serves: 'Serves 4',
+    time: '15 min',
+    grade: 'reconstructed',
+    summary:
+      'Nothing in it was bought, planted, harvested or paid for. It is what a hillside has in late summer, and it is the only dish here that assumes you own nothing at all.',
+    intro:
+      'Every other dish on this site starts with a market or a store cupboard. This one starts with the observation that a dry Mediterranean hillside in late August is, if you know what you are looking at, a larder — sour red drupes on the sumac, purslane fat with water in the rock cracks, terebinth going oily, figs splitting on trees nobody planted. Add the one thing a person with a flock always has, which is soured milk, and you have a real meal rather than a survival exercise. It needs no fire and almost no equipment. It is here because the food nobody wrote down is the food most people ate on most days.',
+    sourceText: {
+      kind: 'paraphrase',
+      text: 'Sumac, terebinth, figs, olives, almonds, pine nuts, grapes, pomegranates and coriander were recovered together from the Uluburun wreck, giving a rare direct list of plant foods in circulation. Gathered wild plants appear routinely in archaeobotanical assemblages across the region, and pastoral groups are documented throughout second-millennium correspondence. No text preserves a gathered-food recipe.',
+      attribution: 'Uluburun botanical assemblage; regional archaeobotany',
+    },
+    ingredientGroups: [
+      {
+        name: 'Off the hillside',
+        items: [
+          { ancient: 'Ú', modern: 'Purslane, thick stems and all', qty: '200 g', grade: 'attested', note: 'purslane' },
+          { ancient: 'Ú', modern: 'Mallow, chard tops or another soft green', qty: '200 g', grade: 'attested' },
+          { ancient: '—', modern: 'Sumac, ground', qty: '2 tsp', grade: 'attested', note: 'sumac' },
+          { ancient: '—', modern: 'Terebinth nuts, or shelled pistachios, roughly cracked', qty: '60 g', grade: 'attested' },
+          { ancient: '—', modern: 'Capers, rinsed hard if salted', qty: '2 tbsp', grade: 'attested' },
+          { ancient: '—', modern: 'Ripe figs, torn open', qty: '4', grade: 'attested' },
+        ],
+      },
+      {
+        name: 'From whoever has a flock',
+        items: [
+          { ancient: 'GA', modern: 'Soured sheep milk — thick yoghurt or laban', qty: '400 g', grade: 'attested' },
+          { ancient: 'šmn', modern: 'Olive oil', qty: '3 tbsp', grade: 'attested' },
+          { ancient: '—', modern: 'Salt', qty: 'to taste', grade: 'inferred' },
+          { ancient: 'lḥm', modern: 'Barley flatbread', qty: '4', grade: 'attested' },
+        ],
+      },
+    ],
+    directionGroups: [
+      {
+        name: 'The greens',
+        steps: [
+          { text: 'Wash the greens properly and then wash them again. Gathered food arrives with dust, grit and a certain amount of livestock, and there is no dignified way around a bowl of cold water.', grade: 'reconstructed' },
+          { text: 'Purslane goes in raw. It is a succulent and the whole point of it is that it stays crisp and squeaks against the teeth. Anything softer and more fibrous — mallow, chard tops — gets sixty seconds in boiling water and then squeezing out hard. Chop both roughly.', grade: 'reconstructed' },
+        ],
+      },
+      {
+        name: 'The bowl',
+        steps: [
+          { text: 'Beat the soured milk smooth with a good pinch of salt and half the oil. If you blanched anything, let it come down to hand temperature first — heat splits sour dairy, and a split bowl is unpleasant to look at and cannot be rescued.', grade: 'reconstructed' },
+          { text: 'Fold the greens and the capers through it. Do not stir it into a paste. You want streaks of white and streaks of green, because the dish is partly about the fact that it was assembled and not cooked.', grade: 'reconstructed' },
+          { text: 'Sumac heavily over the top, then the cracked nuts, then the torn figs, then the last of the oil poured across. Eat it with bread, scooping. It should go sour, then salty, then briefly sweet wherever a fig is.', grade: 'reconstructed' },
+        ],
+      },
+    ],
+    apparatus: [
+      {
+        term: 'Standing',
+        text: 'Every ingredient here is attested for the region and the period, and several of them come from one spectacular source: the Uluburun ship went down carrying sumac, terebinth, figs, olives, almonds, pine nuts, grapes and coriander, which is about as close to a plant-food shopping list as the Bronze Age gets. What is reconstructed is the assembly. Nobody recorded what a shepherd made for himself, because nobody records what costs nothing.',
+      },
+      {
+        term: 'purslane',
+        text: 'A fat, low, sprawling succulent that grows out of rock cracks and gets treated as a weed nearly everywhere it grows. It is lemony, faintly salty, and it squeaks. It is also one of very few green plants at its best in the dead heat of late summer, when everything that came up in spring has gone to seed and turned bitter. If nobody near you sells it, watercress or lamb’s lettuce will stand in — you are after crispness and a sour edge, not that exact leaf.',
+      },
+      {
+        term: 'sumac',
+        text: 'The red drupes of the sumac shrub, ripe in late summer, dried and ground. It is sourness with a little fruit behind it, and in a world with no citrus whatsoever it is doing the job a lemon does for you. Buy it ground. It should be dark brick red and very slightly damp; bright orange dusty sumac has been cut with something and will taste of nothing at all.',
+      },
+      {
+        term: 'What not to gather',
+        text: 'Since this dish invites you to go and pick things, two warnings that matter in exactly this landscape. Bitter almonds are not sweet almonds — they carry enough amygdalin to do real harm, and the only clue is the taste, so spit out any almond that is bitter and do not persevere out of politeness. And oleander grows all across the Mediterranean in precisely the dry stony places this food comes from, is beautiful, and will kill you: every part of it, fresh or dried, including the smoke off it. Nothing here should be foraged by a beginner without a local guide and a proper book. Buying the lot is not cheating.',
+      },
+    ],
+    substitutions: [
+      { from: 'Purslane', to: 'Watercress, lamb’s lettuce, or young spinach with extra sumac', text: 'The job is crisp texture and acidity. Anything limp is the wrong choice however green it looks.' },
+      { from: 'Terebinth nuts', to: 'Pistachios, or pine nuts', text: 'Terebinth is a Pistacia, so a pistachio is a close cousin rather than a substitute. Pine nuts are milder, and were on the same ship.' },
+      { from: 'Soured sheep milk', to: 'Full-fat Greek yoghurt, loosened with a spoon of water', text: 'Avoid anything low-fat. It is thin and sour without being rich, and it gives you a bowl that tastes like an apology.' },
+    ],
+    sources: ['Uluburun wreck botanical assemblage', 'Regional Late Bronze Age archaeobotany', 'Second-millennium correspondence on pastoral groups'],
+  },
+  {
     slug: 'caravan-pot-with-dried-curd',
     title: 'The Road Pot: Emmer, Dried Curd and Onion',
     ancient: 'URUDU',

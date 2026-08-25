@@ -51,10 +51,70 @@ export function yadinuDate(iso) {
 
 export const fieldReports = [
   {
-    slug: 'the-woman-with-excellent-aim',
+    slug: 'they-took-the-people-too',
+    kind: 'report',
+    card: 'robbed-teaching',
+    title: 'They took the people too',
+    region: 'levant',
+    place: 'The hills southeast of the Belan pass',
+    date: '2026-08-26',
+    access: 'open',
+    recipe: 'hillside-greens-with-soured-milk',
+    related: [
+      { to: '/reports/the-road-is-made-of-donkeys', label: 'The caravan, four days before this' },
+    ],
+    standfirst:
+      'They took eleven donkeys, four tonnes of copper and every person in the caravan except me. I spent the next four days finding out what a hillside is worth.',
+    hero: {
+      name: 'robbed-raiders',
+      alt: 'Yadinu standing with both hands raised and open, talking to two armed men holding long spears on a narrow mountain track, with laden donkeys and the rest of the caravan held behind him.',
+      caption: 'Me, being extremely reasonable at two men who had already decided everything. Nobody shouted. That is the part I keep going back over.',
+    },
+    figures: [
+      {
+        name: 'robbed-taken', at: 2, size: 'col',
+        alt: 'Yadinu crouched low behind a rock in the foreground, watching a line of people and donkeys being walked away along a hillside track by men with spears.',
+        caption: 'I followed for about an hour at a distance that would not get me noticed twice. Šimatum is the small dark shape near the front, still arguing.',
+      },
+      {
+        name: 'robbed-foraging', at: 6, size: 'inset',
+        crop: '4 / 5', pan: [-6, 1.5], zoom: 1.1,
+        alt: 'Yadinu crouched on a stony hillside cutting greens into a woven basket, with piles of gathered leaves, olives and small yellow-green fruit spread on the rock in front of him.',
+        caption: 'Day two, and the haul that made me stop panicking. Almost none of this looks like food until you have been hungry beside it for a while.',
+      },
+      {
+        name: 'robbed-teaching', at: 8, size: 'col',
+        alt: 'Yadinu sitting on the ground holding up a sprig of herb and talking to a young woman and an older man, with a jug, a basket of olives, greens and figs spread on the rock in front of them and sheep behind.',
+        caption: 'The trade: they had milk and bread and a fire, and I had four days of very close attention to a hillside.',
+      },
+    ],
+    pulls: [
+      {
+        at: 5,
+        text: 'They priced every person on that track, and the price they put on me was nothing at all. I have been turning that over ever since, and it is not entirely an insult.',
+      },
+    ],
+    body: [
+      'We had come up over the Belan pass and turned southeast into the hills, and I should explain why, because it is the whole reason for what happened. The direct road east is steppe. It is flat, it is open, and in August it is dry enough that Šimatum did not trust the wells — you can lose animals on a dry road and a dead donkey is eighty kilos of cargo you now have to redistribute. So she took the long way round, through the hill country, where there is water. Water and cover. She had weighed those two things against each other for twenty-two years and this time the sum came out wrong.',
+      'They came down off the slope on both sides of the track at once, at the point where it narrows, and it was over before I had properly understood that it was starting. Eight or nine men, long spears, no shouting. They did not charge and nobody fought them. Šimatum said one sentence I did not catch and then put her hands out flat, palms down, and the two hired men did the same, and that was the robbery.',
+      'They took the donkeys and they took the people. I want to be exact about the second part, because it is the part that surprised me and it is the part that turns out to matter most. Nobody was hurt. A dead merchant is worth nothing to anybody, and a live one is worth whatever somebody will pay to get her back, and these men were not lunatics on a hill — they were running a business with a fee structure. The copper was the bonus. The people were the actual asset.',
+      'They did not take me, and I want to set down exactly why, because it took me most of a week to stop being annoyed about it and start finding it interesting. Their leader asked whose man I was. I said I was nobody’s, which was the truth and was also the worst possible answer. He asked what I was carrying and I said notes. He looked at the notes. Then he asked which city would pay for me, and I stood there in the sun and worked out, in front of him, that the honest answer was none of them — and he had already moved on before I finished, because he had asked the question purely to arrive at that. I was not spared out of mercy. I was assessed at nothing and set down like a bad ingot.',
+      'I followed them for an hour, keeping low and well back, until the track dropped into a valley I did not know and I understood that all I was doing was getting further from water. Then it was very quiet, and I was alone in the mountains with a cloak, a knife, an empty skin and no clear idea which side of the ridge I was on.',
+      'Here is what I found out over the following four days, and it is the reason I am writing this down as a food report rather than as a complaint. A dry hillside in late August looks like nothing. It looks brown and spiny and finished. It is not. It is the best-stocked larder of the whole year if you know what you are looking at, and the reason it looks empty is that everything on it is small, sour and low to the ground.',
+      'Sumac first, because sumac saved me. The red drupes come ripe now, in fat velvety clusters, and they are pure sourness — you can chew them straight off the shrub, and in a landscape with no lemon anywhere in it that is not a small thing. Purslane after that, which grows out of cracks in the rock, is fat with water in the exact month everything else has gone to seed, and tastes faintly of salt. Terebinth nuts, oily and resinous. Capers, but only if you are prepared to soak the bitterness out of them for a day, which on day one I was not. Wild figs splitting on trees nobody planted. Mallow, which is dull and slightly slimy and will keep you alive. Almonds — and here is the one that will hurt you, because bitter almonds and sweet almonds grow on the same hillside and look identical, and the only warning you get is the taste, so if it is bitter you spit it out and you do not persevere. And oleander, which is everywhere, and is beautiful, and which you do not touch, ever, in any form, including the smoke off it.',
+      'On the fourth morning I came over a saddle and found sheep, and behind the sheep two people and a fire, and I have rarely been so pleased to see anything. They were a girl of maybe sixteen and her grandfather, three days from anywhere, working a flock up the high ground while the low pasture was burnt off.',
+      'And then something happened that I had not expected, which is that I was the one with something to teach. I had assumed I would be a beggar at that fire. But they were shepherds, not gatherers — their food came off the flock, milk and curd and hard bread, and they walked past the sumac every single day of their lives without once thinking about it. So I emptied the basket out on the rock and went through it, and the girl made me do it twice, and by the end of it she was correcting me on where the good fig trees were, which was fair, because she lives there and I do not.',
+      'What came out of it was this. Purslane raw, mallow softened for a minute and wrung out, both folded through their soured milk with salt and a hard pour of oil; sumac over the top until the whole surface went pink; cracked terebinth; figs torn open; hard bread to scoop with. Sour, then salty, then briefly sweet wherever a fig is, and it cost nobody anything at all. Four days earlier I had been eating out of the stores of a caravan carrying four tonnes of copper. This was better. I am aware of how that sounds and I am going to leave it where it is.',
+      'The honest position on all this: gathered food leaves almost no trace and no recipe. What you do have is that ship off Uluburun, which went down carrying sumac, terebinth, figs, olives, almonds, pine nuts, grapes and coriander — every one of which grows wild on the hill I was stuck on. So the ingredients are not a guess. The bowl is.',
+      'Word came up to the shepherds on the sixth day, the way word does. The town below the pass had paid. Not out of kindness — out of exposure. A city is answerable for what happens to merchants on its ground, and Šimatum was carrying somebody else’s copper under somebody else’s seal, and if she vanished in their hills the letters would start: first from her partners, then from her city, then from a king, and a claim like that gets settled in silver whatever the town does or does not admit. So the headman paid the ransom and will spend the next two years getting it back off the road in tolls. That is not a moral system. It is a working one, and it is the reason the copper road exists at all.',
+      'They came out yesterday. All five, no donkeys, no copper, and Šimatum reportedly in a temper of legendary proportions about one specific pack-frame rather than about the cargo, which everyone agrees is very much her. She is going down to the coast to file the loss and start again. And I have not stopped noticing that a town paid good silver for five people and would not have paid a shekel for the sixth, who was standing right there. I am going east on my own feet. I am taking a basket.',
+    ],
+  },
+  {
+    slug: 'she-never-hits-the-geese',
     kind: 'report',
     card: 'tavern-spread',
-    title: 'An island made of copper, and a woman with excellent aim',
+    title: 'She never hits the geese',
     region: 'levant',
     place: 'A harbour on Alašiya',
     date: '2026-06-21',
@@ -123,6 +183,7 @@ export const fieldReports = [
     access: 'open',
     recipe: 'caravan-pot-with-dried-curd',
     related: [
+      { to: '/reports/they-took-the-people-too', label: 'What happened to this caravan four days later' },
       { to: '/reports/never-out-of-sight-of-land', label: 'The sea leg of the same copper road' },
     ],
     standfirst:
@@ -243,7 +304,7 @@ export const fieldReports = [
     slug: 'never-out-of-sight-of-land',
     kind: 'report',
     card: 'alashiya-spread',
-    title: 'Nine days south, and never once out of sight of land',
+    title: 'We never lost sight of land',
     region: 'levant',
     place: 'The Cilician coast, working south',
     date: '2026-06-13',

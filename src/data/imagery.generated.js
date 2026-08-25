@@ -133,6 +133,14 @@ export const dishArt = {
     tw: 176, th: 176, cw: 420, ch: 420,
     alt: '',
   },
+  'hillside-greens-with-soured-milk': {
+    src: '/img/dish-hillside-greens-with-soured-milk.webp',
+    thumb: '/img/dish-hillside-greens-with-soured-milk-thumb.webp',
+    card: '/img/dish-hillside-greens-with-soured-milk-card.webp',
+    w: 716, h: 716,
+    tw: 176, th: 176, cw: 420, ch: 420,
+    alt: '',
+  },
   'honeyed-pork-chops-with-dates': {
     src: '/img/dish-honeyed-pork-chops-with-dates.webp',
     thumb: '/img/dish-honeyed-pork-chops-with-dates-thumb.webp',

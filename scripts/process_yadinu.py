@@ -84,7 +84,12 @@ def main() -> None:
             continue
         # _maps holds candidate map tablets, which are not photographs of Yadinu and
         # must not be swept in and filed as `yadinu-landscape-NN`.
-        if "_maps" in p.parts:
+        #
+        # _alt holds superseded takes of a shot that has since been re-shot. They are
+        # kept on disk deliberately — a rejected take is worth being able to go back to —
+        # but they must not be processed, or a folder that has been re-shot once ends up
+        # publishing both versions under two different slot names.
+        if "_maps" in p.parts or "_alt" in p.parts:
             continue
         digest = hashlib.md5(p.read_bytes()).hexdigest()
         if digest in seen:

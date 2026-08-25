@@ -186,6 +186,12 @@
   "ratio": 1.0
  },
  {
+  "raw": "gen-hillside-greens-with-soured-milk.png",
+  "out": "dish-hillside-greens-with-soured-milk",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
   "raw": "gen-honey.png",
   "out": "staple-honey",
   "kind": "plate",

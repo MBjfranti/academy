@@ -225,6 +225,21 @@
   "generated": "2026-08-25T04:24:09+00:00"
  },
  {
+  "slug": "hillside-greens-with-soured-milk",
+  "tier": "dishes",
+  "out": "dish-hillside-greens-with-soured-milk",
+  "kind": "plate",
+  "raw": "gen-hillside-greens-with-soured-milk.png",
+  "model": "gpt-image-1",
+  "size": "1024x1024",
+  "quality": "medium",
+  "prompt_sha256": "152335b7b9c4cbb4b53e79e3c416c427fda7f8bbaa211116d3e855a72ff8fb5f",
+  "image_sha256": "e70b65f63f3857c797c51df20744a00c3ae09e648968686d4f5cfe2d05b130a1",
+  "bytes": 2222906,
+  "usd": 0.042,
+  "generated": "2026-08-25T22:37:25+00:00"
+ },
+ {
   "slug": "honeyed-pork-chops-with-dates",
   "tier": "dishes",
   "out": "dish-honeyed-pork-chops-with-dates",
