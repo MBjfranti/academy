@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- BARLEY & BRONZE.
+
+     The ampersand out of the site's own Eczar, as outlines: a favicon loads outside the
+     page, where the webfont is not. Weight 800 rather than the masthead's 700, because
+     at 16px the lighter cut thins out and this one holds.
+
+     NO BACKGROUND CHIP. A rounded rectangle behind the glyph spends a third of a 16px
+     budget on its own border and makes the thing read as an app icon. Full bleed on
+     transparent lets the mark be as large as the box allows and sit on whatever ground
+     the browser paints.
+
+     BOTH THEMES. The two fills are the site's own copper tokens, light and dark, so the
+     favicon tracks the browser chrome the same way the page tracks the reader's choice.
+     A browser that ignores the media query gets the light value, which is the one that
+     works on a light tab strip.
+
+     NOTE FOR WHOEVER EDITS THIS: XML comments cannot contain two hyphens in a row, so a
+     CSS custom property written out in full here silently breaks the whole file. Ask me
+     how I know. -->
+<style>
+  .amp { fill: #A45320; }
+  @media (prefers-color-scheme: dark) { .amp { fill: #E9A063; } }
+</style>
+<g transform="translate(0.77 58.09) scale(0.08166 -0.08166)"><path class="amp" d="M327 -29Q237 -29 165.0 1.0Q93 31 51.0 84.0Q9 137 9 207Q9 265 36.5 304.0Q64 343 107.0 363.5Q150 384 195 386L201 413L335 360L316 278Q277 279 249.0 267.5Q221 256 205.5 234.5Q190 213 190 184Q190 150 209.5 127.0Q229 104 260.0 92.5Q291 81 326 81Q350 81 378.0 87.0Q406 93 425 105Q450 126 461.5 156.0Q473 186 473 220Q473 263 455.0 304.5Q437 346 402 371L556 419Q595 378 613.0 326.5Q631 275 631 226Q631 155 595.0 97.0Q559 39 491.0 5.0Q423 -29 327 -29ZM215 339Q152 345 111.0 367.5Q70 390 50.0 423.0Q30 456 30 491Q30 534 58.5 574.5Q87 615 143.5 641.5Q200 668 283 668Q334 668 393.5 656.5Q453 645 502 622L441 469L263 550Q241 542 224.0 518.5Q207 495 207 466Q207 443 221.5 416.5Q236 390 269 373ZM401 281 359 359Q427 402 486.0 431.0Q545 460 595.0 472.0Q645 484 685.0 475.0Q725 466 756 433L707 300Q677 321 647.0 335.0Q617 349 582.0 351.0Q547 353 503.5 337.0Q460 321 401 281Z"/></g>
+</svg>

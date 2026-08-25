@@ -1,0 +1,75 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   IMAGERY
+
+   Everything the assets in /img need, and nothing else. No custom property is
+   defined here — these rules only consume the ones index.css already owns, so
+   both themes come along for free.
+
+   Three registers, and the class MUST match the file's real aspect ratio.
+   `object-fit: cover` makes a mismatch silent: the browser crops the picture a
+   SECOND time on top of whatever the pipeline already did, and the only symptom
+   is that the art looks badly framed.
+
+     .plate    an opaque 4:3 scene (the five accent plates, 880×660).
+     .fresco   an opaque 16:10 panel (the moderns, 880×550).
+     .square   an opaque 1:1 plate (the 33 dish and staple squares). Sized by
+               its container in cards.css / plates.css rather than here,
+               because it appears at 62px, 132px and full width.
+     .cutout   keyed to transparency. No box, no border, no chip behind it —
+               the paper (or the dark ground) shows through, which is the whole
+               reason these read correctly in both themes with no treatment.
+
+   Every rule here is width-safe: images are `max-width: 100%` and sized in
+   percentages or small fixed pixels that fit inside a 390px column.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.plate {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.fresco {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-2);
+}
+
+/* At the foot of a scrolling modal body, as a closing beat. */
+.fresco--signoff {
+  margin-top: 1.2rem;
+}
+
+.cutout {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* These were drawn as lit frescoes on pale plaster. Left alone in the dark
+   theme they glare — a bright slab in a dim page. Easing them back is enough
+   to make them sit in the page rather than on top of it. Brightness rather
+   than anything cleverer because the drawing is near-black and the ground is
+   near-white, so a proportional knock-back barely touches the line work.
+   The same figures cards.css uses for the squares, so a plate and a square
+   never sit side by side at two different values. */
+:root[data-theme='dark'] .plate,
+:root[data-theme='dark'] .fresco {
+  filter: brightness(0.88) saturate(0.92);
+}
+
+/* Cutouts are line art with no drop shadow of their own. On the dark ground
+   the pale stone ones can float; a whisper of warmth under them settles them
+   without reading as a box. */
+:root[data-theme='dark'] .cutout {
+  filter: brightness(0.94);
+}

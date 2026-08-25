@@ -1,0 +1,282 @@
+/* ── PLATE CARDS ────────────────────────────────────────────────────────
+   The picture-forward card: a square painting on top, a name under it, one
+   line under that. Used by the twelve staples, the six rules and the accents.
+
+   WHY THIS AND NOT THE OLD TILE. The staples were 12 cells of a 142px grid
+   with 0.88rem headings and two clamped lines of 0.75rem grey — "almost like
+   just dashboards or rows", which is exactly what they had become after four
+   successive compression passes. A staple is a THING you go and buy. The card
+   that represents it should look like the thing, at a size where you can see
+   what it is, and there are twelve square paintings sitting in /img that were
+   made for exactly this.
+
+   It is deliberately a different species from `.dcard` in cards.css. A dish
+   card is a row — thumbnail left, name and tags right — because seventeen of
+   them have to be comparable at a glance and the tags are the filter. A staple
+   card is a tile, because twelve of them are a cupboard you are looking at.
+   Same modal behind both. ───────────────────────────────────────────────── */
+
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--pcol, 190px), 1fr));
+  gap: 0.7rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pgrid--wide {
+  --pcol: 208px;
+}
+
+/* A single card that is the header of a group rather than a member of one.
+   Full width, picture on the left. The shared kitchen is the thing the other
+   five are variations OF, so a lone tile in a five-wide row — which is what
+   auto-fill gave it — read as the first of a set with four missing. */
+.pgrid--banner {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.pgrid--banner .pcard {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.pgrid--banner .pcard__fig {
+  flex: 0 0 auto;
+  width: 148px;
+  height: 102px;
+  aspect-ratio: auto;
+  border-bottom: 0;
+  border-right: 1px solid var(--line);
+}
+
+.pgrid--banner .pcard__body {
+  justify-content: center;
+  padding: 0.8rem 1rem;
+}
+
+.pgrid--banner .pcard__name {
+  font-size: 1.15rem;
+}
+
+.pgrid--banner .pcard__line {
+  max-width: 62ch;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 560px) {
+  .pgrid--banner .pcard__fig {
+    width: 96px;
+    height: 104px;
+  }
+}
+
+/* Six is a number that wants a shape. Left to auto-fill the rules landed as a
+   row of five and a single orphan, which reads as a mistake; three-by-two
+   reads as "there are six of these". */
+.pgrid--rules {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 900px) {
+  .pgrid--rules {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .pgrid--rules {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.pgrid > li {
+  display: flex;
+}
+
+.pcard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  overflow: hidden;
+  transition: border-color 0.14s, transform 0.14s;
+}
+
+.pcard:hover,
+.pcard:focus-visible {
+  border-color: var(--ink-3);
+  transform: translateY(-1px);
+}
+
+.pcard:hover .pcard__name {
+  color: var(--copper);
+}
+
+/* The picture. 5:4 rather than the file's own 1:1, which is the one deliberate
+   crop on the site: it takes 10% off the top and bottom of a square whose
+   subject is centred with plaster around it, and it is what lets twelve staples
+   sit as two full rows inside the scroller at 1280x760 instead of two rows and
+   a sliver of a third. Cropping WIDTH would be wrong — several of these plates
+   put a leek or a ladle out to the edge horizontally. */
+.pcard__fig {
+  display: block;
+  width: 100%;
+  /* SQUARE, because every painting in here is square. A 5:4 box either cropped a
+     fifth off the top and bottom of each picture (with `cover`) or left cream bars
+     down both sides (with `contain`). Matching the box to the artwork does neither:
+     the painting fills the card edge to edge, whole and uncropped.
+
+     NO max-height. A height cap fights the ratio: the card keeps widening with its
+     grid track while the figure stops growing, and the box goes back to being wider
+     than it is tall — which is the letterbox again, just arrived by a different
+     route. The ratio has to win, so the figure is always exactly square and the card
+     is as tall as it needs to be. The variance is small (190px at 1280, 202px at
+     1568) and the page scroller absorbs it, which is what it is for. */
+  aspect-ratio: 1 / 1;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* `contain` now that the box is square: box and picture share a ratio, so nothing is
+   cropped and nothing is letterboxed. Kept as `contain` rather than `cover` so that if a
+   plate ever comes back from the pipeline slightly off-square, it shows whole rather than
+   silently losing an edge. */
+.pcard__fig img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* A cutout has no ground of its own, so it gets the page's rather than a crop:
+   contained, standing on the bottom edge, because the figures in the artwork
+   are standing on something. */
+.pcard__fig--cut {
+  background: var(--paper-2);
+  padding: 0.4rem 0.4rem 0;
+}
+
+.pcard__fig--cut img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* No art: a numeral instead. The six rules are numbered and the number is
+   load-bearing — "rule 3 of 6" is how the owner refers to them — so it earns
+   the same square the paintings occupy rather than being a caption. */
+.pcard__num {
+  display: grid;
+  place-items: center start;
+  width: 100%;
+  height: 62px;
+  padding-inline: 0.65rem;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--display);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--copper);
+}
+
+.pcard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.55rem 0.65rem 0.7rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.pcard__name {
+  font-family: var(--display);
+  font-size: 1rem;
+  line-height: 1.16;
+  color: var(--ink);
+  transition: color 0.14s;
+}
+
+.pcard__line {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--ink-3);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pcard__line--copper {
+  color: var(--copper);
+}
+
+/* A text-only card, for the two entries that are a scale rather than a place.
+   No fig slot at all: a blank square would read as a missing image. */
+.pcard--text .pcard__body {
+  padding: 0.7rem 0.8rem 0.8rem;
+}
+
+.pcard--text .pcard__line {
+  -webkit-line-clamp: 6;
+}
+
+.pcard__kicker {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+/* Dark theme. Same treatment the dish squares already carry in cards.css: the
+   plates are painted on cream plaster and left alone they are lamps on a dark
+   page. Multiply-style knock-back crushes nothing because the drawing is
+   near-black and the ground is near-white. */
+:root[data-theme='dark'] .pcard__fig img {
+  filter: brightness(0.86) saturate(0.94);
+}
+
+:root[data-theme='dark'] .pcard__fig--cut img {
+  filter: brightness(0.94);
+}
+
+@media (max-width: 480px) {
+  .pgrid {
+    --pcol: 150px;
+  }
+  .pgrid--wide {
+    --pcol: 160px;
+  }
+  .pcard__name {
+    font-size: 0.94rem;
+  }
+}
+
+/* The accent tiles carry a standing figure. Its height is fixed rather than
+   derived from an aspect ratio, so five different silhouettes — 213px to 273px
+   wide, all 340 tall — line up as one row instead of stepping down by a
+   different amount each. */
+.pgrid--wide .pcard__fig--cut {
+  aspect-ratio: auto;
+  height: 128px;
+}
+
+/* Two rows of tagline beside a figure that big; the card is already the
+   tallest on the site. */
+.pgrid--wide .pcard__line {
+  -webkit-line-clamp: 2;
+}
+
+.pgrid--wide.pgrid--text .pcard__line {
+  -webkit-line-clamp: 4;
+}

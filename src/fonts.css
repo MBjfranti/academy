@@ -1,0 +1,112 @@
+/* Self-hosted webfaces.
+   Built by scripts/font/build_fonts.py from OFL sources in scripts/font/src.
+   Licences ship alongside the woff2 in public/fonts/.
+
+   `font-display: swap` throughout: this is a reference tool someone reads standing in a
+   supermarket aisle, so text that is readable immediately in a fallback beats text that is
+   invisible for 100ms and then perfect.
+
+   The variable faces declare `font-weight: 200 900` and let the wght axis interpolate, so
+   one file covers every weight the site asks for. Requesting named weights separately is
+   what made the old Source Serif load cost 528 KB for a single family. */
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/source-sans-3-subset.woff2') format('woff2-variations'),
+       url('/fonts/source-sans-3-subset.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/source-sans-3-italic-subset.woff2') format('woff2-variations'),
+       url('/fonts/source-sans-3-italic-subset.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eczar';
+  src: url('/fonts/eczar-subset.woff2') format('woff2-variations'),
+       url('/fonts/eczar-subset.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gentium Plus';
+  src: url('/fonts/gentium-plus-subset.woff2') format('woff2-variations'),
+       url('/fonts/gentium-plus-subset.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Metric-matched fallback, so the swap from Arial to Source Sans 3 does not shift the
+   layout. Computed from measured metrics: Source Sans 3 x-height/em 0.478 against Arial's
+   0.519 gives size-adjust 92.1%, and the ascent/descent overrides are the face's own hhea
+   values divided by that same figure. Without this every page reflows on font load, which
+   on a one-screen layout is the difference between fitting and not. */
+@font-face {
+  font-family: 'Source Sans 3 Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Liberation Sans');
+  size-adjust: 92.1%;
+  ascent-override: 111.2%;
+  descent-override: 43.4%;
+  line-gap-override: 0%;
+}
+
+/* ── ancient scripts ─────────────────────────────────────────────────────
+   Subset to the ~47 signs the site actually publishes; built and verified by
+   scripts/font/build_scripts.py, which re-derives every sign from its Unicode NAME and
+   refuses to ship one the font cannot draw. 12.2 KB for all four.
+
+   `unicode-range` earns its keep HERE and nowhere else on this site. Each block is
+   disjoint and astral, so a browser fetches the cuneiform face only when a cuneiform sign
+   is on screen — open an Aegean dish and only Linear B downloads, 2.4 KB.
+
+   No Anatolian hieroglyphs. Hittite was written in cuneiform; the Anatolian script belongs
+   to Luwian monumental inscriptions, not to the kitchen tablets this site draws on.
+   Shipping it would look right and be wrong. */
+
+@font-face {
+  font-family: 'Script Cuneiform';
+  src: url('/fonts/noto-cuneiform-subset.woff2') format('woff2');
+  unicode-range: U+12000-123FF;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Script Egyptian';
+  src: url('/fonts/noto-egyptian-subset.woff2') format('woff2');
+  unicode-range: U+13000-1342F;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Script LinearB';
+  src: url('/fonts/noto-linearb-subset.woff2') format('woff2');
+  unicode-range: U+10000-1007F;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Script Ugaritic';
+  src: url('/fonts/noto-ugaritic-subset.woff2') format('woff2');
+  unicode-range: U+10380-1039F;
+  font-display: swap;
+}
+
+:root {
+  /* One stack per script. The UI face trails each so the transliteration and gloss
+     rendered beside a sign stay in the body face rather than inheriting a script font
+     that has no Latin glyphs at all. */
+  --script-cuneiform: 'Script Cuneiform', var(--ui);
+  --script-egyptian: 'Script Egyptian', var(--ui);
+  --script-linearb: 'Script LinearB', var(--ui);
+  --script-ugaritic: 'Script Ugaritic', var(--ui);
+}

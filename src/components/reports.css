@@ -1,0 +1,953 @@
+/* The home page: Yadinu's posts, the three doors out, and the map.
+
+   This page is allowed to be TEXT, unapologetically. Every other route on this site is a
+   tool — search a thing, get a verdict; pick a dish, get a method — and is laid out under
+   a hard one-screen rule. This one is a reading page, and it lives inside the same
+   `.page__scroll` region everything else uses, so the page itself still cannot scroll:
+   the reading happens inside the scroller, which is exactly what that scroller is for.
+
+   IT IS LAID OUT LIKE A PUBLICATION, not like a document. The earlier version set every
+   paragraph at one size in one column and stacked the photographs in a heap at the end,
+   which is a 1996 shape: technically a web page, visibly not a piece of writing. What was
+   missing was the furniture a reader actually navigates by — a kicker, a byline with a
+   face, a hero with a caption under it, pictures set INTO the prose with text wrapping
+   past them, and a lifted line every so often to break the column. All of it earns its
+   place: a caption says what a picture cannot, a pull quote gives the eye somewhere to
+   land, and a measure capped near 66 characters is the difference between reading and
+   scanning. */
+
+/* ── the top bar ─────────────────────────────────────────────────────────
+   NO BOXES. These were three pill-shaped cards with a 999px radius, borders faint enough
+   to barely register, and wildly uneven text lengths — so the corners bulged, the padding
+   was ragged, and the whole band added chrome without adding information. The labels were
+   always doing the work; the containers were decoration around them.
+
+   It is type now, in two groups: the way IN on the left, the tools on the right, one rule
+   under the lot. It also takes about half the vertical space, which the cards below want. */
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.9rem 2rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* THE FRONT DOOR. The introduction is the oldest post on the site, so any date sort buries
+   it — and it is the one page that says who is writing and why. It is pinned here instead
+   of being left to age out of the grid. */
+.bar__start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.9rem;
+  max-width: none;
+  margin: 0;
+  font-family: var(--display);
+  font-size: 0.92rem;
+}
+
+.bar__start > span {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+}
+
+.bar__start a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--copper);
+  text-decoration: none;
+}
+
+/* Small, and a rounded square rather than a circle: a circle reads as an avatar and
+   these are article thumbnails. 30px keeps the whole bar at one line. */
+.bar__start img {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 1px solid var(--line-2);
+  transition: transform 0.16s;
+}
+
+.bar__start a > span {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.14s;
+}
+
+.bar__start a > span::after {
+  content: ' →';
+  opacity: 0.55;
+}
+
+.bar__start a:hover > span,
+.bar__start a:focus-visible > span {
+  border-bottom-color: var(--copper);
+}
+
+.bar__start a:hover img,
+.bar__start a:focus-visible img {
+  transform: scale(1.06);
+}
+
+/* The tools. Named for what you would DO — "shop", "cook" — because "Market" means nothing
+   to somebody who has just arrived. Separated by rules rather than boxes. */
+.doors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.4rem;
+}
+
+.door {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-left: 1.4rem;
+  border-left: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+
+.door:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.door__label {
+  font-family: var(--display);
+  font-size: 0.94rem;
+  color: var(--copper);
+  transition: color 0.14s;
+}
+
+.door:hover .door__label,
+.door:focus-visible .door__label {
+  color: var(--copper-2);
+}
+
+.door__line {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+/* Stacked, the two groups need air between them rather than a shared baseline. */
+@media (max-width: 720px) {
+  .bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .doors {
+    gap: 0.9rem 1.2rem;
+  }
+}
+
+@media (pointer: coarse) {
+  .door,
+  .older__item {
+    min-height: 44px;
+  }
+}
+
+/* THE MEASURE, defined once and inherited by both the front page and the article.
+
+   In `rem` rather than `ch` on purpose: `ch` resolves against each element's OWN font-size,
+   so the byline — set smaller than the body — computed a measure eleven pixels wider and its
+   rule overhung the text column it was supposed to line up with.
+
+   THIS RULE IS LOAD-BEARING AND WAS ONCE DELETED BY ACCIDENT, when the front-page block it
+   happened to live inside was rewritten. Six rules below depend on it; with it missing they
+   all fall back to `max-width: none`, the prose column jumps to the full 940px while the
+   paragraphs stay capped at 66ch, and floated insets strand themselves in the gap. If the
+   article layout ever looks like that again, look here first. */
+.lead,
+.postbody {
+  --measure: 42rem;
+}
+
+/* ── the front page: a lead, then cards ──────────────────────────────────
+   Two earlier shapes were discarded. A lead plus a sidebar column worked at three posts and
+   became a wall of identical rows at eight; adding a third tier fixed the wall but demoted
+   older pieces to a date and a title, which on a site whose product IS the writing buries
+   the good ones the moment they age. Every post now gets a picture, a headline and a
+   sentence, and only the newest gets a bigger box. */
+
+/* THE LEAD: picture left, words right. A full-width banner pushed the first row of cards
+   off the bottom of the scroller, which defeated the point of having cards. */
+.lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 1.8rem;
+  align-items: center;
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.lead__fig {
+  display: block;
+  line-height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.lead__fig img {
+  display: block;
+  width: 100%;
+  /* 3:2, cropped from high up — these photographs put their subject in the upper third. */
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.lead__txt {
+  min-width: 0;
+}
+
+.lead__kicker,
+.card__kicker {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--copper);
+  max-width: none;
+  margin: 0 0 0.5rem;
+}
+
+/* "Latest" as a quiet chip rather than another line of type. */
+.lead__kicker span {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--ink-3);
+  letter-spacing: 0.08em;
+}
+
+.lead__title {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.9vw, 2.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0 0 0.55rem;
+}
+
+.lead__open {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.14s;
+}
+
+.lead__open:hover,
+.lead__open:focus-visible {
+  color: var(--copper);
+}
+
+.lead__stand {
+  font-size: 1.06rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+  max-width: 46ch;
+  margin: 0 0 0.7rem;
+}
+
+/* One paragraph, clamped. Enough to prove there is writing behind the headline. */
+.lead__excerpt {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  max-width: 52ch;
+  margin: 0 0 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lead__meta,
+.card__meta {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-3);
+  max-width: none;
+  margin: 0;
+}
+
+/* ── the grid ─────────────────────────────────────────────────────────────
+   Three across at full width, and it degrades by available room rather than by breakpoint —
+   `auto-fill` with a sensible minimum means the grid never needs to know what device it is
+   on. */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
+  gap: 1.7rem 1.6rem;
+  padding-bottom: 2rem;
+}
+
+/* The WHOLE card is the link. A card with a separate "read more" gives the reader two
+   targets for one destination and makes them choose between identical doors. */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__fig {
+  display: block;
+  line-height: 0;
+  border-radius: 9px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.card__fig img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 22%;
+  transition: transform 0.35s ease;
+}
+
+/* The only motion on the page, and it is small on purpose. */
+.card:hover .card__fig img,
+.card:focus-visible .card__fig img {
+  transform: scale(1.03);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.card__kicker {
+  margin: 0;
+}
+
+.card__title {
+  font-family: var(--display);
+  font-size: 1.02rem;
+  line-height: 1.2;
+  color: var(--ink);
+  transition: color 0.14s;
+}
+
+.card:hover .card__title,
+.card:focus-visible .card__title {
+  color: var(--copper);
+}
+
+.card__stand {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--ink-3);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__meta {
+  margin-top: 0.15rem;
+}
+
+/* Below this the lead cannot hold two columns without both of them becoming gutters. */
+@media (max-width: 760px) {
+  .lead {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__fig img {
+    transition: none;
+  }
+  .card:hover .card__fig img {
+    transform: none;
+  }
+}
+
+/* ── the reading column ──────────────────────────────────────────────────
+   One measure, set once, used by the lead and by the opened post so they cannot drift.
+   66ch is the top of the comfortable range: past about 75 the eye loses its place
+   returning to the left margin, and under about 45 it never gets going. */
+/* THE COLUMN IS CENTRED; THE TEXT INSIDE IT IS NOT. The measure lives on the container
+   rather than on each paragraph, which is the whole trick: a centred block of left-ragged
+   type sits on the same axis as the headline above it, where capping each paragraph
+   individually left the column pinned to the left edge with the headline floating over it.
+
+   It also has to be the container and not the children, because FLOATS ignore auto
+   margins. An inset floated inside a full-width .prose goes to the far edge of the lead
+   column and separates from the text it is supposed to be wrapping; floated inside a
+   centred .prose it lands on the measure, where it belongs. */
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+/* `max-width: none` overrides the global 66ch cap in index.css, which was capping
+   paragraphs at 619px inside a 672px column. The two disagreeing is what made a right
+   float hang 53px past the end of the text it was supposed to be wrapping: the float
+   aligns to the column, the words stopped short of it. One measure, both. */
+.prose p {
+  margin: 0 0 1.15em;
+  max-width: none;
+}
+
+/* Slightly tighter on the front page, where the excerpt is competing for room with the
+   Continue button below it. */
+.prose--lead p {
+  margin-bottom: 0.95em;
+}
+
+/* The opening paragraph runs a shade larger and darker. It is the standard newspaper
+   lead-in and it does a real job: it marks where the article proper begins, now that a
+   standfirst and a byline sit above it. */
+.prose > p:first-child {
+  font-size: 1.18rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* The last float has to be cleared by something, or it hangs below the end of the
+   article and out of the bottom of the modal. */
+.prose::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ── kickers, headlines, standfirsts ─────────────────────────────────────
+   Three sizes above the body text, and each says something different: the kicker says what
+   KIND of thing this is, the headline says what it is about, the standfirst says why you
+   would read it. */
+.lead__kicker,
+.postbody__kicker {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--copper);
+  margin: 0 0 0.5rem;
+}
+
+.lead__title {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.7vw, 2.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0 0 0.6rem;
+  max-width: 20ch;
+}
+
+/* Wide rather than tall: at 56ch this ran to three lines under a much wider hero. Given
+   the full measure it settles into two and gives back a line of vertical space. */
+.lead__stand {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin: 0 0 0.7rem;
+  max-width: var(--measure);
+}
+
+/* `max-width: none` is load-bearing. index.css caps every <p> at 66ch, and `ch` resolves
+   against the element's own font-size — so at 0.66rem this one-line dateline inherited a
+   346px box and sat centred inside it, hard against the left of a page that is centred
+   everywhere else. The kickers escape it only because they carry margin-inline: auto. */
+.postbody__stand {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  line-height: 1.42;
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+  max-width: 54ch;
+}
+
+/* ── the byline ──────────────────────────────────────────────────────────
+   A face, a name, a line of standing, and the dateline. A byline is how a reader decides
+   whether to trust the next thousand words; a bare date stamp gives them nothing to decide
+   with. The face is a crop of one of the photographs — see the note in yadinu.py about why
+   there is exactly one description of this man. */
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 0 auto 1.5rem;
+  max-width: var(--measure);
+}
+
+.byline__face {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* The photographs are 4:5 with the head high in the frame, so a centred square crop
+     lands on his chest. */
+  object-position: 50% 14%;
+  border: 1px solid var(--line-2);
+}
+
+.byline__who {
+  font-family: var(--display);
+  font-size: 0.94rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.byline__who span {
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  color: var(--ink-3);
+  margin-left: 0.45rem;
+}
+
+.byline__when {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-3);
+  margin: 0.12rem 0 0;
+}
+
+/* ── figures ─────────────────────────────────────────────────────────────
+   THREE WIDTHS, and the choice is editorial rather than technical.
+
+   `wide`   breaks out past the measure. The hero, and anything that is the point of the
+            paragraph rather than an illustration of it.
+   `col`    fills the measure.
+   `inset`  about half the column, floated, with the text running past it. This is the one
+            that makes a page stop looking like a document: a picture the prose flows
+            around is part of the article, and a picture on its own line is an interruption.
+            They alternate sides down the piece.
+
+   EVERY FIGURE HAS A CAPTION and every image has alt text, and they are not the same
+   thing. Alt describes the picture for a reader who cannot see it. The caption says
+   something the picture does not — where it was, or what was happening just outside it. */
+.fig {
+  margin: 0 0 1.3rem;
+}
+
+.fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+/* A cropped figure. The span owns the shape; the image just fills it. See the note in
+   PostBody.jsx for why the ratio cannot live on the <img> itself. */
+.fig__crop {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+/* `.fig .fig__crop img`, not `.fig__crop img`. The extra class is deliberate and it is
+   load-bearing: `.fig--inset img` sets a 300px cap at the SAME specificity, so which of
+   the two wins came down to source order — and it was clipping the image to 300px inside
+   a 353px frame, leaving a band of bare background under it. This block briefly existed
+   twice by accident, and the duplicate happened to sit after the cap, which is the only
+   reason it looked fixed; deleting the duplicate silently un-fixed it. Winning on
+   specificity instead means no future edit can reorder this back into being broken. */
+.fig .fig__crop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+}
+
+.fig figcaption,
+.worldmap figcaption {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin-top: 0.5rem;
+  padding-left: 0.7rem;
+  border-left: 2px solid var(--line-2);
+}
+
+.fig--col {
+  clear: both;
+  max-width: var(--measure);
+}
+
+.fig--wide {
+  clear: both;
+  max-width: min(100%, 780px);
+  margin-bottom: 1.6rem;
+}
+
+/* A 2:3 portrait at full column width is taller than most screens. The heroes are
+   landscape and need no help; a portrait used wide gets capped and cropped from the top
+   third, where the face is. */
+.fig--wide img {
+  max-height: 440px;
+  object-fit: cover;
+  object-position: center 26%;
+}
+
+/* 34%, not 42%. At the old width a left float left about 41 characters beside it —
+   below the floor stated in the measure note above, and the exact reason the mobile
+   breakpoint unfloats insets. Narrower keeps the text readable at ~48 characters and
+   costs the picture very little. */
+.fig--inset {
+  width: min(34%, 240px);
+  margin-bottom: 0.9rem;
+}
+
+/* The photographs are 2:3, so at this width they come in near 480px tall — taller than
+   the two or three paragraphs that are supposed to run beside them, which left a column
+   of blank paper under the text. Cropped to roughly square they are flanked properly by
+   the one or two paragraphs actually beside them. From 20% down, because the head is high
+   in every frame. */
+.fig--inset img {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Clearing means two insets never end up shoulder to shoulder in the same band of text,
+   which is what happens when two paragraphs in a row each carry one. */
+.fig--left {
+  clear: both;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.fig--right {
+  clear: both;
+  float: right;
+  margin-left: 1.5rem;
+}
+
+/* ── the front-page hero ─────────────────────────────────────────────────
+   FULL WIDTH OF THE LEAD COLUMN, and cropped high. Two separate decisions:
+
+   Width, because a hero capped narrower than the column it sits in reads as an
+   illustration of the article rather than the opening of it. It runs edge to edge and the
+   text below it is what gets the measure.
+
+   CROP FROM 15%, not the middle. Photographs put their subject in the upper third far
+   more often than not — faces, horizons, the thing being held up — so a centred crop on a
+   wide banner reliably takes the top off the interesting part and leaves the table. */
+.fig--inset figcaption {
+  font-size: 0.72rem;
+}
+
+/* A caption runs the width of the picture it belongs to. It was capped at 52ch, which
+   under a full-bleed hero left it wrapping to three short lines against a very wide image
+   and reading as a stray note rather than as part of the figure. */
+.fig figcaption,
+.worldmap figcaption {
+  max-width: none;
+}
+
+/* Floating a 320px picture inside a 66ch column leaves a gutter too narrow to read in, so
+   below this width every inset goes back to being a full-width figure. */
+@media (max-width: 700px) {
+  .fig--inset {
+    float: none;
+    width: 100%;
+    max-width: var(--measure);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .fig--wide img {
+    max-height: 300px;
+  }
+}
+
+/* ── pull quotes ─────────────────────────────────────────────────────────
+   A line lifted out of the article and set large. It is not decoration: it gives the eye a
+   place to rest in a long column and it tells a reader skimming the page what the piece
+   actually claims. One per article, near — but not immediately beside — the paragraph it
+   comes from. */
+.pull {
+  clear: both;
+  margin: 1.6rem 0;
+  padding: 0 0 0 1.3rem;
+  border-left: 3px solid var(--copper);
+  font-family: var(--display);
+  font-size: 1.32rem;
+  line-height: 1.34;
+  color: var(--ink);
+  max-width: 44ch;
+}
+
+/* ── the sidebar: two secondaries, then a list ────────────────────────────
+   Eight posts do not fit in two tiers. A column of equal cards makes every post look
+   equally unread, so the space each one gets now says what it is worth: the next two after
+   the featured keep a picture and a standfirst, and everything older drops to a single line
+   of title and date. A reader scanning the list is looking for a subject, not a summary. */
+.aside {
+  border-left: 1px solid var(--line);
+  padding-left: 1.4rem;
+}
+
+.seconds,
+.older {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.seconds li + li {
+  border-top: 1px dotted var(--line);
+}
+
+.second {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.85rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.second__thumb {
+  flex: 0 0 auto;
+  width: 62px;
+  height: 62px;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 1px solid var(--line);
+}
+
+.second__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.16rem;
+  min-width: 0;
+}
+
+.second:hover .second__title,
+.second:focus-visible .second__title {
+  color: var(--copper);
+}
+
+.second__date {
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+}
+
+.second__title {
+  font-family: var(--display);
+  font-size: 0.88rem;
+  line-height: 1.24;
+  color: var(--ink);
+}
+
+.second__stand {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--ink-3);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.older__h {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  margin: 1.1rem 0 0.2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+/* One line per post: the title carries it, the date sits at the right in the margin the
+   title does not use. No standfirst — at this tier the reader is scanning subjects. */
+.older li + li {
+  border-top: 1px dotted var(--line);
+}
+
+.older__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.older__item:hover .older__title,
+.older__item:focus-visible .older__title {
+  color: var(--copper);
+}
+
+.older__title {
+  font-family: var(--display);
+  font-size: 0.8rem;
+  line-height: 1.28;
+  color: var(--ink-2);
+  min-width: 0;
+}
+
+.older__date {
+  flex: 0 0 auto;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .frontpage {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.6rem;
+  }
+  .aside {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+/* ── the opened post ─────────────────────────────────────────────────────
+   Same furniture as the lead, inside the modal. The modal supplies the title, so the post
+   body starts at the kicker.
+
+   THE SAME SHAPE AS THE FRONT PAGE, because it is the same article and a reader who clicks
+   through should not arrive somewhere that looks different. Full-bleed hero, centred
+   standfirst, centred column at the shared measure. The modal is sized for the recipe
+   views, which are two columns of list, so the article caps well inside it — otherwise a
+   single column of prose left-aligned in that width strands four hundred pixels of blank
+   paper down the right-hand side. */
+.postbody {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+/* The bar keeps only its close button, so the article can start at the top of the panel
+   with its own headline instead of under a smaller duplicate of it. */
+.dmodal__top--bare {
+  justify-content: flex-end;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.postbody__kicker,
+.postbody__title,
+.postbody__stand {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.postbody__title {
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  line-height: 1.09;
+  letter-spacing: -0.012em;
+  /* `auto` in the shorthand, not a separate margin-inline: the shorthand is written after
+     the centring rule above and would otherwise reset both side margins to zero, which
+     leaves the headline hanging off the left of a page that is centred everywhere else. */
+  margin: 0 auto 0.6rem;
+  max-width: 24ch;
+}
+
+/* The hero runs the full width of the article, wider than the text below it, exactly as it
+   does on the front page — and is cropped to a banner whatever shape the photograph is.
+   A 4:5 portrait shown whole here letterboxed inside a 940px figure and left the caption
+   sitting under a strip of empty paper. */
+.postbody > .fig--wide {
+  max-width: none;
+}
+
+.postbody > .fig--wide img {
+  max-height: 400px;
+  object-position: center 15%;
+}
+/* Where to go next: the dish this came out of, and any post worth reading beside it. */
+.postbody__next {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: var(--measure);
+  margin: 1.8rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--display);
+}
+
+.postbody__next a {
+  color: var(--copper);
+  text-decoration: none;
+}
+
+.postbody__next a:hover,
+.postbody__next a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ── the map ─────────────────────────────────────────────────────────────
+   A photographed clay tablet with NOTHING laid over it. See the note in WorldMap.jsx: two
+   earlier passes annotated it, and both amounted to modern apparatus stuck onto an
+   excavated object. The reading is done in the prose instead. */
+.worldmap {
+  clear: both;
+  margin: 1.6rem 0;
+  max-width: 100%;
+}
+
+.worldmap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}

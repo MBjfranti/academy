@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- The ampersand out of Barley & Bronze, with the outlines lifted from the site's own
+         Eczar rather than set as <text> — a favicon loads outside the page, where the
+         webfont is not. It is the same glyph that carries the masthead; see the .mark block
+         in src/index.css. Not "B&B", which reads as a guesthouse before it reads as this. -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barley &amp; Bronze</title>
+    <meta
+      name="description"
+      content="Cooking the Late Bronze Age eastern Mediterranean and Near East, c. 1750–1150 BC — Mesopotamia, Egypt, the Aegean, Hatti and the Levant — using only what an ordinary supermarket stocks."
+    />
+    <!-- Fonts are self-hosted and subset; see src/fonts.css and docs/typography.md.
+         Preload only the UI face: it is what the first paint is actually set in.
+         Preloading all four would contend for bandwidth with the first render. -->
+    <link
+      rel="preload"
+      href="/fonts/source-sans-3-subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+/* ── THE INGREDIENT LIST, AND THE OTHER PARTS OF A RECIPE ────────────────
+   Formerly deck.css. The swipe deck, the base card and the rule card that
+   lived here are all gone — decks were replaced by grids and modals, which is
+   the site's single browse-and-read pattern — and about 500 lines of CSS for
+   components that no longer exist went with them.
+
+   What survives is what a recipe needs wherever it is rendered: the step
+   colour scale, the two ways of reading an ingredient list, the substitution
+   list and the source quotation. IngredientList.jsx imports this file itself,
+   so the styles travel with the component rather than depending on whichever
+   page happened to pull the old one in. ──────────────────────────────────── */
+
+/* ── ingredients, colour-keyed to the step that uses them ───────────── */
+
+:root {
+  --s1: #F7EFDD;  --s1b: #B98F4C;
+  --s2: #E8F0E6;  --s2b: #6F9569;
+  --s3: #E4EDF5;  --s3b: #5D85AC;
+  --s4: #F7E9E5;  --s4b: #B87A66;
+  --s5: #EFF2E1;  --s5b: #8A9757;
+  --s6: #ECE9F3;  --s6b: #857BA6;
+  --s7: #F3EDE3;  --s7b: #9C8467;
+  --s8: #E6EFEE;  --s8b: #5F8F8A;
+}
+
+:root[data-theme='dark'] {
+  --s1: #2B2519;  --s1b: #C9A76A;
+  --s2: #1E2A20;  --s2b: #7FA37A;
+  --s3: #1C2530;  --s3b: #7192B5;
+  --s4: #2D211D;  --s4b: #C08876;
+  --s5: #262A1C;  --s5b: #98A468;
+  --s6: #232130;  --s6b: #948CB0;
+  --s7: #2A2620;  --s7b: #B09779;
+  --s8: #1B2828;  --s8b: #79A9A4;
+}
+.ilist {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.ilist__g {
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  background: var(--card);
+  padding: 0.35rem 0.6rem 0.4rem;
+}
+
+/* By step the number badge floats beside the rows instead of sitting on its
+   own heading line — the step text is already in the method column. */
+.ilist--bystep .ilist__g {
+  display: grid;
+  grid-template-columns: 1.3rem minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+  padding-top: 0.4rem;
+}
+
+.ilist--bystep .ilist__step {
+  margin-top: 0.18rem;
+}
+
+.ilist__g ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ilist__h {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 0.25rem;
+}
+
+.ilist__i {
+  padding: 0.16rem 0;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  max-width: none;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.ilist__i:last-child {
+  border-bottom: 0;
+}
+
+.ilist__step {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  width: 1.15rem;
+  height: 1.15rem;
+  display: inline-grid;
+  place-items: center;
+  color: var(--card);
+  background: var(--ink-3);
+}
+
+/* by step: the whole block carries the colour */
+.ilist__g--s1 { background: var(--s1); border-left-color: var(--s1b); }
+.ilist__g--s2 { background: var(--s2); border-left-color: var(--s2b); }
+.ilist__g--s3 { background: var(--s3); border-left-color: var(--s3b); }
+.ilist__g--s4 { background: var(--s4); border-left-color: var(--s4b); }
+.ilist__g--s5 { background: var(--s5); border-left-color: var(--s5b); }
+.ilist__g--s6 { background: var(--s6); border-left-color: var(--s6b); }
+
+.ilist__g--s1 .ilist__step { background: var(--s1b); }
+.ilist__g--s2 .ilist__step { background: var(--s2b); }
+.ilist__g--s3 .ilist__step { background: var(--s3b); }
+.ilist__g--s4 .ilist__step { background: var(--s4b); }
+.ilist__g--s5 .ilist__step { background: var(--s5b); }
+.ilist__g--s6 .ilist__step { background: var(--s6b); }
+
+.ilist__g--s1 .ilist__h,
+.ilist__g--s2 .ilist__h,
+.ilist__g--s3 .ilist__h,
+.ilist__g--s4 .ilist__h,
+.ilist__g--s5 .ilist__h,
+.ilist__g--s6 .ilist__h {
+  color: var(--ink-2);
+}
+
+/* by aisle: the row keeps a stripe of its step colour */
+.ilist__i--s1 { box-shadow: inset 3px 0 0 var(--s1b); padding-left: 0.6rem; }
+.ilist__i--s2 { box-shadow: inset 3px 0 0 var(--s2b); padding-left: 0.6rem; }
+.ilist__i--s3 { box-shadow: inset 3px 0 0 var(--s3b); padding-left: 0.6rem; }
+.ilist__i--s4 { box-shadow: inset 3px 0 0 var(--s4b); padding-left: 0.6rem; }
+.ilist__i--s5 { box-shadow: inset 3px 0 0 var(--s5b); padding-left: 0.6rem; }
+.ilist__i--s6 { box-shadow: inset 3px 0 0 var(--s6b); padding-left: 0.6rem; }
+.ilist__i--s8 { box-shadow: inset 3px 0 0 var(--s8b); padding-left: 0.6rem; }
+.ilist__i--s7 { box-shadow: inset 3px 0 0 var(--s7b); padding-left: 0.6rem; }
+
+.ilist__i--s1 .ilist__step { background: var(--s1b); }
+.ilist__i--s2 .ilist__step { background: var(--s2b); }
+.ilist__i--s3 .ilist__step { background: var(--s3b); }
+.ilist__i--s4 .ilist__step { background: var(--s4b); }
+.ilist__i--s5 .ilist__step { background: var(--s5b); }
+.ilist__i--s6 .ilist__step { background: var(--s6b); }
+.ilist__i--s8 .ilist__step { background: var(--s8b); }
+.ilist__i--s7 .ilist__step { background: var(--s7b); }
+
+/* ── the rest of an opened recipe ───────────────────────────────────── */
+
+.srcquote {
+  margin: 0 0 0.6rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--line-2);
+  font-style: italic;
+  color: var(--ink);
+  max-width: 62ch;
+}
+
+.cookpanel__attr {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+.subs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subs li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--line);
+  max-width: none;
+}
+
+.subs li:last-child {
+  border-bottom: 0;
+}
+
+.subs__from {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--ink-3);
+}
+
+.subs__arrow {
+  color: var(--copper);
+  margin: 0 0.45rem;
+}
+
+.subs__to {
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.subs li p {
+  margin: 0.2rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: var(--ink-3);
+  max-width: none;
+}

@@ -1,0 +1,560 @@
+[
+ {
+  "raw": "gen-a-man-hunting.png",
+  "out": "modern-a-man-hunting",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-a-woman-in-the-pantry.png",
+  "out": "modern-a-woman-in-the-pantry",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-a-woman-shopping.png",
+  "out": "modern-a-woman-shopping",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-allium-and-seed-base.png",
+  "out": "dish-allium-and-seed-base",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-at-the-checkout.png",
+  "out": "modern-at-the-checkout",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-barley-and-fig-feast-porridge.png",
+  "out": "dish-barley-and-fig-feast-porridge",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-beet-greens-silqu.png",
+  "out": "dish-beet-greens-silqu",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-beruwa-chickpea-and-cucumber.png",
+  "out": "dish-beruwa-chickpea-and-cucumber",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-brazier-chickpeas-alashiya.png",
+  "out": "dish-brazier-chickpeas-alashiya",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-brined-sheep-cheese.png",
+  "out": "staple-brined-sheep-cheese",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-brown-lentils.png",
+  "out": "staple-brown-lentils",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-canaanite.png",
+  "out": "accent-canaanite",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-caravan-pot-with-dried-curd.png",
+  "out": "dish-caravan-pot-with-dried-curd",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-carrying-it-home.png",
+  "out": "modern-carrying-it-home",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-cumin-and-coriander-seed.png",
+  "out": "staple-cumin-and-coriander-seed",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-dairy.png",
+  "out": "aisle-dairy",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-date-and-sesame-confection-mersu.png",
+  "out": "dish-date-and-sesame-confection-mersu",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-dates.png",
+  "out": "staple-dates",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-desert-truffles-mari.png",
+  "out": "dish-desert-truffles-mari",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-drinks.png",
+  "out": "aisle-drinks",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-drygoods.png",
+  "out": "aisle-drygoods",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-eastern-mediterranean.png",
+  "out": "map-eastern-mediterranean",
+  "kind": "plate",
+  "ratio": 1.5
+ },
+ {
+  "raw": "gen-elamite-broth-me-elamutim.png",
+  "out": "dish-elamite-broth-me-elamutim",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-emmer-beer-heneqet.png",
+  "out": "dish-emmer-beer-heneqet",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-emmer-loaves-in-conical-moulds.png",
+  "out": "dish-emmer-loaves-in-conical-moulds",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-emmer-porridge-with-curds-delta.png",
+  "out": "dish-emmer-porridge-with-curds-delta",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-family-at-the-produce-aisle.png",
+  "out": "modern-family-at-the-produce-aisle",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-fats.png",
+  "out": "aisle-fats",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-fish-baked-on-fennel-amnisos.png",
+  "out": "dish-fish-baked-on-fennel-amnisos",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-francolin-broth-me-tarri.png",
+  "out": "dish-francolin-broth-me-tarri",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-happena-meat-in-oil-and-honey.png",
+  "out": "dish-happena-meat-in-oil-and-honey",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-honey.png",
+  "out": "staple-honey",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-honeyed-pork-chops-with-dates.png",
+  "out": "dish-honeyed-pork-chops-with-dates",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-hot-pan-flatbread.png",
+  "out": "dish-hot-pan-flatbread",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-barley-porridge.png",
+  "out": "dish-inv-barley-porridge",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-barley-risotto.png",
+  "out": "dish-inv-barley-risotto",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-caesar-salad.png",
+  "out": "dish-inv-caesar-salad",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-chopped-salad.png",
+  "out": "dish-inv-chopped-salad",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-curd-cheesecake.png",
+  "out": "dish-inv-curd-cheesecake",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-eggs-on-flatbread.png",
+  "out": "dish-inv-eggs-on-flatbread",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-emmer-pancakes.png",
+  "out": "dish-inv-emmer-pancakes",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-fish-supper.png",
+  "out": "dish-inv-fish-supper",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-flatbread-crisps.png",
+  "out": "dish-inv-flatbread-crisps",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-honeyed-duck.png",
+  "out": "dish-inv-honeyed-duck",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-honeyed-nut-clusters.png",
+  "out": "dish-inv-honeyed-nut-clusters",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-lamb-flatbread-sandwich.png",
+  "out": "dish-inv-lamb-flatbread-sandwich",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-late-night-cheese-flatbread.png",
+  "out": "dish-inv-late-night-cheese-flatbread",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-late-night-lamb-and-yoghurt.png",
+  "out": "dish-inv-late-night-lamb-and-yoghurt",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-lentil-salad.png",
+  "out": "dish-inv-lentil-salad",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-meat-and-roots.png",
+  "out": "dish-inv-meat-and-roots",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-parched-barley.png",
+  "out": "dish-inv-parched-barley",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-inv-salted-chickpeas.png",
+  "out": "dish-inv-salted-chickpeas",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-kabri-palace-wine.png",
+  "out": "dish-kabri-palace-wine",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-kanasu-broth-me-kanasi.png",
+  "out": "dish-kanasu-broth-me-kanasi",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-kariya-grilled-liver-and-heart.png",
+  "out": "dish-kariya-grilled-liver-and-heart",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-kid-in-the-tripod-cauldron.png",
+  "out": "dish-kid-in-the-tripod-cauldron",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-kid-stew-with-soured-milk.png",
+  "out": "dish-kid-stew-with-soured-milk",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-kykeon-barley-and-cheese.png",
+  "out": "dish-kykeon-barley-and-cheese",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-lamb-and-beet-stew-tuhu.png",
+  "out": "dish-lamb-and-beet-stew-tuhu",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-lamb-shoulder.png",
+  "out": "staple-lamb-shoulder",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-leek-lentil-and-barley-pottage.png",
+  "out": "dish-leek-lentil-and-barley-pottage",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-lentil-and-barley-pottage.png",
+  "out": "dish-lentil-and-barley-pottage",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-lentils-with-oil-and-cumin-ugarit.png",
+  "out": "dish-lentils-with-oil-and-cumin-ugarit",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-marzeah-roast-mutton.png",
+  "out": "dish-marzeah-roast-mutton",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-meat.png",
+  "out": "aisle-meat",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-neck-of-mutton-with-leeks-hattusa.png",
+  "out": "dish-neck-of-mutton-with-leeks-hattusa",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-olive-oil.png",
+  "out": "staple-olive-oil",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-onions-and-garlic.png",
+  "out": "staple-onions-and-garlic",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-pearl-barley.png",
+  "out": "staple-pearl-barley",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-pigeon-in-broth-amursanu.png",
+  "out": "dish-pigeon-in-broth-amursanu",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-produce.png",
+  "out": "aisle-produce",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-pushing-the-trolley.png",
+  "out": "modern-pushing-the-trolley",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-roast-barley-pilaf-ybc25.png",
+  "out": "dish-roast-barley-pilaf-ybc25",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-roast-duck-for-the-gods-table.png",
+  "out": "dish-roast-duck-for-the-gods-table",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-roast-goose-with-figs.png",
+  "out": "dish-roast-goose-with-figs",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-salt.png",
+  "out": "staple-salt",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-seared-cheese-on-the-copper-pan.png",
+  "out": "dish-seared-cheese-on-the-copper-pan",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-seasoning.png",
+  "out": "aisle-seasoning",
+  "kind": "cutout",
+  "height": 160
+ },
+ {
+  "raw": "gen-sheep-on-the-huprushi.png",
+  "out": "dish-sheep-on-the-huprushi",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-sheep-or-goat-yoghurt.png",
+  "out": "staple-sheep-or-goat-yoghurt",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-shelled-beans-deir-el-medina.png",
+  "out": "dish-shelled-beans-deir-el-medina",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-skewers-on-the-firedog.png",
+  "out": "dish-skewers-on-the-firedog",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-split-and-salted-nile-fish.png",
+  "out": "dish-split-and-salted-nile-fish",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-strained-yoghurt.png",
+  "out": "dish-strained-yoghurt",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-the-chill-cabinet.png",
+  "out": "modern-the-chill-cabinet",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-the-weighing-of-the-heart.png",
+  "out": "modern-the-weighing-of-the-heart",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-thick-loaf-for-the-hearth-harsi.png",
+  "out": "dish-thick-loaf-for-the-hearth-harsi",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-tiger-nut-and-honey-cones.png",
+  "out": "dish-tiger-nut-and-honey-cones",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-too-many-bags.png",
+  "out": "modern-too-many-bags",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-too-many-bags-hittite.png",
+  "out": "modern-too-many-bags-hittite",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-unwinding-broth-pasrutum.png",
+  "out": "dish-unwinding-broth-pasrutum",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
+  "raw": "gen-weighing-the-produce.png",
+  "out": "modern-weighing-the-produce",
+  "kind": "plate",
+  "ratio": 1.6
+ },
+ {
+  "raw": "gen-wholemeal-flour.png",
+  "out": "staple-wholemeal-flour",
+  "kind": "plate",
+  "ratio": 1.0
+ }
+]
