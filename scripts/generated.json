@@ -114,6 +114,12 @@
   "ratio": 1.0
  },
  {
+  "raw": "gen-dried-river-fish-with-onions-terqa.png",
+  "out": "dish-dried-river-fish-with-onions-terqa",
+  "kind": "plate",
+  "ratio": 1.0
+ },
+ {
   "raw": "gen-drinks.png",
   "out": "aisle-drinks",
   "kind": "cutout",

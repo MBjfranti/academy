@@ -51,6 +51,71 @@ export function yadinuDate(iso) {
 
 export const fieldReports = [
   {
+    slug: 'the-wall-and-the-canal',
+    kind: 'report',
+    card: 'terqa-talk',
+    title: 'The wall and the canal are the same thing',
+    region: 'mesopotamia',
+    place: 'Terqa, on the middle Euphrates',
+    date: '2026-09-14',
+    access: 'open',
+    recipe: 'dried-river-fish-with-onions-terqa',
+    related: [
+      { to: '/reports/they-took-the-people-too', label: 'Why I was walking alone' },
+      { to: '/reports/the-road-is-made-of-donkeys', label: 'The caravan that started this' },
+    ],
+    standfirst:
+      'Nineteen days on foot from the hills, and then green, and then a wall. I have spent a week in the market here working out what both of them cost.',
+    hero: {
+      name: 'terqa-arrival',
+      alt: 'Yadinu standing with a staff on a dry ridge above a river valley, looking down at a long mud-brick walled city with the Euphrates and a strip of green fields and palms behind it.',
+      caption: 'You can see the whole argument from up here. Everything green is within a morning’s walk of the water and nothing else is.',
+    },
+    figures: [
+      {
+        name: 'terqa-gate', at: 4, size: 'col',
+        alt: 'A high mud-brick city wall with a towered gateway, donkeys and people passing in and out along a dusty track, animal pens beside the road.',
+        caption: 'I have never in my life been so pleased to see a wall, and I want that on the record before I start complaining about it.',
+      },
+      {
+        name: 'terqa-market', at: 6, size: 'col',
+        alt: 'A crowded market street with baskets of grain, pulses and dried fruit, split dried fish laid out on a table, stacked pottery, and traders and shoppers among the awnings.',
+        caption: 'Grain, pulses, dried fruit, wool, pots, and that table of split fish which is the cheapest protein in the city.',
+      },
+      {
+        name: 'terqa-talk', at: 9, size: 'inset',
+        crop: '4 / 5', pan: [-6, 2], zoom: 1.5,
+        alt: 'Yadinu standing among a group of market people seated around baskets of dates, olives and flatbreads in low evening light, one man talking with both hands raised.',
+        caption: 'The man with his hands up is explaining the canal to me. It took an hour and I did not once get a word in.',
+      },
+      {
+        name: 'terqa-evening', at: 11, size: 'col',
+        alt: 'A lamplit interior at night: a bearded man standing mid-story with his arms spread, a crowd of adults and children sitting on rugs around him, food set out on the floor.',
+        caption: 'No fee, no temple, no tablet. This is the part of a city that never turns up in the records at all.',
+      },
+    ],
+    pulls: [
+      {
+        at: 7,
+        text: 'A granary is a target. A target needs a wall, a wall needs men on it, men on it need feeding, and the feeding comes out of the granary. Everything follows from having more grain than you can eat.',
+      },
+    ],
+    body: [
+      'Nineteen days from the hills, most of it alone, and for the last four of them I walked through country that has nothing to say for itself. Flat, pale, thorn and stone, the horizon doing the same thing in every direction. You know what that ground is like. You have driven across it. Then in the middle of an afternoon there was a smell of water, and an hour after that the ground tipped down and there it was: a green line, palms, a river with light on it, and a city sitting on the bank with a wall around it.',
+      'I sat down. I am not embarrassed about it.',
+      'Now the thing I want to be honest about, because the pictures people carry of this place are wrong and mine were too. The green is a ribbon. Standing on that ridge you can see the whole of it — a strip of fields and palms along the water, perhaps an hour wide, and then dry ground again, and it goes on being dry for as far as anybody walks. This is not a fertile country with a river in it. It is a desert with a fertile seam, and every single thing in that city is grown inside a band you could cross on foot before lunch.',
+      'And that seam does not happen by itself either, which took me a while to see properly. The river is above the fields in places and below them in others, and the water gets to the barley because somebody cut a channel to bring it there. A channel silts up. Every year, without fail, it fills with what the river carried into it, and if nobody clears it the field behind it stops being a field within about two seasons. So the canal is not a thing that was built. It is a thing that is being built, continuously, by people with baskets, forever, and the reason the bread exists is that this year somebody made them do it again.',
+      'I came in through the gate at dusk with a line of donkeys and a man wrote something down about me. And I want to set down clearly how that felt, because it would be very easy to be clever about it and it would be a lie. I have been robbed. I have slept four nights on a mountain listening to every stone that moved. Walking through that gate into a street with people in it, and lying down that night without listening — I would have agreed to almost anything for that. Whatever I say next, that came first.',
+      'What I say next is that the man at the gate writing down who came in is not doing something different from the man who counts the barley into the granary, or the man who decides how many days you owe on the canal this spring. It is one job. I know it is one job because I did it. I spent eleven years counting jars into a palace store at Ugarit, and I never once thought of myself as part of an apparatus, I thought of myself as a man who was good with jars.',
+      'So here is the sum, and it is not a complaint, it is just the arithmetic. Grow more grain than you eat and you have a surplus. A surplus has to be put somewhere, so you build a granary. A granary is a target, so you build a wall. A wall needs men standing on it, and men standing on it are not farming, so they have to be fed out of the granary. Now you need to know exactly what is in the granary and who owes what to it, so you need writing, and you need me. Every part of that follows from the part before it. Nobody sat down and chose it.',
+      'The market is where you can see what it buys. I have spent most of a week in it and it is genuinely marvellous: grain in open baskets, lentils, chickpeas, dates by the bushel from downriver, sesame oil, wool, salt, onions in ropes, stacked pots, and a long table of split dried fish which is the cheapest protein anybody here can carry home. Almost none of it was grown by the person selling it. That is the actual achievement — not any one of those things, but the fact that a person with no field and no boat can eat well by standing in a street.',
+      'There is a house in this city that burned down about five hundred years before I was born, and you dug it up, and you found something in a jar in it that you have been arguing about ever since — because if it is what one of you says it is, it grew four thousand miles east of here, on islands nobody in my world has heard of. I am not going to tell you who is right. I like that the argument exists. It is a useful reminder that a market like this one had a back end reaching further than anybody standing in it could have drawn on a map.',
+      'And the cost, the one that is not about power and does not go away if the king is a good one. Water that is spread on a field and left to evaporate does not leave nothing behind. It leaves what it was carrying, and what it was carrying is salt, a little at a time, every year, and the field slowly stops being able to grow wheat and starts being fit only for barley, which minds it less. Down south this has been happening for centuries and their bread has gone darker for it. Up here it is gentler; the river runs faster and the fields are younger. You argue about how much of the southern story is salt and how much is politics, and you are right to, but the direction of it is not in dispute. The canal that makes the city is also, very slowly, unmaking the ground under it.',
+      'Supper, then, since it took me all this to earn it. Dried fish off that table, soaked overnight; four onions cooked in sesame oil for a full half hour, which is far longer than seems reasonable and is the entire point, because preserved fish has salt and no sweetness and the onions have to supply what it lacks; cracked grain stirred through; the fish folded in at the end in big flakes so it stays in pieces. Sumac over it. Bread. It cost almost nothing and it is one of the best things I have eaten this year, and every single component of it came from somewhere else and arrived here because the canal runs and the wall stands.',
+      'Last night there was a man telling a story in a courtyard, at some length, to about thirty people sitting on rugs with children asleep against them and food going round. He was very good. Nobody paid him, nobody wrote it down, and it happened because a large number of people were safe and fed in the same place on the same evening. That is the other thing the wall is for, and it is the part your excavations will never find, and I am going to stop trying to have this both ways: I know what it costs and I sat there until it finished.',
+    ],
+  },
+  {
     slug: 'they-took-the-people-too',
     kind: 'report',
     card: 'robbed-teaching',
@@ -61,6 +126,7 @@ export const fieldReports = [
     access: 'open',
     recipe: 'hillside-greens-with-soured-milk',
     related: [
+      { to: '/reports/the-wall-and-the-canal', label: 'Where I got to, nineteen days later' },
       { to: '/reports/the-road-is-made-of-donkeys', label: 'The caravan, four days before this' },
     ],
     standfirst:

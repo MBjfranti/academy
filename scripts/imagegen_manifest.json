@@ -120,6 +120,21 @@
   "generated": "2026-08-25T04:11:17+00:00"
  },
  {
+  "slug": "dried-river-fish-with-onions-terqa",
+  "tier": "dishes",
+  "out": "dish-dried-river-fish-with-onions-terqa",
+  "kind": "plate",
+  "raw": "gen-dried-river-fish-with-onions-terqa.png",
+  "model": "gpt-image-1",
+  "size": "1024x1024",
+  "quality": "medium",
+  "prompt_sha256": "f6394e904b1b088202679f8edaf9cbaedd794cf5be4f4f7cc76b46add4fd2189",
+  "image_sha256": "cce7b77344834a9b7a8f9eaf877482f997a620f06abfec8416e24a72aedd27f7",
+  "bytes": 2105048,
+  "usd": 0.042,
+  "generated": "2026-08-25T23:16:50+00:00"
+ },
+ {
   "slug": "elamite-broth-me-elamutim",
   "tier": "dishes",
   "out": "dish-elamite-broth-me-elamutim",

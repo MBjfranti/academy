@@ -410,6 +410,107 @@ export const recipes = [
     sources: ['Uluburun wreck botanical assemblage', 'Regional Late Bronze Age archaeobotany', 'Second-millennium correspondence on pastoral groups'],
   },
   {
+    slug: 'dried-river-fish-with-onions-terqa',
+    title: 'Dried River Fish with Onions and Sesame Oil',
+    ancient: 'KU₆',
+    translit: 'nūnu',
+    language: 'Akkadian, written with the Sumerian logogram KU₆',
+    region: 'mesopotamia',
+    category: 'Stews & Broths',
+    siglum: 'Middle Euphrates · Terqa',
+    provenance: 'A market town on the middle Euphrates',
+    period: 'Late Bronze Age',
+    date: 'c. 1250 BC',
+    serves: 'Serves 4',
+    time: '45 min, after an overnight soak',
+    grade: 'inferred',
+    summary:
+      'Dried fish is the cheapest protein a river city has and the most thoroughly documented food in Mesopotamia. It is also, done properly, extremely good.',
+    intro:
+      'Two rivers means fish, and Mesopotamian records are stiff with them — species lists running to dozens of names, temple deliveries counted in the thousands, whole classes of people whose job title is fisherman. Fresh fish feeds the people standing on the bank. Dried and salted fish feeds everybody else, which is most of the point: it keeps, it travels, it is cheap, and it turns a good week on the river into food four months later and a hundred miles away. This is the dish that market stall makes sense of. It is built on onions cooked far longer than you will want to, and on sesame oil, because this is not olive country.',
+    sourceText: {
+      kind: 'paraphrase',
+      text: 'Fish appear throughout Mesopotamian administrative and lexical material: extensive species vocabularies, large-scale temple and palace deliveries, and dried and salted fish handled as a storable commodity. Sesame is the principal oil crop of southern Mesopotamia, as olive is of the Levantine coast. No recipe for a fish dish survives among the small culinary corpus that does.',
+      attribution: 'Mesopotamian administrative, lexical and economic texts',
+    },
+    ingredientGroups: [
+      {
+        name: 'The fish',
+        items: [
+          { ancient: 'KU₆', modern: 'Salt cod, or other dried salted white fish', qty: '400 g', grade: 'attested', note: 'whichfish' },
+        ],
+      },
+      {
+        name: 'The pot',
+        items: [
+          { ancient: '—', modern: 'Onions, sliced thin', qty: '4 large', grade: 'attested' },
+          { ancient: 'Ì.GIŠ', modern: 'Sesame oil, light and untoasted', qty: '5 tbsp', grade: 'attested', note: 'sesameoil' },
+          { ancient: '—', modern: 'Garlic, sliced', qty: '4 cloves', grade: 'attested' },
+          { ancient: '—', modern: 'Cumin seed, cracked', qty: '2 tsp', grade: 'attested' },
+          { ancient: '—', modern: 'Coriander seed, cracked', qty: '1 tsp', grade: 'attested' },
+          { ancient: 'ZÍZ', modern: 'Coarse bulgur or cracked barley', qty: '150 g', grade: 'attested' },
+          { ancient: '—', modern: 'Water or the fish’s second soaking water', qty: '600 ml', grade: 'inferred' },
+        ],
+      },
+      {
+        name: 'Over the top',
+        items: [
+          { ancient: '—', modern: 'Sumac, or a squeeze of something sour', qty: '2 tsp', grade: 'attested' },
+          { ancient: '—', modern: 'Fresh herbs, coarsely torn', qty: 'a handful', grade: 'inferred' },
+          { ancient: 'Ì.GIŠ', modern: 'Sesame oil, to pour over', qty: '1 tbsp', grade: 'attested' },
+        ],
+      },
+    ],
+    directionGroups: [
+      {
+        name: 'The day before',
+        steps: [
+          { text: 'Put the fish in a large bowl of cold water and leave it in a cold place for at least twelve hours, changing the water three or four times. This is not optional and it cannot be hurried. Under-soaked salt fish is inedible in a way that no amount of later seasoning will argue with.', grade: 'reconstructed' },
+          { text: 'Taste a corner at the end. It should taste seasoned, not salty. If it still bites, give it another four hours and another change of water.', grade: 'reconstructed' },
+        ],
+      },
+      {
+        name: 'The onions',
+        steps: [
+          { text: 'Warm the sesame oil in a wide heavy pot and put the onions in with a pinch of salt. Now cook them for twenty-five minutes over a low flame, stirring when you remember. You are going well past soft and into sweet and collapsing and deep gold. This is the whole flavour of the dish and there is no shortcut in it.', grade: 'reconstructed' },
+          { text: 'Garlic, cumin and coriander in for the last minute, until you can smell all three.', grade: 'attested' },
+        ],
+      },
+      {
+        name: 'Together',
+        steps: [
+          { text: 'Stir the bulgur through the onions until every grain is coated, then pour in the water. Bring it up, drop it to a bare simmer and put a lid on for fifteen minutes.', grade: 'reconstructed' },
+          { text: 'Drain the fish, tear it into large flakes and fold them in whole rather than stirring them to shreds. Lid back on, off the heat, ten minutes. It finishes cooking in the steam and stays in pieces.', grade: 'reconstructed' },
+          { text: 'Sumac over the top, herbs, the last of the oil poured across. Eat it warm rather than hot, with bread.', grade: 'reconstructed' },
+        ],
+      },
+    ],
+    apparatus: [
+      {
+        term: 'Standing',
+        text: 'Graded inferred rather than reconstructed, which is a step up from most things here, because the ingredients are not merely plausible — dried fish, onion, sesame oil, cumin, coriander and cracked grain are all documented commodities moving through exactly these towns in exactly this period, in quantity. What is missing is the instruction. The tiny culinary corpus that survives is palace cooking, and this is not palace cooking. So: real ingredients, real proportions for the region, and a method that is mine.',
+      },
+      {
+        term: 'sesameoil',
+        text: 'Buy the pale, light-coloured sesame oil, not the dark brown toasted kind sold for East Asian cooking. The dark one is pressed from roasted seed and will take over everything it touches; the light one is a straightforward neutral cooking oil with a faint nuttiness, which is what is wanted. This matters more than it sounds, because it is the single line dividing the Mesopotamian kitchen from the Levantine one — the river valley grows sesame, the coast grows olives, and you can hear the border in the cooking.',
+      },
+      {
+        term: 'whichfish',
+        text: 'Salt cod is the easiest thing to buy that behaves the right way, and every fishmonger and most Portuguese, Spanish and Caribbean grocers have it. It is not a river fish and it is not from anywhere near the Euphrates, and I would rather say so than pretend. What it shares with the original is the thing that matters: it was preserved hard so it could travel, and it needs a long patient soak to come back. Dried Nile perch does the same job if you can find it. Smoked mackerel does not — it is already cooked, already oily, and it will fall to pieces.',
+      },
+      {
+        term: 'Why onions this long',
+        text: 'Twenty-five minutes feels absurd for onions in a dish this plain, and it is exactly why the dish works. Preserved fish gives you salt and body but almost no sweetness, so if the onions are merely translucent the pot tastes flat and one-note. Taken all the way to collapsing gold they supply the sugar the fish cannot, and the two halves finally add up. If you have ten minutes rather than forty, make something else.',
+      },
+    ],
+    substitutions: [
+      { from: 'Salt cod', to: 'Dried Nile perch, or unsalted white fish plus 1 tsp salt', text: 'Fresh fish makes a perfectly nice supper but a different dish — you lose the firm flaking texture that being dried and rehydrated gives, which is half of what this is.' },
+      { from: 'Sesame oil', to: 'A neutral oil such as sunflower, or olive oil', text: 'Olive oil tastes good here and is what a Levantine cook would reach for, so use it without guilt. It just makes the dish a coastal one instead of a river one.' },
+      { from: 'Bulgur', to: 'Coarse cracked barley, or pearl barley given ten minutes longer', text: 'Barley is the more likely grain of the two and slightly the better one, being chewier against soft fish. Bulgur is faster and easier to buy.' },
+    ],
+    sources: ['Mesopotamian lexical fish vocabularies', 'Temple and palace fish delivery records', 'Middle Euphrates commodity texts'],
+  },
+  {
     slug: 'caravan-pot-with-dried-curd',
     title: 'The Road Pot: Emmer, Dried Curd and Onion',
     ancient: 'URUDU',
