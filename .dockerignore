@@ -1,1 +1,30 @@
+# Kept out of the build context. Size matters here because the context is uploaded to the
+# builder before anything runs.
+
+.git
+.gitignore
+
+node_modules
+dist
+
+# The source art. This is the largest thing in the repo by a wide margin — full-resolution
+# PNGs that exist so the Python pipeline can derive the webp files under public/img, which
+# ARE committed. Nothing in the Vite build reads this directory.
+images
+
+# Python pipeline scratch. scripts/ itself must stay in the context: vite.config.js
+# imports scripts/vite-crop-plugin.js at config load.
+**/__pycache__
+*.pyc
+
+docs
+logo-options.html
+
+# Never. generate_images.py reads $OPENAI_API_KEY from the environment, but a .env is the
+# usual place a key ends up on the way there.
+.env
+.env.*
+
 fly.toml
+Dockerfile
+.dockerignore
