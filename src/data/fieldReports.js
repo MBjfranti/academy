@@ -96,8 +96,8 @@ export const fieldReports = [
     ],
     pulls: [
       {
-        at: 7,
-        text: 'A granary is a target. A target needs a wall, a wall needs men on it, men on it need feeding, and the feeding comes out of the granary. Everything follows from having more grain than you can eat.',
+        at: 5,
+        text: 'Everything I am grateful for in this city was paid for by somebody who was never asked whether they wanted to pay it.',
       },
     ],
     body: [

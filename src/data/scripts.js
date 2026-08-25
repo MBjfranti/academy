@@ -84,6 +84,7 @@ export const WORDS = {
     { signs: '\u{122AC}', t: 'SAR', gloss: 'garden vegetable', of: ['SAR'] },
     { signs: '\u{12137}', t: 'MUŠEN', gloss: 'bird', of: ['HU'] },
     { signs: '\u{122E7}', t: 'SUM', gloss: 'onion, allium', of: ['SUM'] },
+    { signs: '\u{12129}', t: 'KU₆', gloss: 'fish', of: ['HA'] },
   ],
 
   /* Written linearly. Where a word ends in a determinative — a sign that classifies rather
@@ -182,6 +183,7 @@ const WORD_FOR_DISH = {
   'thick-loaf-for-the-hearth-harsi': 'NINDA',
   'neck-of-mutton-with-leeks-hattusa': 'SUM',
   'caravan-pot-with-dried-curd': 'GA',
+  'dried-river-fish-with-onions-terqa': 'KU₆',
   'sheep-on-the-huprushi': 'UDU',
   'lentil-and-barley-pottage': 'ŠE',
   'leek-lentil-and-barley-pottage': 'ŠE',
@@ -213,6 +215,7 @@ const WORD_FOR_DISH = {
   'brazier-chickpeas-alashiya': 'lḥm',
   'kabri-palace-wine': 'yn',
   'lentils-with-oil-and-cumin-ugarit': 'šmn',
+  'hillside-greens-with-soured-milk': 'šmn',
 }
 
 /** A stable word for a dish: the fitting one where we have named it, a seeded one if not. */

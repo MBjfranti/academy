@@ -77,6 +77,14 @@ export const dishArt = {
     tw: 176, th: 176, cw: 420, ch: 420,
     alt: '',
   },
+  'dried-river-fish-with-onions-terqa': {
+    src: '/img/dish-dried-river-fish-with-onions-terqa.webp',
+    thumb: '/img/dish-dried-river-fish-with-onions-terqa-thumb.webp',
+    card: '/img/dish-dried-river-fish-with-onions-terqa-card.webp',
+    w: 710, h: 710,
+    tw: 176, th: 176, cw: 420, ch: 420,
+    alt: '',
+  },
   'elamite-broth-me-elamutim': {
     src: '/img/dish-elamite-broth-me-elamutim.webp',
     thumb: '/img/dish-elamite-broth-me-elamutim-thumb.webp',
