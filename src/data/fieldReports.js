@@ -67,8 +67,8 @@ export const fieldReports = [
       'They took eleven donkeys, four tonnes of copper and every person in the caravan except me. I spent the next four days finding out what a hillside is worth.',
     hero: {
       name: 'robbed-raiders',
-      alt: 'Yadinu standing with both hands raised and open, talking to two armed men holding long spears on a narrow mountain track, with laden donkeys and the rest of the caravan held behind him.',
-      caption: 'Me, being extremely reasonable at two men who had already decided everything. Nobody shouted. That is the part I keep going back over.',
+      alt: 'Four armed men on a mountain track, two carrying long spears and two carrying round shields of woven wicker and stretched hide, standing over baskets and packs that have been set down on the stones.',
+      caption: 'Look at the shields. Men who have decided to rob somebody on the way past do not carry shields.',
     },
     figures: [
       {
@@ -79,8 +79,8 @@ export const fieldReports = [
       {
         name: 'robbed-foraging', at: 6, size: 'inset',
         crop: '4 / 5', pan: [-6, 1.5], zoom: 1.1,
-        alt: 'Yadinu crouched on a stony hillside cutting greens into a woven basket, with piles of gathered leaves, olives and small yellow-green fruit spread on the rock in front of him.',
-        caption: 'Day two, and the haul that made me stop panicking. Almost none of this looks like food until you have been hungry beside it for a while.',
+        alt: 'Yadinu kneeling on a stony hillside with both hands working into a low thorny shrub, stripping small pale fruit from it, dry hills stretching away behind him.',
+        caption: 'Two hours of this fills a basket once. Nobody gathers who has any alternative at all, which is exactly why nobody wrote it down.',
       },
       {
         name: 'robbed-teaching', at: 8, size: 'col',
