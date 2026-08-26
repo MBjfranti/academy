@@ -44,7 +44,7 @@ export const recipes = [
     featured: true,
     summary: 'The most complete dish on the best-preserved culinary tablet in existence, and the closest thing the Bronze Age has to a recipe you can follow.',
     intro:
-      'Leg of lamb seared in its own fat, stewed with beer and alliums and a deep red root, then hit twice with coriander at the close — the seed sprinkled over, the fresh leaf folded in. Fourteen ingredients, given in the order they enter the pot, and not one measurement anywhere. That absence is not damage to the tablet. It is a working note between professionals, written by someone who assumed the reader already knew how much, which is why every quantity below is ours rather than his.',
+      'Leg of lamb seared in its own fat, stewed with beer and alliums and a deep red root, then hit twice with coriander at the close, the seed sprinkled over and the fresh leaf folded in. Fourteen ingredients, given in the order they enter the pot, and not one measurement anywhere. That absence is not damage to the tablet. It is a working note between professionals, written by someone who assumed the reader already knew how much, which is why every quantity below is ours and not his.',
     sourceText: {
       kind: 'quotation',
       text: "Tuh'u. Leg meat is used. You prepare water. You add fat. You sear. You fold in salt, beer, onion, arugula, cilantro, Persian shallot, cumin and red beet, and you crush leek and garlic. You sprinkle coriander on top. You add kurrat and fresh cilantro.",
@@ -131,7 +131,7 @@ export const recipes = [
     summary:
       'One of the four meatless entries on the tablet, thickened at the last moment with pounded beer-bread. It opens with the words “meat is not used.”',
     intro:
-      '“Meat is not used.” The entry announces what it is not before it says anything else, which on a tablet where twenty-one of the twenty-five recipes are built on meat counts as a statement of intent. What is left is barley, alliums and green herbs — and one move at the very end that makes the whole dish. Dried beer-bread pounded, sifted, scattered over the pot just before it comes off the fire. It thickens, it seasons, and it pulls a faintly sour, yeasty note through everything. The name plausibly comes from pašāru, the verb for loosening, releasing, undoing a knot.',
+      '“Meat is not used.” The entry announces what it is not before it says anything else, which on a tablet where twenty-one of the twenty-five recipes are built on meat counts as a statement of intent. What is left is barley, alliums and green herbs, plus one move at the very end that makes the whole dish. Dried beer-bread pounded, sifted, scattered over the pot just before it comes off the fire. It thickens, it seasons, and it pulls a faintly sour, yeasty note through everything. The name plausibly comes from pašāru, the verb for loosening, releasing, undoing a knot.',
     sourceText: {
       kind: 'quotation',
       text: 'Pašrūtum. Meat is not used. You prepare water. You add fat. (You add) kurrat, cilantro, salt as desired, leek, garlic. You pound up dried sourdough, you sift (it) and you scatter (it) over the pot before removing it.',
@@ -235,7 +235,7 @@ export const recipes = [
     summary:
       'A foreign dish, named for Elam, thickened with blood and soured milk and built on dill, which no other entry on the tablet uses.',
     intro:
-      'Dill appears exactly once in the whole corpus, and it appears here, in one of two entries the tablet itself marks as foreign. Elam lay east, in what is now south-western Iran, and dill remains a signature of Iranian cooking rather than Iraqi — a small piece of evidence pointing the same way the label does. No meat, then; a great deal of dill; and a body built from blood and soured milk rather than a joint, thick and tart and deeply savoury. This is what a scribe writes down when the food is not his own.',
+      'Dill appears exactly once in the whole corpus, and it appears here, in one of two entries the tablet itself marks as foreign. Elam lay east, in what is now south-western Iran, and dill remains a signature of Iranian cooking and not Iraqi, which is a small piece of evidence pointing the same way the label does. No meat, then; a great deal of dill; and a body built from blood and soured milk instead of a joint, thick and tart and deeply savoury. This is what a scribe writes down when the food is not his own.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Meat is not used. Water and fat are prepared. Dill, kurrat, cilantro, leek and garlic go in, bound with blood and a corresponding quantity of soured milk, and more garlic at the close.',
@@ -339,7 +339,7 @@ export const recipes = [
     summary:
       'Nothing in it was bought, planted, harvested or paid for. It is what a hillside has in late summer, and it is the only dish here that assumes you own nothing at all.',
     intro:
-      'Every other dish on this site starts with a market or a store cupboard. This one starts with the observation that a dry Mediterranean hillside in late August is, if you know what you are looking at, a larder — sour red drupes on the sumac, purslane fat with water in the rock cracks, terebinth going oily, figs splitting on trees nobody planted. Add the one thing a person with a flock always has, which is soured milk, and you have a real meal rather than a survival exercise. It needs no fire and almost no equipment. It is here because most people, on most days, ate something closer to this than to anything else on the site.',
+      'Every other dish on this site starts with a market or a store cupboard. This one starts with the observation that a dry Mediterranean hillside in late August is, if you know what you are looking at, a larder. There are sour red drupes on the sumac, purslane fat with water in the rock cracks, terebinth going oily, and figs splitting on trees nobody planted. Add the one thing a person with a flock always has, which is soured milk, and you have a real meal and not a survival exercise. It needs no fire and almost no equipment. It is here because most people, on most days, ate something closer to this than to anything else on the site.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Sumac, terebinth, figs, olives, almonds, pine nuts, grapes, pomegranates and coriander were recovered together from the Uluburun wreck, giving a rare direct list of plant foods in circulation. Gathered wild plants appear routinely in archaeobotanical assemblages across the region, and pastoral groups are documented throughout second-millennium correspondence. No text preserves a gathered-food recipe.',
@@ -427,7 +427,7 @@ export const recipes = [
     summary:
       'Dried fish is the cheapest protein a river city has and the most thoroughly documented food in Mesopotamia. Done properly it is also excellent.',
     intro:
-      'Two rivers means fish, and Mesopotamian records are stiff with them — species lists running to dozens of names, temple deliveries counted in the thousands, whole classes of people whose job title is fisherman. Fresh fish feeds the people standing on the bank. Dried and salted fish feeds everybody else, which is most of the point: it keeps, it travels, it is cheap, and it turns a good week on the river into food four months later and a hundred miles away. This is the dish that market stall makes sense of. It is built on onions cooked far longer than you will want to, and on sesame oil, because this is not olive country.',
+      'Two rivers means fish, and Mesopotamian records are stiff with them. There are species lists running to dozens of names, temple deliveries counted in the thousands, and whole classes of people whose job title is fisherman. Fresh fish feeds the people standing on the bank. Dried and salted fish feeds everybody else, which is most of the point: it keeps, it travels, it is cheap, and it turns a good week on the river into food four months later and a hundred miles away. This is the dish that market stall makes sense of. It is built on onions cooked far longer than you will want to, and on sesame oil, because this is not olive country.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Fish appear throughout Mesopotamian administrative and lexical material: extensive species vocabularies, large-scale temple and palace deliveries, and dried and salted fish handled as a storable commodity. Sesame is the principal oil crop of southern Mesopotamia, as olive is of the Levantine coast. No recipe for a fish dish survives among the small culinary corpus that does.',
@@ -528,7 +528,7 @@ export const recipes = [
     summary:
       'Everything in it survives three weeks on a donkey. That is not a stylistic choice, it is the entire design brief.',
     intro:
-      'Food on a road is a logistics problem before it is a cooking problem. A donkey carries something like eighty kilos and eats a good part of its own value on a long haul, so every item in a caravan’s stores has to justify its weight and then survive heat, dust and three weeks of being jolted. That rules out nearly everything fresh and rules in a short, strange list: hard grain, dried pulses, oil in a sealed jar, dried fruit, salt, and dried sour curd — milk turned into a rock so that it can be turned back into food a month later and four hundred kilometres away. This is the pot those things make. It is better than it has any right to be.',
+      'Food on a road is a logistics problem before it is a cooking problem. A donkey carries something like eighty kilos and eats a good part of its own value on a long haul, so every item in a caravan’s stores has to justify its weight and then survive heat, dust and three weeks of being jolted. That rules out nearly everything fresh and rules in a short, strange list: hard grain, dried pulses, oil in a sealed jar, dried fruit, salt, and dried sour curd, which is milk turned into a rock so that it can be turned back into food a month later and four hundred kilometres away. This is the pot those things make. It is better than it has any right to be.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Merchant correspondence across the second millennium records donkey caravans, their loads, their fodder costs, the tolls and escorts they paid for, and their losses to robbery. Dried and soured dairy products are recorded as commodities in Mesopotamian administrative texts. No text records what a caravan cooked at the end of a day.',
@@ -604,7 +604,7 @@ export const recipes = [
     grade: 'reconstructed',
     summary: 'The most elaborate cooking instruction to survive from the ancient world. It is long, technical, and broken in the worst places.',
     intro:
-      'Four lines is what YBC 4644 gives a stew. YBC 8958 spends dozens on a handful of bird dishes: the broth, the dough, the lining of the vessel, the order of assembly, what the finished thing should look like when it reaches the table. It is a recipe in the modern sense, written a thousand years before Homer — and it is broken in precisely the places you would most want it whole. Long stretches of the method are simply gone. That the dough encloses the birds is a reading, the one that makes sense of the surviving instructions, and what follows is a working reconstruction rather than a translation.',
+      'Four lines is what YBC 4644 gives a stew. YBC 8958 spends dozens on a handful of bird dishes: the broth, the dough, the lining of the vessel, the order of assembly, what the finished thing should look like when it reaches the table. It is a recipe in the modern sense, written a thousand years before Homer, and it is broken in precisely the places you would most want it whole. Long stretches of the method are gone. That the dough encloses the birds is a reading, the one that makes sense of the surviving instructions, and what follows is a working reconstruction and not a translation.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The entry directs the cook to prepare the birds and a seasoned broth, to make a dough, to line and cover a vessel with it, and to assemble the birds within — with further instruction on garnish and on presentation. Substantial passages are lost.',
@@ -688,7 +688,7 @@ export const recipes = [
     grade: 'inferred',
     summary: 'Not from a recipe tablet at all. It is reconstructed from the ration and offering lists that issued its ingredients together, by name, for centuries.',
     intro:
-      'Five hundred years of paperwork and not one line on how to make it. Mersu is allocated to temples, issued to officials, listed at feasts, and never described, because everyone receiving it already knew. What the archives give instead is the issue list — dates, fat, flour, and often nuts, booked out together under the one heading, again and again. That is a different kind of evidence from a recipe, and it stops well short of a method.',
+      'Five hundred years of paperwork and not one line on how to make it. Mersu is allocated to temples, issued to officials, listed at feasts, and never described, because everyone receiving it already knew. What the archives give instead is an issue list of dates, fat, flour and often nuts, booked out together under one heading, again and again. That is a different kind of evidence from a recipe, and it stops well short of a method.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Mersu is named in issue and offering lists rather than described. The commodities booked against it are consistently dates, fat or butter, flour, and frequently pistachio or other nuts.',
@@ -759,7 +759,7 @@ export const recipes = [
     summary:
       'A pulse-and-mint pot named after a plant still argued over, and the most honest dish on the tablet about how much of this cuisine remains open.',
     intro:
-      'Kanāšu is a plant name that recurs across Old Babylonian texts and has never been pinned down, and the rival readings are not close to the same dish — which is a problem when something has to actually go in the pot. Published editions gloss it as a legume, and one summary of the tablet renders this entry as lamb with grain and mint, so a pulse is what goes in here, labelled as a choice rather than buried as a fact. Everything else about it is plain and good: beans gone soft, lamb backing them rather than leading them, mint torn in at the end. The name stays open.',
+      'Kanāšu is a plant name that recurs across Old Babylonian texts and has never been pinned down, and the rival readings are not close to the same dish, which is a problem when something has to go in the pot. Published editions gloss it as a legume, and one summary of the tablet renders this entry as lamb with grain and mint, so a pulse is what goes in here, labelled as a choice and not buried as a fact. Everything else about it is plain and good: beans gone soft, lamb backing them and not leading them, mint torn in at the end. The name stays open.',
     sourceText: {
       kind: 'paraphrase',
       text: 'A short entry in the tablet’s standard broth formula: water and fat are prepared, salt goes in, then the kanāšu with alliums and herbs, and the pot is held at a simmer. The sequence is legible; the plant is not.',
@@ -938,7 +938,7 @@ export const recipes = [
     summary:
       'The vegetable the tablet names most confidently, cooked on its own. The quickest thing on the Mesopotamian shelf, and the one you will make on a weeknight.',
     intro:
-      'Nobody is seriously fighting over silqu, which makes it a rarity here: the word is beet, one of the safer plant identifications in the corpus. Whether a given entry means the root, the leaf or both is usually past recovering, so this uses the whole plant — which is what a cook with a bunch of it in front of them would have done anyway. Inside tuḫ’u it is one ingredient among fourteen. Here it is dinner: greens, alliums, fat, a little souring at the close, thirty-five minutes.',
+      'Nobody is seriously fighting over silqu, which makes it a rarity here: the word is beet, one of the safer plant identifications in the corpus. Whether a given entry means the root, the leaf or both is usually past recovering, so this uses the whole plant, which is what a cook with a bunch of it in front of them would have done anyway. Inside tuḫ’u it is one ingredient among fourteen. Here it is dinner: greens, alliums, fat, a little souring at the close, thirty-five minutes.',
     sourceText: {
       kind: 'paraphrase',
       text: 'A brief vegetable entry. Water and fat; salt; the silqu with onion, leek and garlic; herbs at the close.',
@@ -1031,7 +1031,7 @@ export const recipes = [
     summary:
       'A spring delicacy gathered off the steppe and sent to the king by letter. The best-dated food in the corpus, and one nobody wrote a method for.',
     intro:
-      'Somebody at Mari was in trouble for sending poor truffles. The palace letters record the consignments as they came in off the steppe — how many, in what condition, who was slow, who sent bad ones. So here is a food we can place inside a season and a reign, Zimri-Lim’s, in the decades before Hammurabi burned the palace, and about whose cooking not one line ever reached you. What follows is the treatment they still get across Syria and Iraq: cleaned hard, cooked in fat with an allium, otherwise left alone. Their whole quality is a mild earthy sweetness and anything assertive buries it.',
+      'Somebody at Mari was in trouble for sending poor truffles. The palace letters record the consignments as they came in off the steppe: how many, in what condition, who was slow, and who sent bad ones. So here is a food we can place inside a season and a reign, Zimri-Lim’s, in the decades before Hammurabi burned the palace, and about whose cooking not one line ever reached you. What follows is the treatment they still get across Syria and Iraq: cleaned hard, cooked in fat with an allium, otherwise left alone. Their whole quality is a mild earthy sweetness and anything assertive buries it.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The archive records consignments of truffles reaching the palace, with remarks on quantity and quality and on the conduct of those responsible for sending them. Nothing in the letters describes how they were prepared.',
@@ -1237,7 +1237,7 @@ export const recipes = [
     summary:
       'Kid strengthened with mutton, in a sauce bound with blood and soured milk. The entry begins by telling you to singe the head, legs and tail over the flame.',
     intro:
-      'Singe the head, the legs and the tail over an open flame before any of it goes near the pot. That is the first thing the entry says, and it is not ceremony: singeing takes off the hair and firms the skin so the extremities hold together through hours in liquid. It is still done across the region wherever heads and trotters are cooked. The second instruction is stranger to a modern ear — the entry wants mutton in with the kid, an older and stronger meat put in deliberately to sharpen a mild young one. The sauce is bound the way several dishes on this tablet are, with blood and soured milk together.',
+      'Singe the head, the legs and the tail over an open flame before any of it goes near the pot. That is the first thing the entry says, and it is not ceremony: singeing takes off the hair and firms the skin so the extremities hold together through hours in liquid. It is still done across the region wherever heads and trotters are cooked. The second instruction is stranger to a modern ear. The entry wants mutton in with the kid, an older and stronger meat put in deliberately to sharpen a mild young one. The sauce is bound the way several dishes on this tablet are, with blood and soured milk together.',
     sourceText: {
       kind: 'quotation',
       text: 'Singe head, legs and tail over flame [before putting in pot]. Meat [in addition to kid] is needed, [preferably mutton to sharpen the flavor]. Bring water to boil. Throw in fat. Squeeze onion, samîdu [a plant probably of the onion family, and] garlic [to extract juices, add to pot with] blood and soured milk.',
@@ -1348,7 +1348,7 @@ export const recipes = [
     featured: true,
     summary: 'The best-evidenced bread in the ancient world: you have the moulds, the wall paintings of the bakery, and the loaves themselves.',
     intro:
-      'You have the moulds by the thousand. You have the bakery painted in register on the tomb wall — grinding, sieving, mixing, heating the moulds, filling, baking, turning out. And from the tomb of the architect Kha and his wife Merit you have the loaves themselves, dry and intact. What no source anywhere gives you is a method, because bread was the least remarkable thing in Egypt and nobody troubles to write down the obvious.',
+      'You have the moulds by the thousand. You have the bakery painted in register on the tomb wall, from grinding and sieving and mixing to heating the moulds, filling, baking and turning out. And from the tomb of the architect Kha and his wife Merit you have the loaves themselves, dry and intact. What no source anywhere gives you is a method, because bread was the least remarkable thing in Egypt and nobody troubles to write down the obvious.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The bakery sequence is depicted in register on the tomb walls: grain ground on a saddle quern, dough mixed in bulk, tall conical ceramic moulds pre-heated in the fire, filled with dough, closed, and baked. Loaves of comparable form survive as grave provisions.',
@@ -1429,7 +1429,7 @@ export const recipes = [
     summary:
       'The other thing Egyptians did with grain. Bread gets all the attention; this is what the same emmer becomes when nobody is baking.',
     intro:
-      'Egypt is described, over and over, as a civilisation of bread and beer, and that is true and it is also the end of most accounts. But grain does not only become bread. It becomes this: cracked, boiled soft, eaten with whatever the household has — curds if the goat is giving, green onion tops, a few dates, oil if there is oil. There is no temple in this dish and no scribe recorded it. It is what a family in a Delta village eats in the morning before the day starts, and the reason we can be confident it existed is that cracked grain and a pot are older than Egypt.',
+      'Egypt is described, over and over, as a civilisation of bread and beer, and that is true and it is also the end of most accounts. But grain does not only become bread. It becomes this: cracked, boiled soft, and eaten with whatever the household has. Curds if the goat is giving, green onion tops, a few dates, oil if there is oil. There is no temple in this dish and no scribe recorded it. It is what a family in a Delta village eats in the morning before the day starts, and the reason we can be confident it existed is that cracked grain and a pot are older than Egypt.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Ration texts issue grain and beer by the person and by the day. Emmer is the dominant Egyptian wheat throughout the pharaonic period, recovered in bulk from settlement sites. Dairying, onions, dates and leafy greens are all attested in settlement deposits and tomb painting. No text records a porridge.',
@@ -1510,7 +1510,7 @@ export const recipes = [
     grade: 'inferred',
     summary: 'A sweet made from a tuber, shown being formed into cones on the wall of a vizier’s tomb.',
     intro:
-      'Tiger nut is not a nut. It is the tuber of a sedge, Cyperus esculentus, sweet and dense and oily, and Egyptians ate it from the Predynastic onward — found in graves, listed in offerings, and held in the hands of confectioners on the wall of Rekhmire’s tomb, where the sequence appears to run from grinding to mixing with honey to forming into cones. Read that way, it is one of the oldest depicted sweets on earth. The painting carries no caption. Read is doing a great deal of work in that sentence, and the reading is not universally accepted.',
+      'Tiger nut is not a nut. It is the tuber of a sedge, Cyperus esculentus, sweet and dense and oily, and Egyptians ate it from the Predynastic onward. It is found in graves, listed in offerings, and held in the hands of confectioners on the wall of Rekhmire’s tomb, where the sequence appears to run from grinding to mixing with honey to forming into cones. Read that way, it is one of the oldest depicted sweets on earth. The painting carries no caption. Read is doing a great deal of work in that sentence, and the reading is not agreed.',
     sourceText: {
       kind: 'paraphrase',
       text: 'A register of the tomb shows confectioners at work: a substance ground, combined, and shaped into conical forms. The identification of the substance as tiger nut and of the process as a honey confection is a scholarly reading of the image, not a caption.',
@@ -1569,7 +1569,7 @@ export const recipes = [
     summary:
       'Cooked to be looked at first and eaten second, which turns out to change how you cook it.',
     intro:
-      'A temple served its god a meal every day: real food, carried in, set down, left, and taken away again. This is a bird for that table, and the constraint that shapes it is not flavour but appearance — an offering is presented before it is consumed, so it has to look like the best of its kind. That means whole, glazed, unbroken, and arranged rather than served. Then comes the reversion: the god does not eat it, and the food does not go to waste. It is redistributed to the priests and the temple staff, which is how a large fraction of literate Egypt got lunch. Cook it for the look, and eat it anyway.',
+      'A temple served its god a meal every day: real food, carried in, set down, left, and taken away again. This is a bird for that table, and the constraint that shapes it is not flavour but appearance. An offering is presented before it is consumed, so it has to look like the best of its kind: whole, glazed, unbroken, and arranged instead of served. Then comes the reversion: the god does not eat it, and the food does not go to waste. It is redistributed to the priests and the temple staff, which is how a large fraction of literate Egypt got lunch. Cook it for the look, and eat it anyway.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Temple daily ritual texts describe presenting food and drink to the god, censing, and the withdrawal of the offering. Offering lists itemise bread, beer, wine, oxen, fowl, incense and cloth. The reversion of offerings — the redistribution of presented food to priests and temple personnel — is attested in temple administrative documents. No text gives a method of cooking.',
@@ -1653,7 +1653,7 @@ export const recipes = [
     grade: 'attested',
     summary: 'The protein that fed the workmen who built the tombs, and one of Egypt’s reliable exports.',
     intro:
-      'Nothing here is less glamorous, and nothing in Egypt was eaten more. The Deir el-Medina workmen were issued fish as a matter of routine and their foremen wrote it down; the reliefs show the whole line, from the catch to the splitting to the gutting to the drying racks. Egypt had a river full of tilapia and mullet, and it had natron, a salt crust that dries out of desert lake beds. Nile species turn up at inland Levantine sites, which means the cure worked and the cure travelled — one of the clearest food-trade signals in the Bronze Age eastern Mediterranean.',
+      'Nothing here is less glamorous, and nothing in Egypt was eaten more. The Deir el-Medina workmen were issued fish as a matter of routine and their foremen wrote it down; the reliefs show the whole line, from the catch to the splitting to the gutting to the drying racks. Egypt had a river full of tilapia and mullet, and it had natron, a salt crust that dries out of desert lake beds. Nile species turn up at inland Levantine sites, which means the cure worked and the cure travelled. It is one of the clearest food-trade signals in the Bronze Age eastern Mediterranean.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Processing scenes show fish taken, split along the length, gutted, and laid out; ration records book fish to named workmen in regular quantities. Salt is a state-controlled commodity in the same records.',
@@ -1713,7 +1713,7 @@ export const recipes = [
     grade: 'inferred',
     summary: 'The other half of the Egyptian ration, and a dish whose textbook method was overturned by looking down a microscope.',
     intro:
-      'For most of the twentieth century the story was settled: bake loaves, crumble them into water, let the mash ferment. Tidy, plausible, built on a reading of the tomb scenes, and printed in every older book on Egypt. Then the residues from the brewing installations went under a microscope and the grain structures did not match. What they showed was a two-part process — malted grain and unmalted, one part heated and one not — combined and fermented. Closer to brewing than to soaked bread. Bread and beer shared a bakery and a workforce; they did not share a loaf. Both methods are given below, because knowing that a reconstruction can be wrong is most of the point.',
+      'For most of the twentieth century the story was settled: bake loaves, crumble them into water, let the mash ferment. Tidy, plausible, built on a reading of the tomb scenes, and printed in every older book on Egypt. Then the residues from the brewing installations went under a microscope and the grain structures did not match. What they showed was a two-part process, malted grain and unmalted with one part heated and one not, combined and fermented. Closer to brewing than to soaked bread. Bread and beer shared a bakery and a workforce; they did not share a loaf. Both methods are given below, because knowing that a reconstruction can be wrong is most of the point.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Microscopic examination of desiccated residues from Egyptian brewing vessels shows two distinct grain fractions — one malted, one not, one heated, one not — combined and fermented. The crumbled-bread model is not supported by the residues.',
@@ -1779,7 +1779,7 @@ export const recipes = [
     grade: 'inferred',
     summary: 'The standard thick offering loaf of the Hittite state cult, named on hundreds of tablets and described on none.',
     intro:
-      'Hundreds of tablets tell you how many of these to break, who breaks them, and at which moment in the festival. Not one tells you how to make one. You have the name, the role, the ritual handling and roughly the shape of the thick loaf, and no formula at all. Whether it was even leavened is genuinely open. This version is, because leavened bread behaves the way the texts describe it being handled, and I would not defend that choice hard.',
+      'Hundreds of tablets tell you how many of these to break, who breaks them, and at which moment in the festival. Not one tells you how to make one. You have the name, the role, the ritual handling and roughly the shape of the thick loaf, and no formula at all. Whether it was even leavened is an open question. This version is, because leavened bread behaves the way the texts describe it being handled, and I would not defend that choice hard.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Festival tablets prescribe the thick loaf by name and count, specify who breaks it and at which point in the sequence, and distinguish it from thin and wafer breads. No tablet gives a formula or a method.',
@@ -1843,7 +1843,7 @@ export const recipes = [
     grade: 'reconstructed',
     summary: 'Mutton over a portable clay brazier. The vessel is attested by name, the animal by law, the seasoning by inference.',
     intro:
-      'Three things hold this dish up: a hearth attested by name, an animal attested by law, and a seasoning attested by nothing whatever. The huprushi turns up repeatedly in Hittite ritual as a portable brazier for burning and heating offerings. Sheep and goat are priced in the Laws and eaten in quantity at the festivals. Putting the two together is our idea, not theirs — the most invented dish on this site, and better said out loud than allowed to pass as a translation.',
+      'Three things hold this dish up: a hearth attested by name, an animal attested by law, and a seasoning attested by nothing whatever. The huprushi turns up repeatedly in Hittite ritual as a portable brazier for burning and heating offerings. Sheep and goat are priced in the Laws and eaten in quantity at the festivals. Putting the two together is our idea, not theirs. It is the most invented dish on this site, and better said out loud than allowed to pass as a translation.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The huprushi appears in ritual texts as a portable hearth used for burning and heating offerings. Sheep, goat and cattle are priced in the Laws and consumed in quantity in festival texts. No text joins the two into a described dish.',
@@ -1994,7 +1994,7 @@ export const recipes = [
     summary:
       'Built from a cargo manifest and a firebox: what one pot can do on a wooden ship where an open flame is the thing that kills you.',
     intro:
-      'You have an unusually good idea of what was on a Late Bronze Age merchant ship, because one of ours went down off Uluburun with everything still aboard — ten tonnes of copper in oxhide ingots, tin, glass, ebony, ivory, and a hold that also held almonds, pine nuts, figs, olives, pomegranates, coriander and a great deal of resin. What we do not have is a galley log. So this comes from the other direction: given that cargo, given a clay firebox that is the only fire allowed on a vessel made of wood and pitch, and given a crew that has to be fed twice a day for nine days down a coast and a crossing at the end of it — what can you actually cook? One pot, one heat, and everything else assembled cold on bread.',
+      'You have an unusually good idea of what was on a Late Bronze Age merchant ship, because one of ours went down off Uluburun with everything still aboard: ten tonnes of copper in oxhide ingots, tin, glass, ebony, ivory, and a hold that also held almonds, pine nuts, figs, olives, pomegranates, coriander and a great deal of resin. What we do not have is a galley log. So this comes from the other direction: given that cargo, given a clay firebox that is the only fire allowed on a vessel made of wood and pitch, and given a crew that has to be fed twice a day for nine days down a coast with a crossing at the end of it, what can you cook? One pot, one heat, and everything else assembled cold on bread.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The Uluburun wreck carried copper and tin ingots by the tonne, Canaanite jars of terebinth resin, glass, ivory, and foodstuffs including almonds, pine nuts, figs, olives, grapes, pomegranates, coriander and sumac. Amarna letters name Alašiya as a kingdom sending copper to Egypt. No text describes cooking aboard a ship.',
@@ -2084,7 +2084,7 @@ export const recipes = [
     featured: true,
     summary: 'A recipe recovered without a single word of text, read out of forty storage jars by chemical analysis of what had soaked into the clay.',
     intro:
-      'Forty large storage jars in a room off the palace courtyard, opened by excavators in 2013 and sampled for whatever had soaked into the clay, because porous pottery holds onto its contents for a very long time. Every jar had held wine. Beyond the wine the chemistry returned honey, storax resin, terebinth resin, cedar oil, cyperus and juniper, with possible mint, myrtle and cinnamon. Several of those are named in the Mari texts from Mesopotamia and in the Egyptian medical papyri — so a Canaanite cellar, a Babylonian archive and an Egyptian pharmacopoeia independently describe the same practice. The best-evidenced drink of the Bronze Age, and not one of us wrote a word of it down.',
+      'Forty large storage jars in a room off the palace courtyard, opened by excavators in 2013 and sampled for whatever had soaked into the clay, because porous pottery holds onto its contents for a long time. Every jar had held wine. Beyond the wine the chemistry returned honey, storax resin, terebinth resin, cedar oil, cyperus and juniper, with possible mint, myrtle and cinnamon. Several of those are named in the Mari texts from Mesopotamia and in the Egyptian medical papyri, so a Canaanite cellar, a Babylonian archive and an Egyptian pharmacopoeia independently describe the same practice. The best-evidenced drink of the Bronze Age, and not one of us wrote a word of it down.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Organic residue analysis of the Room 2440 jar assemblage returned markers consistent with wine in all sampled vessels, together with honey, storax resin, terebinth resin, cedar oil, cyperus and juniper, and possible mint, myrtle and cinnamon.',
@@ -2152,7 +2152,7 @@ export const recipes = [
     grade: 'reconstructed',
     summary: 'Built from a storeroom instead of a recipe. The everyday pulse dish of a city that wrote about everything except dinner.',
     intro:
-      'Ugarit left an enormous archive — letters, treaties, ledgers, lawsuits, whole cycles of myth — and almost nothing about cooking. What reached you instead is the contents of its storerooms: lentils, chickpeas, bitter vetch, barley, olives and oil, in the quantities of a city feeding itself. This dish is assembled from that inventory and from what those materials plainly want to become. Honest food, and a reconstruction. There is no tablet behind it and we are not going to pretend there is.',
+      'Ugarit left an enormous archive of letters, treaties, ledgers, lawsuits and whole cycles of myth, and almost nothing about cooking. What reached you instead is the contents of its storerooms: lentils, chickpeas, bitter vetch, barley, olives and oil, in the quantities of a city feeding itself. This dish is assembled from that inventory and from what those materials plainly want to become. Honest food, and a reconstruction. There is no tablet behind it and we are not going to pretend there is.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Ugaritic administrative texts and excavated storerooms attest lentils, chickpeas, bitter vetch, barley, olive oil, cumin and coriander in domestic and palatial quantity. You have no culinary text from the site.',
@@ -2214,7 +2214,7 @@ export const recipes = [
     grade: 'reconstructed',
     summary: 'Assembled entirely from inventory: the vessel from one tablet, the spices from another, the method from nowhere at all.',
     intro:
-      'A scribe at Pylos took the trouble to record that one of his tripod cauldrons was of Cretan workmanship. That is the sort of thing Ta 641 preserves — cookware, itemised, sorted by condition and origin — and it is why the tablet is famous among the people who read Linear B, the syllabic script the Mycenaean palaces kept their accounts in. Other tablets count out coriander, cumin, fennel, celery, mint, sesame and cyperus by the unit; others count the goat flocks. Set them side by side and you get a dish the Mycenaeans certainly could have made, and that no evidence says they did. That gap is the entire Aegean problem.',
+      'A scribe at Pylos took the trouble to record that one of his tripod cauldrons was of Cretan workmanship. That is the sort of thing Ta 641 preserves: cookware, itemised, sorted by condition and origin. It is why the tablet is famous among the people who read Linear B, the syllabic script the Mycenaean palaces kept their accounts in. Other tablets count out coriander, cumin, fennel, celery, mint, sesame and cyperus by the unit; others count the goat flocks. Set them side by side and you get a dish the Mycenaeans certainly could have made, and that no evidence says they did. That gap is the entire Aegean problem.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Ta 641 inventories tripod cauldrons, distinguishing them by condition and by workmanship. Separate tablets record coriander, cumin, fennel, celery, mint, sesame, safflower and cyperus as counted commodities. Livestock tablets record goat flocks by shepherd and location. No tablet records a method of cooking anything.',
@@ -2284,7 +2284,7 @@ export const recipes = [
     summary:
       'Every ingredient is on a Knossos tablet or in a Cretan midden. Nothing tells you they were ever put in the same dish.',
     intro:
-      'Fennel is the surprise here, and it should not be. The Knossos scribes counted it out by the unit under the name ma-ra-tu-wo, alongside coriander, celery, cumin, mint and sesame — the Aegean kept the longest spice list of any kitchen on this site and left not one instruction for using it. The fish is not on a tablet at all. It is in the middens, in the fishing gear, and painted life-size on the wall at Akrotiri, held up by a boy in both hands. Put the two together over a fire and you get a dish the Cretans could certainly have made, on a coast where the fennel grows wild to the waterline and the fish is landed forty paces away. That it works this well is an argument. It is not evidence.',
+      'Fennel is the surprise here, and it should not be. The Knossos scribes counted it out by the unit under the name ma-ra-tu-wo, alongside coriander, celery, cumin, mint and sesame. The Aegean kept the longest spice list of any kitchen on this site and left not one instruction for using it. The fish is not on a tablet at all. It is in the middens, in the fishing gear, and painted life-size on the wall at Akrotiri, held up by a boy in both hands. Put the two together over a fire and you get a dish the Cretans could certainly have made, on a coast where the fennel grows wild to the waterline and the fish is landed forty paces away. That it works this well is an argument. It is not evidence.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Knossos tablets record coriander, fennel, celery, cumin, mint, sesame and cyperus as counted commodities, and olive oil in quantity. Amnisos appears as a-mi-ni-so, a harbour town of the Knossos administration. Fish are absent from the tablets and abundant in the archaeology: bones, hooks, net weights, and the fisherman fresco at Akrotiri. No tablet records a method of cooking anything.',
@@ -2385,7 +2385,7 @@ export const recipes = [
     grade: 'reconstructed',
     summary: 'Built from a single provisioning tablet, which is the shopping list for one occasion at one sanctuary on one day.',
     intro:
-      'Barley, flour, olives, figs, wine, honey, cyperus, and a counted tally of oxen, sheep, goats and pigs. That is PY Un 2 — everything gathered for one occasion at the sanctuary site of pa-ki-ja-ne, written down by a scribe with no reason on earth to record what the cooks did next. A menu with no dishes on it. This porridge takes the plant half of the list and does the obvious thing with it.',
+      'Barley, flour, olives, figs, wine, honey, cyperus, and a counted tally of oxen, sheep, goats and pigs. That is PY Un 2: everything gathered for one occasion at the sanctuary site of pa-ki-ja-ne, written down by a scribe with no reason on earth to record what the cooks did next. A menu with no dishes on it. This porridge takes the plant half of the list and does the obvious thing with it.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The tablet records commodities assembled for an occasion at pa-ki-ja-ne, including barley, flour, olives, figs, wine, honey and cyperus, alongside a tally of livestock.',
@@ -2449,7 +2449,7 @@ export const recipes = [
     featured: true,
     summary: 'A drink recovered from the residue in a bucket set at the feet of a girl in an oak coffin, dated by the rings of the tree they buried her in.',
     intro:
-      'They buried her in a hollowed oak, and the tree rings say it was felled in the summer of 1370 BC, which makes this one of the best-dated objects in European prehistory. At her feet stood a bucket of birch bark. The residue inside it has been analysed: malted wheat, bog myrtle, cranberries and cowberries, honey. No text, no recipe, no surviving tradition — just a bucket with the ingredients still in it, which beats all three.',
+      'They buried her in a hollowed oak, and the tree rings say it was felled in the summer of 1370 BC, which makes this one of the best-dated objects in European prehistory. At her feet stood a bucket of birch bark. The residue inside it has been analysed: malted wheat, bog myrtle, cranberries and cowberries, honey. No text, no recipe and no surviving tradition. Just a bucket with the ingredients still in it, which beats all three.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Residue and pollen analysis of the birch bark vessel from the Egtved coffin indicates a fermented drink made from malted wheat, sweet gale (bog myrtle), bog cranberry and cowberry, and honey.',
@@ -2514,7 +2514,7 @@ export const recipes = [
     grade: 'reconstructed',
     summary: 'Sorghum and dairy, the two things Kerma had that Egypt did not, reconstructed from grain deposits and pot residues.',
     intro:
-      'Arcs of bull skulls running to thousands of animals curve behind the burials at Kerma, which was overwhelmingly a cattle kingdom and a cuisine in its own right rather than a southern annexe of Egypt. It grew sorghum, an African grain Egypt did not rely on, and the dairying turns up as residue inside its pots. This flatbread puts those two staples together the way sorghum-and-dairy cultures across the region still put them together. Reconstruction — but reconstruction built on the right materials.',
+      'Arcs of bull skulls running to thousands of animals curve behind the burials at Kerma, which was overwhelmingly a cattle kingdom and a cuisine in its own right, not a southern annexe of Egypt. It grew sorghum, an African grain Egypt did not rely on, and the dairying turns up as residue inside its pots. This flatbread puts those two staples together the way sorghum-and-dairy cultures across the region still put them together. A reconstruction, but one built on the right materials.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Archaeobotanical assemblages from Kerma attest sorghum alongside barley and emmer; lipid residues in ceramics attest dairy processing; the funerary record attests cattle on an extraordinary scale.',
@@ -2586,7 +2586,7 @@ export const recipes = [
     grade: 'inferred',
     summary: 'Broomcorn millet reached central Europe from east Asia around 1500 BC, and it shows up in the bones of the people who ate it.',
     intro:
-      'Plainest food here, largest argument attached to it. Broomcorn millet is not native to Europe. It arrives in the central European record around 1500 BC, and because it photosynthesises differently from wheat and barley it leaves a distinct carbon signature in the skeletons of the people who ate it — so the moment a foreign grain became a staple is legible in human bone. The Uluburun wreck, a cargo ship that went down off southern Turkey, proves goods moved by sea across the eastern Mediterranean. Millet proves they moved overland across Eurasia. Neither of those is licence to cook the two worlds in one pot.',
+      'Plainest food here, largest argument attached to it. Broomcorn millet is not native to Europe. It arrives in the central European record around 1500 BC, and because it photosynthesises differently from wheat and barley it leaves a distinct carbon signature in the skeletons of the people who ate it, so the moment a foreign grain became a staple is legible in human bone. The Uluburun wreck, a cargo ship that went down off southern Turkey, proves goods moved by sea across the eastern Mediterranean. Millet proves they moved overland across Eurasia. Neither of those is licence to cook the two worlds in one pot.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Charred broomcorn millet appears in central European settlement assemblages from around 1500 BC. Stable carbon isotope values in human bone from the same period and region shift in a manner consistent with millet consumption. Vessel lipid residues attest dairy processing alongside.',
@@ -2650,7 +2650,7 @@ export const recipes = [
     summary:
       'Pork over fierce heat with a honey, coriander and cumin glaze, and dates going sticky in the fat alongside.',
     intro:
-      'Pig was eaten across the Late Bronze Levant — the bones are in the middens — and everything else in this pan came off the same shelf. Sear hard, glaze late, let the dates collapse in the fat. Put the honey in early and you get a black chop and a raw one.',
+      'Pig was eaten across the Late Bronze Levant, and the bones are in the middens. Everything else in this pan came off the same shelf. Sear hard, glaze late, let the dates collapse in the fat. Put the honey in early and you get a black chop and a raw one.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Pig bones are present in Late Bronze Levantine settlement deposits. Olive oil, honey, dates, coriander and cumin are attested in palace stores, administrative texts and residue work across the same region and period. No text describes this dish.',
@@ -2848,7 +2848,7 @@ export const recipes = [
     summary:
       'The bird Egyptian tomb walls show more than any other, and one of the few dishes you have recovered as food instead of as a picture of food.',
     intro:
-      'Among the provisions sealed into Tutankhamun’s tomb were boxes of prepared poultry, one of them cut in the shape of a goose and containing a goose. That is unusual: most Egyptian food reaches us as a picture of food. Geese are also everywhere on the tomb walls — netted, herded, counted, plucked, spitted — and force-feeding to fatten the liver is depicted as far back as the Old Kingdom, so these were birds raised for richness rather than caught wild. The method is the part nobody recorded, which is why this is graded a reconstruction: a long slow roast to render the fat, figs and honey in the cavity because both are attested Egyptian flavourings.',
+      'Among the provisions sealed into Tutankhamun’s tomb were boxes of prepared poultry, one of them cut in the shape of a goose and containing a goose. That is unusual: most Egyptian food reaches us as a picture of food. Geese are also everywhere on the tomb walls, netted and herded and counted and plucked and spitted, and force-feeding to fatten the liver is depicted as far back as the Old Kingdom, so these were birds raised for richness and not caught wild. The method is the part nobody recorded, which is why this is graded a reconstruction: a long slow roast to render the fat, figs and honey in the cavity because both are attested Egyptian flavourings.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Tomb painting shows geese at every stage from netting to plucking to spitting. Sealed provision boxes from royal burials contained prepared poultry, including goose. Gavage — cramming grain into the birds to fatten the liver — is depicted from the Old Kingdom.',
@@ -2916,7 +2916,7 @@ export const recipes = [
     summary:
       'Issued by the hundred jars to the men who cut the royal tombs. The most ordinary food on this site, and the best documented as something people were actually given.',
     intro:
-      'The men who cut the royal tombs could write, and what they mostly wrote down was what they were owed and when it failed to turn up. Deir el-Medina is the rarest thing in Egyptology for exactly that reason: a village that kept its own receipts. The ostraca record rations in detail, and under the Ramesside kings shelled beans went out by the hundred jars. This is not banquet food and it is not tomb-wall aspiration — every other Egyptian dish here comes from what somebody wanted to be seen eating for eternity. This one comes off a payroll.',
+      'The men who cut the royal tombs could write, and what they mostly wrote down was what they were owed and when it failed to turn up. Deir el-Medina is the rarest thing in Egyptology for exactly that reason: a village that kept its own receipts. The ostraca record rations in detail, and under the Ramesside kings shelled beans went out by the hundred jars. This is not banquet food and it is not tomb-wall aspiration. Every other Egyptian dish here comes from what somebody wanted to be seen eating for eternity. This one comes off a payroll.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Ration accounts from the workmen’s village record regular issues of grain, bread, beer, fish, vegetables and oil, with shelled beans distributed in quantity under the Ramesside kings.',
@@ -2981,7 +2981,7 @@ export const recipes = [
     summary:
       'Meat baked slowly in olive oil and honey. A named Hittite dish, and the clearest evidence that this kitchen liked sweetness against meat.',
     intro:
-      'Two kitchens a few hundred miles apart, disagreeing about sweetness. The Mesopotamian tablets sour their meat pots with beer and soured milk and never once sweeten them; the Hittite corpus names a dish that does. Happena is glossed as a casserole of meat, olive oil and honey — and three ingredients attached to a name is unusually generous by Hittite standards, where a great many foods are named and almost none described. Cooked slowly and covered, the honey goes dark and faintly resinous rather than sweet. The name and the three ingredients are attested. The method is ours.',
+      'Two kitchens a few hundred miles apart, disagreeing about sweetness. The Mesopotamian tablets sour their meat pots with beer and soured milk and never once sweeten them; the Hittite corpus names a dish that does. Happena is glossed as a casserole of meat, olive oil and honey, and three ingredients attached to a name is unusually generous by Hittite standards, where a great many foods are named and almost none described. Cooked slowly and covered, the honey goes dark and faintly resinous instead of sweet. The name and the three ingredients are attested. The method is ours.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Named in the Hittite food texts and glossed as a casserole of meat, olive oil and honey.',
@@ -3043,7 +3043,7 @@ export const recipes = [
     summary:
       'A market dish, not a festival one: the cheap end of the animal, buried in more allium than seems reasonable.',
     intro:
-      'The Hittites left tens of thousands of tablets and almost no cooking. What they did leave is a law code that fixes what an animal is worth, ration lists that say who ate how much, and festival texts naming well over a hundred breads without explaining one of them. So this is built from the shape of the evidence rather than from a recipe: a sheep is the ordinary animal, the neck and shanks are what an ordinary household could afford, alliums are the vegetable the whole Near East cooks on, and the Hittite kitchen is the one that lets sweetness near meat. Three hours later you have something that tastes far better than the argument that produced it.',
+      'The Hittites left tens of thousands of tablets and almost no cooking. What they did leave is a law code that fixes what an animal is worth, ration lists that say who ate how much, and festival texts naming well over a hundred breads without explaining one of them. So this is built from the shape of the evidence instead of from a recipe: a sheep is the ordinary animal, the neck and shanks are what an ordinary household could afford, alliums are the vegetable the whole Near East cooks on, and the Hittite kitchen is the one that lets sweetness near meat. Three hours later you have something that tastes far better than the argument that produced it.',
     sourceText: {
       kind: 'paraphrase',
       text: 'The Hittite Laws set tariffs in silver for livestock, hides, grain and hired labour, listing a sheep among the cheapest animals a household would buy. Ration texts from Ḫattuša issue grain and beer by the person. Festival texts name well over a hundred breads and pastries. No Hittite tablet explains how to cook anything.',
@@ -3133,7 +3133,7 @@ export const recipes = [
     summary:
       'Lamb liver and heart, grilled. The fastest dish on the site, and the one that best explains what sacrifice smelled like.',
     intro:
-      'The liver was read before it was eaten. Hittite and Babylonian priests both took omens from sheep livers — clay teaching models, marked up for instruction, survive from across the Near East — and then the organ went on the coals like anything else. Both things are true at once, and the second is the one people forget. Heart and liver appear together in the Hittite food texts under this name. Grilled hard and fast, both are excellent: liver wants to be pink inside and is ruined at any doneness past that, heart is lean and dense and behaves far more like a steak than most people expect.',
+      'The liver was read before it was eaten. Hittite and Babylonian priests both took omens from sheep livers, and clay teaching models marked up for instruction come from across the Near East. Then the organ went on the coals like anything else. Both things are true at once, and the second is the one people forget. Heart and liver appear together in the Hittite food texts under this name. Grilled hard and fast, both are excellent. Liver wants to be pink inside and is ruined at any doneness past that; heart is lean and dense and behaves far more like a steak than most people expect.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Named in the Hittite food texts and glossed as grilled lamb liver and heart.',
@@ -3194,7 +3194,7 @@ export const recipes = [
     summary:
       'A mash of chickpeas, which is what the word means, with raw cucumber over the top. The oldest ancestor of a familiar thing.',
     intro:
-      'You will think you know what this is. Put that down for a minute. Beruwa is the Hittite word for mashed food, and the texts name a version with chickpea and a version with cucumber; putting them in one bowl is our doing rather than theirs. There is no sesame paste in it and no citrus — no evidence for either here — and the texture stays deliberately coarse. What it is instead is a warm crushed chickpea dish with oil worked through it and cold cucumber over the top, and that cold-against-warm is the whole architecture of the dish.',
+      'You will think you know what this is. Put that down for a minute. Beruwa is the Hittite word for mashed food, and the texts name a version with chickpea and a version with cucumber; putting them in one bowl is our doing and not theirs. There is no sesame paste in it and no citrus, there being no evidence for either here, and the texture stays deliberately coarse. What it is instead is a warm crushed chickpea dish with oil worked through it and cold cucumber over the top, and that cold-against-warm is the whole architecture of the dish.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Beruwa is the term for mashed food; the texts record beruwa with chickpea and beruwa with cucumber among the named varieties.',
@@ -3258,7 +3258,7 @@ export const recipes = [
     summary:
       'Grilled meat on skewers, cooked on a purpose-built portable grill. The best-evidenced cooking method in the Aegean, because the equipment survives.',
     intro:
-      'Most Bronze Age cooking has to be inferred from ingredients. This one is inferred from hardware, which is better. At Akrotiri, excavators found ceramic firedogs with paired notches cut along the top to seat skewers and a line of holes through the base to feed the coals air. From Mycenae, Gla and Pylos come rectangular trays that sat beneath the skewers to catch the fat — and experimental work found they only performed properly with the coals inside them, which makes the whole assembly portable. You carried the fire with you. What went on the skewers, none of us wrote down.',
+      'Most Bronze Age cooking has to be inferred from ingredients. This one is inferred from hardware, which is better. At Akrotiri, excavators found ceramic firedogs with paired notches cut along the top to seat skewers and a line of holes through the base to feed the coals air. From Mycenae, Gla and Pylos come rectangular trays that sat beneath the skewers to catch the fat, and experimental work found they only performed properly with the coals inside them, which makes the whole assembly portable. You carried the fire with you. What went on the skewers, none of us wrote down.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Ceramic firedogs from Akrotiri carry paired indentations for resting skewers and perforations to supply the coals with air. Rectangular grill trays from Mycenae, Gla and Pylos sat beneath the skewers. Replication showed the tray performed as a portable brazier, holding the coals rather than sitting in a fire.',
@@ -3330,7 +3330,7 @@ export const recipes = [
     summary:
       'Barley meal, grated goat cheese and wine, stirred together and drunk. Restorative, strange, and the one recipe here that comes from a poem.',
     intro:
-      'In the eleventh book of the Iliad a wounded man is handed a drink: Pramnian wine, goat cheese grated into it with a bronze rasp, white barley meal scattered over the top. It is offered as a restorative, and the same mixture surfaces later as the ritual drink of the Eleusinian Mysteries. Homer is the weakest evidence on this site and it is worth being blunt about why — the poems were fixed in writing centuries after the world they describe, and epic preserves objects and customs unevenly. What keeps it here is that every component is independently named on the Linear B tablets, the palace accounts kept four hundred years earlier, so the ingredients are period-correct even where the drink as described is not securely so.',
+      'In the eleventh book of the Iliad a wounded man is handed a drink: Pramnian wine, goat cheese grated into it with a bronze rasp, white barley meal scattered over the top. It is offered as a restorative, and the same mixture surfaces later as the ritual drink of the Eleusinian Mysteries. Homer is the weakest evidence on this site, and the reason is plain: the poems were fixed in writing centuries after the world they describe, and epic preserves objects and customs unevenly. What keeps it here is that every component is independently named on the Linear B tablets, the palace accounts kept four hundred years earlier, so the ingredients are period-correct even where the drink as described is not securely so.',
     sourceText: {
       kind: 'quotation',
       text: 'Therein she first mixed Pramnian wine, and grated over it goat’s-milk cheese with a bronze grater, and sprinkled thereon white barley meal.',
@@ -3396,7 +3396,7 @@ export const recipes = [
     summary:
       'The roast at the centre of a Canaanite drinking society. You know the social shape of that feast in detail and the cooking of it not at all.',
     intro:
-      'Membership roll, patron deity, leased houses and vineyards, a room kept for the banquets: the marzeaḥ was a drinking association with property. The Ugaritic texts lay it out as an institution — who belonged, what it owned, what it cost — and never once as a menu. The ground fills in a little. Temple precincts at Hazor and other Canaanite sites give up the burnt bones of cattle and sheep, and the pottery from them leans heavily toward bowls, chalices and goblets. So: the animal, the setting, the drinking vessels, the occasion. Nothing whatever about the seasoning. What follows is a Levantine roast built from that pantry and staged for the evening the texts describe.',
+      'Membership roll, patron deity, leased houses and vineyards, a room kept for the banquets: the marzeaḥ was a drinking association with property. The Ugaritic texts lay it out as an institution, recording who belonged and what it owned and what it cost, and never once as a menu. The ground fills in a little. Temple precincts at Hazor and other Canaanite sites give up the burnt bones of cattle and sheep, and the pottery from them leans heavily toward bowls, chalices and goblets. So: the animal, the setting, the drinking vessels, the occasion. Nothing whatever about the seasoning. What follows is a Levantine roast built from that pantry and staged for the evening the texts describe.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Ugaritic texts describe the marzeaḥ as a formal association with membership, property and a patron deity, meeting to feast and drink. Faunal remains from Canaanite temple precincts show slaughtered cattle and sheep, and the pottery is heavily weighted toward bowls, chalices and goblets.',
