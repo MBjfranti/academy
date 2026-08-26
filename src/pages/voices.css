@@ -1,0 +1,191 @@
+/* The voice test. Furniture only.
+   The specimens themselves are styled by reports.css — deliberately, because the question
+   the page asks is how each voice reads in the setting it would actually ship in. Nothing
+   here touches .prose. */
+
+.voices {
+  /* Article measure, so a specimen line-breaks exactly as it would in a report. */
+  --measure: 42rem;
+  padding-bottom: 5rem;
+}
+
+.voices__head {
+  max-width: var(--measure);
+  margin: 0 auto 1rem;
+}
+
+.voices__kicker {
+  font-family: var(--ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin: 0 0 0.6rem;
+}
+
+.voices__title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+
+.voices__intro {
+  font-family: var(--ui);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.voices__intro p { margin: 0 0 0.8em; max-width: none; }
+.voices__intro ul { margin: 0 0 0.9em; padding-left: 1.1rem; }
+.voices__intro li { margin-bottom: 0.25em; }
+.voices__intro strong { color: var(--ink); }
+
+/* ---------------------------------------------------------------- the bar */
+.voices__bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: var(--measure);
+  margin: 1.5rem auto 0;
+  padding: 0.5rem 0;
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.voices__bar nav {
+  display: flex;
+  gap: 0.2rem;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.voices__bar nav a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 4px;
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.voices__bar nav a:hover { background: var(--paper-2); color: var(--ink); }
+
+.voices__navletter {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--copper);
+}
+
+.voices__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  cursor: pointer;
+  user-select: none;
+}
+.voices__toggle input {
+  accent-color: var(--copper);
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------------- specimens */
+.voices__spec {
+  padding-top: 3rem;
+}
+
+.voices__spechead {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  max-width: var(--measure);
+  margin: 0 auto 1.6rem;
+}
+
+.voices__letter {
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: var(--copper);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  transform: translateY(-0.1em);
+}
+
+.voices__name {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------- the note */
+.voices__note {
+  max-width: var(--measure);
+  margin: 1.8rem auto 0;
+  padding: 1rem 1.15rem;
+  background: var(--paper-2);
+  border-left: 3px solid var(--copper);
+  font-family: var(--ui);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.voices__note p { margin: 0 0 0.65em; max-width: none; }
+.voices__note p:last-child { margin-bottom: 0; }
+.voices__note strong { color: var(--ink); }
+
+.voices__notelabel {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+/* Blind read: the prose has to win on its own before the pitch for it is read. */
+.voices--blind .voices__note,
+.voices--blind .voices__name,
+.voices--blind .voices__navname { display: none; }
+
+/* ---------------------------------------------------------------- outro */
+.voices__outro {
+  max-width: var(--measure);
+  margin: 3.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--ui);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.voices__outro h2 {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  margin: 0 0 0.9rem;
+  color: var(--ink);
+}
+.voices__outro p { margin: 0 0 0.8em; max-width: none; }
+.voices__outro ul { margin: 0 0 1em; padding-left: 1.1rem; }
+.voices__outro li { margin-bottom: 0.4em; }
+.voices__outro strong { color: var(--ink); }
