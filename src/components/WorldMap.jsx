@@ -27,7 +27,14 @@
    hold nine facts while scrolling away from the picture. It is short now and it is about
    the names rather than the lines, which is the argument of the article anyway.
 
-   The labelled variant is kept in images/_custom/_maps if this call is ever revisited. */
+   THE FILE IN USE is derived from images/_custom/_maps/ChatGPT Image Aug 25, 2026,
+   04_14_39 PM.png, chosen over an earlier tablet that carried no writing at all. The
+   plain one was legible as an object but said nothing about literacy, and this piece is
+   partly about names — four names for one island, in four scripts. A chart with marks
+   beside its features belongs to a man who writes for a living. Regenerate at 880px wide
+   if it is ever replaced.
+
+   The Latin-labelled variant is also kept in _maps if this call is ever revisited. */
 export default function WorldMap() {
   return (
     <figure className="worldmap">
