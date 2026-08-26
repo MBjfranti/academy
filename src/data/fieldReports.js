@@ -183,7 +183,7 @@ export const fieldReports = [
       { to: '/reports/never-out-of-sight-of-land', label: 'The crossing that got me here' },
     ],
     standfirst:
-      'Alašiya makes copper for the whole of our world and it looks and smells like it. The woman who fed me in the harbour had views about what I was writing down.',
+      'We made the one open crossing on the whole run and did not sink, so I arrived on Alašiya prepared to admire a slag heap. The woman who fed me that night had views about what I was writing down.',
     hero: {
       name: 'tavern-spread',
       alt: 'A tavern table at night loaded with bowls of chickpeas, olives, white cheese, red onions, garlic, nuts and dates, with drinkers behind and a harbour full of lit ships beyond.',
@@ -220,8 +220,8 @@ export const fieldReports = [
       },
     ],
     body: [
-      'The crossing took a day and a half. You lose the land behind you in the middle of the morning and nothing appears in front of you until the following afternoon, and between those two moments there is a great deal of water and nothing to look at. Nobody sang. Two of the crew slept the whole way, which I took at the time for indifference and now think was a decision. I ate cold chickpeas on cold bread and thought about how much of what I have been calling seafaring is walking beside a very wet road.',
-      'Alašiya is not what I had pictured and probably not what you have. The smoke shows from well out at sea, standing in a line over the low hills inland. What you meet on landing is not a market but slag: heaps of it, glassy black and cold, tipped out of a furnace and never moved again. This island makes copper for the whole of our world, and it looks and smells like what it is.',
+      'We did not sink. For a day and a half that was the only question anybody aboard was interested in, and not one person said so out loud. You lose the land behind you in the middle of the morning and nothing appears in front of you until the following afternoon. Nobody sang. Two of the crew slept the whole way, which I took at the time for indifference and now understand was a decision. I ate cold chickpeas on cold bread and made a short private list of the people I would want told.',
+      'Then Alašiya, and I have been noticing things ever since, considerably more of them than are worth noticing. The smoke shows from well out at sea, standing in a line over the low hills inland. What you meet on landing is not a market but slag: heaps of it, glassy black and cold, tipped out of a furnace and never moved again. I thought it was beautiful. I am aware that this is the kind of thing a man thinks on the afternoon he does not drown. This island makes copper for the whole of our world, and it looks and smells like what it is, and I walked past those heaps twice more before dark.',
       'The tavern stands on the harbour and does not appear to close. I got there late enough that the ships were lit and the drinkers had reached the stage of the evening where they explain things to you. The woman who runs it is called Kuparra, or near enough. I wrote the name down and she read it over my shoulder and laughed at me for some time.',
       '“That is not it,” she said. I asked what it was. “Not that.” She took the cup out of my hand, refilled it, and went back to work. We were both speaking Akkadian, which belongs to neither of us. Nearly all business in this sea is done in a language nobody at the table grew up in, and the effect is to make everyone shorter with each other and, as far as I can tell, more honest. You lose the words for softening a thing. Nobody on this island can read the writing of this island — a few hundred inscriptions, no key, and no agreement about what language sits underneath — so it is unlikely that anyone will ever correct me, including her.',
       'She spent the evening throwing stones at geese.',

@@ -427,3 +427,47 @@ that two competent adults are doing business in a language neither owns, and man
 Direct speech in typographic double quotes, inside the single-quoted data strings. Keep
 attribution plain — *she said*, and usually nothing else. No adverbs on the tag. Let the
 line carry it.
+
+## 18. The sliders move
+
+§14 sets a baseline, not a setting. Eleven reports at an identical distance would be its
+own monotony — the restrained version of the nine-paragraph template.
+
+**Yadinu is a spirit, and that is what licenses the range.** He is narrating from outside
+his own life, so he can stand close to a moment or a long way off it, and where he stands
+should be decided by what actually happened to him that week. Three sliders, set per piece:
+
+- **Attachment** — how much he cares about these particular people, this time.
+- **Detachment** — how far after the fact he is standing. Inside the moment, or looking
+  back at it from centuries away.
+- **Humour** — always seasoning (§17), but the dose varies, and so does whether it is warm
+  or defensive.
+
+The point is that these are consequences, not decoration. He is giddy on Alašiya because he
+spent a day and a half expecting to drown. He is short-tempered on the Euphrates road
+because it is day eleven and his feet hurt. If the register cannot be traced to something
+that happened, it is a costume.
+
+### The register of each report
+
+| Report | Setting |
+| --- | --- |
+| Hello, I am Yadinu | Courteous, a little formal. He is introducing himself to strangers and does not yet know how much to say. |
+| The world, as far as I have eaten it | Expansive, enthusiastic, showing off. He likes his world and wants you to see the size of it. |
+| Two songs, and the fish is done | Charmed and easy. A good day with somebody who knows what she is doing. Low stakes, warm humour. |
+| The law says a sheep is one shekel | Sharp, argumentative, enjoying the fight. Zuwa gives as good as he gets and Yadinu is having fun. |
+| We never lost sight of land | Steady and workmanlike, with unease rising toward the crossing that nobody will mention. |
+| She never hits the geese | **Giddy.** He did not drown. He notices far more than is worth noticing and is prepared to find a slag heap beautiful — then Kuparra takes him down a peg and he lets her. |
+| Egypt, without the temples | **Tender, and slower than anything else on the site.** He is a little in love with Merit and is not going to say so, which the prose should show by lingering where it has no business lingering. |
+| A meal for someone who does not eat | Cool and sceptical on arrival, and moved by the end despite having decided in advance not to be. |
+| The road is made of donkeys | **Worn down and irritable.** Day eleven, and the arithmetic of fodder has stopped being interesting. Humour goes dry and slightly mean, at his own expense and the donkeys'. |
+| They took the people too | Shaken. Fast and clipped while it is happening, flat afterwards, and then oddly calm. Almost no humour, and what there is arrives late. |
+| The wall and the canal | Reflective, tired, safe. The furthest-back of any of them; a man with time to think, thinking. |
+
+### Two rules
+
+**Earn the swing.** A register that does not follow from an event is a costume. If he is
+giddy, something happened. If he is curt, something is wrong.
+
+**Adjacent pieces should not match.** Two consecutive reports at the same distance flatten
+each other. The robbery is followed by Terqa precisely because shaken is followed by safe.
