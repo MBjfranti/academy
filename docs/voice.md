@@ -176,6 +176,36 @@ The first will return legitimate coordination too — read each hit and ask whet
 second clause **advances** the argument or merely **comments on** the first. Only the
 second kind is the tic.
 
+## 11a. Ration, do not sterilise
+
+**Read this before acting on §7, §8 or §12.** The first pass against those sections cut too
+much, and it is worth recording what it cost.
+
+Yadinu is a retired palace clerk who is dry about himself, scrupulous to the point of
+fussiness, and aware that he is being both. Those verbal habits are how a reader knows that.
+Remove every instance and what is left is accurate, well-formed prose with nobody inside it
+— which is a worse outcome than the tic, because the tic was at least somebody.
+
+The test, applied to every candidate:
+
+> **Does the phrase reveal YADINU, or does it reveal the MACHINERY of the essay?**
+
+| Phrase | Verdict |
+| --- | --- |
+| "The honest note." | Machinery. A section header wearing a sentence. Cut. |
+| "Here is what I found out over the following four days…" | Machinery. A signpost. Cut. |
+| "I am aware of how that sounds, and I am going to leave it where it is." | **Yadinu.** He knows he sounds sentimental and will not take it back. Keep. |
+| "…and I want that on the record before I start complaining about it." | **Yadinu.** Being fair to a thing before criticising it. Keep. |
+| "I sat down, and I am not embarrassed about it." | **Yadinu.** Declining to apologise for being moved. Keep. |
+
+It was never that these constructions exist. It is that they appeared in every paragraph of
+every piece, which turns a habit into a fingerprint. **Distribution matters more than count:
+three in one report and none in the next four reads as a person; seven in every report reads
+as a generator.**
+
+When in doubt, keep the one that shows him being a person and cut the one that shows him
+being a narrator.
+
 ## 12. "…and nobody thinks to X"
 
 State something; tag it with a claim that nobody notices it, records it or asks about it.
