@@ -913,6 +913,40 @@
   object-position: center 15%;
 }
 /* Where to go next: the dish this came out of, and any post worth reading beside it. */
+/* WHAT IS ATTESTED AND WHAT IS INVENTED.
+   Set as furniture at the end of the article rather than as a paragraph inside it. It has
+   to read as a different KIND of text from the essay above — the piece speaking about
+   itself rather than about dinner — so it takes the UI face and a tint, not the reading
+   face. Kept to --measure so it lines up with the column it follows instead of announcing
+   itself as a banner. */
+.standing {
+  max-width: var(--measure);
+  margin: 2rem auto 0;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--copper);
+  background: var(--paper-2);
+  font-family: var(--ui);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.standing p {
+  margin: 0 0 0.7em;
+  max-width: none;
+}
+
+.standing p:last-child {
+  margin-bottom: 0;
+}
+
+.standing__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 0.5em;
+}
+
 .postbody__next {
   display: flex;
   flex-direction: column;

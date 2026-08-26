@@ -496,7 +496,7 @@ export const recipes = [
       },
       {
         term: 'whichfish',
-        text: 'Salt cod is the easiest thing to buy that behaves the right way, and every fishmonger and most Portuguese, Spanish and Caribbean grocers have it. It is not a river fish and it is not from anywhere near the Euphrates, and I would rather say so than pretend. What it shares with the original is the thing that matters: it was preserved hard so it could travel, and it needs a long patient soak to come back. Dried Nile perch does the same job if you can find it. Smoked mackerel does not — it is already cooked, already oily, and it will fall to pieces.',
+        text: 'Salt cod is the easiest thing to buy that behaves the right way, and every fishmonger and most Portuguese, Spanish and Caribbean grocers have it. It is not a river fish and it is not from anywhere near the Euphrates. What it shares with the original is the thing that matters: it was preserved hard so it could travel, and it needs a long patient soak to come back. Dried Nile perch does the same job if you can find it. Smoked mackerel does not — it is already cooked, already oily, and it will fall to pieces.',
       },
       {
         term: 'Why onions this long',
@@ -1955,11 +1955,11 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'The ingredients are attested and the pan is inference — good inference, because the archaeology of this island is overwhelmingly metallurgical and a flat sheet of copper is a cheap object in a place that makes copper. What nobody wrote down is what a Cypriot cook did with one. This is a technique reconstructed from a material, which is a different kind of guess from the usual and I would rather say which kind it is.',
+        text: 'The ingredients are attested and the pan is inference — good inference, because the archaeology of this island is overwhelmingly metallurgical and a flat sheet of copper is a cheap object in a place that makes copper. What nobody wrote down is what a Cypriot cook did with one. This is a technique reconstructed from a material, which is a different kind of guess from the usual one.',
       },
       {
         term: 'This is not halloumi',
-        text: 'This is not halloumi, and I want to be firm about that, because the temptation is enormous. Halloumi as a named, brined, mint-layered cheese is documented from the medieval period, not the Bronze Age, and claiming otherwise would be exactly the sort of thing this site exists to avoid. What IS attested here is sheep and goat dairying, fresh curd cheese, and a metal surface hot enough to brown it. Any firm fresh cheese that holds its shape in a hot pan does the same job — halloumi is simply the easiest one to buy, and there is no harm in using it as long as nobody claims it is three thousand years old.',
+        text: 'This is not halloumi, whatever the temptation to say that it is. Halloumi as a named, brined, mint-layered cheese is documented from the medieval period, not the Bronze Age, and claiming otherwise would be exactly the sort of thing this site exists to avoid. What IS attested here is sheep and goat dairying, fresh curd cheese, and a metal surface hot enough to brown it. Any firm fresh cheese that holds its shape in a hot pan does the same job — halloumi is simply the easiest one to buy, and there is no harm in using it as long as nobody claims it is three thousand years old.',
       },
       {
         term: 'Why metal changes the dish',

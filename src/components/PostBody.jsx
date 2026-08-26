@@ -140,6 +140,24 @@ export default function PostBody({ post }) {
         })}
       </div>
 
+      {/* WHAT IS ATTESTED AND WHAT IS INVENTED, pulled out of the body and set at the end.
+          It used to run as an ordinary paragraph, which cost the piece twice: the essay
+          had to stop and turn round to deliver it, and it needed a spoken hinge to get
+          there — "The honest note." opened that paragraph verbatim in three separate
+          reports, which is a template rather than a voice.
+
+          As furniture it needs no hinge at all. The box IS the announcement, the body is
+          free to end on its own terms, and a reader who wants to know how much of this is
+          guesswork can go straight to one place and find it in every piece. */}
+      {post.standing && (
+        <aside className="standing" aria-label="What is attested and what is invented">
+          <p className="standing__label">Attested, and invented</p>
+          {(Array.isArray(post.standing) ? post.standing : [post.standing]).map((p) => (
+            <p key={p}>{p}</p>
+          ))}
+        </aside>
+      )}
+
       {(post.recipe || post.related?.length > 0) && (
         <nav className="postbody__next" aria-label="Read next">
           {post.recipe && (
