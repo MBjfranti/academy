@@ -9,6 +9,7 @@
     "lint": "oxlint",
     "prose": "node scripts/check_prose.mjs",
     "frames": "node scripts/derive_frames.mjs",
+    "prompts": "python scripts/export_prompts.py",
     "preview": "vite preview"
   },
   "dependencies": {

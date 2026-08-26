@@ -17,7 +17,7 @@ INTO THE GAP where the missing picture would be, with a copy button. The loop cl
     npm run prompts                    frames    -> public/prompts.json
     (browse the article, copy the prompt out of the gap, generate it wherever)
     python scripts/fetch_frame.py <slug> <file>  -> images/_raw/generated/
-    python scripts/process_writers.py --write    -> public/img/writers/<id>/
+    python scripts/process_writers.py --write    -> public/img/reports/<article>/
 
 NOT SHIPPED TO PRODUCTION. It lands in public/ rather than src/ precisely so that it is
 fetched at runtime in dev and never bundled. It is roughly 150 KB of prompt text and no
@@ -45,11 +45,8 @@ def main() -> None:
     out = {}
     for s in rows:
         writer = s["writer"]
-        name = s["out"].split("/")[-1]
-        # Keyed the way the browser knows a picture: writer + slot name. The pipeline slug
-        # is a different string (`henut-oven`), and asking the front end to reconstruct it
-        # would be one more place for the two halves to drift apart.
-        out[f"{writer}/{name}"] = {
+        # Keyed by the browser path beneath /img. The article slug owns the scene.
+        out[s["out"].removeprefix("reports/")] = {
             "slug": s["slug"],
             "writer": writer,
             "who": s.get("who"),

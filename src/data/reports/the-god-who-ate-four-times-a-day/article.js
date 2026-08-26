@@ -1,0 +1,45 @@
+const article = {
+  slug: 'the-god-who-ate-four-times-a-day',
+  kind: 'report',
+  author: 'balatu',
+  region: 'mesopotamia',
+  place: 'Babylon, in the Esagila temple precinct',
+  date: '2026-08-20',
+  access: 'open',
+  recipe: 'pigeon-in-broth-amursanu',
+  title: 'The God Who Ate Four Times a Day',
+  standfirst:
+    'Marduk received breakfast, a second breakfast, supper, and a final tray at dusk. Divinity required an excellent kitchen and a very patient accountant.',
+  body: [
+    'Marduk ate four times each day and never praised the cook.',
+    'I do not hold this against him. Praise from a statue would have caused administrative trouble. The temple would need a scribe to record it, witnesses to confirm it, and a learned man to decide whether the voice was Marduk or a mouse behind the cedar door.',
+    'Silence kept the schedule clean. At dawn we sent bread, beer, dates, milk, fruit, and meat into the god’s chamber. A second meal followed. Evening required two more services. Each tray arrived in order, with vessels intact and portions worthy of the lord of Babylon.',
+    { h: 'An old appetite' },
+    'The ritual was older than the cook performing it. That matters to me. New kings rebuild walls and stamp their names into bricks. In the kitchen, an old list may carry more force than a living king.',
+    'I keep fragments of those lists. One names cuts of meat in a hand no apprentice now uses. Another records birds for a festival whose procession route vanished beneath later houses. The clay smells of dust. Its quantities still make a steward nervous.',
+    'The god’s meals expressed rule. Marduk sat at the centre because Babylon sat at the centre. Other gods visited, received portions, and took their assigned places. A table can arrange the cosmos without moving a star.',
+    'It can also expose a bad pigeon.',
+    { h: 'The bird in the broken text' },
+    'Our finest surviving instructions for birds come from an older tablet, damaged where curiosity bites hardest. It directs the cook to prepare pigeons, make broth and dough, line a vessel, arrange the birds, and cover the whole. Several steps have fallen into silence.',
+    'I read the fragments as a covered pot. Dough seals the rim and traps the steam. The pigeons cook in seasoned broth while the crust takes smoke and heat. When the seal breaks, the room receives the bird before the diners do.',
+    'This is interpretation. Another cook may shape the dough differently or treat it as bread served beneath the birds. The tablet permits an argument because the missing clay cannot object.',
+    'I have tried both. Dough under the broth becomes a sodden mat. Dough around the rim becomes a lid worth fighting over. Antiquity offers many mysteries. Some yield to philology. Others yield when the kitchen boys steal the crust.',
+    { h: 'After the god' },
+    'Marduk’s food did not vanish. Temple offerings moved onward to priests and staff according to rank and office. Divinity consumed honour. People consumed calories. The distinction kept both temple and city alive.',
+    'The accounts therefore mattered as much as the incense. A missing bird was not a theological puzzle. It was a missing bird, and the cook standing nearest the basket had better produce either feathers or a persuasive enemy.',
+    'At the last service, I watched the doors close on the final tray. Outside, apprentices waited for their shares and pretended they had come to sweep. The god kept his silence. The old tablet kept half its method. We ate the crust while it was hot.',
+  ],
+  pulls: [{ at: 6, text: 'A table can arrange the cosmos without moving a star.' }],
+  standing: [
+    'First-millennium Babylonian ritual and administrative texts attest multiple daily meals for major gods and list their provisions.',
+    'The detailed pigeon preparation derives from the damaged Old Babylonian culinary tablet YBC 8958, many centuries earlier than the setting of Balāṭu’s temple service.',
+    'Balāṭu’s fragment collection, experiments, and kitchen staff are invented. The dough-sealed pot is one declared reconstruction of an incomplete method.',
+  ],
+  glossary: [
+    { term: 'Marduk', gloss: 'The city god of Babylon and chief god of its imperial theology.' },
+    { term: 'Esagila', gloss: 'Marduk’s principal temple in Babylon.' },
+  ],
+  related: [{ to: '/reports/the-name-of-the-broth', label: 'Balāṭu, on a word the kitchen lost' }],
+}
+
+export default article

@@ -39,7 +39,7 @@ function panLimit(frameW, frameH, natW, natH, zoom) {
 
 const clamp = (v, lim) => Math.max(-lim, Math.min(lim, v))
 
-export default function CropTool({ figure, onClose }) {
+export default function CropTool({ figure, postSlug, onClose }) {
   const [crop, setCrop] = useState(figure.crop ?? '4 / 5')
   const [zoom, setZoom] = useState(figure.zoom ?? 1)
   const [pan, setPan] = useState(figure.pan ?? [0, 0])
@@ -99,7 +99,7 @@ export default function CropTool({ figure, onClose }) {
       const res = await fetch('/__crop', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: figure.name, ...values }),
+        body: JSON.stringify({ postSlug, name: figure.name, ...values }),
       })
       setSaved(res.ok ? 'saved' : `failed: ${await res.text()}`)
     } catch (err) {
@@ -128,7 +128,7 @@ export default function CropTool({ figure, onClose }) {
       >
         <img
           ref={imgRef}
-          src={`/img/writers/${figure.writer ?? 'yadinu'}/${figure.name}.webp`}
+          src={`/img/reports/${postSlug}/${figure.name}.webp`}
           alt=""
           draggable="false"
           style={{ transform: `translate(${pan[0]}%, ${pan[1]}%) scale(${zoom})` }}

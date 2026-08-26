@@ -460,42 +460,182 @@ ANNIWIYA_WORLD = (
 # item on these lists is here because a real frame got it wrong at least once.
 
 YADINU_SIGNATURE = (
-    "THE ATTACHED PHOTOGRAPH IS THIS PERSON. Reproduce him exactly: the same face, the same "
-    "lean build, the same dark tousled hair and short beard, the same clothes. He is "
-    "thirty-one, quick and restless, and his resting expression is a wide easy smile. "
-    "DETAILS THAT MUST NOT DRIFT: the pale loose-woven shawl over the LEFT shoulder with its "
-    "narrow faded indigo-and-rust stripe; the cream linen tunic; the narrow satchel strap "
-    "crossing his chest from the RIGHT shoulder; no jewellery of any kind."
+    "The attached photograph IS this man. Same face, same build, same clothes. Yadinu, 31, "
+    "lean, dark tousled hair and a short beard, quick and smiling. "
+    "MUST NOT DRIFT: the pale shawl over his LEFT shoulder with its faded indigo-and-rust "
+    "stripe; the cream linen tunic; the satchel strap across his chest; no jewellery."
 )
 
 HENUT_SIGNATURE = (
-    "THE ATTACHED PHOTOGRAPH IS THIS PERSON. Reproduce her exactly: the same face, the same "
-    "strong upright build, the same clothes. She is forty-six, handsome and formidable. "
-    "DETAILS THAT MUST NOT DRIFT: HER HEAD IS SHAVED and bare in every frame, with NO hair "
-    "anywhere and NO wig, and any linen cloth sits around her neck or shoulders and NEVER "
-    "covers the crown; her forearms are white with flour to the elbow; the blue-green faience "
-    "bead string at her throat; the copper bangle on her right wrist. "
-    "HER DEMEANOUR IS WARM AND FUNNY, on the edge of laughing. Never solemn, never grim."
+    "The attached photograph IS this woman. Same face, same strong upright build, same "
+    "clothes. Henut, 46, handsome and formidable. "
+    "MUST NOT DRIFT: her head is SHAVED and bare, no hair anywhere, no wig, and any linen "
+    "cloth sits on her neck or shoulders and never covers the crown; forearms floured to the "
+    "elbow; faience beads at the throat; copper bangle on the right wrist. "
+    "She is warm and funny, close to laughing. Never solemn."
 )
 
 BALATU_SIGNATURE = (
-    "THE ATTACHED PHOTOGRAPH IS THIS PERSON. Reproduce him exactly: the same face, the same "
-    "heavy build, the same beard, the same clothes. He is fifty-four. "
-    "DETAILS THAT MUST NOT DRIFT: the beard is full, combed and squared, NEVER sculpted into "
-    "tiered ringlets; the broad dark leather apron; the short bronze knife on a cord at his "
-    "chest; the dull madder-red fringed wool wrap over the left shoulder."
+    "The attached photograph IS this man. Same face, same heavy build, same clothes. "
+    "Balāṭu, 54. "
+    "MUST NOT DRIFT: the beard is full, combed and squared, NEVER in tiered ringlets; the "
+    "broad dark leather apron; the bronze knife on a cord at his chest; the madder-red "
+    "fringed wrap over his left shoulder."
 )
 
 ANNIWIYA_SIGNATURE = (
-    "THE ATTACHED PHOTOGRAPH IS THIS PERSON. Reproduce her exactly: the same face, the same "
-    "colouring, the same clothes. She is thirty-two and strikingly beautiful, and that must "
-    "survive into this frame. "
-    "DETAILS THAT MUST NOT DRIFT: she is XANTHE, with tawny gold sun-lightened hair in one "
-    "heavy plait over the shoulder and a fair, warm, freckled complexion, NOT olive and NOT "
-    "dark-haired; pale green-hazel eyes; the deep indigo scarf thrown back over the LEFT "
-    "shoulder; the saffron-gold gown with woven madder-and-blue bands; and at her throat the "
-    "string of white cockle shells with ONE cobalt-blue glass bead, her only necklace. "
-    "She is a king's daughter and stands like one: chin level, shoulders back."
+    "The attached photograph IS this woman. Same face, same colouring, same clothes. "
+    "Anniwiya, 32, and strikingly beautiful. "
+    "MUST NOT DRIFT: tawny gold sun-lightened hair in one plait, fair freckled complexion, "
+    "pale green-hazel eyes, NOT dark-haired and NOT olive; the deep indigo scarf over her "
+    "LEFT shoulder; the saffron-gold gown with woven madder-and-blue bands; the white cockle "
+    "shell string with ONE blue glass bead, her only necklace. "
+    "She was born a king's daughter and stands like one."
+)
+
+# =========================================================================================
+# THE SHORT BRIEF — what a referenced frame actually gets
+# =========================================================================================
+#
+# THE LONG PROMPTS WERE THE PROBLEM. Five thousand characters of rules produced averaged
+# mush: every frame the same amber wash, every subject centred and posed, the whole set
+# reading as costume drama rather than photography. Each constraint added to fight that made
+# it worse, because a generator given fifty competing absolutes satisfies all of them
+# weakly.
+#
+# A reference photograph removes the need for most of them. It already carries the face, the
+# build, the clothes, the palette and half the period detail, and it carries them better
+# than prose can. So a referenced frame now gets three things and nothing else: WHO (short),
+# WHAT IS HAPPENING (the scene, which is the actual content), and a one-line tail for the
+# handful of facts a photograph cannot assert.
+
+REF_TAIL = (
+    "A real photograph, not an illustration, painting or render. Late Bronze Age, about "
+    "1226 BC: bronze rather than iron, hand-woven wool and linen, nothing modern in frame. "
+    "No text or lettering anywhere in the image."
+)
+
+# =========================================================================================
+# THE PORTRAIT BRIEFS — for the four face frames, which have nothing to reference
+# =========================================================================================
+#
+# A face frame is the anchor the rest of a writer's set is generated against, so it is the
+# one frame that must carry the whole person in words. It still gets a SHORT brief, because
+# the long ones did not work: a thousand words of description averaged out into a generic
+# costume-drama portrait, and the specific details drowned.
+#
+# About a hundred words each. Age, build, colouring, the one garment that makes the
+# silhouette, the two or three identifiers that must never drift, and the demeanour.
+
+YADINU_PORTRAIT = (
+    "Yadinu of Ugarit, a Levantine man of 31. Warm olive-brown skin, lean and wiry, the "
+    "build of a man who walks all day. Dark brown, nearly black hair, thick and loosely "
+    "curled, collar length, falling forward over the brow. A short dark beard close along "
+    "the jaw. Warm brown eyes and a wide easy smile that is his resting expression. Quick "
+    "and restless. "
+    "A pale loose-woven shawl over his LEFT shoulder with a narrow faded indigo-and-rust "
+    "stripe, over a cream linen tunic frayed at the hem. A wide dark belt with a small "
+    "pouch, a satchel strap crossing his chest from the right shoulder, leather sandals. "
+    "No jewellery at all."
+)
+
+HENUT_PORTRAIT = (
+    "Henut of Set Maat, an Egyptian woman of 46. Deep reddish-brown skin, strong and "
+    "upright, with real muscle in the arms and back. HER HEAD IS SHAVED, bare and close to "
+    "the scalp: no hair anywhere, no wig. Large dark almond eyes ringed with black kohl "
+    "extended at the outer corner, high brows, a wide well-cut mouth. "
+    "She is warm and funny and close to laughing. Never solemn, never grim. "
+    "A plain undyed linen shift knotted at one shoulder with a linen apron over it. An "
+    "undyed linen cloth with narrow blue and red woven stripes sits on her shoulders and "
+    "NEVER covers her head. Her forearms are floured white to the elbow. Blue-green faience "
+    "beads at the throat, a copper bangle on the right wrist."
+)
+
+BALATU_PORTRAIT = (
+    "Balāṭu of Babylon, a Mesopotamian man of 54. Olive skin weathered brown, short and "
+    "heavy through the chest and shoulders, with a solid gut. Grey-black hair swept back "
+    "and tied at the nape. "
+    "His beard is full, oiled and combed straight downward and squared off flat below the "
+    "chin, iron-grey through the black. NEVER sculpted into tiered ringlets. "
+    "Small deep-set brown eyes under heavy lids and a mouth that turns down at rest, so he "
+    "looks about to disagree with you. "
+    "A long fringed wool wrap in dull madder-red over his LEFT shoulder, a plain linen "
+    "tunic beneath, and a broad dark leather apron from chest to knee, cracked and "
+    "blackened with grease. A short bronze knife on a cord at his chest. Forearms marked "
+    "with old burns."
+)
+
+ANNIWIYA_PORTRAIT = (
+    "Anniwiya of Millawanda, a woman of 32, and strikingly beautiful. She is XANTHE: tawny "
+    "gold hair, honey at the root and lightening to pale wheat where sun and salt have "
+    "caught it, worn in one heavy plait over the shoulder. Her complexion is fair and warm, "
+    "cream rather than olive, freckled across the nose. Large pale green-hazel eyes, a long "
+    "straight nose, high wide cheekbones. "
+    "Small, lithe and very upright. She was born a king's daughter and stands like one: "
+    "chin level, shoulders back, looking straight down the lens without smiling to please. "
+    "A saffron-gold gown of finely woven wool with woven madder-and-blue bands at hem, "
+    "sleeve and neck, a madder girdle wound twice, and a deep indigo scarf thrown back over "
+    "her LEFT shoulder. At her throat, white cockle shells with ONE cobalt-blue glass bead, "
+    "her only necklace."
+)
+
+# The still-life brief. Same job as REF_TAIL: everything a photograph of a place or an
+# object needs, and nothing that belongs to a person.
+STILL_BRIEF = (
+    "A real photograph with NO PEOPLE in it at all: no figures, faces, hands or arms, and "
+    "nobody in the background, not even blurred or small. The subject is the place or the "
+    "object itself, filling the frame. "
+    "Late Bronze Age, about 1226 BC: bronze rather than iron, hand-woven wool and linen, "
+    "fired clay, stone and basketry, nothing modern anywhere. Where a settlement shows, it "
+    "is lived-in and maintained, plastered and painted and busy, never a ruin or a dig "
+    "site. No text or lettering anywhere in the image."
+)
+
+# A THIRD MODE, because two was one short. `who` answers "is the writer in this frame", and
+# it was doing double duty as "is anybody in this frame". So a crowded hall with no narrator
+# in it had no way to be asked for: who=None stripped every human out of a feast.
+#
+#   who set          the writer is the subject          -> FRAMING_PERSON
+#   who null         nothing alive in frame at all      -> FRAMING_STILL
+#   people: true     a populated scene, no named subject -> FRAMING_SCENE
+FRAMING_SCENE = (
+    "A populated scene with NO single portrait subject. People fill it and the room or the "
+    "event is the subject, not any one face. Nobody poses for the camera or looks at it. "
+    "Shoot it wide, 28-40mm, from the edge of the room, the way a photographer standing in "
+    "a doorway would. Faces in the middle distance are real and busy but none of them is "
+    "the point."
+)
+
+# =========================================================================================
+# PHOTO_REAL — the one block that goes in front of every single prompt
+# =========================================================================================
+#
+# A REGRESSION I CAUSED. Cutting the prompts down was right, but I cut the camera out along
+# with the padding, and no branch carried a photographic specification any more. Close-up
+# food survived, because a still life of a bowl renders photographically by default. Wide
+# populated scenes did not: a hall of forty small faces has nothing anchoring it, and the
+# model falls back on the enormous pile of PAINTED historical scenes in its training. The
+# Pylos hall came back looking like an oil painting of a feast.
+#
+# So this goes first, in every branch, always. It is short on purpose. The load is carried
+# by naming a real photographic process and by the imperfections, which is what actually
+# separates a photograph from an illustration: a painting is composed and evenly resolved,
+# a photograph has a focal plane, motion, grain and things going wrong at the edges.
+
+PHOTO_REAL = (
+    "AN UNPOSED DOCUMENTARY PHOTOGRAPH, shot on 35mm colour film and scanned. Reportage, not "
+    "illustration. "
+    "THIS MUST NOT LOOK PAINTED. No painting, no oil painting, no digital painting, no "
+    "concept art, no illustration, no 3D render, no CGI, no matte painting, no video game "
+    "cinematic, no airbrushed skin. "
+    "NOT A MODEL: no diorama, no miniature, no scale model, no tilt-shift, no toy-like figures. Everything is life size and the people are full-scale human beings. "
+    "PHOTOGRAPHIC IMPERFECTION IS THE POINT: a true shallow focal plane with only one depth "
+    "sharp and everything in front and behind genuinely soft, fine film grain, slight "
+    "highlight blowout where the light is strongest, and motion blur on anyone moving. "
+    "Somebody is half out of frame, somebody has their back to the lens, somebody is caught "
+    "mid-blink. Nobody is arranged. "
+    "Real skin with pores, oil and unevenness. Faces in the middle distance are soft, "
+    "because a lens cannot hold them all."
 )
 
 # =========================================================================================
@@ -503,13 +643,13 @@ ANNIWIYA_SIGNATURE = (
 # =========================================================================================
 WRITERS = {
     "yadinu":   dict(face=YADINU_FACE,   dress=YADINU_DRESS,   world=YADINU_WORLD,
-                     signature=YADINU_SIGNATURE),
+                     signature=YADINU_SIGNATURE,   portrait=YADINU_PORTRAIT),
     "henut":    dict(face=HENUT_FACE,    dress=HENUT_DRESS,    world=HENUT_WORLD,
-                     signature=HENUT_SIGNATURE),
+                     signature=HENUT_SIGNATURE,    portrait=HENUT_PORTRAIT),
     "balatu":   dict(face=BALATU_FACE,   dress=BALATU_DRESS,   world=BALATU_WORLD,
-                     signature=BALATU_SIGNATURE),
+                     signature=BALATU_SIGNATURE,   portrait=BALATU_PORTRAIT),
     "anniwiya": dict(face=ANNIWIYA_FACE, dress=ANNIWIYA_DRESS, world=ANNIWIYA_WORLD,
-                     signature=ANNIWIYA_SIGNATURE),
+                     signature=ANNIWIYA_SIGNATURE, portrait=ANNIWIYA_PORTRAIT),
 }
 
 # gpt-image-1 accepts only these three. Portrait for a standing figure, landscape where the
@@ -522,7 +662,8 @@ FRAMES = Path(__file__).resolve().parent / "frames.json"
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def writer_prompt(world_of: str, scene: str, who: str | None, reference: bool = False) -> str:
+def writer_prompt(world_of: str, scene: str, who: str | None, reference: bool = False,
+                  people: bool = False) -> str:
     """One prompt.
 
     `world_of` is whose beat the picture is set in — it selects the WORLD block, and it is
@@ -540,17 +681,22 @@ def writer_prompt(world_of: str, scene: str, who: str | None, reference: bool = 
     The face precedes the clothes, because a wrong face ruins a frame and wrong clothes only
     spoil one. The negatives go last, where a generator weights them most heavily.
     """
-    parts = [PHOTOGRAPHY]
+    # A REFERENCED FRAME GETS ALMOST NOTHING. Signature, scene, tail. The photograph does
+    # the rest, and every block left out is one fewer instruction diluting the scene.
     if who and reference:
-        # A photograph is attached. It answers the face and the clothes far better
-        # than six hundred words of adjectives, so the short brief goes in instead
-        # and the scene gets the room.
-        parts += [FRAMING_PERSON, WRITERS[who]["signature"]]
-    elif who:
-        parts += [FRAMING_PERSON, WRITERS[who]["face"], WRITERS[who]["dress"]]
-    else:
-        parts += [FRAMING_STILL]
-    parts += [PERIOD, LIVING_WORLD, WRITERS[world_of]["world"], f"SCENE: {scene}", ANACHRONISMS]
+        return "\n\n".join([PHOTO_REAL, WRITERS[who]["signature"], f"SCENE: {scene}", REF_TAIL])
+
+    if who:
+        # The face frame: no reference exists yet, so the person is carried in words. Still
+        # about a hundred of them, not a thousand.
+        return "\n\n".join([PHOTO_REAL, WRITERS[who]["portrait"], f"SCENE: {scene}", REF_TAIL])
+    if people:
+        return "\n\n".join([PHOTO_REAL, FRAMING_SCENE, STILL_BRIEF.replace(
+            "A real photograph with NO PEOPLE in it at all: no figures, faces, hands or "
+            "arms, and nobody in the background, not even blurred or small. The subject is "
+            "the place or the object itself, filling the frame. ", "A real photograph. "),
+            f"SCENE: {scene}"])
+    return "\n\n".join([PHOTO_REAL, STILL_BRIEF, f"SCENE: {scene}"])
     # The no-person rule is repeated last, after the negatives, because that is the position
     # a generator weights most heavily and it is the instruction that kept losing.
     if not who:
@@ -580,16 +726,17 @@ def subjects() -> list[dict]:
             ref = cand if cand.exists() else None
         out.append(dict(
             tier="writers", slug=f["slug"], kind="plate",
-            # The output name the site asks for: public/img/writers/<writer>/<name>.webp.
-            # process_writers.py reads the same file to route the raw into the right folder.
-            out=f"writers/{f['writer']}/{f['name']}",
+            # Story frames belong to the article. Writer folders hold identity portraits.
+            out=f"reports/{f['folder']}/{f['name']}",
             writer=f["writer"], who=f.get("who"),
             ratio=(0.667 if shape == "portrait" else 1.5),
             size=SHAPE_SIZE[shape],
             source=f"post: {f['post']}",
             art=f["scene"],
             reference=str(ref) if ref else None,
-            prompt=writer_prompt(f["writer"], f["scene"], f.get("who"), bool(ref)),
+            people=bool(f.get("people")),
+            prompt=writer_prompt(f["writer"], f["scene"], f.get("who"), bool(ref),
+                                 people=bool(f.get("people"))),
         ))
     return out
 

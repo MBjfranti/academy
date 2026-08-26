@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { img, bcDate } from '../data/fieldReports'
+import { img, reportImg, bcDate } from '../data/fieldReports'
 import { byId, byline } from '../data/authors'
 import WorldMap from './WorldMap'
 import CropTool from './CropTool'
@@ -32,11 +32,13 @@ export function Byline({ post }) {
   if (!a) return null
   return (
     <div className="byline">
-      <img className="byline__face" src={img(a.portrait, true, a.id)} alt="" loading="lazy"
-           onError={hideBroken} />
+      <Link className="byline__face-link" to={`/writers/${a.id}`} aria-label={`Profile of ${byline(a.id)}`}>
+        <img className="byline__face" src={img(a.portrait, false, a.id)} alt="" loading="lazy"
+             onError={hideBroken} />
+      </Link>
       <div>
         <p className="byline__who">
-          {byline(a.id)} <span>{a.trade}</span>
+          <Link to={`/writers/${a.id}`}>{byline(a.id)}</Link> <span>{a.trade}</span>
         </p>
         <p className="byline__when">
           {post.place} · {bcDate(post.date)}
@@ -64,10 +66,11 @@ export default function PostBody({ post }) {
       <h1 className="postbody__title">{post.title}</h1>
       <p className="postbody__stand">{post.standfirst}</p>
       <Byline post={post} />
+      {post.dateline && <p className="postbody__dateline">{post.dateline}</p>}
 
       {post.hero && (
         <figure className="fig fig--wide">
-          <img src={img(post.hero.name, false, post.author)} alt={post.hero.alt}
+          <img src={reportImg(post, post.hero.name)} alt={post.hero.alt}
                loading="eager" decoding="async" onError={hideBroken} />
           <figcaption>{post.hero.caption}</figcaption>
         </figure>
@@ -81,9 +84,21 @@ export default function PostBody({ post }) {
       <div className="prose">
         {post.body.map((para, i) => {
           const here = figures.filter((f) => f.at === i)
+          /* A BODY ENTRY IS USUALLY A PARAGRAPH AND SOMETIMES NOT.
+             Strings stayed plain for a long time on purpose: no markup in the prose meant
+             no way to smuggle a link into a sentence, and the discipline was worth keeping.
+             Long pieces broke it. At two thousand words a reader needs section breaks, and
+             an article that quotes a ration tablet needs to set it apart from the argument.
+             So an entry may also be {h} for a section heading or {quote} for a set-off
+             block. Anything else is still just a paragraph. */
+          const block =
+            typeof para === 'string' ? <p>{para}</p>
+            : para.h ? <h2 className="prose__h">{para.h}</h2>
+            : para.quote ? <blockquote className="prose__quote">{para.quote}</blockquote>
+            : null
           return (
             <Fragment key={i}>
-              <p>{para}</p>
+              {block}
               {/* The map belongs to one paragraph in one post: the one that opens on the
                   sea and says everything else follows from it. */}
               {post.showMapAfter === i && <WorldMap />}
@@ -118,7 +133,7 @@ export default function PostBody({ post }) {
                         onClick={editable ? () => setEditing(f) : undefined}
                       >
                         <img
-                          src={img(f.name, false, post.author)}
+                          src={reportImg(post, f.name)}
                           alt={f.alt}
                           style={{
                             transform: `translate(${px}%, ${py}%) scale(${f.zoom ?? 1})`,
@@ -131,7 +146,7 @@ export default function PostBody({ post }) {
                     ) : (
                       <img
                         className={editable ? 'fig--editable' : undefined}
-                        src={img(f.name, false, post.author)}
+                        src={reportImg(post, f.name)}
                         alt={f.alt}
                         onClick={editable ? () => setEditing(f) : undefined}
                         loading="lazy"
@@ -209,7 +224,7 @@ export default function PostBody({ post }) {
           ))}
         </nav>
       )}
-      {editing && <CropTool figure={editing} onClose={() => setEditing(null)} />}
+      {editing && <CropTool figure={editing} postSlug={post.slug} onClose={() => setEditing(null)} />}
     </article>
   )
 }

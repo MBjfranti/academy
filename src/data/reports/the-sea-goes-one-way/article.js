@@ -1,0 +1,46 @@
+const article = {
+  slug: 'the-sea-goes-one-way',
+  kind: 'report',
+  author: 'yadinu',
+  region: 'levant',
+  place: 'A merchant ship off the Cilician coast',
+  date: '2026-08-23',
+  access: 'open',
+  recipe: 'brazier-chickpeas-alashiya',
+  title: 'The Sea Goes One Way',
+  standfirst:
+    'A captain can promise any port. The wind, current, water jars, and cooking fire decide where the ship goes first.',
+  body: [
+    'The captain said we were sailing to Alašiya. He pointed south-west with the confidence of a man standing on shore. By sunset we were moving north.',
+    'This did not mean the ship was lost. It meant the sea had begun correcting his sentence.',
+    'A square sail turns wind into speed when the wind agrees. Oars can pull a loaded merchant hull out of harbour or away from rocks. They cannot argue all day with weather and current. So a voyage that looks like one line on your map becomes a chain of headlands, anchorages, crossings, and delays.',
+    { h: 'The coast chooses the route' },
+    'We worked along the Cilician shore because land remained close enough to save us and far enough to miss. Each evening the captain looked for a lee, fresh water, and a beach that did not already contain men eager to own our cargo.',
+    'Copper waited across the water. Grain, oil, cloth, timber, resin, jars, tools, and people filled the route around it. The hold was an argument about value. Ten tonnes of metal justified a dangerous crossing. A sack of barley did not.',
+    'Every object also argued with the ship. Heavy ingots wanted the bottom. Jars wanted wedging. Ivory wanted dryness. People wanted water, shade, and the right to complain about both.',
+    'I walked the hold each morning with a tablet. A cracked jar announced itself by smell. A shifted ingot announced itself by smashing whatever had been packed beside it.',
+    { h: 'One fire on a wooden ship' },
+    'The brazier frightened me more than the sea. Our hull was timber sealed with pitch. Rope, sailcloth, baskets, oil, and dry provisions surrounded one permitted box of coals. The cook guarded it like a small hostile god.',
+    'His pot held chickpeas soaked at the previous anchorage. He softened onion in oil, added coriander seed, then covered the peas with water. A lid saved fuel and kept ash out. No second pot simmered beside it. One fire gave us one decision.',
+    'We ate the chickpeas with flatbread, olives, and curd cheese assembled cold on deck. When the hull rolled, the broth ran to one side of the bowl. Experienced sailors drank from the lower edge. I learned after wearing supper twice.',
+    'The meal tells you the route. Dried pulses survive a long delay, while oil and olives travel well. We bought bread or baked it ashore. Fresh water set the length of every leg. The sea carried immense weight cheaply, then charged for every day it refused to cooperate.',
+    { h: 'The crossing' },
+    'At last the wind turned. The coast fell behind us before noon. Once land vanished, every man discovered an urgent reason to ask the captain how long the passage would take.',
+    'He said two days. The cook soaked chickpeas for three.',
+    'We reached Alašiya on the third morning. Copper lay stacked near the landing in the shape of hides, each ingot made for shoulders that would carry it long after the ship stopped. The captain said we had arrived exactly as planned.',
+    'I wrote the date on my tablet. A traveller should preserve one honest witness against the map.',
+  ],
+  pulls: [{ at: 10, text: 'One fire gave us one decision.' }],
+  standing: [
+    'Late Bronze Age eastern Mediterranean sailing used seasonal winds, coastal navigation, anchorages, and open-water crossings. Exact routes varied with vessel, weather, and purpose.',
+    'The Uluburun wreck carried copper, tin, jars, luxury materials, and foodstuffs. It does not preserve a galley log or this meal.',
+    'Yadinu’s voyage, captain, and cook are invented. The chickpea pot is reconstructed from portable provisions and the constraint of a shipboard brazier.',
+  ],
+  glossary: [
+    { term: 'Alašiya', gloss: 'A Late Bronze Age kingdom generally identified with Cyprus.' },
+    { term: 'Cilicia', gloss: 'The south coast of Anatolia, facing Cyprus.' },
+  ],
+  related: [{ to: '/reports/four-days-out-of-ugarit', label: 'Yadinu, on the road after the harbour' }],
+}
+
+export default article

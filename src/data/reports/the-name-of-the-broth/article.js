@@ -1,0 +1,46 @@
+const article = {
+  slug: 'the-name-of-the-broth',
+  kind: 'report',
+  author: 'balatu',
+  region: 'mesopotamia',
+  place: 'Babylon, beside the Esagila kitchens',
+  date: '2026-08-24',
+  access: 'open',
+  recipe: 'kanasu-broth-me-kanasi',
+  title: 'The Name of the Broth',
+  standfirst:
+    'The tablet gives the broth a name and the cook an order. One dead word stands between them. I put the word back into the pot.',
+  body: [
+    'The sign is clear. That is the irritating part.',
+    'A broken tablet can be forgiven. Fire cracks clay. Salt blooms through it. A careless excavator removes half a line with a pick. Here the wedges sit clean and deep: ka-na-šu. I can read the word aloud. I cannot tell you what it is.',
+    'The recipe calls the dish mê kanaši, the broth of kanašu. It then orders meat, fat, onion, samīdu, leek, garlic, blood, and fresh herbs into the pot. The named ingredient may hide elsewhere in the line. It may be the dish’s chief pulse or plant. The tablet assumes the cook already knows.',
+    { h: 'A word with no kitchen' },
+    'Scribes preserve words better than meanings. We copied old lexical lists for centuries. A pupil could write the name of a tree he had never seen and receive a beating for choosing the wrong sign. Accuracy of form can outlive knowledge of the thing.',
+    'I found kanašu in lists, medical texts, and accounts. Each occurrence tightened the fence and left the field empty. It was edible. It could be measured. It belonged near plants and pulses. That gave me a neighbourhood, not an address.',
+    'Modern scholars place broad beans or chickpeas behind the word. Both grew in our world. Both thicken broth. Both accept garlic, leek, and the deep taste of blood. A dictionary must choose a line of type. A cook can choose two pots.',
+    'I soaked broad beans in one jar and chickpeas in another. The beans shed their skins and softened quickly. The chickpeas remained firm, round, and rather proud of themselves.',
+    { h: 'The tablet at the stove' },
+    'The recipe begins with water and fat. Meat enters. Then the crushed and chopped seasonings build the broth. The instructions are brief because they were written for trained hands. “Prepare in the usual way” is useless only to a stranger.',
+    'I made the bean version first. It collapsed into the liquid and gave the blood somewhere to disappear. The broth turned dark and close, with no single ingredient declaring itself. This felt right for a dish named after a plant.',
+    'The chickpea version tasted cleaner. Each seed survived the long cooking. The pot looked richer and ate poorer, since the broth and pulse never quite became one thing.',
+    'My younger assistant preferred the chickpeas. He also prefers new tablets, sharp knives, and women who have not met him. His judgement has a pattern.',
+    'I returned to the bean pot and added leek tops at the end. The old recipe distinguishes the seasonings added during cooking from greens scattered before service. That small order carries more authority than my guess about the lost noun.',
+    { h: 'What survives translation' },
+    'You want the ancient name to land on a modern ingredient. I understand the desire. A named thing can be bought. A question cannot be simmered for supper.',
+    'Yet the uncertainty belongs to the dish. Kanašu survives as sound, category, and behaviour in a pot. Its exact seed has gone where old cooks go.',
+    'So my reconstruction uses broad beans and keeps the dead word in the title. The beans are provisional. The name is evidence. A translation that hides the doubt would lose the one thing the clay preserved perfectly.',
+  ],
+  pulls: [{ at: 15, text: 'A named thing can be bought. A question cannot be simmered for supper.' }],
+  standing: [
+    'Mê kanaši appears among the Old Babylonian culinary tablets. Kanašu remains an uncertain plant or pulse term.',
+    'Broad bean and chickpea are working identifications, not secure translations. The reconstruction uses broad beans because they thicken the broth convincingly.',
+    'Balāṭu’s trial pots and assistant are invented. The sequence of ingredients follows the surviving culinary tradition in paraphrase.',
+  ],
+  glossary: [
+    { term: 'Mê', gloss: 'Akkadian for water; in recipe titles it can denote a broth.' },
+    { term: 'Samīdu', gloss: 'An unidentified seasoning, often treated cautiously as an allium.' },
+  ],
+  related: [{ to: '/reports/the-god-who-ate-four-times-a-day', label: 'Balāṭu, on the oldest appetite in Babylon' }],
+}
+
+export default article

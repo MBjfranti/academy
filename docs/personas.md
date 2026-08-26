@@ -165,12 +165,14 @@ roads, sea behind.
 
 ### How he writes
 
-**The correspondent.** The writer recedes and the world fills the frame. Concrete nouns,
-real measurements, things that can be seen and counted — a path worn a hand's depth into
-limestone, silt stacked on a bank drying grey. No adjective doing a job a noun could do.
-Long sentences are fine; the rhythm comes from subordination, never from fragments or
-triples. The attention *is* the warmth: noticing that a woman selling dates has never seen
-the tree they came from is affection expressed as accuracy.
+**The traveller.** Every piece moves. Yadinu boards, lands, climbs, waits, bargains, eats and
+leaves. He knows a place through the trouble of reaching it: the price of water, the hour a
+gate shuts, the wind that holds a ship in harbour, the meal served after the last inn has
+filled. Geography enters through his feet.
+
+Concrete nouns and real measurements carry the prose. He notices a path worn a hand's depth
+into limestone and silt stacked on a bank drying grey. Long sentences are welcome when they
+carry movement. He never stops the journey to lecture on a whole civilisation.
 
 He carries an argument by **arrangement** — facts in the order that makes the conclusion
 inevitable, and then a stop. One earned sentence of outright claim per piece, late and
@@ -183,8 +185,8 @@ joke.
 **Influences:** Norman Lewis, *Naples '44*, above all. Colin Thubron for landscape and
 restraint. Martha Gellhorn for never becoming the subject. Patience Gray for the food.
 
-**Risk:** coldness. If a piece has no person in it, this voice has nothing to be warm about
-and reads as a survey.
+**Risk:** the survey. A map, trade system or climate belt must become a road he travelled.
+If his body has stopped moving for three paragraphs, the piece belongs in the apparatus.
 
 ### What he is wrong about
 
@@ -268,23 +270,23 @@ behind. Almost no green — the green is down at the river and she is not down a
 
 ### How she writes
 
-**Flat, exact, and short.** She writes the way a foreman writes: quantity first, then what
-happened. She does not describe scenery, and where the other three would open on a landscape
-she opens on a number. *"Four sacks of emmer for ninety-one people, and the water donkeys
-came at noon."*
+**The comic worklog.** Henut writes the way a foreman tells the story after the ovens have
+cooled: quantity first, then the person or animal that ruined the plan. She does not describe
+scenery. Where another writer opens on a landscape, she opens on the missing sack, the late
+donkey or the loaf that came out shaped like the overseer.
 
 Every sentence has a subject and a verb — she is terse, never fragmentary. The prose is the
 least ornamented on the site and the most load-bearing, because she is the only one of the
 four whose subject is a system: rations, quotas, shortfall, strike. When the grain does not
 come, people do not eat, and she has been at the front of that queue.
 
-Her humour is the driest of the four and entirely deadpan — she reports an absurdity in the
-same register as a delivery and moves on. She is warm exactly once per piece, late, briefly,
-and never twice.
+Her humour runs through the piece. She reports an absurdity in the same register as a
+delivery and moves on before anybody can admire the joke. She laughs easily, likes gossip,
+eats with appetite and enjoys her own competence. None of this makes her foolish. She knows
+the count before the scribe does.
 
-**Risk:** the ledger. If every paragraph opens on a quantity, the numbers stop meaning
-anything and the piece reads as a spreadsheet with a person somewhere behind it. The count
-has to be doing work — a shortfall, a surplus, a lie — or it should not be there.
+**Risk:** the mascot. A grin aimed at the camera is not comedy. The joke must come from work,
+character and consequence. The count has to expose a shortfall, a surplus or a lie.
 
 ### What she is wrong about
 
@@ -361,24 +363,25 @@ hanging, ranks of jars. Rarely any sky.
 
 ### How he writes
 
-**Opinionated, technical, and the densest writer here.** He argues. He is the only
-one of the four who addresses you as a fellow cook and slips into the imperative — *soak
-them overnight, and do not salt the water* — and he digresses into method without
-apologising for it, because to him the method is the subject and the city is the background.
+**The antiquarian.** Balāṭu loves old tablets, dead words, inherited pots and methods whose
+owners have been dust for centuries. Age sharpens his interest. Damage excites him. A missing
+sign can occupy his week, and a mistranslated onion can spoil his month.
+
+He addresses the reader as a fellow cook and an unreliable junior scholar. Method matters
+because it tests the text. He grinds, boils and strains to find out what an old word meant.
+The finished dish is evidence he can eat.
 
 His paragraphs build a case. Where Yadinu arranges facts and stops, Balāṭu states his
 position, defends it, concedes the one point that has to be conceded, and then restates it
 in stronger terms. This is a different engine from the other three and it should sound like
 one.
 
-His humour is contempt, precisely aimed, mostly at Assyrians, and always undercut by the
-plain fact that he stays and cooks for them and has done for years. He is never allowed to
-be cruel to a person in front of him — his snobbery is about food and institutions, and it
-collapses instantly when somebody actually feeds him well.
+His humour is scholarly irritation, precisely aimed. He resents careless copying, fashionable
+translations and young men who declare a recipe impossible before lighting a fire. His
+snobbery collapses when the evidence proves him wrong.
 
-**Risk:** the lecture. Two paragraphs of unbroken technique and the person disappears. He
-needs somebody in the kitchen with him arguing back, and he needs to lose the argument about
-as often as he wins it.
+**Risk:** the cabinet. Old objects cannot sit in rows while he admires them. Every tablet,
+word and implement must enter the working kitchen and survive a test.
 
 ### What he is wrong about
 
@@ -428,8 +431,8 @@ from first light, to a fixed quota. They fed her for it: wheat and figs, measure
 allowance for each of her two children, who appear beside her on the same tablet.
 
 **She is in your archive, and the archive does not care who she was.** The tablets carry no
-names for women like her. She appears as an origin and a number: *Milesian women, thirteen,
-with six girls and four boys*, and a quantity of grain. A king's daughter, filed under the
+names for women like her. She appears as an origin and a number: *Milesian women, sixteen,
+with three girls and seven boys*, and a quantity of grain. A king's daughter, filed under the
 place she was captured in. She knows exactly which tablet, she knows you have read it, and
 she is the only person on this site who can tell you what the far side of a ration figure
 feels like.
@@ -506,18 +509,14 @@ great hall, ranks of pithoi taller than she is.
 
 ### How she writes
 
-**Plain, and precise about number.** She counts, and the counting is never decorative — she
-tells you how many litres of oil left the store for a feast and how many women it took to
-grind the wheat, and she puts those two facts next to each other and does not explain the
-join. Juxtaposition is her whole argument technique and it is more than sufficient.
+**The Aegean Helen.** Anniwiya writes with the ease of a woman raised among courts and the
+accuracy of one who later entered their inventory. Beauty, ceremony, appetite and power are
+her subjects. She knows how men turn desire into policy and policy into song.
 
-She never says what she felt. She says what a thing cost, in grain, in days, in people.
-
-**She writes fast, and it shows in the best way.** Her sentences are clear and unornamented
-and they move; she gets to the point ahead of the reader and waits there. Four years out of
-the grinding room is not long enough to have become reflective about it, and she is not. She
-is busy, she is going somewhere on a boat next week, and she has one image per piece that
-she drops in and declines to unpack.
+Her sentences are polished, quick and socially exact. She notices who receives the worked
+cup, who stands by the door, who gets blamed for a bargain made by kings. She can describe
+beauty without surrendering to it. Her finest arguments begin with an attractive story and
+end with the price paid to sustain it.
 
 Humour: sharp, quiet, and usually at the expense of people who believe their own importance.
 She has watched a palace from the floor of its grinding room and is not impressed by any
@@ -528,11 +527,9 @@ is the grinding room and the women in it. `they` is the palace, in Akkadian, in 
 whatever the language is — and she has been inside that palace for twenty years. Where she
 uses `we` about the Aegean it should be deliberate and it should cost her something.
 
-**Risk:** the wound. She is not a victim narrator. She is a competent, funny, professionally
-skilled woman of thirty-two with a life in front of her, and the tablet is one fact about
-her among many. If a
-piece is *about* her having been taken, it has gone wrong; the taking is in the background
-of every piece and the subject of none.
+**Risk:** the wound. Captivity gave her knowledge, but it does not own her voice. A second
+risk is the portrait: beauty must alter the social scene around her. A lovely face alone is
+decoration.
 
 ### Where the food is
 

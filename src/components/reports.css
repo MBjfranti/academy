@@ -136,6 +136,21 @@
   border-bottom: 1px solid var(--line);
 }
 
+.lead--text {
+  grid-template-columns: minmax(0, 44rem);
+  justify-content: center;
+  padding-block: 1.25rem 2rem;
+}
+
+.lead--text .lead__stand,
+.lead--text .lead__excerpt {
+  max-width: 62ch;
+}
+
+.card--text .card__body {
+  padding-top: 1.35rem;
+}
+
 .lead__fig {
   display: block;
   line-height: 0;
@@ -463,11 +478,30 @@
   border: 1px solid var(--line-2);
 }
 
+.byline__face-link {
+  flex: 0 0 auto;
+  display: block;
+  line-height: 0;
+  border-radius: 50%;
+}
+
 .byline__who {
   font-family: var(--display);
   font-size: 0.94rem;
   color: var(--ink);
   margin: 0;
+}
+
+.byline__who a {
+  color: inherit;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.16em;
+}
+
+.byline__who a:hover,
+.byline__who a:focus-visible {
+  color: var(--copper);
+  text-decoration-color: currentColor;
 }
 
 .byline__who span {
@@ -554,20 +588,27 @@
 
 .fig--col {
   clear: both;
-  max-width: var(--measure);
+  /* Past the measure on purpose. Text stops at 42rem for readability; a photograph has no
+     such limit, and matching them made every picture look like an afterthought sitting in
+     a column of prose. */
+  max-width: min(100%, 860px);
+  margin-bottom: 1.9rem;
 }
 
 .fig--wide {
   clear: both;
-  max-width: min(100%, 780px);
-  margin-bottom: 1.6rem;
+  max-width: 100%;
+  margin-bottom: 2.2rem;
 }
 
 /* A 2:3 portrait at full column width is taller than most screens. The heroes are
    landscape and need no help; a portrait used wide gets capped and cropped from the top
    third, where the face is. */
 .fig--wide img {
-  max-height: 440px;
+  /* 720, not 440. A wide figure is the feature photograph of the piece and was being
+     letterboxed into a strip. Portraits still get capped and cropped from the upper third,
+     where the face is, because a 2:3 frame at full width is taller than most screens. */
+  max-height: 720px;
   object-fit: cover;
   object-position: center 26%;
 }
@@ -577,8 +618,8 @@
    breakpoint unfloats insets. Narrower keeps the text readable at ~48 characters and
    costs the picture very little. */
 .fig--inset {
-  width: min(34%, 240px);
-  margin-bottom: 0.9rem;
+  width: min(44%, 340px);
+  margin-bottom: 1.1rem;
 }
 
 /* The photographs are 2:3, so at this width they come in near 480px tall — taller than
@@ -981,4 +1022,45 @@
   .gloss dd {
     margin-bottom: 0.5rem;
   }
+}
+
+/* ── long-form furniture ────────────────────────────────────────────────────
+   Added when the articles grew past two thousand words. A short piece needs none of this;
+   a long one needs somewhere for the reader to breathe and a way to set a quoted record
+   apart from the argument being made about it. */
+
+.postbody__dateline {
+  max-width: var(--measure);
+  margin: -0.4rem auto 1.4rem;
+  font-family: var(--ui);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.prose__h {
+  max-width: var(--measure);
+  margin: 2.6rem auto 0.9rem;
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+/* The quoted tablet. Monospaced because it is a record rather than a sentence, and the
+   spacing between its fields is the thing worth seeing: a person rendered as columns. */
+.prose__quote {
+  max-width: var(--measure);
+  margin: 1.5rem auto;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--copper);
+  background: var(--paper-2);
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--ink);
 }

@@ -24,8 +24,8 @@
  *                    is the whole point — a still life with a face wedged into it because
  *                    the prompt insisted on one is worse than no picture.
  *
- * The FOLDER is always the post's author, whoever is in the frame, because these are that
- * writer's pictures and they are referenced from that writer's posts.
+ * The FOLDER is always the article slug. Portrait identity remains writer-owned, while a
+ * commissioned scene belongs to the argument that earned it.
  *
  * Output is JSON rather than Python because subjects.py and generate_images.py are Python
  * and fieldReports.js is JavaScript, and this is the same bridge scripts/generated.json
@@ -67,9 +67,7 @@ for (const post of fieldReports) {
   for (const [im, slot] of images) {
     if (!im.scene) continue // an existing frame; nothing to commission
 
-    // The slug is the pipeline's global key and the filename is per-writer, so the two
-    // cannot be the same string: three writers each have a slot called `face`.
-    const slug = `${author.id}-${im.name}`
+    const slug = `${post.slug}-${im.name}`
 
     if (im.who !== null && im.who !== undefined && !byId[im.who]) {
       problems.push(`${post.slug} / ${im.name}: who is ${JSON.stringify(im.who)}, not a writer id`)
@@ -77,9 +75,13 @@ for (const post of fieldReports) {
 
     rows.push({
       slug,
-      writer: author.id, // whose folder it lands in
-      name: im.name, // the filename inside that folder
+      writer: author.id, // whose face and regional visual rules apply
+      folder: post.slug, // the article directory under public/img/reports
+      name: im.name, // the filename inside that article directory
       who: im.who ?? null, // whose face goes in the prompt, or nobody
+      // `people: true` on a writer-less image asks for a populated scene rather than
+      // a still life: a crowded hall with nobody in particular as the subject.
+      people: im.people === true,
       shape: shapeFor(im, slot),
       scene: im.scene,
       post: post.slug,

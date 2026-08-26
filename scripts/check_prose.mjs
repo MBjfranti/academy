@@ -89,7 +89,16 @@ const EM_DASH = /—/g
 const splitSentences = (s) =>
   s.split(/(?<=[.!?])["'”’]?\s+/).map((x) => x.trim()).filter(Boolean)
 
-const files = readdirSync(DATA).filter((f) => f.endsWith('.js')).map((f) => join(DATA, f))
+const articleArg = process.argv.find((arg) => arg.startsWith('--article='))
+const articleSlug = articleArg?.slice('--article='.length)
+const articleOnly = process.argv.includes('--articles') || Boolean(articleSlug)
+const files = articleSlug
+  ? [join(DATA, 'reports', articleSlug, 'article.js')]
+  : articleOnly
+  ? readdirSync(join(DATA, 'reports'), { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => join(DATA, 'reports', entry.name, 'article.js'))
+  : readdirSync(DATA).filter((f) => f.endsWith('.js')).map((f) => join(DATA, f))
 
 let hits = 0
 const say = (file, line, kind, text) => {
@@ -98,6 +107,7 @@ const say = (file, line, kind, text) => {
 }
 
 const want = process.argv.slice(2)
+  .filter((arg) => arg !== '--articles' && !arg.startsWith('--article='))
 const run = (flag) => want.length === 0 || want.includes(flag)
 
 // ── rule 3, and rule 1's line-level half ─────────────────────────────────────────────
@@ -128,7 +138,7 @@ for (const file of files) {
 if (run('--para')) {
   const { fieldReports } = await import(new URL('../src/data/fieldReports.js', import.meta.url))
 
-  for (const post of fieldReports) {
+  for (const post of fieldReports.filter((item) => !articleSlug || item.slug === articleSlug)) {
     const where = (label) => `${post.slug} ${label}`
     const shipped = [
       ...(post.body ?? []).map((x, i) => [x, `body[${i}]`]),
@@ -141,7 +151,7 @@ if (run('--para')) {
 
     for (const [text, label] of shipped) {
       // Em dash. The beautiful-prose skill bans it outright in shipped prose.
-      for (const m of text.matchAll(EM_DASH)) say(DATA, 0, 'em dash (beautiful-prose)', where(label))
+      for (const _ of text.matchAll(EM_DASH)) say(DATA, 0, 'em dash (beautiful-prose)', where(label))
 
       const sentences = splitSentences(text)
       const lengths = sentences.map((s) => s.split(/\s+/).filter(Boolean).length)
@@ -164,7 +174,7 @@ if (run('--para')) {
       }
     }
 
-    post.body?.forEach((para, i) => {
+    post.body?.filter((para) => typeof para === 'string').forEach((para, i) => {
       const words = para.split(/\s+/).filter(Boolean).length
       if (words > PARA_DEFECT) say(DATA, 0, `paragraph DEFECT ${words}w`, where(`body[${i}]`))
       else if (words > PARA_FAULT) say(DATA, 0, `paragraph fault ${words}w`, where(`body[${i}]`))

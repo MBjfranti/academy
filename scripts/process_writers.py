@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The writers' photographs: images/_custom and images/_raw/generated -> public/img/writers/<id>/
+Writer portraits and article photographs, routed to separate public folders.
 
 Deliberately its own script rather than a branch inside process_images.py. That script is
 built around two questions — is this a chroma-keyed cutout, or a plate to be matted and
@@ -38,6 +38,7 @@ SRC = ROOT / "images" / "_custom"
 # half of this script — the same half the hand-supplied photographs need.
 GEN = ROOT / "images" / "_raw" / "generated"
 OUT_ROOT = ROOT / "public" / "img" / "writers"
+REPORT_ROOT = ROOT / "public" / "img" / "reports"
 
 # ONE FOLDER PER WRITER, and the folder carries the identity so the filename does not have
 # to. Three of the four writers have a slot named "face", which a single flat directory
@@ -52,10 +53,10 @@ CUSTOM_WRITER = "yadinu"
 
 
 def routes() -> dict[str, tuple[str, str]]:
-    """gen-<slug>.png  ->  (writer, name). Empty when nobody has run `npm run frames`."""
+    """gen-<slug>.png  ->  (article folder, name)."""
     if not FRAMES.exists():
         return {}
-    return {r["slug"]: (r["writer"], r["name"])
+    return {r["slug"]: (r["folder"], r["name"])
             for r in json.loads(FRAMES.read_text(encoding="utf-8"))}
 
 # Longest edge for the version shown in a post. 1440 rather than 1200 because articles
@@ -163,8 +164,7 @@ def main() -> None:
 
     # ── the generated frames ─────────────────────────────────────────────────────────
     # Named for what they are rather than numbered, because an article places these by hand
-    # and a caption has to be able to find them: writers/yadinu/world-hatti, not
-    # writers/yadinu/portrait-07.
+    # and a caption has to be able to find them in its article directory.
     #
     # THE WORK ORDER DRIVES THIS LOOP, not the directory. images/_raw/generated holds the
     # raws for every tier — dishes, staples, panels, maps — so globbing it and treating
@@ -174,16 +174,16 @@ def main() -> None:
     # missing, which is the more useful half of the report.
     route = routes()
     pending = []
-    for slug, (writer, name) in sorted(route.items()):
+    for slug, (folder, name) in sorted(route.items()):
         p = GEN / f"gen-{slug}.png"
         if not p.exists():
             pending.append(slug)
             continue
         im = Image.open(p).convert("RGB")
         w, h = im.size
-        rows.append((writer, name, "landscape" if w > h else "portrait", w, h, p.name))
+        rows.append((folder, name, "landscape" if w > h else "portrait", w, h, p.name))
         if write:
-            encode(im, w, h, OUT_ROOT / writer, name, (82, 76, 68, 60, 52))
+            encode(im, w, h, REPORT_ROOT / folder, name, (82, 76, 68, 60, 52))
 
     by = {}
     for _, _, shape, *_ in rows:

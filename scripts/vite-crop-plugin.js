@@ -26,8 +26,6 @@ import { resolve } from 'node:path'
  * that name does not appear exactly once. Registered `apply: 'serve'`, so it does not
  * exist in a production build.
  */
-const FILE = 'src/data/fieldReports.js'
-
 // `crop: '4 / 5', pan: [12, -4], zoom: 1.9,` — its own line inside a figure object.
 // Anchored with \s at the end so it matches whether or not a '\r' survived the split.
 const CROP_LINE = /^\s*crop:.*,\s*$/
@@ -47,12 +45,13 @@ export default function cropPlugin() {
         req.on('data', (c) => (body += c))
         req.on('end', () => {
           try {
-            const { name, crop, zoom, pan } = JSON.parse(body)
-            if (!name || !crop || !Array.isArray(pan) || pan.length !== 2 || typeof zoom !== 'number') {
-              throw new Error('need name, crop, pan[2] and zoom')
+            const { postSlug, name, crop, zoom, pan } = JSON.parse(body)
+            if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(postSlug ?? '') ||
+                !name || !crop || !Array.isArray(pan) || pan.length !== 2 || typeof zoom !== 'number') {
+              throw new Error('need a safe postSlug, name, crop, pan[2] and zoom')
             }
 
-            const path = resolve(server.config.root, FILE)
+            const path = resolve(server.config.root, 'src', 'data', 'reports', postSlug, 'article.js')
             const raw = readFileSync(path, 'utf8')
             const eol = raw.includes('\r\n') ? '\r\n' : '\n'
             const lines = raw.split(/\r?\n/)

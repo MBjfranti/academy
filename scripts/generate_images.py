@@ -743,6 +743,13 @@ def main() -> None:
     # reason: it accepts the writer's canonical face as a reference image, which is the
     # only real cure for a set that drifts. See the GEMINI block above.
     ap.add_argument("--provider", choices=["openai", "gemini"], default="openai")
+    # GENERATE FROM THE DESCRIPTION ALONE, ignoring the writer's face photograph.
+    # The reference path holds a character steady and is the right default, but it also
+    # locks a set to whatever the first face frame happened to look like. This is how
+    # you find out what the written brief actually produces on its own, which is the
+    # only way to tell whether the brief is good or whether the reference was carrying it.
+    ap.add_argument("--no-reference", action="store_true",
+                    help="ignore the writer's face photo; use the long written brief")
     ap.add_argument("--gemini-model", default=GEMINI_MODEL,
                     help=f"default {GEMINI_MODEL}; also gemini-3.1-flash-image")
     ap.add_argument("--concurrency", type=int, default=1)
@@ -790,6 +797,13 @@ def main() -> None:
 
     RAW.mkdir(parents=True, exist_ok=True)
     manifest = load_manifest()
+    if args.no_reference:
+        import narrators
+        for s in subjects:
+            if s.get("reference"):
+                s["reference"] = None
+                s["prompt"] = narrators.writer_prompt(
+                    s["writer"], s["art"], s.get("who"), reference=False)
     todo, skipped = plan(subjects, manifest, args.force)
 
     print(f"\n-- Barley & Bronze : image generation --")

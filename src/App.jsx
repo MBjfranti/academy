@@ -9,6 +9,8 @@ import Article from './pages/Article'
 import NotFound from './pages/NotFound'
 import Nutrition from './pages/Nutrition'
 import Voices from './pages/Voices'
+import Writers from './pages/Writers'
+import Writer from './pages/Writer'
 
 /* The home page is Yadinu's posts. The Pantry moved to /pantry to make room, which is
    the right way round: someone arriving cold should meet the writing first and the
@@ -26,6 +28,8 @@ export default function App() {
             and the recipe apparatus had nowhere to fit. */}
         <Route path="recipes/:slug" element={<Dish />} />
         <Route path="reports/:slug" element={<Article />} />
+        <Route path="writers" element={<Writers />} />
+        <Route path="writers/:id" element={<Writer />} />
         <Route path="nutrition" element={<Nutrition />} />
         {/* Working page, deliberately not in the top bar: four candidate voices
             set in the site's own article typography, which is the only place a

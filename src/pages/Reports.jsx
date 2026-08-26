@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { posts, img, bcDate } from '../data/fieldReports'
+import { posts, reportImg, bcDate } from '../data/fieldReports'
 import { byline } from '../data/authors'
 import hideBroken from '../components/hideBroken'
 import { items as marketItems } from '../data/market'
@@ -31,6 +31,11 @@ import '../components/reports.css'
    "shop", "cook" — because "Market" means nothing to somebody who has just arrived. */
 
 const DOORS = [
+  {
+    to: '/writers',
+    label: 'Meet the writers',
+    line: 'Four bylined voices',
+  },
   {
     to: '/market',
     label: 'Shop the market',
@@ -107,10 +112,10 @@ export default function Reports() {
    below it stay on screen. */
 function Lead({ post }) {
   return (
-    <article className="lead">
+    <article className={`lead${post.hero ? '' : ' lead--text'}`}>
       {post.hero && (
         <Link className="lead__fig" to={href(post)} tabIndex={-1} aria-hidden="true">
-          <img src={img(facePic(post), false, post.author)} alt="" loading="eager"
+          <img src={reportImg(post, facePic(post))} alt="" loading="eager"
                decoding="async" onError={hideBroken} />
         </Link>
       )}
@@ -141,10 +146,10 @@ function Lead({ post }) {
    a reader two targets for one destination and makes them choose between identical doors. */
 function Card({ post }) {
   return (
-    <Link className="card" to={href(post)}>
+    <Link className={`card${post.hero ? '' : ' card--text'}`} to={href(post)}>
       {post.hero && (
         <span className="card__fig">
-          <img src={img(facePic(post), false, post.author)} alt="" loading="lazy"
+          <img src={reportImg(post, facePic(post), true)} alt="" loading="lazy"
             decoding="async" onError={hideBroken} />
         </span>
       )}
