@@ -159,6 +159,11 @@ TIER_SPEC = {
     # The only asset a reader actually studies, and the only one with HTML laid over
     # it, so the coastlines have to hold up. High.
     "maps": ("1536x1024", "high"),
+    # The four writers. HIGH, and not negotiable: these are the only photographs on a site
+    # of drawings, they carry a face a reader has to recognise across a whole set, and a
+    # soft one reads as a costume rather than a person. Portrait is the tier default and
+    # the landscape frames override it per subject. See scripts/narrators.py.
+    "writers": ("1024x1536", "high"),
 }
 
 BACKOFF_BASE = 2.0
@@ -200,7 +205,9 @@ def spec(subject: dict) -> tuple[str, str]:
     return subject.get("size", size), quality
 
 
-def price_of(subject: dict, quality_override=None) -> float:
+def price_of(subject: dict, quality_override=None, args=None) -> float:
+    if args is not None and getattr(args, "provider", "openai") == "gemini":
+        return gemini_price(subject, args.gemini_model)
     size, quality = spec(subject)
     return PRICE[(size, quality_override or quality)]
 
@@ -238,6 +245,153 @@ def plan(subjects, manifest, force: bool):
 # the call
 # =========================================================================
 
+# =========================================================================
+# GEMINI, the second provider
+# =========================================================================
+#
+# WHY A SECOND PROVIDER AT ALL. One thing only: REFERENCE IMAGES. gpt-image-1 takes a
+# prompt and nothing else, so every frame of a writer is an independent roll of the dice
+# against a text description, and the set drifts. Henut came back with hair in two frames
+# out of three after the brief said shaved head, and the fix was to shout louder in words.
+#
+# Gemini's image models accept input images alongside the prompt. So a writer's canonical
+# `face.webp` can be attached to every other frame in their set, and the model is matching a
+# picture rather than reconstructing one from adjectives. That is the whole reason this
+# exists, and it is why `--provider gemini` attaches the face automatically.
+#
+# EVERYTHING ELSE IS SHARED. The prompts are provider-neutral prose and are not rewritten.
+# The manifest, the budget ceiling, the idempotency check, the reroll-to-superseded rule and
+# the concurrency cap all work exactly as before, because a provider is a function that
+# turns a subject into PNG bytes and nothing more.
+
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/interactions"
+
+# Default to Pro for the writers: these carry faces a reader must recognise across a set,
+# which is precisely where the cheaper model is a false economy.
+GEMINI_MODEL = "gemini-3-pro-image"
+
+# USD per image, from Google's published pricing table. SAME CAVEAT AS `PRICE` ABOVE: this
+# is the one number here that goes stale silently, and every cost report is built on it.
+# Verify before a real run. --execute prints the table in use.
+GEMINI_PRICE = {
+    ("gemini-3-pro-image", "1K"): 0.134,
+    ("gemini-3-pro-image", "2K"): 0.134,
+    ("gemini-3-pro-image", "4K"): 0.24,
+    ("gemini-3.1-flash-image", "1K"): 0.067,
+    ("gemini-3.1-flash-image", "2K"): 0.101,
+    ("gemini-3.1-flash-image", "4K"): 0.151,
+    ("gemini-3.1-flash-lite-image", "1K"): 0.0336,
+}
+
+# gpt-image-1 speaks in pixel dimensions and Gemini speaks in aspect ratios, so the subject's
+# `size` is translated rather than duplicated. Keeping one vocabulary in subjects.py means a
+# frame does not have to know which provider will render it.
+GEMINI_RATIO = {"1024x1536": "2:3", "1536x1024": "3:2", "1024x1024": "1:1"}
+
+# 2K is a little over our 1440px shipping edge, which leaves headroom for the article crops
+# that zoom into a frame. 4K costs more and buys nothing we display.
+GEMINI_SIZE = "2K"
+
+
+def gemini_price(subject, model: str) -> float:
+    return GEMINI_PRICE[(model, GEMINI_SIZE)]
+
+
+def gemini_reference(subject: dict) -> list[dict]:
+    """The writer's canonical face, as an input image, for any frame they appear in.
+
+    THIS IS THE POINT OF THE WHOLE PROVIDER. A frame with `who` set is a frame containing a
+    person the reader has to recognise, and the face frame is the reference the rest of the
+    set is judged against by eye anyway. Handing it to the model closes that loop.
+
+    Returns [] for a still life, for a face frame generating itself, and whenever the face
+    has not been made yet, so a cold checkout still works.
+    """
+    who = subject.get("who")
+    if not who or subject["slug"] == f"{who}-face":
+        return []
+    face = ROOT / "public" / "img" / "writers" / who / "face.webp"
+    if not face.exists():
+        return []
+    return [{"type": "image", "mime_type": "image/webp",
+             "data": base64.b64encode(face.read_bytes()).decode()}]
+
+
+def gemini_generate(subject: dict, model: str, retries: int) -> bytes:
+    """One image from Gemini. Returns PNG bytes; raises on final failure."""
+    import requests
+
+    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    refs = gemini_reference(subject)
+    prompt = subject["prompt"]
+    if refs:
+        prompt = (
+            "The attached photograph is the reference for the person named in this brief. "
+            "Reproduce that same individual exactly: the same face, bone structure, "
+            "colouring, hair and clothing. Place them in the new scene described below.\n\n"
+            + prompt
+        )
+    body = {
+        "model": model,
+        "input": [{"type": "text", "text": prompt}] + refs,
+        "response_format": {
+            "type": "image",
+            "aspect_ratio": GEMINI_RATIO[spec(subject)[0]],
+            "image_size": GEMINI_SIZE,
+        },
+    }
+    for attempt in range(1, retries + 1):
+        try:
+            r = requests.post(GEMINI_ENDPOINT, json=body, timeout=300,
+                              headers={"x-goog-api-key": key,
+                                       "Content-Type": "application/json"})
+            if r.status_code in (400, 401, 403, 404):
+                raise RuntimeError(f"HTTP {r.status_code}: {r.text[:300]}")
+            r.raise_for_status()
+            j = r.json()
+            b64 = (j.get("output_image") or {}).get("data")
+            if not b64:
+                for step in j.get("steps", []):
+                    for c in step.get("content", []):
+                        if c.get("type") == "image" and c.get("data"):
+                            b64 = c["data"]
+                            break
+                    if b64:
+                        break
+            if not b64:
+                raise RuntimeError(f"no image in response: {str(j)[:300]}")
+            return base64.b64decode(b64)
+        except Exception as e:                                    # noqa: BLE001
+            if attempt == retries or "HTTP 4" in str(e):
+                raise
+            wait = BACKOFF_BASE ** attempt + random.uniform(0, 1.0)
+            with _lock:
+                print(f"    {subject['slug']}: {type(e).__name__} "
+                      f"(attempt {attempt}/{retries}) - retrying in {wait:.1f}s")
+            time.sleep(wait)
+    raise RuntimeError("unreachable")
+
+
+def gemini_client(model: str):
+    """Fails before spending anything if the key or the dependency is missing."""
+    if not (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")):
+        sys.exit(
+            "GEMINI_API_KEY is not set.\n"
+            "  PowerShell:  $env:GEMINI_API_KEY = '<key>'\n"
+            "  bash:        export GEMINI_API_KEY='<key>'\n"
+            "Get one at https://aistudio.google.com/apikey\n"
+            "Nothing was generated and nothing was charged."
+        )
+    try:
+        import requests  # noqa: F401
+    except ImportError:
+        sys.exit("pip install requests  - required for --provider gemini")
+    if model not in {m for m, _ in GEMINI_PRICE}:
+        sys.exit(f"unknown gemini model: {model}\nknown: "
+                 + ", ".join(sorted({m for m, _ in GEMINI_PRICE})))
+    return model
+
+
 def client():
     """The OpenAI client, or a clear exit. The key is read here and nowhere else."""
     if not os.environ.get("OPENAI_API_KEY"):
@@ -255,10 +409,37 @@ def client():
 
 
 def generate_one(cli, subject: dict, quality: str, retries: int) -> bytes:
-    """One image, with backoff. Returns PNG bytes; raises on final failure."""
+    """One image, with backoff. Returns PNG bytes; raises on final failure.
+
+    TWO ENDPOINTS, and which one is used depends on whether the subject carries a reference
+    photograph. This is the whole answer to the drift problem and it was available all along:
+
+      images.generate   prompt only. Still lifes, and a writer's own face frame.
+      images.edit       prompt PLUS the writer's canonical face.webp. Every other frame of
+                        a person, so the model is matching a photograph of them rather than
+                        reconstructing one from adjectives.
+
+    Before this, every frame of Henut was an independent roll against a text description and
+    the set drifted: hair where the brief said shaved head, a different woman between the
+    oven and the ration line. narrators.py pairs the reference with a much SHORTER brief for
+    the same reason, since a photograph answers the face better than six hundred words can.
+    """
     size, _ = spec(subject)
+    ref = subject.get("reference")
     for attempt in range(1, retries + 1):
+        fh = None
         try:
+            if ref:
+                fh = open(ref, "rb")
+                r = cli.images.edit(
+                    model=MODEL,
+                    image=fh,
+                    prompt=subject["prompt"],
+                    size=size,
+                    quality=quality,
+                    n=1,
+                )
+                return base64.b64decode(r.data[0].b64_json)
             r = cli.images.generate(
                 model=MODEL,
                 prompt=subject["prompt"],
@@ -285,11 +466,15 @@ def generate_one(cli, subject: dict, quality: str, retries: int) -> bytes:
                 print(f"    {subject['slug']}: {type(e).__name__} "
                       f"(attempt {attempt}/{retries}) - retrying in {wait:.1f}s")
             time.sleep(wait)
+        finally:
+            if fh is not None:
+                fh.close()
     raise RuntimeError("unreachable")
 
 
 def run(subjects, manifest, args) -> None:
-    cli = client()
+    gemini = args.provider == "gemini"
+    cli = gemini_client(args.gemini_model) if gemini else client()
     size_q = {s["slug"]: (spec(s)[0], args.quality or spec(s)[1]) for s in subjects}
     spent = 0.0
     made, failed = [], []
@@ -297,7 +482,7 @@ def run(subjects, manifest, args) -> None:
     def one(s):
         nonlocal spent
         size, quality = size_q[s["slug"]]
-        cost = PRICE[(size, quality)]
+        cost = gemini_price(s, args.gemini_model) if gemini else PRICE[(size, quality)]
         with _lock:
             # The ceiling is checked immediately before each call, not once up front, so a
             # concurrent run cannot overshoot by more than one image.
@@ -305,7 +490,8 @@ def run(subjects, manifest, args) -> None:
                 return s, None, f"budget ceiling ${args.budget:.2f} reached"
             spent += cost
         try:
-            data = generate_one(cli, s, quality, args.retries)
+            data = (gemini_generate(s, args.gemini_model, args.retries) if gemini
+                    else generate_one(cli, s, quality, args.retries))
         except Exception as e:                                    # noqa: BLE001
             with _lock:
                 spent -= cost                                     # nothing was produced
@@ -318,7 +504,10 @@ def run(subjects, manifest, args) -> None:
         p.write_bytes(data)
         return s, dict(
             slug=s["slug"], tier=s["tier"], out=s["out"], kind=s["kind"],
-            raw=p.name, model=MODEL, size=size, quality=quality,
+            raw=p.name, provider=args.provider,
+            reference=(Path(s["reference"]).name if s.get("reference") else None),
+            model=(args.gemini_model if gemini else MODEL),
+            size=(GEMINI_SIZE if gemini else size), quality=quality,
             prompt_sha256=sha(s["prompt"].encode()),
             image_sha256=sha(data), bytes=len(data), usd=cost,
             generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -356,6 +545,12 @@ def emit_generated(manifest: dict) -> None:
 
     Only rows whose raw is actually on disk are written, so the file never asks
     process_images.py for something that is not there.
+
+    THE WRITERS TIER IS EXCLUDED, and that is the whole reason this filter exists. Those
+    frames are photographs of people and process_writers.py already owns them: it reads the
+    same images/_raw/generated directory and does the resize-and-encode they need. Letting
+    them through here would hand the same file to process_images.py as well, which would
+    mat and crop it as though it were a drawn plate.
     """
     by_slug = {s["slug"]: s for s in SUBJECTS}
     rows = []
@@ -363,7 +558,7 @@ def emit_generated(manifest: dict) -> None:
         if not raw_path(slug).exists():
             continue
         s = by_slug.get(slug)
-        if s is None:
+        if s is None or s["tier"] == "writers":
             continue
         row = dict(raw=r["raw"], out=s["out"], kind=s["kind"])
         if s["kind"] == "cutout":
@@ -450,10 +645,13 @@ def report(subjects, todo, skipped, args) -> None:
             continue
         size, quality = TIER_SPEC[tier]
         quality = args.quality or quality
-        each = PRICE[(size, quality)]
+        each = (gemini_price(group[0], args.gemini_model)
+                if args.provider == "gemini" else PRICE[(size, quality)])
         sub = each * len(group)
         total += sub
-        print(f"  {tier:<8} {len(group):>3} x {MODEL} {size} {quality:<6} "
+        label = (f"{args.gemini_model} {GEMINI_SIZE}"
+                 if args.provider == "gemini" else f"{MODEL} {size} {quality}")
+        print(f"  {tier:<8} {len(group):>3} x {label:<34} "
               f"@ ${each:.3f} = ${sub:>6.3f}")
     print(f"  {'':<8} {len(todo):>3} images{'':<38} ${total:>6.3f}")
 
@@ -540,6 +738,13 @@ def main() -> None:
     ap.add_argument("--force", action="store_true", help="re-generate existing art")
     ap.add_argument("--budget", type=float, default=5.00, help="hard USD ceiling")
     ap.add_argument("--quality", choices=["low", "medium", "high"])
+    # WHICH PROVIDER RENDERS. The prompts are provider-neutral prose and are not
+    # rewritten, so this switches the renderer and nothing else. Gemini is here for one
+    # reason: it accepts the writer's canonical face as a reference image, which is the
+    # only real cure for a set that drifts. See the GEMINI block above.
+    ap.add_argument("--provider", choices=["openai", "gemini"], default="openai")
+    ap.add_argument("--gemini-model", default=GEMINI_MODEL,
+                    help=f"default {GEMINI_MODEL}; also gemini-3.1-flash-image")
     ap.add_argument("--concurrency", type=int, default=1)
     ap.add_argument("--retries", type=int, default=4)
     ap.add_argument("--show", default="", help="print one full prompt and exit")
@@ -601,19 +806,32 @@ def main() -> None:
         if args.prompts:
             show_prompts(todo)
         print(f"\nDRY RUN - nothing was called and nothing was charged.")
-        if not os.environ.get("OPENAI_API_KEY"):
-            print("OPENAI_API_KEY is NOT set; --execute would fail immediately.")
+        need = "GEMINI_API_KEY" if args.provider == "gemini" else "OPENAI_API_KEY"
+        have = os.environ.get(need) or (os.environ.get("GOOGLE_API_KEY")
+                                        if args.provider == "gemini" else None)
+        if not have:
+            print(f"{need} is NOT set; --execute would fail immediately.")
         print(f"Add --prompts to see the full text of each. "
               f"Add --execute --budget {max(total * 1.1, 0.05):.2f} to spend ${total:.3f}.")
         return
 
-    if not os.environ.get("OPENAI_API_KEY"):
-        client()                      # exits with the message; never reaches the API
+    # The key check is per provider. Calling client() unconditionally meant a Gemini run
+    # died on a missing OPENAI_API_KEY, which is a confusing way to fail.
+    if args.provider == "gemini":
+        gemini_client(args.gemini_model)   # exits with its own message if unusable
+    elif not os.environ.get("OPENAI_API_KEY"):
+        client()                           # exits with the message; never reaches the API
     if total > args.budget:
         sys.exit(f"\nrefusing to start: ${total:.2f} planned against a "
                  f"${args.budget:.2f} ceiling. Raise --budget deliberately.")
-    print(f"\nprice table in use: {MODEL}, "
-          + ", ".join(f"{k[0]}/{k[1]}=${v}" for k, v in sorted(PRICE.items())))
+    if args.provider == "gemini":
+        print(f"\nprice table in use: {args.gemini_model} at {GEMINI_SIZE}, "
+              + ", ".join(f"{k[1]}=${v}" for k, v in sorted(GEMINI_PRICE.items())
+                          if k[0] == args.gemini_model))
+        print("VERIFY against Google's published pricing before a real run.")
+    else:
+        print(f"\nprice table in use: {MODEL}, "
+              + ", ".join(f"{k[0]}/{k[1]}=${v}" for k, v in sorted(PRICE.items())))
     run(todo, manifest, args)
 
 

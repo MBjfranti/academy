@@ -73,12 +73,69 @@ src/
     regions.js      8 regions        │  research from the earlier build.
     corpus.js       18 sources       ├─ still live, currently unrouted.
     methods.js      technique essays │
-    fieldReports.js test-kitchen logs│
+    fieldReports.js the posts       │  EMPTY — see below
     kitchen.js      flavour + nutrition per dish
     sourcing.js     3-tier substitution engine
     grades.js       evidence grading
   _parked/     the earlier archive pages — see _parked/README.md
 ```
+
+## The writing
+
+The home page is a grid of posts, and **there are currently none**. The site ran thirteen
+articles by a single narrator, they had drifted into being a journal about him rather than
+writing about places, and they were scrapped. `git log` has every word if one is wanted back.
+
+What replaces them is four writers, each with one part of the map:
+
+| | Beat |
+| --- | --- |
+| **Yadinu** of Ugarit, 31, a provisioning scribe | The Levant and eastern Anatolia |
+| **Henut** of Set Maat, 46, bread and beer for the tomb crew | Egypt |
+| **Balāṭu** of Babylon, 54, a temple cook | Mesopotamia and Elam |
+| **Anniwiya** of Millawanda, 32, ground grain at Pylos and now weighs oil | The Aegean and western Anatolia |
+
+Every post names its writer and every post arrives at a recipe. The beat is enforced rather
+than trusted: a post filed under `aegean` and signed by the Babylonian cook fails at import.
+
+Four documents govern the prose, in this order of authority:
+
+- **`docs/style.md`** — active voice, three-to-five-sentence paragraphs, and a ban list of
+  AI-slop constructions. Mechanical and non-negotiable. Run `npm run prose`.
+- **`docs/voice.md`** — the spirit conceit, the pronoun rule, four catalogued tics.
+- **`docs/personas.md`** — the four writers: backstory, physical description, voice, and
+  what each of them is wrong about.
+- **`.claude/skills/beautiful-prose/SKILL.md`** — the installed style contract the
+  first three enforce. Bans em dashes, reversal pivots and filler; sets a register per writer.
+- **`scripts/narrators.py`** — the image half of the same brief.
+
+## The pictures of the writers
+
+Everything else on this site is drawn. The writers are photographs, and the contrast is the
+point: the drawings are diagrams, the writers are people.
+
+**The article commissions its own pictures, in that order.** A post places an image where
+the prose needs one and describes it in a `scene`, plus a `who` naming which writer stands
+in it (or `null` for a still life, which drops the face and dress blocks from the prompt).
+`npm run frames` collects those into `scripts/frames.json`, which is the work order the
+generator and the processor both read. An image with no `scene` is an existing frame already
+on disk and nothing tries to remake it.
+
+They generate through the existing OpenAI pipeline as their own tier — National Geographic
+register, available light, real skin and hand-woven cloth, with the period research written
+into the prompt as hard negatives, because most Bronze Age image error is a first-millennium
+beard or a rotary quern rather than anything exotic.
+
+```bash
+python scripts/generate_images.py --tier writers               # plan, spend nothing
+python scripts/generate_images.py --show henut-face            # one full prompt
+python scripts/generate_images.py --tier writers --execute --budget 4.40
+npm run frames                                                 # posts -> frames.json
+python scripts/process_writers.py --write                      # then the back half
+```
+
+Generate the four `*-face` frames first and judge the rest of each set against them. A
+drifted set is much cheaper to prevent than to reroll.
 
 ## Theme
 

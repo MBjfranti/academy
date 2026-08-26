@@ -1,8 +1,10 @@
 import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { img, yadinuDate } from '../data/fieldReports'
+import { img, bcDate } from '../data/fieldReports'
+import { byId, byline } from '../data/authors'
 import WorldMap from './WorldMap'
 import CropTool from './CropTool'
+import hideBroken from './hideBroken'
 
 /* ONE ARTICLE, RENDERED ONCE.
  *
@@ -16,18 +18,28 @@ import CropTool from './CropTool'
  * the quotient, which is why a kitchen scene could turn up beside a paragraph about
  * shipping lanes. */
 
-/* Yadinu, place, date. A byline is how a reader decides whether to trust the next thousand
-   words, so it gets a face and a line of standing rather than a bare date stamp. */
+/* Who wrote it, from where, when. A byline is how a reader decides whether to trust the
+   next thousand words, so it gets a face and a line of standing rather than a bare date
+   stamp.
+
+   THIS USED TO BE HARDCODED to Yadinu, his trade and one specific photograph, which was
+   correct while there was one writer and became a silent lie the moment there were four:
+   the region label and the byline sit in opposite corners of the layout, so a piece by
+   Henut wearing Yadinu's face would have looked entirely normal. It reads from authors.js
+   now, and a post with no valid `author` renders no byline at all rather than guessing. */
 export function Byline({ post }) {
+  const a = byId[post.author]
+  if (!a) return null
   return (
     <div className="byline">
-      <img className="byline__face" src={img('portrait-13', true)} alt="" loading="lazy" />
+      <img className="byline__face" src={img(a.portrait, true, a.id)} alt="" loading="lazy"
+           onError={hideBroken} />
       <div>
         <p className="byline__who">
-          Yadinu of Ugarit <span>Palace provisioning scribe, retired</span>
+          {byline(a.id)} <span>{a.trade}</span>
         </p>
         <p className="byline__when">
-          {post.place} · {yadinuDate(post.date)}
+          {post.place} · {bcDate(post.date)}
         </p>
       </div>
     </div>
@@ -55,7 +67,8 @@ export default function PostBody({ post }) {
 
       {post.hero && (
         <figure className="fig fig--wide">
-          <img src={img(post.hero.name)} alt={post.hero.alt} loading="eager" decoding="async" />
+          <img src={img(post.hero.name, false, post.author)} alt={post.hero.alt}
+               loading="eager" decoding="async" onError={hideBroken} />
           <figcaption>{post.hero.caption}</figcaption>
         </figure>
       )}
@@ -105,23 +118,25 @@ export default function PostBody({ post }) {
                         onClick={editable ? () => setEditing(f) : undefined}
                       >
                         <img
-                          src={img(f.name)}
+                          src={img(f.name, false, post.author)}
                           alt={f.alt}
                           style={{
                             transform: `translate(${px}%, ${py}%) scale(${f.zoom ?? 1})`,
                           }}
                           loading="lazy"
                           decoding="async"
+                          onError={hideBroken}
                         />
                       </span>
                     ) : (
                       <img
                         className={editable ? 'fig--editable' : undefined}
-                        src={img(f.name)}
+                        src={img(f.name, false, post.author)}
                         alt={f.alt}
                         onClick={editable ? () => setEditing(f) : undefined}
                         loading="lazy"
                         decoding="async"
+                        onError={hideBroken}
                       />
                     )}
                     <figcaption>{f.caption}</figcaption>
@@ -155,6 +170,30 @@ export default function PostBody({ post }) {
           {(Array.isArray(post.standing) ? post.standing : [post.standing]).map((p) => (
             <p key={p}>{p}</p>
           ))}
+        </aside>
+      )}
+
+      {/* THE NAMES. A reader who has just met Alašiya, Wilusa and Set Maat in one piece
+          needs somewhere to put them, and the prose should not stop four times to say
+          "which you call Cyprus".
+
+          SO THE PROSE TEACHES AND THIS CATCHES. The writers explain the load-bearing
+          things themselves, at length, in voice — that is the interesting half and it is
+          where the reader learns why the flood matters or why bronze needs two metals.
+          This list carries only the flat lookup: what a place is called on a modern map.
+          Set at the foot of the piece rather than as tooltips, because a hover is invisible
+          on a phone and a reader who wants the names wants them all at once. */}
+      {post.glossary?.length > 0 && (
+        <aside className="gloss" aria-label="The names in this piece">
+          <p className="gloss__label">The names in this piece</p>
+          <dl>
+            {post.glossary.map((g) => (
+              <Fragment key={g.term}>
+                <dt>{g.term}</dt>
+                <dd>{g.gloss}</dd>
+              </Fragment>
+            ))}
+          </dl>
         </aside>
       )}
 

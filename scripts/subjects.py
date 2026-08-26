@@ -19,10 +19,17 @@ it after touching either side.
 STYLE WAS DERIVED BY LOOKING AT THE SHIPPED ASSETS, not from a brief. See STYLE_NOTES.
 """
 
-# NOTE: the narrator is NOT generated here. Yadinu's photographs are made by hand and
-# dropped into images/_custom; scripts/yadinu.py holds the written standard describing him
-# and the list of slots the articles need, and scripts/process_yadinu.py ingests them. There
-# was a generation tier here briefly and it is gone on purpose — one source for that man.
+# THE WRITERS ARE GENERATED, and they live in scripts/narrators.py rather than in this
+# file. That split is the same one the module docstring describes: the house style here is
+# FLAT PAINTED ART, and the four writers are the one thing on this site that is a
+# photograph. Two registers, two files, and mixing the art direction would blur both.
+#
+# narrators.py exports subjects() in exactly the shape below, so the pipeline treats them
+# like any other tier. What it does NOT share is the back half: generate_images.py excludes
+# the writers tier from generated.json, because process_writers.py already reads the same raw
+# directory and gives photographs the resize-and-encode they need instead of the matting and
+# cropping a drawn plate gets.
+from narrators import subjects as writer_frames  # noqa: E402
 
 # =========================================================================
 # THE HOUSE STYLE
@@ -1016,8 +1023,9 @@ SUBJECTS = (
     + [_modern(s, r, c, a) for s, r, c, a in MODERNS]
     + [_invented(s, a) for s, a in INVENTED]
     + [_map(s, a) for s, a in MAPS]
+    + writer_frames()
 )
 
-TIERS = ["staples", "dishes", "panels", "icons", "moderns", "invented", "maps"]
+TIERS = ["staples", "dishes", "panels", "icons", "moderns", "invented", "maps", "writers"]
 
 assert len({s["slug"] for s in SUBJECTS}) == len(SUBJECTS), "duplicate slug in SUBJECTS"

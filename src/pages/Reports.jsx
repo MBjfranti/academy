@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
-import { posts, img, yadinuDate } from '../data/fieldReports'
+import { posts, img, bcDate } from '../data/fieldReports'
+import { byline } from '../data/authors'
+import hideBroken from '../components/hideBroken'
 import { items as marketItems } from '../data/market'
 import { attestedDishes, inventedDishes } from '../data/dishes'
 import '../components/reports.css'
@@ -47,14 +49,19 @@ const DOORS = [
   },
 ]
 
-/* The orientation pieces are pinned, not sorted.
+/* EVERY POST IS IN THE GRID. There used to be a "New here?" strip above it holding the
+   orientation pieces, pulled out of the grid on the grounds that they were a front door
+   rather than news.
 
-   They are the oldest posts on the site, so a strict date sort put "Hello, I am Yadinu" —
-   the one page that explains who is writing and why — at the bottom of the last row of
-   cards. Sorting them as news was the mistake: they are not news, they are the front door.
-   So they come out of the grid entirely and sit in the bar at the top, and the grid becomes
-   what it should always have been, which is the field reports. */
-const isLetter = (p) => p.kind === 'letter'
+   That was right when one narrator had written two introductions and eleven reports. It
+   stopped being right the moment there were four writers, because then the introductions
+   ARE the substance: four people arriving through four subjects, which is the most
+   interesting thing on the page. Pinning them into a strip of thumbnails demoted the best
+   writing on the site to a row of chips, and left the grid underneath entirely empty.
+
+   So the strip is gone and the bar carries the doors alone. A reader scanning the grid is
+   choosing a SUBJECT, and the kicker on each card already says which of them is an
+   introduction. */
 
 const href = (post) => `/reports/${post.slug}`
 const kicker = (post) => (post.kind === 'letter' ? 'Introduction' : 'Field report')
@@ -63,31 +70,13 @@ const kicker = (post) => (post.kind === 'letter' ? 'Introduction' : 'Field repor
 const facePic = (post) => post.card ?? post.hero?.name
 
 export default function Reports() {
-  // Oldest first: these are a reading order, not a news feed. Newest-first put the
-  // orientation piece ahead of the introduction it depends on.
-  const letters = posts.filter(isLetter).slice().reverse()
-  const [featured, ...rest] = posts.filter((p) => !isLetter(p))
+  const [featured, ...rest] = posts
 
   return (
     <div className="page">
       <div className="page__scroll">
         <div className="wrap">
           <div className="bar">
-            {letters.length > 0 && (
-              <p className="bar__start">
-                <span>New here?</span>
-                {letters.map((p) => (
-                  <Link key={p.slug} to={href(p)}>
-                    {/* A face, because the first question a new reader has is who is
-                        writing this. A line of copper text does not answer it and a
-                        photograph does it before they have finished reading. */}
-                    {p.hero && <img src={img(p.hero.name, true)} alt="" loading="eager" />}
-                    <span>{p.title.replace(/\.$/, "")}</span>
-                  </Link>
-                ))}
-              </p>
-            )}
-
             <nav className="doors" aria-label="Where to go next">
               {DOORS.map((d) => (
                 <Link className="door" key={d.to} to={d.to}>
@@ -100,7 +89,7 @@ export default function Reports() {
 
           {featured && <Lead post={featured} />}
 
-          <ul className="cards" aria-label="More reports">
+          <ul className="cards" aria-label="More posts">
             {rest.map((p) => (
               <li key={p.slug}>
                 <Card post={p} />
@@ -121,7 +110,8 @@ function Lead({ post }) {
     <article className="lead">
       {post.hero && (
         <Link className="lead__fig" to={href(post)} tabIndex={-1} aria-hidden="true">
-          <img src={img(facePic(post))} alt="" loading="eager" decoding="async" />
+          <img src={img(facePic(post), false, post.author)} alt="" loading="eager"
+               decoding="async" onError={hideBroken} />
         </Link>
       )}
 
@@ -137,7 +127,10 @@ function Lead({ post }) {
         <p className="lead__stand">{post.standfirst}</p>
         <p className="lead__excerpt">{post.body[0]}</p>
         <p className="lead__meta">
-          {post.place} · {yadinuDate(post.date)}
+          {/* THE WRITER LEADS THE META LINE. With one narrator a byline on a card was
+              noise, because every card carried the same name. With four it is the first
+              thing a returning reader scans for. */}
+          <strong>{byline(post.author)}</strong> · {post.place} · {bcDate(post.date)}
         </p>
       </div>
     </article>
@@ -151,7 +144,8 @@ function Card({ post }) {
     <Link className="card" to={href(post)}>
       {post.hero && (
         <span className="card__fig">
-          <img src={img(facePic(post))} alt="" loading="lazy" decoding="async" />
+          <img src={img(facePic(post), false, post.author)} alt="" loading="lazy"
+            decoding="async" onError={hideBroken} />
         </span>
       )}
       <span className="card__body">
@@ -159,7 +153,7 @@ function Card({ post }) {
         <span className="card__title">{post.title}</span>
         <span className="card__stand">{post.standfirst}</span>
         <span className="card__meta">
-          {post.place} · {yadinuDate(post.date)}
+          <strong>{byline(post.author)}</strong> · {post.place} · {bcDate(post.date)}
         </span>
       </span>
     </Link>

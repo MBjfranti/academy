@@ -128,7 +128,7 @@ export default function CropTool({ figure, onClose }) {
       >
         <img
           ref={imgRef}
-          src={`/img/yadinu/yadinu-${figure.name}.webp`}
+          src={`/img/writers/${figure.writer ?? 'yadinu'}/${figure.name}.webp`}
           alt=""
           draggable="false"
           style={{ transform: `translate(${pan[0]}%, ${pan[1]}%) scale(${zoom})` }}

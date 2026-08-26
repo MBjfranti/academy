@@ -298,8 +298,8 @@ and covers that box at 3×. `CardGrid.jsx` and `PlateGrid.jsx` already do exactl
 **A low-bandwidth tier.** It doubles the manifest, needs a persisted user setting, and the
 imagery is already lazy-loaded and inside a 250 KB per-asset budget. There is no bandwidth
 problem to solve. (One genuine budget note found in passing, unrelated to pixels:
-`process_yadinu.py` sets `MAX_KB = 320`, above the site's stated 250 KB ceiling, and
-`public/img/yadinu` is 6.2 MB of the 14 MB total.)
+`process_writers.py` sets `MAX_KB = 320`, above the site's stated 250 KB ceiling, and
+`public/img/writers` is 6.2 MB of the 14 MB total.)
 
 ### The one thing I would say yes to
 

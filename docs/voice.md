@@ -1,6 +1,26 @@
 # The voice
 
-Everything on this site is written by **Yadinu of Ugarit**. This document exists because
+> **This file described one narrator, and the site now has four.** Read it anyway — almost
+> all of it survives the split, because the tics it catalogues are hazards for any writer
+> rather than problems with Yadinu.
+>
+> **Where each thing now lives:**
+>
+> | | |
+> | --- | --- |
+> | `docs/style.md` | Active voice, paragraph length, the AI-slop ban list. **Mechanical, and the highest authority.** Enforced by `node scripts/check_prose.mjs`. |
+> | **This file** | The spirit conceit, the pronoun rule, the four tics and their cures, the register sliders. Governs all four writers. |
+> | `docs/personas.md` | Who the four are, and how each one differs from this baseline. |
+>
+> **Two things here are now scoped rather than universal.** §13–§16 describe *the
+> correspondent*, which is Yadinu's voice specifically — Henut, Balāṭu and Anniwiya each run
+> a different engine, set out in `personas.md`. And §18's register table lists reports that
+> no longer exist. The principle it states holds: register follows from what happened, and
+> adjacent pieces should not match.
+>
+> Everywhere below that says "Yadinu", read "the writer", except in §13–§16.
+
+Everything on this site was written by **Yadinu of Ugarit**. This document exists because
 the voice drifted once already, in a way that was invisible sentence by sentence and
 obvious across a whole article, and it will drift again unless the rule is written down.
 

@@ -35,68 +35,11 @@
   border-bottom: 1px solid var(--line);
 }
 
-/* THE FRONT DOOR. The introduction is the oldest post on the site, so any date sort buries
-   it — and it is the one page that says who is writing and why. It is pinned here instead
-   of being left to age out of the grid. */
-.bar__start {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.3rem 0.9rem;
-  max-width: none;
-  margin: 0;
-  font-family: var(--display);
-  font-size: 0.92rem;
-}
+/* .bar__start lived here: the "New here?" strip that pinned the introductions above the
+   grid. Removed along with the strip, because with four writers the introductions are the
+   substance rather than a front door. See the note at the top of Reports.jsx. The bar now
+   carries the doors alone, which is why .bar keeps its border and loses its first child. */
 
-.bar__start > span {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
-  color: var(--ink-3);
-}
-
-.bar__start a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  color: var(--copper);
-  text-decoration: none;
-}
-
-/* Small, and a rounded square rather than a circle: a circle reads as an avatar and
-   these are article thumbnails. 30px keeps the whole bar at one line. */
-.bar__start img {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  object-fit: cover;
-  object-position: center 18%;
-  border: 1px solid var(--line-2);
-  transition: transform 0.16s;
-}
-
-.bar__start a > span {
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.14s;
-}
-
-.bar__start a > span::after {
-  content: ' →';
-  opacity: 0.55;
-}
-
-.bar__start a:hover > span,
-.bar__start a:focus-visible > span {
-  border-bottom-color: var(--copper);
-}
-
-.bar__start a:hover img,
-.bar__start a:focus-visible img {
-  transform: scale(1.06);
-}
 
 /* The tools. Named for what you would DO — "shop", "cook" — because "Market" means nothing
    to somebody who has just arrived. Separated by rules rather than boxes. */
@@ -984,4 +927,58 @@
   width: 100%;
   height: auto;
   border-radius: 6px;
+}
+
+/* THE NAMES IN THIS PIECE. A glossary of proper nouns under the article.
+
+   Sibling to .standing rather than a copy of it: both are furniture at the foot of a post,
+   so they share the measure, the UI face and the small size, and they differ where their
+   jobs differ. The standing box is prose about evidence and takes a copper rule. This is a
+   lookup table and takes none, because two identical bordered blocks stacked on top of each
+   other read as one box that has gone wrong.
+
+   TWO COLUMNS ON A GRID, not a floated dl. `dt` and `dd` alternate in source order, so a
+   two-column grid lines the terms and glosses up without wrapper elements, and it collapses
+   to one column on a narrow screen where a 9em term column would leave four words a line. */
+.gloss {
+  max-width: var(--measure);
+  margin: 1.25rem auto 0;
+  font-family: var(--ui);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.gloss__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 0.6rem;
+}
+
+.gloss dl {
+  display: grid;
+  grid-template-columns: minmax(7em, max-content) 1fr;
+  gap: 0.3rem 1rem;
+  margin: 0;
+}
+
+.gloss dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.gloss dd {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+@media (max-width: 34rem) {
+  .gloss dl {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+  .gloss dd {
+    margin-bottom: 0.5rem;
+  }
 }

@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
+    "prose": "node scripts/check_prose.mjs",
+    "frames": "node scripts/derive_frames.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
