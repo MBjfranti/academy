@@ -175,3 +175,46 @@ failure mode this exists to prevent.
 The first will return legitimate coordination too — read each hit and ask whether the
 second clause **advances** the argument or merely **comments on** the first. Only the
 second kind is the tic.
+
+## 12. "…and nobody thinks to X"
+
+State something; tag it with a claim that nobody notices it, records it or asks about it.
+There were **34 of these across the corpus**.
+
+> Not one of them mentions what anybody ate, **because why would it.**
+> Nobody gathers who has any alternative at all, **which is exactly why nobody wrote it down.**
+> This is **the part nobody mentions** and it is my favourite fact in Egypt.
+> The baskets are the other half of the household economy, **and the half nobody writes
+> about either.**
+
+This is worse than the comma-and tag in §7, for two reasons.
+
+**It is always the same assertion.** That the ordinary goes unrecorded is not an aside —
+it is this site's entire thesis. A thesis asserted thirty-four times is a thesis nobody
+believes by the fifth. It has to be *demonstrated*: by the evidence grades, by what the
+`standing` box does and does not contain, by the fact that the good dishes here are
+reconstructions. Demonstrate it and it never needs stating.
+
+**It flatters.** "Nobody thinks about this" positions Yadinu as the one who noticed and
+invites the reader to feel clever alongside him. Occasionally that is a real insight. As a
+paragraph-closing habit it is a mannerism, and an unfalsifiable one — nobody ever checked
+whether nobody thinks about it.
+
+### The test: is it a fact or a flourish?
+
+| Where | Verdict | Example |
+| --- | --- | --- |
+| **Evidence apparatus** — `standing`, recipe `Standing` and `What is not attested` notes | **Keep.** Here it is a factual statement of what does not exist, and saying so is the whole job of the box. | "Nobody wrote down what a ship's crew ate." |
+| **Body prose** | **Cut.** The body's business is what happened and what it tasted like. | "…which is exactly why nobody wrote it down." |
+| **Describing the world, not the archive** | **Not the pattern.** Leave alone. | "figs on trees nobody planted" (an image of wildness); "she does it without thinking about it" (a cook expert at her own work) |
+
+The count after this pass is 25, and it should stay near there: almost all of them are in
+apparatus, plus one deliberate use as the closing line of the Terqa piece. **Once per site
+in body prose is the budget.**
+
+### Grep
+
+    grep -nE "nobody (thinks|wrote|records|writes|notices|mentions|expects|is counting)" src/data/*.js
+    grep -nE "because why would|the part nobody|never gets written down" src/data/*.js
+
+Then ask of each hit: *fact, flourish, or world?* Only the flourish goes.

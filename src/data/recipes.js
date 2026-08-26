@@ -339,7 +339,7 @@ export const recipes = [
     summary:
       'Nothing in it was bought, planted, harvested or paid for. It is what a hillside has in late summer, and it is the only dish here that assumes you own nothing at all.',
     intro:
-      'Every other dish on this site starts with a market or a store cupboard. This one starts with the observation that a dry Mediterranean hillside in late August is, if you know what you are looking at, a larder — sour red drupes on the sumac, purslane fat with water in the rock cracks, terebinth going oily, figs splitting on trees nobody planted. Add the one thing a person with a flock always has, which is soured milk, and you have a real meal rather than a survival exercise. It needs no fire and almost no equipment. It is here because the food nobody wrote down is the food most people ate on most days.',
+      'Every other dish on this site starts with a market or a store cupboard. This one starts with the observation that a dry Mediterranean hillside in late August is, if you know what you are looking at, a larder — sour red drupes on the sumac, purslane fat with water in the rock cracks, terebinth going oily, figs splitting on trees nobody planted. Add the one thing a person with a flock always has, which is soured milk, and you have a real meal rather than a survival exercise. It needs no fire and almost no equipment. It is here because most people, on most days, ate something closer to this than to anything else on the site.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Sumac, terebinth, figs, olives, almonds, pine nuts, grapes, pomegranates and coriander were recovered together from the Uluburun wreck, giving a rare direct list of plant foods in circulation. Gathered wild plants appear routinely in archaeobotanical assemblages across the region, and pastoral groups are documented throughout second-millennium correspondence. No text preserves a gathered-food recipe.',
@@ -387,7 +387,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'Every ingredient here is attested for the region and the period, and several of them come from one spectacular source: the Uluburun ship went down carrying sumac, terebinth, figs, olives, almonds, pine nuts, grapes and coriander, which is about as close to a plant-food shopping list as the Bronze Age gets. What is reconstructed is the assembly. Nobody recorded what a shepherd made for himself, because nobody records what costs nothing.',
+        text: 'Every ingredient here is attested for the region and the period, and several of them come from one spectacular source: the Uluburun ship went down carrying sumac, terebinth, figs, olives, almonds, pine nuts, grapes and coriander, which is about as close to a plant-food shopping list as the Bronze Age gets. What is reconstructed is the assembly. Nobody recorded what a shepherd made for himself.',
       },
       {
         term: 'purslane',
@@ -1569,7 +1569,7 @@ export const recipes = [
     summary:
       'Cooked to be looked at first and eaten second — which turns out to change how you cook it.',
     intro:
-      'A temple served its god a meal every day: real food, carried in, set down, left, and taken away again. This is a bird for that table, and the constraint that shapes it is not flavour but appearance — an offering is presented before it is consumed, so it has to look like the best of its kind. That means whole, glazed, unbroken, and arranged rather than served. Then comes the part nobody expects: the god does not eat it, and the food does not go to waste. It is redistributed to the priests and the temple staff, which is how a large fraction of literate Egypt got lunch. Cook it for the look, and eat it anyway.',
+      'A temple served its god a meal every day: real food, carried in, set down, left, and taken away again. This is a bird for that table, and the constraint that shapes it is not flavour but appearance — an offering is presented before it is consumed, so it has to look like the best of its kind. That means whole, glazed, unbroken, and arranged rather than served. Then comes the reversion: the god does not eat it, and the food does not go to waste. It is redistributed to the priests and the temple staff, which is how a large fraction of literate Egypt got lunch. Cook it for the look, and eat it anyway.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Temple daily ritual texts describe presenting food and drink to the god, censing, and the withdrawal of the offering. Offering lists itemise bread, beer, wine, oxen, fowl, incense and cloth. The reversion of offerings — the redistribution of presented food to priests and temple personnel — is attested in temple administrative documents. No text gives a method of cooking.',
@@ -3194,7 +3194,7 @@ export const recipes = [
     summary:
       'A mash — that is what the word means — of chickpeas, with raw cucumber over the top. The oldest ancestor of a very familiar thing.',
     intro:
-      'You will think you know what this is. Put that down for a minute. Beruwa is the Hittite word for mashed food, and the texts name a version with chickpea and a version with cucumber; putting them in one bowl is our doing rather than theirs. There is no sesame paste in it and no citrus — no evidence for either here — and the texture stays deliberately coarse. What it is instead is a warm crushed chickpea dish with oil worked through it and cold cucumber over the top, and that cold-against-warm is both the part nobody expects and the part that makes it work.',
+      'You will think you know what this is. Put that down for a minute. Beruwa is the Hittite word for mashed food, and the texts name a version with chickpea and a version with cucumber; putting them in one bowl is our doing rather than theirs. There is no sesame paste in it and no citrus — no evidence for either here — and the texture stays deliberately coarse. What it is instead is a warm crushed chickpea dish with oil worked through it and cold cucumber over the top, and that cold-against-warm is the whole architecture of the dish.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Beruwa is the term for mashed food; the texts record beruwa with chickpea and beruwa with cucumber among the named varieties.',
