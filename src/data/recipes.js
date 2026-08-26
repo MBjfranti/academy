@@ -619,7 +619,7 @@ export const recipes = [
     siglum: 'Middle Euphrates · muster provisioning',
     provenance: 'A riverside camp below Terqa',
     period: 'Late Bronze Age',
-    date: 'c. 1250 BC',
+    date: 'c. 1226 BC',
     serves: 'Serves 4 to 6',
     time: '3 hr 30, mostly unattended',
     grade: 'reconstructed',
@@ -2481,7 +2481,7 @@ export const recipes = [
       {
         name: 'The bed',
         items: [
-          { ancient: 'ma-ra-tu-wo', modern: 'Fennel bulbs, sliced thick, fronds kept back', qty: '2 large', grade: 'attested', note: 'marathuwo' },
+          { ancient: 'ma-ra-tu-wo', modern: 'Fennel, for the bed — see the note before you buy', qty: '2 large bulbs', grade: 'attested', note: 'nobulb' },
           { ancient: 'e-ra-wo', modern: 'Olive oil', qty: '4 tbsp', grade: 'attested' },
           { ancient: 'wo-no', modern: 'Wine, dry and white', qty: '150 ml', grade: 'attested' },
           { ancient: '—', modern: 'Salt', qty: 'to taste', grade: 'inferred' },
@@ -2532,8 +2532,8 @@ export const recipes = [
         text: 'The Aegean gives you a complete pantry and no dishes at all. Every ingredient here is counted on a tablet or dug out of a midden; the act of combining them is mine. Cook it because it is good, not because it is proven.',
       },
       {
-        term: 'The word for fennel',
-        text: 'Linear B writes it ma-ra-tu-wo, and by a long and much-loved chain that is the origin of the place name Marathon, the field of fennel. It grows wild along this coast down to the tideline, which is a large part of why this dish makes sense here and would make less sense inland.',
+        term: 'nobulb',
+        text: 'Buy a bulb, and know that you are buying a stand-in. Florence fennel, the fat white bulb in every greengrocer, is an Italian selection of about the seventeenth century AD. The plant that grew to the tideline at Amnisos was wild fennel: fronds, stalks, seed, and no bulb whatever. The honest bed is the thick lower stalks split lengthways, or leeks, and the bulb is simply the easiest thing to buy that behaves the same way. What is attested is the plant and the word. Linear B writes it ma-ra-tu-wo, and by a long and much-loved chain that is the origin of the place name Marathon, the field of fennel. It grows wild along this coast down to the tideline, which is a large part of why this dish makes sense here and would make less sense inland.',
       },
       {
         term: 'Why no fish on the tablets',
@@ -2550,7 +2550,7 @@ export const recipes = [
     ],
     substitutions: [
       { from: 'Sea bream', to: 'Sea bass, red mullet, or any whole round fish of about 500 g', text: 'All of these are Mediterranean and all of them cook in about the same time. Avoid oily fish here. Mackerel and sardines fight the fennel instead of sitting under it.' },
-      { from: 'Fennel bulb', to: 'Fennel bulb plus a teaspoon of fennel seed', text: 'Modern bulb fennel is a much later selection. The seed pushes it back toward what a wild plant would have given you.' },
+      { from: 'Fennel bulb', to: 'Leek or onion rounds, plus a teaspoon of fennel seed', text: 'Closer to the plant that actually grew there, and it behaves the same way under a fish. The seed carries the aniseed the wild stalks would have given you.' },
     ],
     sources: ['Knossos spice tablets', 'Amnisos harbour tablets (a-mi-ni-so)', 'Akrotiri fisherman fresco and Aegean fish faunal assemblages', 'Hagia Triada sarcophagus'],
   },

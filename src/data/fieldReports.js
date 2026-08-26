@@ -95,7 +95,7 @@ export const fieldReports = [
       },
     ],
     body: [
-      'Iddin-Sîn is about forty, missing the top joint of one finger, and has been a soldier for nineteen years in the way a man is a farmer for nineteen years, which is to say seasonally and without much ceremony about it. He is going south with a column in the morning. I am going with them as far as Mari, where I intend to find a boat and go north again, and he thinks this is a very sound plan.',
+      'Iddin-Sîn is about forty, missing the top joint of one finger, and has been a soldier for nineteen years in the way a man is a farmer for nineteen years, which is to say seasonally and without much ceremony about it. He is going south with a column in the morning. I am going with them as far as Mari, where I intend to find a boat and go north again. Mari is a name that still does work in conversation and has not been a city for five hundred years; what is there now is a village on a great deal of fallen brick, and a crossing. It is enough for a boat. Iddin-Sîn thinks this is a very sound plan.',
       'What he could tell me about where he is going: south, along the river, about eleven days. That there is a campaign, and that it is with Babylon, so the Babylonians will be somewhere in the same country doing something related. That the man they are going against has been burning farms.',
       'What he could not tell me: which man. Whose farms. Why. Whether the burning was the cause of the campaign or a response to it. Whether Terqa had asked for this or been told. I put all of that to him over the course of an afternoon, from several directions, and got the same shrug each time, delivered without any impatience at all.',
       '“It would not move me one pace,” he said, eventually. He was crushing garlic at the time. “Knowing it, I mean. I would stand where they put me either way.”',
@@ -107,7 +107,7 @@ export const fieldReports = [
       'We leave at first light. Eleven days for him and four for me, and then a boat north.',
     ],
     standing:
-      'Sheep and goat dominate the faunal record here and are priced and issued throughout the administrative material. Cumin, garlic and sesame oil are documented commodities. Military musters and their provisioning appear in correspondence, and so do complaints about burned fields, though never with enough context attached to know whose or why. Iddin-Sîn is invented. What is not invented is how little an ordinary soldier is told, which the correspondence makes plain by never once addressing him.',
+      'Sheep and goat dominate the faunal record here and are priced and issued throughout the administrative material. Cumin, garlic and sesame oil are documented commodities. Military musters and their provisioning appear in correspondence, and so do complaints about burned fields, though never with enough context attached to know whose or why. Iddin-Sîn is invented. What is not invented is how little an ordinary soldier is told, which the correspondence makes plain by never once addressing him. As for the campaign itself: Assyria and Babylonia were at war across these decades and this stretch of river lay between them. When the decisive year fell is disputed by about ten years, depending on which chronology you follow, and I cannot settle it from where I am standing any better than you can from where you are. That is not modesty. Iddin-Sîn’s shrug is the most accurate sentence in this report, and I have left it in his mouth rather than improving on it in mine.',
   },
   {
     slug: 'the-field-decides-when-supper-is',
@@ -123,7 +123,7 @@ export const fieldReports = [
       { to: '/reports/the-wall-and-the-canal', label: 'The city these fields belong to' },
     ],
     standfirst:
-      'Two women, one pot and thirty men in the barley. The cooking is easy and the timing is not, because nobody knows when the light will give out.',
+      'Two women, one pot and thirty people cutting sesame. The cooking is easy and the timing is not, because the field decides when it stops and the field does not consult anybody.',
     hero: {
       name: 'harvest-table',
       alt: 'Yadinu working at a long riverside table loaded with greens, cucumbers, pulses, dates and curd, with two women beside him and a domed bread oven behind, the Euphrates and a mudbrick town beyond.',
@@ -134,7 +134,7 @@ export const fieldReports = [
         name: 'harvest-showing', at: 2, size: 'inset',
         crop: '4 / 5', pan: [-30.6, 10.2], zoom: 1.774,
         alt: 'Bēltum holding out a handful of grain across the cauldron for Yadinu to look at, both of them laughing.',
-        caption: 'Bēltum, explaining why this year’s barley wants five minutes longer than last year’s.',
+        caption: 'Bēltum, explaining why this year’s grain wants five minutes longer than last year’s.',
       },
       {
         name: 'harvest-stirring', at: 4, size: 'col',
@@ -156,19 +156,19 @@ export const fieldReports = [
       },
     ],
     body: [
-      'Two days downriver from the city the fields start, and in the middle of September they are full of people. The barley comes in fast or it comes in badly, so everyone who can hold a sickle is out from first light, and thirty of them have to be fed at the end of it. That job belongs to Bēltum, who is nearer seventy than sixty and has done it for most of them, and to Iltani, who is her niece and is quicker with a knife than anybody I have watched this year.',
+      'Two days downriver from the city the fields start, and in the middle of September they are full of people cutting sesame. Sesame will not wait. Leave it standing a few days too long and the capsules open on their own and the crop is on the ground, so everyone who can hold a sickle is out from first light, and thirty of them have to be fed at the end of it. That job belongs to Bēltum, who is nearer seventy than sixty and has done it for most of them, and to Iltani, who is her niece and is quicker with a knife than anybody I have watched this year.',
       'Their kitchen is a table under a vine by the water, a bread oven, and a cauldron I could sit in. There is no roof over any of it. Bēltum said the roof was the point, because a fire under a roof in September is how you lose a house, and then she said it a second time in case I was the sort of man who needed telling twice. I have been that sort of man before now.',
       'What goes in the pot is chickpeas, cracked barley, leeks, onions, a whole head of garlic and a great deal of cumin, and none of that is the interesting part. The interesting part is the clock, which does not exist. Nobody in that field knows what time they will stop. They stop when the light goes or when the barley in front of them runs out, and the pot has to be ready before that and then capable of waiting an hour without turning to paste.',
       'So the whole design is about holding. Pulses and grain, because they sit. Half the leeks in early to dissolve into the body of it and half in late so there is still something to bite. The greens not in it at all until the last three minutes. And no salt to speak of until the end, because a pot that sits keeps reducing, and a pot seasoned correctly at noon is a mouthful of brine by dusk. Bēltum salts it hard at the last moment, in front of everybody, and it is the only part of the process she will not let anyone else do.',
       'I said, meaning it as praise, that it was a simple way to feed thirty people.',
       '“It is not simple.” She had the paddle in both hands and did not stop moving it. “It is cheap. You keep saying simple.” Iltani laughed at that without looking up. I have used the word about a dozen dishes on this journey and I have stopped using it since.',
       'They came in a little after the light went. Everyone ate standing or sitting on the ground with a bowl on their knees, bread torn from the stack, cold curd spooned on top of hot grain, dates going round in a bowl that came back empty twice. It took about twenty minutes. Then most of them went home and four of them went to sleep where they were.',
-      'There is a rumour running along this stretch of river that farms are being burned somewhere south. I asked about it twice and got a different answer each time, neither of them from anybody who had seen anything. Bēltum has heard it. What she said about it was that the barley still has to come in.',
+      'There is a rumour running along this stretch of river that farms are being burned somewhere south. I asked about it twice and got a different answer each time, neither of them from anybody who had seen anything. Bēltum has heard it. What she said about it was that the sesame still has to come in.',
       'After dark she went out and drove a pair of geese off the bank with her arms out and a good deal of noise. I told her I had met a woman on Alašiya who spent an entire evening throwing stones at geese and never once hit one, on purpose, because hitting one would have meant plucking it and she was working. Bēltum thought about this for a moment. Then she said that she had hit one in the spring, that it had taken her most of an afternoon to deal with, and that it had been worth it. Two women, one bird, and completely different arithmetic.',
       'I go south with a column in two days. Bēltum has given me a cloth of bread and dates for it, which I did not ask for and which she handed over as though it were part of the arrangement.',
     ],
     standing:
-      'Chickpeas, barley, leeks, onions, cumin and sesame oil are all documented commodities in Middle Euphrates and Babylonian material, issued in bulk and often issued together. Harvest labour with provisioning attached is recorded as a seasonal obligation. What no text describes is the cooking of it, because a meal handed to thirty field workers passed through no storeroom and needed no clerk. Bēltum and Iltani are invented. The pot is reconstructed from the constraint it had to satisfy.',
+      'Chickpeas, barley, leeks, onions, cumin and sesame oil are all documented commodities in Middle Euphrates and Babylonian material, issued in bulk and often issued together. Harvest labour with provisioning attached is recorded as a seasonal obligation. What no text describes is the cooking of it, because a meal handed to thirty field workers passed through no storeroom and needed no clerk. Bēltum and Iltani are invented, and so, for these years, is the settled countryside they are working in: nothing from Terqa can be securely dated to my own decade, and what you have of the place is centuries older. The pot is reconstructed from the constraint it had to satisfy.',
   },
   {
     slug: 'the-wall-and-the-canal',
@@ -216,7 +216,7 @@ export const fieldReports = [
       },
     ],
     standing:
-      'A gugallu is a real office: canal inspector is an attested title, and the water schedule, the corvée obligation and the disputes over both are documented across Mesopotamian administrative and legal material. Hammi-Dagan is invented. Nobody recorded what a canal inspector said to a stranger in a market. The salt is real too, and the wheat-to-barley shift in the southern records is real, though how much of that shift to lay at the door of salinisation rather than politics or climate is genuinely argued over by the people who work on it, and I have tried to say so rather than pick a side. The house that burned is Terqa’s, the jar is Terqa’s, and the thing in the jar is a fight I am staying out of. The market list comes from commodity texts and not from anybody’s shopping basket.',
+      'A gugallu is a real office: canal inspector is an attested title, and the water schedule, the corvée obligation and the disputes over both are documented across Mesopotamian administrative and legal material. Hammi-Dagan is invented. Nobody recorded what a canal inspector said to a stranger in a market. The salt is real too, and the wheat-to-barley shift in the southern records is real, though how much of that shift to lay at the door of salinisation rather than politics or climate is genuinely argued over by the people who work on it, and I have tried to say so rather than pick a side. The house that burned is Terqa’s, the jar is Terqa’s, and the thing in the jar is a fight I am staying out of. The market list comes from commodity texts and not from anybody’s shopping basket. One more thing, and it is about this page rather than about dinner. If you go looking for Terqa in my own century you will not find it. There is no king of Hana on any list for these years, no archive, no tablet anybody can date to the decade I am standing in. The house I mention above, the one that burned five hundred years before I was born, is the opposite: excavated, published, argued over. This stretch of river is far better known half a millennium before my visit than during it, which is exactly the thing this site keeps saying about food and is stranger when it happens to a city.',
     body: [
       'The ridge above Terqa carries a path worn a hand’s depth into the limestone. From it the city appears all at once: mud brick on the west bank, the river behind it carrying a great deal of afternoon light, and between the two a band of cultivation about an hour’s walk across. The band ends without gradation. Past its edge the ground is thorn and stone, and it continues in that condition for as far as the eye can follow it.',
       'Inside the band there is barley, date palms in rows, and small fields of onions divided by low earth walls. Water reaches them along channels that leave the river above the town and run beside it, dropping slightly as they go, so that in several places the channel runs higher than the field it serves. Men were working in one of them as I came down. They stood knee-deep in wet silt, lifting it out in baskets and stacking it on the bank, where it dried grey. They do this every spring. If they stopped, the fields would be steppe inside two years.',
@@ -268,11 +268,6 @@ export const fieldReports = [
         name: 'robbed-teaching', at: 10, size: 'col',
         alt: 'Yadinu sitting on the ground holding up a sprig of herb and talking to a young woman and an older man, with a jug, a basket of olives, greens and figs spread on the rock in front of them and sheep behind.',
         caption: 'The trade: they had milk and bread and a fire, and I had four days of very close attention to a hillside.',
-      },
-    ],
-    pulls: [
-      {
-        at: 1,
       },
     ],
     standing:
@@ -365,7 +360,7 @@ export const fieldReports = [
     kind: 'report',
     title: 'The road is made of donkeys',
     region: 'mesopotamia',
-    place: 'The Euphrates road, east of Emar',
+    place: 'The hill road, west of Emar',
     date: '2026-08-25',
     access: 'open',
     recipe: 'caravan-pot-with-dried-curd',
@@ -487,7 +482,7 @@ export const fieldReports = [
       'Then the reversion, which is my favourite fact in Egypt. The god does not consume the offering and the offering is not burnt or thrown away. It comes back out of the room and is divided: priests, singers, doorkeepers, the men who carried it in. A temple is a religious institution and it is also, in strictly practical terms, an extremely large catering operation with a very unusual first customer. The offering table is the point at which the whole economy of the place turns back into dinner.',
       'I ate some of it and it was excellent.',
       'I asked him whether it was not a great deal of care to take over a diner who would never taste any of it. He did not take offence and he did not reach for the answer about the reversion, which was there and which he could have had for nothing. He asked what I was doing in Mennefer. I told him I was writing down what people eat so that it would be known a long time from now. He turned the bird and thought about it for a while. Then he asked me who was going to eat the meals I wrote down. I have been four days on the river since and I have not thought of anything to say to that.',
-      'Behind this town, on the desert edge, are the pyramids, and they are not new. They were already twelve hundred years old on the day Nakht was born, and everybody here treats them the way you treat a mountain, as scenery with some history on it. He ate rather more of the bird than I did, then went and sat on a mat and played senet against himself, which is what the middle of the day is for. “I usually win,” he said.',
+      'Behind this town, on the desert edge, are the pyramids, and they are not new. They were already thirteen hundred years old on the day Nakht was born, and everybody here treats them the way you treat a mountain, as scenery with some history on it. He ate rather more of the bird than I did, then went and sat on a mat and played senet against himself, which is what the middle of the day is for. “I usually win,” he said.',
     ],
   },
   {
@@ -737,7 +732,7 @@ export const fieldReports = [
       'She cooks for boat crews at Amnisos, the port Knossos uses. Uses is generous. The palace on the hill burned before my grandfather was born and nobody has rebuilt it, so what sits up there is an extremely large ruin with households camped round its edges. The bottom of the hill is a different matter, because a beach that was good for pulling boats onto is still good for pulling boats onto after the accountants have gone. Sand, a row of houses turned the wrong way for the wind, and by mid-morning the smell of fish being opened at speed.',
       'She is perhaps thirty, has firm opinions concerning how other people manage their fires, and can take a bream apart faster than the sentence describing it. Her Akkadian runs to about forty words and I have not one word of her own language, so two days passed largely in gesture, which neither of us minded. When I put out a hand for a knife to butterfly one of the fish, she removed the knife from my reach without saying anything at all.',
       'She buys them whole and about as long as her forearm, half a kilo apiece near enough, choosing on a clear eye and red gills underneath, which is guidance that has not altered in three thousand years and is not about to. Two of that size will do four people. The whole virtue of the dish depends on the fish staying on its bones with its cavity packed.',
-      'What packs it is fennel, which grows wild the length of this shore right down to where the sand begins, tall and feathery and giving off aniseed the instant it is bruised. She uses every part. Sliced thick, the bulbs make a single layer underneath. The fronds get chopped small along with coriander leaf, celery leaf and garlic worked to a paste, then salted and then worked again by hand for a good deal longer than looks necessary. I asked why. “Green,” she said. “Not grass.” When it became obvious that I had not followed, she took hold of my wrist, pushed my hand down into the bowl and kept it there until I had.',
+      'What packs it is fennel, which grows wild the length of this shore right down to where the sand begins, tall and feathery and giving off aniseed the instant it is bruised. She uses every part. The thick lower stalks, split down their length, make a single layer underneath. The fronds get chopped small along with coriander leaf, celery leaf and garlic worked to a paste, then salted and then worked again by hand for a good deal longer than looks necessary. I asked why. “Green,” she said. “Not grass.” When it became obvious that I had not followed, she took hold of my wrist, pushed my hand down into the bowl and kept it there until I had.',
       'Each fish is then scored twice on each side, right down to the bone, and stuffed until nothing more will go in. No oven is involved at any stage. It cooks on a broad shallow clay dish set straight onto the embers, and the single trick worth carrying home is what she does with the wine: it goes round the edge and never across the skin. Wine over the top steams the fish and the skin is finished. Wine underneath steams the fennel while the skin stays dry enough to blister. Oil across, salt on the outside, and then she reaches for the lyre.',
       'The clerks at Knossos counted fennel by the unit under the word ma-ra-tu-wo, which is the same word standing behind the name Marathon, meaning a field of the stuff. I told her this, clumsily and at excessive length, along with the fact that her harbour appears on those tablets as a-mi-ni-so and that tablets of that sort are how I know anything whatsoever about the ground I was standing on. She heard me out. Then she asked whether the palace had burned down. I said that it had, a long time ago. “And the fish is still good,” she said, and went to fetch the olives.',
       'It came off the embers cleaner than the list of ingredients would lead you to expect. Underneath, the bulb had turned sweet and silky and taken a little colour at the edges. Inside, the uncooked fronds had held their sharpness and scented the flesh from within. Olives at the last moment and a hard pour of oil once it was on the table, which is what keeps the whole thing from being merely polite.',
@@ -789,7 +784,7 @@ export const fieldReports = [
     standfirst:
       'An introduction, and an explanation of why a former provisioning clerk is writing about dinner.',
     body: [
-      'Somewhere under the ash at Ugarit there are tablets with my marks on them. Oil in and oil out, whose seal, which ship, what came up short. I did that for twelve years and I was good at it, and the result is that you can now state precisely how much sesame oil crossed one storeroom floor in one bad year and nothing whatever about what anybody ate.',
+      'Somewhere under the ash at Ugarit there are tablets with my marks on them. Oil in and oil out, whose seal, which ship, what came up short. I did that for twelve years under two kings of my own city and one very old one in Egypt, who came to his throne so long before I was born that nobody in the storeroom had ever filed a shipment under anybody else’s name. I was good at it, and the result is that you can now state precisely how much sesame oil crossed one storeroom floor in one bad year and nothing whatever about what anybody ate.',
       'The fire that ended my city is the reason you have any of it. Clay bakes. That is the entire mechanism by which my working notes outlived every meal I ever sat down to, and if you want the argument for this site in one physical fact, that is the fact.',
       'It took me an embarrassing length of time to notice what was missing from my own work. Every jar I counted went somewhere. Somebody opened it, somebody cooked with it, somebody sat down. None of that was any of my business, so none of it was written, so none of it exists.',
       'I stopped counting and went to look instead. Ships to Alašiya and on west into the islands. South into Egypt, where the bread is better than anyone north of it will concede. North with the caravans up onto the Anatolian plateau. East, eventually, into Babylonian kitchens, where I was corrected about onions by a woman in Sippar who repeated herself for my benefit. “You put them in at the beginning,” she said. “They are not a decoration.”',
@@ -804,7 +799,7 @@ export const fieldReports = [
     slug: 'the-world-as-i-know-it',
     // The map sits under the paragraph about names and routes, because that is the
     // paragraph it illustrates. Index into `body`.
-    showMapAfter: 0,
+    showMapAfter: 2,
     hero: {
       name: 'portrait-03',
       alt:
@@ -813,27 +808,27 @@ export const fieldReports = [
     },
     figures: [
       {
-        name: 'portrait-12', at: 3, size: 'inset',
+        name: 'portrait-12', at: 5, size: 'inset',
         alt:
           'Yadinu holding up a round dark loaf to the light in a market of tall storage jars, baskets of grain and bread heaped on the table in front of him.',
         caption: 'Barley country. Everything starts as grain here and most of it stays that way.',
       },
       {
-        name: 'portrait-14', at: 4, size: 'inset',
+        name: 'portrait-14', at: 6, size: 'inset',
         crop: '4 / 5', pan: [11.6, 17.9], zoom: 1.45,
         alt:
           'Yadinu holding a cup and a piece of bread on a Nile quay, a brightly painted temple wall and an obelisk behind him, palms and river boats on the water beyond.',
         caption: 'Egypt, and Egyptian bread. Better than ours. I have stopped arguing about it.',
       },
       {
-        name: 'portrait-07', at: 5, size: 'inset',
+        name: 'portrait-07', at: 7, size: 'inset',
         crop: '1 / 1', pan: [1.1, 42], zoom: 2.2,
         alt:
           'Yadinu holding up a large round loaf in a bakery, a domed oven alight behind him and another baker working at the table.',
         caption: 'A hundred named breads in the archive and instructions for almost none of them.',
       },
       {
-        name: 'landscape-13', at: 6, size: 'inset',
+        name: 'landscape-13', at: 8, size: 'inset',
         crop: '4 / 5', pan: [-0.9, 0], zoom: 1.15,
         alt:
           'Yadinu working dough at a long table on a terrace above the sea with two women, a domed oven alight beside them, bowls of olives and greens along the table.',
@@ -853,12 +848,14 @@ export const fieldReports = [
       'Five kitchens, one pantry, and a sea in the middle doing most of the work. What you are actually looking at.',
     body: [
       'The chart above is mine and you cannot read it, which is fair, since it was never meant for you. All the wavy scoring is water. The three circles with rings around them are the places I keep returning to: Ugarit on the coast, Mari up the first river, Bābili a long way down the second. That dashed line heading east out of Ugarit is the road, and somewhere on it in these pages there is a caravan. The clusters of little wedges are names.',
+      'There is a short list of men entitled to call one another brother, and they do it in Akkadian, and none of them is my king. Egypt, Ḫatti, Assyria, Babylonia: four Great Kings, four courts, one shared language of address that belongs to none of them. Ugarit is not on that list. We answer to the Hittite viceroy at Carchemish, who answers to Ḫattuša, and the ships pay for the arrangement. I mention it because a list like that is the reason a cargo moves at all, and because of what once happened to it.',
+      'A name was struck off it. Whoever kept the draft of one particular treaty listed the Great Kings, wrote the king of Ahhiyawa among them, and then drew a line through him. Nobody I have asked will tell me why, and Ahhiyawa has not been heard from since. I have never seen that tablet and I never will; what a man in my trade sees is a name that used to appear on a manifest and has stopped appearing. Both of those are the same event, arriving in different rooms.',
       'Names are the quickest way to see how far things moved. At home we call the city ủgrt; every scribe writing to us in Akkadian calls it Ugarit, Akkadian being the language business happens in whether or not anybody at the table speaks it at home. Crete is ke-re-te on a tablet at Knossos, Keftiu to an Egyptian painter putting tribute-bearers on a tomb wall, and Kaptara to a Babylonian who has in all likelihood never laid eyes on it. One island, four names, four scripts. A name does not travel that far unless ships carry it.',
       'And the ships are why five kitchens amount to one world. Leave Ugarit and you can be on Alašiya inside a day and a half, on Crete inside the week. Grain comes up out of Egypt. Copper comes across from Alašiya. Oil and wine go everywhere at once in quantities nobody has ever successfully counted. Water beats land for speed, so the ports are where recipes change hands along with everything else that changes hands.',
       'MESOPOTAMIA is the one kitchen of the five that left behind anything you could call a recipe, and what it left is three tablets written some five hundred years before my own time, the best of them carrying twenty-five entries, composed by professionals for other professionals and consequently listing no quantity and no cooking time anywhere in them. Barley country, east and downriver. The flavour runs sour: beer into the pot, soured milk stirred through once the heat is off, raw crushed garlic at the finish. Onions go into very nearly everything, and they will argue the point with you at length.',
       'EGYPT bakes better than any of us and is entirely aware of it. Emmer wheat in tall clay moulds, beer thick enough to count as a meal, and between them those two bracket the day from waking to dark. Protein comes off the water as fowl and river fish. Sweetness comes from dates and from tiger nuts. The country names itself Kmt, the black land, after the silt each flood lays down, in deliberate contrast to the red desert on either side; everybody else calls it something along the lines of Miṣru. Not one recipe of theirs reaches you. What reaches you instead is their kitchens, painted in sequence on tomb walls, which is a record of a different kind.',
       'ḪATTI thinks about bread more than anywhere else I have been and refuses to explain any of it. Their texts name well past a hundred varieties and describe almost none. It is high cold country up on the Anatolian plateau, with an archive at Ḫattuša running to tens of thousands of tablets. The distinguishing habit is sweetness set against meat, which nobody to the east of them will countenance: there is a dish that bakes lamb slowly in olive oil and honey together and it is far better than that description makes it sound. Excellent hazelnuts. And crushed chickpeas with raw cucumber over the top, which I have encountered nowhere else on earth.',
-      'THE AEGEAN holds the longest list of seasonings of the five and never once records what was done with any of them. The palace accounts at Knossos and Pylos are stock inventories, so you can say precisely how much coriander went into which storeroom and nothing at all about the dish it ended up in. Olive oil there is the ordinary fat rather than the expensive one, and the sheep cheese justifies the crossing on its own. Their script cannot write a final consonant and makes no distinction between l and r, so every name in Linear B is an approximate sketch of a sound. In place of instructions you get hardware: portable clay grills, notched along the top edge to seat skewers. Somebody was cooking meat on sticks over charcoal three thousand years ago and the equipment proves it even though nobody wrote it down.',
+      'THE AEGEAN holds the longest list of seasonings of the five and never once records what was done with any of them. The palace accounts at Knossos are stock inventories, and so are the tablets from the merchants’ houses outside the walls at Mycenae, which is where the long lists of coriander and cumin and fennel and sesame and celery and mint actually come from. You can say precisely how much of each went into which storeroom and nothing at all about the dish it ended up in. Olive oil there is the ordinary fat rather than the expensive one, and the sheep cheese justifies the crossing on its own. Their script cannot write a final consonant and makes no distinction between l and r, so every name in Linear B is an approximate sketch of a sound. In place of instructions you get hardware: portable clay grills, notched along the top edge to seat skewers. Somebody was cooking meat on sticks over charcoal three thousand years ago and the equipment proves it even though nobody wrote it down.',
       'CANAAN AND THE COAST is home, and of the five it left the thinnest kitchen of its own, which is what happens to a place whose whole occupation is moving everybody else’s food. To ourselves we are knʿn. To a Babylonian clerk we are Kinaḫḫu, and in the letters that go down to Egypt we are Kinaḫni. Harbours, warehouses, other people’s cargo. Olive oil pressed at a scale that is hard to picture, wine with resin through it, a great deal of fish, and a drinking club called the marzeaḥ whose membership rolls and property holdings you can read in detail and whose menu is a blank.',
       'Put the five beside one another and they do not resolve into five cuisines. They resolve into a single pantry spoken with different accents. Grain, pulse, allium, oil, soured dairy, bread: that spine runs unbroken from Pylos to Nippur. The variations are real and they are seasonings on a shared frame. Which fat. Which sour thing. Whether sugar is permitted anywhere near a joint of meat. Learn to make a lentil and barley pot with onions through it and you can cook in any of the five, given a few swaps.',
       'The absences matter as much as the contents. Nothing here has a tomato in it, or a potato, or a chilli, or maize, or citrus, or sugar, or rice, or chocolate, or coffee. All of those turn up afterwards, most of them a great deal afterwards, and most of them off a landmass nobody in this story suspects. A good half of what a modern cook files under Mediterranean is five centuries old at the outside. The other half is three thousand, and it is the half sitting in the pot.',
