@@ -51,6 +51,124 @@ export function yadinuDate(iso) {
 
 export const fieldReports = [
   {
+    slug: 'he-does-not-know-which-king',
+    kind: 'report',
+    card: 'soldier-spread',
+    title: 'He does not know which king',
+    region: 'mesopotamia',
+    place: 'Terqa, and the road south to Mari',
+    date: '2026-09-18',
+    access: 'open',
+    recipe: 'shoulder-for-the-road',
+    related: [
+      { to: '/reports/the-field-decides-when-supper-is', label: 'The fields he is marching to defend' },
+    ],
+    standfirst:
+      'A man is walking south in the morning to fight somebody who is burning farms. He cannot tell me whose farms, or which king, and he does not think the question is a useful one.',
+    hero: {
+      name: 'soldier-table',
+      alt: 'Yadinu and a bearded soldier at a riverside table of pulses, onions, garlic, herbs, dates, curd and a raw joint of meat, a copper pot on a fire beside them and a round shield and spear leaning on the wall behind.',
+      caption: 'The shield has been leaning against that wall for three days. Tomorrow it goes south.',
+    },
+    figures: [
+      {
+        name: 'soldier-mortar', at: 2, size: 'inset',
+        crop: '4 / 5', pan: [0.5, 0.2], zoom: 1.022,
+        alt: 'Yadinu and the soldier working cumin and garlic together in a stone mortar, four hands on the job.',
+        caption: 'Cumin, garlic and salt. He does this well and quickly and has clearly done it many times.',
+      },
+      {
+        name: 'soldier-pot', at: 4, size: 'col',
+        alt: 'The soldier stirring a copper pot over an open fire while Yadinu chops greens at the table beside him, shield and spear against the wall.',
+        caption: 'Chickpeas in the copper pot, and the shoulder in the coals underneath it. One fire, two dishes.',
+      },
+      {
+        name: 'soldier-spread', at: 6, size: 'col',
+        alt: 'The finished meal: a wide bowl of chickpeas and greens, a dark roasted joint of mutton on the bone, white curd, dates, coarse salt and a large jug.',
+        caption: 'The pot is what he eats. The joint is because he is leaving.',
+      },
+      {
+        name: 'soldier-net', at: 8, size: 'inset',
+        crop: '4 / 5', pan: [-0.5, 0.5], zoom: 1.054,
+        alt: 'The soldier sitting alone by the river mending a net with his shield and spear propped beside him.',
+        caption: 'Not a fishing net. It goes over the load on a mule, and he had been meaning to fix it for a month.',
+      },
+    ],
+    body: [
+      'Iddin-Sîn is about forty, missing the top joint of one finger, and has been a soldier for twenty-two years in the way a man is a farmer for twenty-two years, which is to say seasonally and without much ceremony about it. He is going south with a column in the morning. I am going with them as far as Mari, where I intend to find a boat and go north again, and he thinks this is a very sound plan.',
+      'What he could tell me about where he is going: south, along the river, about eleven days. That there is a campaign, and that it is with Babylon, so the Babylonians will be somewhere in the same country doing something related. That the man they are going against has been burning farms.',
+      'What he could not tell me: which man. Whose farms. Why. Whether the burning was the cause of the campaign or a response to it. Whether Terqa had asked for this or been told. I put all of that to him over the course of an afternoon, from several directions, and got the same shrug each time, delivered without any impatience at all.',
+      '“You want to know why,” he said, eventually. He was crushing garlic at the time. “I want to know where to stand.”',
+      'I have been turning that over since and I cannot make it into ignorance, which is what I wanted it to be. He knows what he needs for the thing he has to do, and he has been doing it long enough to know exactly what that is. The why belongs to somebody in a room with a tablet, and if he were told he would not be able to check it, and it would not change the eleven days or the standing.',
+      'The cooking was his and it was better than mine. A mutton shoulder, scored, salted, rubbed hard with cumin and garlic and oil, set on halved onions in a covered dish and left in the coals for three hours while a pot of chickpeas and barley went on the fire above it. One fire, two dishes, no attention required by either for most of the afternoon. He has cooked for men on the move for two decades and everything about the way he works is arranged around not being interrupted.',
+      'The pot is what he actually eats. The shoulder is because he is leaving in the morning, and nobody at that fire said so, and there was a great deal more of it than two men needed. Three of the neighbours came by while it was resting and none of them mentioned the column either. I ate with two women in a field kitchen two days ago and there was no meat on that table at all, which is the ordinary state of affairs. An animal is wool and milk and lambs and years of feed, so eating one is a decision about the future. It appears at festivals, at sacrifices, and when somebody is going away.',
+      'I asked what he would be eating in eleven days. Parched barley, he said, and hard curd, and whatever the country gives up, and he said it the way you would describe weather.',
+      'Afterwards he sat by the water and mended a net he had been meaning to mend for a month. It is not for fish. It goes over a load on a mule and one corner of it had gone, and he worked at it until it was too dark to see, with the shield leaning against the wall behind him where it has been all week.',
+      'We leave at first light. Eleven days for him and four for me, and then a boat north.',
+    ],
+    standing:
+      'Sheep and goat dominate the faunal record here and are priced and issued throughout the administrative material. Cumin, garlic and sesame oil are documented commodities. Military musters and their provisioning appear in correspondence, and so do complaints about burned fields, though never with enough context attached to know whose or why. Iddin-Sîn is invented. What is not invented is how little an ordinary soldier is told, which the correspondence makes plain by never once addressing him.',
+  },
+  {
+    slug: 'the-field-decides-when-supper-is',
+    kind: 'report',
+    card: 'harvest-spread',
+    title: 'The field decides when supper is',
+    region: 'mesopotamia',
+    place: 'Below Terqa, on the Euphrates',
+    date: '2026-09-16',
+    access: 'open',
+    recipe: 'field-pot-for-thirty',
+    related: [
+      { to: '/reports/the-wall-and-the-canal', label: 'The city these fields belong to' },
+    ],
+    standfirst:
+      'Two women, one pot and thirty men in the barley. The cooking is easy and the timing is not, because nobody knows when the light will give out.',
+    hero: {
+      name: 'harvest-table',
+      alt: 'Yadinu working at a long riverside table loaded with greens, cucumbers, pulses, dates and curd, with two women beside him and a domed bread oven behind, the Euphrates and a mudbrick town beyond.',
+      caption: 'Everything on that table came out of the ground within an hour of where it is standing.',
+    },
+    figures: [
+      {
+        name: 'harvest-showing', at: 2, size: 'inset',
+        crop: '4 / 5', pan: [-6, 2], zoom: 1.5,
+        alt: 'Bēltum holding out a handful of grain across the cauldron for Yadinu to look at, both of them laughing.',
+        caption: 'Bēltum, explaining why this year’s barley wants five minutes longer than last year’s.',
+      },
+      {
+        name: 'harvest-stirring', at: 4, size: 'col',
+        alt: 'Yadinu stirring a very large cauldron with a wooden paddle while Bēltum watches and Iltani works at greens behind.',
+        caption: 'The paddle is not for show. A pot this size catches on the bottom if you stir it like a saucepan.',
+      },
+      {
+        name: 'harvest-spread', at: 6, size: 'col',
+        alt: 'The finished meal laid out: a very large bowl of chickpeas and barley strewn with green herbs, stacks of flatbread, bowls of dates, figs, white curd, onions and garlic.',
+        caption: 'One pot, and everything else on the table is cold and needed no fire at all.',
+      },
+      {
+        name: 'harvest-geese', at: 8, size: 'inset',
+        crop: '4 / 5', pan: [0, 4], zoom: 1.3,
+        alt: 'Bēltum at dusk by the river, arms out, driving a pair of geese away from the house, a crescent moon above the palms.',
+        caption: 'She has hit one before. She was keen that I understood the difference.',
+      },
+    ],
+    body: [
+      'Two days downriver from the city the fields start, and in the middle of September they are full of people. The barley comes in fast or it comes in badly, so everyone who can hold a sickle is out from first light, and thirty of them have to be fed at the end of it. That job belongs to Bēltum, who is somewhere past fifty and has done it for most of them, and to Iltani, who is her niece and is quicker with a knife than anybody I have watched this year.',
+      'Their kitchen is a table under a vine by the water, a bread oven, and a cauldron I could sit in. There is no roof over any of it. Bēltum said the roof was the point, because a fire under a roof in September is how you lose a house, and then she said it a second time in case I was the sort of man who needed telling twice. I have been that sort of man before now.',
+      'What goes in the pot is chickpeas, cracked barley, leeks, onions, a whole head of garlic and a great deal of cumin, and none of that is the interesting part. The interesting part is the clock, which does not exist. Nobody in that field knows what time they will stop. They stop when the light goes or when the barley in front of them runs out, and the pot has to be ready before that and then capable of waiting an hour without turning to paste.',
+      'So the whole design is about holding. Pulses and grain, because they sit. Half the leeks in early to dissolve into the body of it and half in late so there is still something to bite. The greens not in it at all until the last three minutes. And no salt to speak of until the end, because a pot that sits keeps reducing, and a pot seasoned correctly at noon is a mouthful of brine by dusk. Bēltum salts it hard at the last moment, in front of everybody, and it is the only part of the process she will not let anyone else do.',
+      'I said, meaning it as praise, that it was a simple way to feed thirty people.',
+      '“It is not simple.” She had the paddle in both hands and did not stop moving it. “It is cheap. You keep saying simple.” Iltani laughed at that without looking up. I have used the word about a dozen dishes on this journey and I am going to be more careful with it, because Bēltum is right: nothing about this is simple. It is a schedule, a set of substitutions and thirty years of judgement, arranged so that it looks like nothing at all.',
+      'They came in a little after the light went. Everyone ate standing or sitting on the ground with a bowl on their knees, bread torn from the stack, cold curd spooned on top of hot grain, dates going round in a bowl that came back empty twice. It took about twenty minutes. Then most of them went home and four of them went to sleep where they were.',
+      'There is a rumour running along this stretch of river that farms are being burned somewhere south. I asked about it twice and got a different answer each time, neither of them from anybody who had seen anything. Bēltum has heard it. What she said about it was that the barley still has to come in, which is not indifference and is not bravery either. It is a statement about what she can do something about.',
+      'After dark she went out and drove a pair of geese off the bank with her arms out and a good deal of noise. I told her I had met a woman on Alašiya who spent an entire evening throwing stones at geese and never once hit one, on purpose, because hitting one would have meant plucking it and she was working. Bēltum thought about this for a moment. Then she said that she had hit one in the spring, that it had taken her most of an afternoon to deal with, and that it had been worth it. Two women, one bird, and completely different arithmetic.',
+      'I go south with a column in two days. Bēltum has given me a cloth of bread and dates for it, which I did not ask for and which she handed over as though it were part of the arrangement.',
+    ],
+    standing:
+      'Chickpeas, barley, leeks, onions, cumin and sesame oil are all documented commodities in Middle Euphrates and Babylonian material, issued in bulk and often issued together. Harvest labour with provisioning attached is recorded as a seasonal obligation. What no text describes is the cooking of it, because a meal handed to thirty field workers passed through no storeroom and needed no clerk. Bēltum and Iltani are invented. The pot is reconstructed from the constraint it had to satisfy.',
+  },
+  {
     slug: 'the-wall-and-the-canal',
     kind: 'report',
     card: 'terqa-talk',
@@ -61,6 +179,7 @@ export const fieldReports = [
     access: 'open',
     recipe: 'dried-river-fish-with-onions-terqa',
     related: [
+      { to: '/reports/the-field-decides-when-supper-is', label: 'Downriver, two days later' },
       { to: '/reports/they-took-the-people-too', label: 'Why I was walking alone' },
       { to: '/reports/the-road-is-made-of-donkeys', label: 'The caravan that started this' },
     ],
@@ -137,7 +256,7 @@ export const fieldReports = [
       },
       {
         name: 'robbed-foraging', at: 6, size: 'inset',
-        crop: '4 / 5', pan: [-6, 1.5], zoom: 1.1,
+        crop: '4 / 5', pan: [-6, 1.5], zoom: 1.12,
         alt: 'Yadinu kneeling on a stony hillside with both hands working into a low thorny shrub, stripping small pale fruit from it, dry hills stretching away behind him.',
         caption: 'Two hours of this fills a basket once. Nobody gathers who has any alternative at all.',
       },
@@ -446,7 +565,7 @@ export const fieldReports = [
     figures: [
       {
         name: 'delta-dough', at: 2, size: 'inset',
-        crop: '4 / 5', pan: [0.3, 0], zoom: 1,
+        crop: '4 / 5', pan: [0, 0], zoom: 1,
         alt: 'Close view of Yadinu and Merit working flour and dough at a low table, the child watching from below with his chin near the tabletop.',
         caption: 'The grain is the same grain that becomes bread. What happens next is the only difference.',
       },
@@ -457,7 +576,7 @@ export const fieldReports = [
       },
       {
         name: 'delta-table', at: 6, size: 'inset',
-        crop: '4 / 5', pan: [20, 4], zoom: 1.7,
+        crop: '16 / 9', pan: [-2.2, 3.2], zoom: 1.13,
         alt: 'A wider view of the same low table with flatbread, a mortar, bowls of pulses and greens, a woman standing in a doorway behind, and the Nile beyond.',
         caption: 'One room, one oven, one quern, and everything else portable.',
       },
@@ -578,7 +697,7 @@ export const fieldReports = [
       },
       {
         name: 'cretan-fish-stuffing', at: 4, size: 'inset',
-        crop: '4 / 5', pan: [-0.4, 0], zoom: 1,
+        crop: '4 / 5', pan: [0, 0], zoom: 1,
         alt: 'Close on two pairs of hands packing chopped green herbs into the belly cavity of a whole fish, a bowl of the herb mixture in front of them.',
         caption: 'Pack it until it will not take any more, then push what is left into the cuts.',
       },

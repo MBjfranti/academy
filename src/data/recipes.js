@@ -511,6 +511,193 @@ export const recipes = [
     sources: ['Mesopotamian lexical fish vocabularies', 'Temple and palace fish delivery records', 'Middle Euphrates commodity texts'],
   },
   {
+    slug: 'field-pot-for-thirty',
+    title: 'The Field Pot: Chickpeas, Barley and Leek',
+    ancient: 'DUG',
+    translit: 'diqāru',
+    language: 'Akkadian, written with the Sumerian vessel sign DUG',
+    region: 'mesopotamia',
+    category: 'Stews & Broths',
+    siglum: 'Middle Euphrates · harvest provisioning',
+    provenance: 'A riverside kitchen below Terqa',
+    period: 'Late Bronze Age',
+    date: 'c. 1250 BC',
+    serves: 'Serves 6, and scales to thirty without changing',
+    time: '1 hr 15',
+    grade: 'inferred',
+    summary:
+      'The pot that fed a harvest crew. Everything in it is a documented staple, and the only difficult part is the timing, which belongs to the field and not to the cook.',
+    intro:
+      'This is cooking as logistics. A harvest crew works while the light lasts and eats when it stops, and nobody knows in advance exactly when that is, so the pot has to be ready early and then be capable of waiting an hour without spoiling. That single requirement shapes everything: pulses and grain instead of meat, because they hold; the greens added in two goes so the second lot is still green when the pot is finally opened; and the salt and the oil kept back to the end, because a pot that sits and reduces will over-season itself if you seasoned it properly at the start. It is very good food and it was built by people solving a scheduling problem.',
+    sourceText: {
+      kind: 'paraphrase',
+      text: 'Chickpeas, barley, leeks, onions, cumin and sesame oil are all documented commodities in Middle Euphrates and Babylonian administrative material, issued in bulk and often together. Harvest labour is recorded as a seasonal obligation with provisioning attached. No text describes the cooking.',
+      attribution: 'Mesopotamian administrative and provisioning texts',
+    },
+    ingredientGroups: [
+      {
+        name: 'The pot',
+        items: [
+          { ancient: '—', modern: 'Dried chickpeas, soaked overnight', qty: '350 g', grade: 'attested' },
+          { ancient: 'ŠE', modern: 'Coarse cracked barley, or pearl barley', qty: '200 g', grade: 'attested' },
+          { ancient: 'SUM', modern: 'Leeks, sliced thick', qty: '4 large', grade: 'attested', note: 'twogoes' },
+          { ancient: 'SUM', modern: 'Onions, sliced', qty: '2 large', grade: 'attested' },
+          { ancient: '—', modern: 'Garlic, whole cloves, peeled', qty: '1 head', grade: 'attested' },
+          { ancient: '—', modern: 'Cumin seed, cracked', qty: '1 tbsp', grade: 'attested' },
+          { ancient: 'Ì', modern: 'Sesame oil, light and untoasted', qty: '4 tbsp', grade: 'attested' },
+          { ancient: '—', modern: 'Water', qty: '1.5 litres', grade: 'inferred' },
+        ],
+      },
+      {
+        name: 'At the end, and at the table',
+        items: [
+          { ancient: '—', modern: 'Chard, spinach or beet tops, shredded', qty: '300 g', grade: 'attested' },
+          { ancient: '—', modern: 'Salt', qty: 'to taste', grade: 'inferred' },
+          { ancient: 'GA', modern: 'Fresh curd or thick yoghurt', qty: '400 g', grade: 'attested' },
+          { ancient: '—', modern: 'Dates, stoned', qty: 'a bowl', grade: 'attested' },
+          { ancient: 'NINDA', modern: 'Flatbread', qty: '6', grade: 'attested' },
+        ],
+      },
+    ],
+    directionGroups: [
+      {
+        name: 'The base',
+        steps: [
+          { text: 'Drain the soaked chickpeas. Cover them with fresh water and cook until they crush between finger and thumb, about forty minutes. Do not salt them yet.', grade: 'reconstructed' },
+          { text: 'In a second and larger pot, warm the sesame oil and put in the onions, half the leeks and the whole garlic cloves. Cook them slowly for fifteen minutes until they slump. Add the cracked cumin for the last minute.', grade: 'reconstructed' },
+        ],
+      },
+      {
+        name: 'Together',
+        steps: [
+          { text: 'Stir the barley through the oil until every grain is coated. Add the chickpeas with their water, bring it up, and hold it at a bare simmer for twenty-five minutes with the lid on.', grade: 'reconstructed' },
+          { text: 'Add the second half of the leeks. Ten more minutes. They will still have some structure at the end, which is the point of holding them back.', grade: 'reconstructed' },
+          { text: 'Take it off the heat and leave the lid on. It will sit an hour quite happily and is better for twenty minutes of it.', grade: 'reconstructed' },
+        ],
+      },
+      {
+        name: 'When the field stops',
+        steps: [
+          { text: 'Bring it back to a simmer, stir the shredded greens through, and give them three minutes. Salt it now, and be firmer than feels right; the grain has been drinking for an hour.', grade: 'reconstructed' },
+          { text: 'Serve it in wide bowls with a spoon of cold curd on each, bread to scoop with, and dates on the table. The cold curd against the hot grain is half of what makes it worth eating.', grade: 'reconstructed' },
+        ],
+      },
+    ],
+    apparatus: [
+      {
+        term: 'Standing',
+        text: 'Graded inferred. Every ingredient is a documented Mesopotamian staple, issued in bulk and frequently issued together, and harvest labour with provisioning attached is recorded as a seasonal obligation. What is not recorded is the cooking, because nobody writes down what thirty people were given at the end of a working day. The proportions and the method are reconstructed from the constraint.',
+      },
+      {
+        term: 'twogoes',
+        text: 'Half the leeks go in early and dissolve into the body of the pot; half go in late and stay themselves. This is the single technique worth taking away from the dish. One vegetable, added twice, gives you both the sweetness of a long cook and the texture of a short one, and it costs nothing.',
+      },
+      {
+        term: 'Why the salt waits',
+        text: 'A pot that has to hold for an hour keeps cooking after it leaves the fire, and it keeps reducing. Salt it correctly at the start and it will be too salty by the time anybody eats. Salt it at the end, hard, and it is right. This is also why the greens are not in it while it waits, and why it is better food than it sounds.',
+      },
+      {
+        term: 'Cooking it for thirty',
+        text: 'The recipe scales without any change at all, which is the reason a pot like this exists. Multiply everything by five and you are cooking for thirty in one vessel. What does not scale is the stirring, so use the widest, heaviest pot you own, keep the heat low once the barley is in, and stir from the bottom. Grain settles and catches, and a burnt bottom cannot be stirred back out.',
+      },
+    ],
+    substitutions: [
+      { from: 'Cracked barley', to: 'Pearl barley, or coarse bulgur', text: 'Pearl barley wants five minutes longer. Bulgur wants ten minutes less and gives a softer pot.' },
+      { from: 'Sesame oil', to: 'Olive oil, or any neutral oil', text: 'Sesame is what the region pressed. Olive tastes good and moves the dish west.' },
+      { from: 'Fresh curd', to: 'Thick yoghurt, or a mild feta crumbled', text: 'What is wanted is something cold, white and sour landing on hot grain.' },
+    ],
+    sources: ['Middle Euphrates provisioning texts', 'Babylonian administrative commodity records'],
+  },
+  {
+    slug: 'shoulder-for-the-road',
+    title: 'Mutton Shoulder for a Man Leaving',
+    ancient: 'UZU',
+    translit: 'šīru',
+    language: 'Akkadian, written with the Sumerian logogram UZU',
+    region: 'mesopotamia',
+    category: 'Roasts & Hearth',
+    siglum: 'Middle Euphrates · muster provisioning',
+    provenance: 'A riverside camp below Terqa',
+    period: 'Late Bronze Age',
+    date: 'c. 1250 BC',
+    serves: 'Serves 4 to 6',
+    time: '3 hr 30, mostly unattended',
+    grade: 'reconstructed',
+    summary:
+      'Meat is occasional in this world, so its appearance marks an occasion. This is the one that appears the night before somebody walks south.',
+    intro:
+      'Nothing in the method here is clever. A shoulder, salt, cumin, garlic, a low fire and a great deal of time, which is how mutton has been cooked across this region for as long as there has been mutton. What is worth understanding is why it is on the table at all. Meat is expensive in labour and in arithmetic, and the ordinary food of this world is the pulse pot on the same fire. A joint appears when something is being marked. This one is on the table because a man is leaving in the morning and nobody at that fire says so.',
+    sourceText: {
+      kind: 'paraphrase',
+      text: 'Sheep and goat are the dominant meat animals in Middle Euphrates and Babylonian faunal assemblages and are priced and issued throughout the administrative record. Cumin, garlic and sesame oil are documented commodities. Military musters and their provisioning appear in correspondence. No text records the cooking of a joint.',
+      attribution: 'Mesopotamian faunal and administrative material',
+    },
+    ingredientGroups: [
+      {
+        name: 'The joint',
+        items: [
+          { ancient: 'UDU', modern: 'Mutton or hogget shoulder, on the bone', qty: '2 kg', grade: 'attested', note: 'whichcut' },
+          { ancient: '—', modern: 'Coarse salt', qty: '2 tbsp', grade: 'attested' },
+          { ancient: '—', modern: 'Cumin seed, cracked', qty: '2 tbsp', grade: 'attested' },
+          { ancient: '—', modern: 'Garlic, crushed to a paste', qty: '1 head', grade: 'attested' },
+          { ancient: 'Ì', modern: 'Sesame oil', qty: '3 tbsp', grade: 'attested' },
+        ],
+      },
+      {
+        name: 'Under it, and beside it',
+        items: [
+          { ancient: 'SUM', modern: 'Onions, halved', qty: '4', grade: 'attested' },
+          { ancient: '—', modern: 'Water', qty: '250 ml', grade: 'inferred' },
+          { ancient: '—', modern: 'Dates, to finish', qty: 'a handful', grade: 'attested' },
+          { ancient: 'NINDA', modern: 'Flatbread', qty: '6', grade: 'attested' },
+        ],
+      },
+    ],
+    directionGroups: [
+      {
+        name: 'The rub',
+        steps: [
+          { text: 'Score the fat side of the shoulder in a lattice, down to the meat but not through it. Work the salt into the cuts with your fingers and leave it out of the cold for an hour.', grade: 'reconstructed' },
+          { text: 'Mix the cracked cumin, the garlic paste and the oil, and rub the whole joint with it, into the scores and underneath as well as on top.', grade: 'attested' },
+        ],
+      },
+      {
+        name: 'The long part',
+        steps: [
+          { text: 'Sit the onion halves in a heavy dish, cut side down, and put the shoulder on top of them. They are there to hold the joint out of its own fat and to sweeten what collects underneath.', grade: 'reconstructed' },
+          { text: 'Pour the water in around, not over. Cover tightly and cook at 150°C for three hours. Do not open it.', grade: 'reconstructed' },
+          { text: 'Uncover, raise the heat to 220°C, and give it twenty-five minutes to darken. Baste once with the pan juices halfway through.', grade: 'reconstructed' },
+        ],
+      },
+      {
+        name: 'To the table',
+        steps: [
+          { text: 'Rest it twenty minutes. It should pull apart under a spoon; if it resists, it wanted another half hour and the fix is time, not heat.', grade: 'reconstructed' },
+          { text: 'Skim the fat off the juices and keep it. Tear the dates over the meat, spoon the juices around, and serve with bread and with the field pot on the same fire.', grade: 'reconstructed' },
+        ],
+      },
+    ],
+    apparatus: [
+      {
+        term: 'Standing',
+        text: 'The animal, the seasonings and the occasion are all attested. Sheep dominate the faunal record, cumin and garlic and sesame oil are documented commodities, and musters with their provisioning appear in the correspondence. The method is reconstructed, and it is reconstructed from the material rather than from a text: a shoulder is a hard-working joint full of connective tissue, and there is exactly one thing to do with it, which is to cook it low for a long time.',
+      },
+      {
+        term: 'whichcut',
+        text: 'Shoulder, and on the bone. It is the cheap end of the animal, it is full of connective tissue and intramuscular fat, and both of those are the point: they melt into gelatin over three hours and give you meat that pulls apart. Leg is leaner, costs more, and dries out before it gives in. Mutton or hogget over lamb if your butcher has it, because older meat has more to say and this cooking method has time to listen.',
+      },
+      {
+        term: 'Why there is meat at all',
+        text: 'The everyday food of this world is the pulse pot, and the arithmetic is not close. An animal represents wool, milk, offspring and years of feed, so eating one is a decision about the future rather than about dinner. Meat therefore appears at festivals, at sacrifices, at the arrival of somebody important, and at departures. If you want the honest picture of how these people ate, cook the field pot four times for every time you cook this.',
+      },
+    ],
+    substitutions: [
+      { from: 'Mutton shoulder', to: 'Lamb shoulder, or goat shoulder', text: 'Lamb is milder and wants half an hour less. Goat is closer to what was eaten in much of the region and behaves almost identically.' },
+      { from: 'Sesame oil', to: 'Olive oil', text: 'Sesame is the river valley and olive is the coast. Either works under a joint.' },
+    ],
+    sources: ['Mesopotamian faunal assemblages', 'Administrative price and ration records', 'Correspondence on musters and provisioning'],
+  },
+  {
     slug: 'caravan-pot-with-dried-curd',
     title: 'The Road Pot: Emmer, Dried Curd and Onion',
     ancient: 'URUDU',

@@ -184,6 +184,8 @@ const WORD_FOR_DISH = {
   'neck-of-mutton-with-leeks-hattusa': 'SUM',
   'caravan-pot-with-dried-curd': 'GA',
   'dried-river-fish-with-onions-terqa': 'KU₆',
+  'field-pot-for-thirty': 'DUG',
+  'shoulder-for-the-road': 'UZU',
   'sheep-on-the-huprushi': 'UDU',
   'lentil-and-barley-pottage': 'ŠE',
   'leek-lentil-and-barley-pottage': 'ŠE',

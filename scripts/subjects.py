@@ -651,6 +651,8 @@ DISHES = [
      "around it in a deliberate ring"),
     ("hillside-greens-with-soured-milk", "a wide shallow bowl of thick white soured milk streaked through with crisp green purslane and dark wilted leaves, a heavy dusting of dark red sumac over the top, cracked green-gold nuts and torn purple figs scattered on it, olive oil pooling at the edge"),
     ("dried-river-fish-with-onions-terqa", "a wide shallow earthenware bowl of pale cracked grain heaped with deep gold collapsed onion and large white flakes of fish, a heavy dusting of dark red sumac and torn green herbs over the top, oil pooling at the rim"),
+    ("field-pot-for-thirty", "a very wide shallow earthenware bowl heaped with pale gold chickpeas and cracked barley, soft green leek and dark shredded greens through it, a spoonful of white curd on top and a scatter of cracked cumin seed"),
+    ("shoulder-for-the-road", "a dark burnished mutton shoulder on the bone in a shallow earthenware dish, sitting on halved browned onions, torn dark dates scattered over it and pan juices pooling around the base"),
     ("caravan-pot-with-dried-curd", "a plain round-bellied cooking pot of thick pale "
      "cracked-wheat porridge streaked with white soured curd, sliced onion and torn dried "
      "apricots through it, a scatter of cumin seed on top"),

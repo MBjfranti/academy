@@ -195,6 +195,21 @@
   "generated": "2026-08-25T20:53:26+00:00"
  },
  {
+  "slug": "field-pot-for-thirty",
+  "tier": "dishes",
+  "out": "dish-field-pot-for-thirty",
+  "kind": "plate",
+  "raw": "gen-field-pot-for-thirty.png",
+  "model": "gpt-image-1",
+  "size": "1024x1024",
+  "quality": "medium",
+  "prompt_sha256": "9c558ccaa88d09205340a7293c76596e9106dd35935fe83e9abf1b519359c52e",
+  "image_sha256": "a2e96e7aa98dc641b71f881966a9bb55415607dc7966dc260108a6bb0e12ec67",
+  "bytes": 1906559,
+  "usd": 0.042,
+  "generated": "2026-08-26T03:37:08+00:00"
+ },
+ {
   "slug": "fish-baked-on-fennel-amnisos",
   "tier": "dishes",
   "out": "dish-fish-baked-on-fennel-amnisos",
@@ -568,6 +583,21 @@
   "bytes": 2002924,
   "usd": 0.042,
   "generated": "2026-08-25T04:24:09+00:00"
+ },
+ {
+  "slug": "shoulder-for-the-road",
+  "tier": "dishes",
+  "out": "dish-shoulder-for-the-road",
+  "kind": "plate",
+  "raw": "gen-shoulder-for-the-road.png",
+  "model": "gpt-image-1",
+  "size": "1024x1024",
+  "quality": "medium",
+  "prompt_sha256": "c7773b308e22433370c359a7cf592db6d2cc211640bdd747ffc6319b380566bd",
+  "image_sha256": "0fc12607e548a8b0600f8e0a9e730281eb08089297a181335ec2944c4515a29d",
+  "bytes": 1853982,
+  "usd": 0.042,
+  "generated": "2026-08-26T03:37:23+00:00"
  },
  {
   "slug": "skewers-on-the-firedog",
