@@ -26,6 +26,9 @@ dist-ssr
 # image pipeline scratch (regenerate with: python scripts/process_images.py --contact)
 images/_work
 
+# Generated report-image candidates; retain only the production WebP assets in Git.
+public/img/reports/**/*.png
+
 # Python pipeline
 __pycache__/
 *.pyc
