@@ -42,7 +42,7 @@ export const recipes = [
     time: '2 hr 30 min',
     grade: 'attested',
     featured: true,
-    summary: 'The most complete dish on the best-preserved culinary tablet in existence, and the closest thing the Bronze Age has to a recipe you can simply follow.',
+    summary: 'The most complete dish on the best-preserved culinary tablet in existence, and the closest thing the Bronze Age has to a recipe you can follow.',
     intro:
       'Leg of lamb seared in its own fat, stewed with beer and alliums and a deep red root, then hit twice with coriander at the close — the seed sprinkled over, the fresh leaf folded in. Fourteen ingredients, given in the order they enter the pot, and not one measurement anywhere. That absence is not damage to the tablet. It is a working note between professionals, written by someone who assumed the reader already knew how much, which is why every quantity below is ours rather than his.',
     sourceText: {
@@ -78,10 +78,10 @@ export const recipes = [
         name: 'The stew',
         steps: [
           { text: 'Render the tail fat in a heavy pot over a low fire until you have a shallow pool of clear fat and the solids have coloured. Leave the solids in.', grade: 'inferred' },
-          { text: 'Raise the fire. Sear the lamb in the fat, in batches, until every face has taken colour. The tablet gives this its own verb and it is not a step to hurry — it is the only browning the dish gets.', grade: 'attested' },
+          { text: 'Raise the fire. Sear the lamb in the fat, in batches, until every face has taken colour. The tablet gives this its own verb. Do not hurry it; it is the only browning the dish gets.', grade: 'attested' },
           { text: 'Pour in water to barely cover, and the beer with it. Bring to a bare tremble.', grade: 'attested' },
-          { text: 'Fold in, in this order: salt, onion, rocket, fresh coriander leaf, Persian shallot, cumin, and the beetroot. The tablet is explicit that these go in together, folded rather than stirred.', grade: 'attested' },
-          { text: 'Crush the leek and garlic to a wet paste — a mortar, not a knife — and work it into the pot.', grade: 'attested' },
+          { text: 'Fold in, in this order: salt, onion, rocket, fresh coriander leaf, Persian shallot, cumin, and the beetroot. The tablet is explicit that these go in together, folded and not stirred.', grade: 'attested' },
+          { text: 'Crush the leek and garlic to a wet paste in a mortar, not with a knife, and work it into the pot.', grade: 'attested' },
           { text: 'Cover and hold at a tremble for two hours, until the lamb gives at the bone and the liquid has gone the colour of old brick.', grade: 'reconstructed' },
           { text: 'Off the fire, sprinkle the ground coriander seed over the surface. Scatter the kurrat and a second handful of fresh coriander leaf. Serve at once, with barley bread to take up the liquid.', grade: 'attested' },
         ],
@@ -129,7 +129,7 @@ export const recipes = [
     time: '50 min',
     grade: 'attested',
     summary:
-      'One of the four meatless entries on the tablet, thickened at the last moment with pounded beer-bread — and the recipe that opens with the words “meat is not used.”',
+      'One of the four meatless entries on the tablet, thickened at the last moment with pounded beer-bread. It opens with the words “meat is not used.”',
     intro:
       '“Meat is not used.” The entry announces what it is not before it says anything else, which on a tablet where twenty-one of the twenty-five recipes are built on meat counts as a statement of intent. What is left is barley, alliums and green herbs — and one move at the very end that makes the whole dish. Dried beer-bread pounded, sifted, scattered over the pot just before it comes off the fire. It thickens, it seasons, and it pulls a faintly sour, yeasty note through everything. The name plausibly comes from pašāru, the verb for loosening, releasing, undoing a knot.',
     sourceText: {
@@ -233,7 +233,7 @@ export const recipes = [
     time: '45 min',
     grade: 'attested',
     summary:
-      'A foreign dish, named for Elam, thickened with blood and soured milk and built on dill — the only entry on the tablet that uses it.',
+      'A foreign dish, named for Elam, thickened with blood and soured milk and built on dill, which no other entry on the tablet uses.',
     intro:
       'Dill appears exactly once in the whole corpus, and it appears here, in one of two entries the tablet itself marks as foreign. Elam lay east, in what is now south-western Iran, and dill remains a signature of Iranian cooking rather than Iraqi — a small piece of evidence pointing the same way the label does. No meat, then; a great deal of dill; and a body built from blood and soured milk rather than a joint, thick and tart and deeply savoury. This is what a scribe writes down when the food is not his own.',
     sourceText: {
@@ -372,13 +372,13 @@ export const recipes = [
         name: 'The greens',
         steps: [
           { text: 'Wash the greens properly and then wash them again. Gathered food arrives with dust, grit and a certain amount of livestock, and there is no dignified way around a bowl of cold water.', grade: 'reconstructed' },
-          { text: 'Purslane goes in raw. It is a succulent and the whole point of it is that it stays crisp and squeaks against the teeth. Anything softer and more fibrous — mallow, chard tops — gets sixty seconds in boiling water and then squeezing out hard. Chop both roughly.', grade: 'reconstructed' },
+          { text: 'Purslane goes in raw. It is a succulent, and it should stay crisp enough to squeak against the teeth. Softer, more fibrous greens such as mallow or chard tops get sixty seconds in boiling water and then a hard squeeze. Chop both roughly.', grade: 'reconstructed' },
         ],
       },
       {
         name: 'The bowl',
         steps: [
-          { text: 'Beat the soured milk smooth with a good pinch of salt and half the oil. If you blanched anything, let it come down to hand temperature first — heat splits sour dairy, and a split bowl is unpleasant to look at and cannot be rescued.', grade: 'reconstructed' },
+          { text: 'Beat the soured milk smooth with a good pinch of salt and half the oil. If you blanched anything, let it come down to hand temperature first. Heat splits sour dairy, and a split bowl cannot be rescued.', grade: 'reconstructed' },
           { text: 'Fold the greens and the capers through it. Do not stir it into a paste. You want streaks of white and streaks of green, because the dish is partly about the fact that it was assembled and not cooked.', grade: 'reconstructed' },
           { text: 'Sumac heavily over the top, then the cracked nuts, then the torn figs, then the last of the oil poured across. Eat it with bread, scooping. It should go sour, then salty, then briefly sweet wherever a fig is.', grade: 'reconstructed' },
         ],
@@ -425,7 +425,7 @@ export const recipes = [
     time: '45 min, after an overnight soak',
     grade: 'inferred',
     summary:
-      'Dried fish is the cheapest protein a river city has and the most thoroughly documented food in Mesopotamia. It is also, done properly, extremely good.',
+      'Dried fish is the cheapest protein a river city has and the most thoroughly documented food in Mesopotamia. Done properly it is also excellent.',
     intro:
       'Two rivers means fish, and Mesopotamian records are stiff with them — species lists running to dozens of names, temple deliveries counted in the thousands, whole classes of people whose job title is fisherman. Fresh fish feeds the people standing on the bank. Dried and salted fish feeds everybody else, which is most of the point: it keeps, it travels, it is cheap, and it turns a good week on the river into food four months later and a hundred miles away. This is the dish that market stall makes sense of. It is built on onions cooked far longer than you will want to, and on sesame oil, because this is not olive country.',
     sourceText: {
@@ -480,8 +480,8 @@ export const recipes = [
         name: 'Together',
         steps: [
           { text: 'Stir the bulgur through the onions until every grain is coated, then pour in the water. Bring it up, drop it to a bare simmer and put a lid on for fifteen minutes.', grade: 'reconstructed' },
-          { text: 'Drain the fish, tear it into large flakes and fold them in whole rather than stirring them to shreds. Lid back on, off the heat, ten minutes. It finishes cooking in the steam and stays in pieces.', grade: 'reconstructed' },
-          { text: 'Sumac over the top, herbs, the last of the oil poured across. Eat it warm rather than hot, with bread.', grade: 'reconstructed' },
+          { text: 'Drain the fish, tear it into large flakes, and fold them in whole. Do not stir it to shreds. Lid back on, off the heat, ten minutes. It finishes cooking in the steam and stays in pieces.', grade: 'reconstructed' },
+          { text: 'Sumac over the top, herbs, the last of the oil poured across. Eat it warm, not hot, with bread.', grade: 'reconstructed' },
         ],
       },
     ],
@@ -602,7 +602,7 @@ export const recipes = [
     serves: 'Serves 4',
     time: '3 hr',
     grade: 'reconstructed',
-    summary: 'The most elaborate cooking instruction to survive from the ancient world — long, technical, and broken in the worst places.',
+    summary: 'The most elaborate cooking instruction to survive from the ancient world. It is long, technical, and broken in the worst places.',
     intro:
       'Four lines is what YBC 4644 gives a stew. YBC 8958 spends dozens on a handful of bird dishes: the broth, the dough, the lining of the vessel, the order of assembly, what the finished thing should look like when it reaches the table. It is a recipe in the modern sense, written a thousand years before Homer — and it is broken in precisely the places you would most want it whole. Long stretches of the method are simply gone. That the dough encloses the birds is a reading, the one that makes sense of the surviving instructions, and what follows is a working reconstruction rather than a translation.',
     sourceText: {
@@ -640,7 +640,7 @@ export const recipes = [
         name: 'The broth',
         steps: [
           { text: 'Draw and singe the birds. Split them or leave them whole as the vessel allows.', grade: 'inferred' },
-          { text: 'Simmer the birds in water with the fat, salt, leek and garlic until just short of tender — three quarters of an hour for squab. Lift them out and reserve the broth.', grade: 'reconstructed' },
+          { text: 'Simmer the birds in water with the fat, salt, leek and garlic until just short of tender, about three quarters of an hour for squab. Lift them out and reserve the broth.', grade: 'reconstructed' },
           { text: 'Reduce the broth hard, until it is a scant few ladles and tastes of more than it looks. Off the heat, temper in the soured milk and the mint.', grade: 'reconstructed' },
         ],
       },
@@ -651,7 +651,7 @@ export const recipes = [
           { text: 'Grease a deep earthenware pot. Roll out two thirds of the dough and line the pot with it, floor and walls, leaving an overhang.', grade: 'reconstructed' },
           { text: 'Settle the birds inside. Pour the thickened broth over them. Roll the remaining dough into a lid, lay it on, and pinch it to the overhang to seal the pot shut.', grade: 'reconstructed' },
           { text: 'Bake in a hot oven, or bury in the ashes of a raked hearth, for an hour, until the crust is hard and dark and sounds hollow.', grade: 'reconstructed' },
-          { text: 'Bring it to the table sealed. Break the lid in front of whoever is eating — the tablet cares about presentation, and this is the only part of that instruction we can still read.', grade: 'attested' },
+          { text: 'Bring it to the table sealed. Break the lid in front of whoever is eating. The tablet cares about presentation, and this is the only part of that instruction still legible.', grade: 'attested' },
         ],
       },
     ],
@@ -686,7 +686,7 @@ export const recipes = [
     serves: 'Makes about 30',
     time: '40 min',
     grade: 'inferred',
-    summary: 'Not from a recipe tablet at all — reconstructed from the ration and offering lists that issued its ingredients together, by name, for centuries.',
+    summary: 'Not from a recipe tablet at all. It is reconstructed from the ration and offering lists that issued its ingredients together, by name, for centuries.',
     intro:
       'Five hundred years of paperwork and not one line on how to make it. Mersu is allocated to temples, issued to officials, listed at feasts, and never described, because everyone receiving it already knew. What the archives give instead is the issue list — dates, fat, flour, and often nuts, booked out together under the one heading, again and again. That is a different kind of evidence from a recipe, and it stops well short of a method.',
     sourceText: {
@@ -715,7 +715,7 @@ export const recipes = [
           { text: 'Toast the sesame in the same pan until it begins to jump. Tip it out with the flour.', grade: 'inferred' },
           { text: 'Warm the clarified butter, add the stoned dates, and work them over a low fire to a coarse paste. They will resist and then give all at once.', grade: 'reconstructed' },
           { text: 'Off the fire, beat in the toasted flour, the pistachios, most of the sesame and the salt. The mass should hold its shape when pressed.', grade: 'reconstructed' },
-          { text: 'Roll into small balls or press into a slab and cut. Roll the outsides through the remaining sesame. Keeps a fortnight in a cool jar — which is very likely the point of it.', grade: 'reconstructed' },
+          { text: 'Roll into small balls or press into a slab and cut. Roll the outsides through the remaining sesame. It keeps a fortnight in a cool jar, which is probably the point of it.', grade: 'reconstructed' },
         ],
       },
     ],
@@ -757,7 +757,7 @@ export const recipes = [
     time: '1 hr 20 min',
     grade: 'reconstructed',
     summary:
-      'A pulse-and-mint pot named after a plant still argued over — and the most honest dish on the tablet about how much of this cuisine is still open.',
+      'A pulse-and-mint pot named after a plant still argued over, and the most honest dish on the tablet about how much of this cuisine remains open.',
     intro:
       'Kanāšu is a plant name that recurs across Old Babylonian texts and has never been pinned down, and the rival readings are not close to the same dish — which is a problem when something has to actually go in the pot. Published editions gloss it as a legume, and one summary of the tablet renders this entry as lamb with grain and mint, so a pulse is what goes in here, labelled as a choice rather than buried as a fact. Everything else about it is plain and good: beans gone soft, lamb backing them rather than leading them, mint torn in at the end. The name stays open.',
     sourceText: {
@@ -936,7 +936,7 @@ export const recipes = [
     time: '35 min',
     grade: 'reconstructed',
     summary:
-      'The vegetable the tablet names most confidently, cooked on its own — the quickest thing in the Mesopotamian shelf and the one you will actually make on a weeknight.',
+      'The vegetable the tablet names most confidently, cooked on its own. The quickest thing on the Mesopotamian shelf, and the one you will make on a weeknight.',
     intro:
       'Nobody is seriously fighting over silqu, which makes it a rarity here: the word is beet, one of the safer plant identifications in the corpus. Whether a given entry means the root, the leaf or both is usually past recovering, so this uses the whole plant — which is what a cook with a bunch of it in front of them would have done anyway. Inside tuḫ’u it is one ingredient among fourteen. Here it is dinner: greens, alliums, fat, a little souring at the close, thirty-five minutes.',
     sourceText: {
@@ -1029,7 +1029,7 @@ export const recipes = [
     time: '40 min',
     grade: 'reconstructed',
     summary:
-      'A spring delicacy gathered off the steppe and sent to the king by letter — the best-dated food in the corpus, and one nobody wrote a method for.',
+      'A spring delicacy gathered off the steppe and sent to the king by letter. The best-dated food in the corpus, and one nobody wrote a method for.',
     intro:
       'Somebody at Mari was in trouble for sending poor truffles. The palace letters record the consignments as they came in off the steppe — how many, in what condition, who was slow, who sent bad ones. So here is a food we can place inside a season and a reign, Zimri-Lim’s, in the decades before Hammurabi burned the palace, and about whose cooking not one line ever reached you. What follows is the treatment they still get across Syria and Iraq: cleaned hard, cooked in fat with an allium, otherwise left alone. Their whole quality is a mild earthy sweetness and anything assertive buries it.',
     sourceText: {
@@ -1132,7 +1132,7 @@ export const recipes = [
     time: '45 min',
     grade: 'attested',
     summary:
-      'The last entry on the tablet, and the only grain dish among the twenty-five — barley roasted dry before it ever meets liquid.',
+      'The last entry on the tablet, and the only grain dish among the twenty-five. Barley roasted dry before it ever meets liquid.',
     intro:
       'Toast the grain before it ever meets liquid and you have a pilaf; skip that and you have porridge. Entry twenty-five, the last on the tablet and the only grain-led one among the twenty-five, puts that step at the front. Finding the technique written down in the eighteenth century BC is more interesting than any single ingredient here. The entry also calls for blood, as several do. It stays in the list and is optional in the method, because pretending the line is not there would be the wrong kind of tidying.',
     sourceText: {
@@ -1235,7 +1235,7 @@ export const recipes = [
     time: '2 hr',
     grade: 'attested',
     summary:
-      'Kid strengthened with mutton, in a sauce bound with blood and soured milk — and the entry begins by telling you to singe the head, legs and tail over the flame.',
+      'Kid strengthened with mutton, in a sauce bound with blood and soured milk. The entry begins by telling you to singe the head, legs and tail over the flame.',
     intro:
       'Singe the head, the legs and the tail over an open flame before any of it goes near the pot. That is the first thing the entry says, and it is not ceremony: singeing takes off the hair and firms the skin so the extremities hold together through hours in liquid. It is still done across the region wherever heads and trotters are cooked. The second instruction is stranger to a modern ear — the entry wants mutton in with the kid, an older and stronger meat put in deliberately to sharpen a mild young one. The sauce is bound the way several dishes on this tablet are, with blood and soured milk together.',
     sourceText: {
@@ -1376,7 +1376,7 @@ export const recipes = [
       {
         name: 'The dough',
         steps: [
-          { text: 'If you are working from whole emmer grain, parch it briefly in a dry pan before pounding. Emmer is a hulled wheat and will not release its grain otherwise. No Egyptian source states this because no Egyptian baker needed telling — it is the single most important unwritten fact about Bronze Age grain.', grade: 'inferred' },
+          { text: 'If you are working from whole emmer grain, parch it briefly in a dry pan before pounding. Emmer is a hulled wheat and will not release its grain otherwise. No Egyptian source states this, because no Egyptian baker needed telling. It is the most important unwritten fact about Bronze Age grain.', grade: 'inferred' },
           { text: 'Mix flour, water and starter to a slack, sticky dough. Emmer is low in gluten and will never come smooth and elastic; stop expecting it to.', grade: 'inferred' },
           { text: 'Add the salt, work it through, and leave the dough covered for three to four hours in a warm place until risen and visibly bubbled.', grade: 'reconstructed' },
         ],
@@ -1384,7 +1384,7 @@ export const recipes = [
       {
         name: 'The bake',
         steps: [
-          { text: 'Heat the oven as hot as it will go, with the empty moulds inside it. The moulds must be hot before the dough meets them — this is the step the tomb painters show most clearly, and it is what gives the loaf its crust.', grade: 'attested' },
+          { text: 'Heat the oven as hot as it will go, with the empty moulds inside it. The moulds must be hot before the dough meets them. This is the step the tomb painters show most clearly, and it is what gives the loaf its crust.', grade: 'attested' },
           { text: 'Take the moulds out, wipe them with fat, and fill each about two thirds with dough.', grade: 'attested' },
           { text: 'Return to the oven and bake 35 to 40 minutes, until the loaves have pulled from the sides and sound hollow.', grade: 'reconstructed' },
           { text: 'Turn out and cool on the mould. Eat within the day; emmer bread goes to stone by the second, which is why Egypt ate it fresh and turned the rest into beer.', grade: 'inferred' },
@@ -1467,7 +1467,7 @@ export const recipes = [
       {
         name: 'The table',
         steps: [
-          { text: 'Spoon it into bowls while it is loose — it thickens as it stands, and thick is the failure state.', grade: 'reconstructed' },
+          { text: 'Spoon it into bowls while it is loose. It thickens as it stands, and thick is the failure state.', grade: 'reconstructed' },
           { text: 'Put the curd on in a soft heap, not stirred through. Scatter the onion, the herbs and the torn dates over it.', grade: 'reconstructed' },
           { text: 'Pour the oil over the lot and salt it again at the table. Everyone stirs their own.', grade: 'reconstructed' },
         ],
@@ -1532,7 +1532,7 @@ export const recipes = [
         name: 'The cones',
         steps: [
           { text: 'Soak the dried tiger nuts overnight in cold water. They rehydrate to something between a nut and a raw chestnut and stop being able to break your teeth.', grade: 'inferred' },
-          { text: 'Drain well and grind to a coarse, damp meal — a mortar if you have the patience, a food processor if you do not.', grade: 'attested' },
+          { text: 'Drain well and grind to a coarse, damp meal, in a mortar if you have the patience and a food processor if you do not.', grade: 'attested' },
           { text: 'Work in the honey and the salt. The mass should be heavy and just cohesive.', grade: 'reconstructed' },
           { text: 'Oil your hands. Form the mixture into cones about the length of a thumb, pressing firmly so they hold.', grade: 'attested' },
           { text: 'Set on a board in a warm dry place for several hours to firm. They are not baked in any reading of the image, and they do not need it.', grade: 'reconstructed' },
@@ -1567,7 +1567,7 @@ export const recipes = [
     time: '1 hr 40 min',
     grade: 'reconstructed',
     summary:
-      'Cooked to be looked at first and eaten second — which turns out to change how you cook it.',
+      'Cooked to be looked at first and eaten second, which turns out to change how you cook it.',
     intro:
       'A temple served its god a meal every day: real food, carried in, set down, left, and taken away again. This is a bird for that table, and the constraint that shapes it is not flavour but appearance — an offering is presented before it is consumed, so it has to look like the best of its kind. That means whole, glazed, unbroken, and arranged rather than served. Then comes the reversion: the god does not eat it, and the food does not go to waste. It is redistributed to the priests and the temple staff, which is how a large fraction of literate Egypt got lunch. Cook it for the look, and eat it anyway.',
     sourceText: {
@@ -1600,7 +1600,7 @@ export const recipes = [
       {
         name: 'The bird',
         steps: [
-          { text: 'Heat the oven to 160°C. Prick the duck’s skin all over with a fork — through the fat, not into the meat — and rub it hard with the coarse salt and half the coriander seed, inside and out.', grade: 'reconstructed' },
+          { text: 'Heat the oven to 160°C. Prick the duck’s skin all over with a fork, through the fat and not into the meat, then rub it hard with the coarse salt and half the coriander seed, inside and out.', grade: 'reconstructed' },
           { text: 'Put the onions and dates in the cavity. Set the bird breast up on a rack over a tin, and roast it for an hour and a quarter, pouring the fat out of the tin twice and keeping every drop.', grade: 'reconstructed' },
           { text: 'Warm the honey with the wine and the rest of the coriander until it is loose. Raise the oven to 210°C.', grade: 'reconstructed' },
           { text: 'Brush the bird with the honey and wine and give it ten minutes. Brush again, ten more. The skin should go dark and glassy, and this is the step the whole dish exists for.', grade: 'reconstructed' },
@@ -1711,7 +1711,7 @@ export const recipes = [
     serves: 'Makes about 4 litres',
     time: '4 days, plus malting',
     grade: 'inferred',
-    summary: 'The other half of the Egyptian ration — and a dish whose textbook method was overturned by looking down a microscope.',
+    summary: 'The other half of the Egyptian ration, and a dish whose textbook method was overturned by looking down a microscope.',
     intro:
       'For most of the twentieth century the story was settled: bake loaves, crumble them into water, let the mash ferment. Tidy, plausible, built on a reading of the tomb scenes, and printed in every older book on Egypt. Then the residues from the brewing installations went under a microscope and the grain structures did not match. What they showed was a two-part process — malted grain and unmalted, one part heated and one not — combined and fermented. Closer to brewing than to soaked bread. Bread and beer shared a bakery and a workforce; they did not share a loaf. Both methods are given below, because knowing that a reconstruction can be wrong is most of the point.',
     sourceText: {
@@ -1738,7 +1738,7 @@ export const recipes = [
           { text: 'To malt: steep the grain 24 hours, drain, and keep it damp and covered for two to three days, turning daily, until the shoots run about the length of the grain. Dry it hard in a low oven. This is the step the old model left out entirely.', grade: 'attested' },
           { text: 'Crack the malted grain coarsely. Set half of it aside cold and uncooked.', grade: 'attested' },
           { text: 'Cook the unmalted grain with three litres of water to a thick gruel, then let it cool to blood heat. Heat kills the enzymes, which is why only this half is cooked.', grade: 'attested' },
-          { text: 'Stir the raw malted grain into the cooled gruel with the remaining water. Hold it warm for two hours. The uncooked malt converts the cooked starch — this two-part logic is the whole discovery.', grade: 'inferred' },
+          { text: 'Stir the raw malted grain into the cooled gruel with the remaining water. Hold it warm for two hours. The uncooked malt converts the cooked starch. That two-part logic is the whole discovery.', grade: 'inferred' },
           { text: 'Strain through cloth, pressing hard. Add the salt.', grade: 'inferred' },
           { text: 'Leave the liquid in an open vessel in a warm room. It will take wild yeast within a day and work hard for two or three. Add crushed dates on the second day if you want it sweeter and stronger.', grade: 'reconstructed' },
           { text: 'Drink it cloudy, young and slightly sour, through a reed if you are being thorough. It does not keep and was never meant to.', grade: 'inferred' },
@@ -1777,7 +1777,7 @@ export const recipes = [
     serves: 'Makes 4 loaves',
     time: '3 hr',
     grade: 'inferred',
-    summary: 'The standard thick offering loaf of the Hittite state cult — named on hundreds of tablets, described on none.',
+    summary: 'The standard thick offering loaf of the Hittite state cult, named on hundreds of tablets and described on none.',
     intro:
       'Hundreds of tablets tell you how many of these to break, who breaks them, and at which moment in the festival. Not one tells you how to make one. You have the name, the role, the ritual handling and roughly the shape of the thick loaf, and no formula at all. Whether it was even leavened is genuinely open. This version is, because leavened bread behaves the way the texts describe it being handled, and I would not defend that choice hard.',
     sourceText: {
@@ -1802,7 +1802,7 @@ export const recipes = [
       {
         name: 'The loaf',
         steps: [
-          { text: 'Mix the two flours with the water and starter to a stiff dough. Emmer and barley together give a dense, close crumb and neither will build much structure — that is the correct outcome for a bread meant to be broken by hand.', grade: 'inferred' },
+          { text: 'Mix the two flours with the water and starter to a stiff dough. Emmer and barley together give a dense, close crumb, and neither will build much structure. That is the correct outcome for a bread meant to be broken by hand.', grade: 'inferred' },
           { text: 'Work in the fat and the salt. Rest, covered, two hours.', grade: 'reconstructed' },
           { text: 'Divide into four. Shape each into a thick round disc, a good hand-span across and three fingers deep. Do not slash them; this loaf is broken, not cut, and it should not be encouraged to open where you chose.', grade: 'attested' },
           { text: 'Bake on a hot stone or in a heavy covered pot at high heat for 30 to 35 minutes, until the crust is dark and the base rings hollow.', grade: 'reconstructed' },
@@ -1841,7 +1841,7 @@ export const recipes = [
     serves: 'Serves 6',
     time: '1 hr 15 min, plus salting',
     grade: 'reconstructed',
-    summary: 'Mutton over a portable clay brazier — the vessel is attested by name, the animal by law, the seasoning by inference.',
+    summary: 'Mutton over a portable clay brazier. The vessel is attested by name, the animal by law, the seasoning by inference.',
     intro:
       'Three things hold this dish up: a hearth attested by name, an animal attested by law, and a seasoning attested by nothing whatever. The huprushi turns up repeatedly in Hittite ritual as a portable brazier for burning and heating offerings. Sheep and goat are priced in the Laws and eaten in quantity at the festivals. Putting the two together is our idea, not theirs — the most invented dish on this site, and better said out loud than allowed to pass as a translation.',
     sourceText: {
@@ -1869,7 +1869,7 @@ export const recipes = [
         steps: [
           { text: 'Salt the butterflied shoulder heavily on both sides and leave it uncovered in a cold place overnight.', grade: 'inferred' },
           { text: 'Mix the melted fat, wine, honey, coriander and garlic to a thin baste.', grade: 'reconstructed' },
-          { text: 'Build a bed of coals and let the flame die entirely. This is brazier cooking, not fire cooking — the huprushi holds embers, not logs.', grade: 'inferred' },
+          { text: 'Build a bed of coals and let the flame die entirely. This is brazier cooking, not fire cooking. The huprushi holds embers, not logs.', grade: 'inferred' },
           { text: 'Lay the meat over the coals fat-side down. Turn every few minutes, brushing with the baste each turn, for about 45 minutes for pink, longer if you want it giving.', grade: 'reconstructed' },
           { text: 'Rest 15 minutes. Carve across the grain and spoon over whatever baste is left, warmed.', grade: 'inferred' },
         ],
@@ -1904,7 +1904,7 @@ export const recipes = [
     time: '15 min',
     grade: 'reconstructed',
     summary:
-      'The only dish on this site cooked on metal rather than in clay — which is not an affectation, it is what an island that makes copper has lying about.',
+      'The only dish on this site cooked on metal instead of clay. That is not an affectation. It is what an island which makes copper has lying about.',
     intro:
       'Everything else here is cooked in clay: a pot, a pan, a mould, a brazier. Alašiya is the exception, and for an entirely unromantic reason. This is an island whose main industry is smelting copper on a scale that reshaped the whole eastern Mediterranean, and where copper is the ordinary material a flat sheet of it is a cheap thing to own. That changes the cooking, because metal does something clay cannot: it gets savagely hot and it gets hot fast, so you can sear instead of stew. The whole dish is fifteen minutes and it is the closest thing on this site to a modern frying pan, three thousand years early.',
     sourceText: {
@@ -1938,9 +1938,9 @@ export const recipes = [
       {
         name: 'The pan',
         steps: [
-          { text: 'Get a heavy metal pan — cast iron, steel, anything but non-stick — as hot as you dare over the biggest burner. It wants to be too hot. This is the entire technique and everything else here is assembly.', grade: 'reconstructed' },
+          { text: 'Get a heavy metal pan as hot as you dare over the biggest burner. Cast iron or steel; anything but non-stick. It wants to be too hot. That is the whole technique, and everything else here is assembly.', grade: 'reconstructed' },
           { text: 'Dry the cheese slices properly on a cloth. Wet cheese steams instead of browning, and steamed cheese is a sad thing.', grade: 'reconstructed' },
-          { text: 'Put the cheese straight onto the dry pan with no oil at all. Ninety seconds a side, and do not move it — you are waiting for a dark crust to build. Lift it off and set it aside; it will squeak and that is correct.', grade: 'reconstructed' },
+          { text: 'Put the cheese straight onto the dry pan with no oil at all. Ninety seconds a side, and do not move it while a dark crust builds. Lift it off and set it aside. It will squeak, which is correct.', grade: 'reconstructed' },
         ],
       },
       {
@@ -2028,8 +2028,8 @@ export const recipes = [
       {
         name: 'The one pot',
         steps: [
-          { text: 'Drain the soaked chickpeas, cover them with fresh water, and cook them until they crush easily between finger and thumb — forty minutes or so. Salt them only once they are soft; salted early they stay stubborn.', grade: 'reconstructed' },
-          { text: 'Pour off most of the water, keeping a cupful. Add the oil, the onion, the garlic and the cracked coriander seed, and cook it down until the onion has gone soft and the pot is thick rather than wet.', grade: 'reconstructed' },
+          { text: 'Drain the soaked chickpeas, cover them with fresh water, and cook them until they crush easily between finger and thumb, about forty minutes. Salt them only once they are soft; salted early they stay stubborn.', grade: 'reconstructed' },
+          { text: 'Pour off most of the water, keeping a cupful. Add the oil, the onion, the garlic and the cracked coriander seed, and cook it down until the onion has gone soft and the pot is thick, not wet.', grade: 'reconstructed' },
           { text: 'Crush about half the chickpeas against the side of the pot and leave the rest whole. That contrast is the whole texture of the dish, and it costs nothing.', grade: 'reconstructed' },
         ],
       },
@@ -2110,12 +2110,12 @@ export const recipes = [
       {
         name: 'The wine',
         steps: [
-          { text: 'Warm a third of the wine gently — nowhere near a simmer — and dissolve the honey into it.', grade: 'inferred' },
+          { text: 'Warm a third of the wine gently, nowhere near a simmer, and dissolve the honey into it.', grade: 'inferred' },
           { text: 'Crush the resins to a coarse powder. They will not dissolve in wine; they need the honey and warmth to disperse, and they will still leave a haze. The haze is correct.', grade: 'inferred' },
           { text: 'Stir the resins into the warm honeyed wine until dispersed.', grade: 'reconstructed' },
           { text: 'Combine with the remaining wine in a jar. Add the juniper, cyperus, mint and myrtle.', grade: 'reconstructed' },
           { text: 'Seal and leave in a cool dark place for two weeks, turning the jar every few days.', grade: 'reconstructed' },
-          { text: 'Strain through cloth. It will be resinous, faintly medicinal, sweet and strange — recognisably the ancestor of retsina, and much further from modern wine than that comparison suggests.', grade: 'reconstructed' },
+          { text: 'Strain through cloth. It will be resinous, faintly medicinal, sweet and strange, and recognisably the ancestor of retsina. It is a good deal further from modern wine than that comparison suggests.', grade: 'reconstructed' },
         ],
       },
     ],
@@ -2150,7 +2150,7 @@ export const recipes = [
     serves: 'Serves 4',
     time: '1 hr',
     grade: 'reconstructed',
-    summary: 'Built from a storeroom rather than a recipe — the everyday pulse dish of a city that wrote about everything except dinner.',
+    summary: 'Built from a storeroom instead of a recipe. The everyday pulse dish of a city that wrote about everything except dinner.',
     intro:
       'Ugarit left an enormous archive — letters, treaties, ledgers, lawsuits, whole cycles of myth — and almost nothing about cooking. What reached you instead is the contents of its storerooms: lentils, chickpeas, bitter vetch, barley, olives and oil, in the quantities of a city feeding itself. This dish is assembled from that inventory and from what those materials plainly want to become. Honest food, and a reconstruction. There is no tablet behind it and we are not going to pretend there is.',
     sourceText: {
@@ -2182,7 +2182,7 @@ export const recipes = [
           { text: 'Add the garlic, cumin and coriander and cook until they catch and smell.', grade: 'reconstructed' },
           { text: 'Add the lentils and the water. Bring up, then hold at a tremble for 35 to 45 minutes, until the lentils are soft and the liquid has gone thick and muddy.', grade: 'reconstructed' },
           { text: 'Salt at the end, not the beginning. Beat in the remaining raw oil off the heat.', grade: 'inferred' },
-          { text: 'Eat with barley bread, using the bread rather than a spoon.', grade: 'inferred' },
+          { text: 'Eat with barley bread, using the bread instead of a spoon.', grade: 'inferred' },
         ],
       },
     ],
@@ -2242,7 +2242,7 @@ export const recipes = [
       {
         name: 'The cauldron',
         steps: [
-          { text: 'Brown the kid in olive oil in a heavy pot — a tripod cauldron if you have one, which you do not.', grade: 'reconstructed' },
+          { text: 'Brown the kid in olive oil in a heavy pot, or in a tripod cauldron if you have one, which you do not.', grade: 'reconstructed' },
           { text: 'Add the wine and let it boil down by half, scraping the pot as it goes.', grade: 'reconstructed' },
           { text: 'Add the fennel bulb, celery, fennel seed, coriander, cumin and honey. Add water to come halfway up the meat.', grade: 'reconstructed' },
           { text: 'Cover and hold at a bare tremble for two hours, until the kid pulls from the bone.', grade: 'reconstructed' },
@@ -2331,9 +2331,9 @@ export const recipes = [
       {
         name: 'The fish',
         steps: [
-          { text: 'Chop the fennel fronds together with the coriander leaf, celery leaf, garlic and cracked coriander seed. Salt it and work it with your hands until it smells green rather than grassy.', grade: 'reconstructed' },
+          { text: 'Chop the fennel fronds together with the coriander leaf, celery leaf, garlic and cracked coriander seed. Salt it and work it with your hands until it smells green and not grassy.', grade: 'reconstructed' },
           { text: 'Score each bream twice on each side, down to the bone. Pack the herb mixture into the belly cavity until it will not take any more, and push what is left into the scores.', grade: 'reconstructed' },
-          { text: 'Lay the fish on the fennel. Pour the wine around them, not over them — you are steaming the bed, not washing the skin. Trickle the rest of the oil across the top and salt the skin.', grade: 'reconstructed' },
+          { text: 'Lay the fish on the fennel. Pour the wine around them, not over them. You are steaming the bed, not washing the skin. Trickle the rest of the oil across the top and salt the skin.', grade: 'reconstructed' },
           { text: 'Cook for 25 to 30 minutes without turning. It is done when the flesh at the thickest part of the shoulder lifts cleanly off the bone and the fennel underneath has gone soft and slightly caught at the edges.', grade: 'reconstructed' },
           { text: 'Scatter the olives and the torn mint over the top. Pour the last of the oil over at the table. Let it stand five minutes before anyone touches it.', grade: 'reconstructed' },
         ],
@@ -2383,7 +2383,7 @@ export const recipes = [
     serves: 'Serves 6',
     time: '50 min',
     grade: 'reconstructed',
-    summary: 'Built from a single provisioning tablet — the shopping list for one occasion at one sanctuary, on one day.',
+    summary: 'Built from a single provisioning tablet, which is the shopping list for one occasion at one sanctuary on one day.',
     intro:
       'Barley, flour, olives, figs, wine, honey, cyperus, and a counted tally of oxen, sheep, goats and pigs. That is PY Un 2 — everything gathered for one occasion at the sanctuary site of pa-ki-ja-ne, written down by a scribe with no reason on earth to record what the cooks did next. A menu with no dishes on it. This porridge takes the plant half of the list and does the obvious thing with it.',
     sourceText: {
@@ -2414,7 +2414,7 @@ export const recipes = [
           { text: 'Add the water and a good pinch of salt. Simmer 35 minutes, until the barley is soft and the pot has gone thick.', grade: 'reconstructed' },
           { text: 'Stir in the figs and cook 10 minutes more, until they have gone to pulp and sweetened the whole pot.', grade: 'reconstructed' },
           { text: 'Off the heat, beat in the honey, the oil and the cyperus if you are using it.', grade: 'reconstructed' },
-          { text: 'Scatter with toasted sesame. Serve warm, as the savoury-sweet grain dish it is — not as a pudding.', grade: 'reconstructed' },
+          { text: 'Scatter with toasted sesame. Serve warm, as a savoury-sweet grain dish and not as a pudding.', grade: 'reconstructed' },
         ],
       },
     ],
@@ -2473,7 +2473,7 @@ export const recipes = [
         name: 'The bucket',
         steps: [
           { text: 'Mash the cracked malted wheat in water held at about 65°C for an hour, then let it cool to blood heat.', grade: 'inferred' },
-          { text: 'Strain off the liquid, pressing the grain. Do not boil it — there is no evidence for boiling here and the honey and berries carry the wild yeast.', grade: 'reconstructed' },
+          { text: 'Strain off the liquid, pressing the grain. Do not boil it. There is no evidence for boiling here, and the honey and berries carry the wild yeast.', grade: 'reconstructed' },
           { text: 'Stir in the honey until fully dissolved.', grade: 'attested' },
           { text: 'Crush the berries and add them with their juice. Add the bog myrtle.', grade: 'attested' },
           { text: 'Cover loosely and leave in a warm room. Fermentation should start within two days on the wild yeast of the honey and fruit; if it does not, the honey was pasteurised.', grade: 'reconstructed' },
@@ -2512,7 +2512,7 @@ export const recipes = [
     serves: 'Makes 8',
     time: '3 days, mostly waiting',
     grade: 'reconstructed',
-    summary: 'Sorghum and dairy, the two things Kerma had that Egypt did not — reconstructed from grain deposits and pot residues.',
+    summary: 'Sorghum and dairy, the two things Kerma had that Egypt did not, reconstructed from grain deposits and pot residues.',
     intro:
       'Arcs of bull skulls running to thousands of animals curve behind the burials at Kerma, which was overwhelmingly a cattle kingdom and a cuisine in its own right rather than a southern annexe of Egypt. It grew sorghum, an African grain Egypt did not rely on, and the dairying turns up as residue inside its pots. This flatbread puts those two staples together the way sorghum-and-dairy cultures across the region still put them together. Reconstruction — but reconstruction built on the right materials.',
     sourceText: {
@@ -2542,7 +2542,7 @@ export const recipes = [
       {
         name: 'The batter',
         steps: [
-          { text: 'Whisk the sorghum flour with the warm water to a thin, pourable batter — thinner than you think, closer to cream than to pancake batter.', grade: 'reconstructed' },
+          { text: 'Whisk the sorghum flour with the warm water to a thin, pourable batter. Thinner than you think: closer to cream than to pancake batter.', grade: 'reconstructed' },
           { text: 'Stir in the starter, cover, and leave in a warm place two to three days. It will sour, thin further, and develop a fine bubble across the top.', grade: 'reconstructed' },
           { text: 'Stir in the salt just before cooking.', grade: 'inferred' },
         ],
@@ -2551,7 +2551,7 @@ export const recipes = [
         name: 'The griddle',
         steps: [
           { text: 'Heat a flat clay griddle or a heavy dry pan until a drop of water skitters.', grade: 'inferred' },
-          { text: 'Pour a ladle of batter and swirl it out thin. Cook on one side only — do not turn it. The surface should go from wet to matt and cover itself in small holes.', grade: 'reconstructed' },
+          { text: 'Pour a ladle of batter and swirl it out thin. Cook on one side only. Do not turn it. The surface should go from wet to matt and cover itself in small holes.', grade: 'reconstructed' },
           { text: 'Lift off when the edges release, about two minutes. Stack them as they come.', grade: 'reconstructed' },
           { text: 'Serve warm, torn, with soured milk poured over and melted clarified butter across the top.', grade: 'reconstructed' },
         ],
@@ -2681,11 +2681,11 @@ export const recipes = [
       {
         name: 'The chops',
         steps: [
-          { text: 'Salt the chops both sides and leave them out of the cold for half an hour. Dry the surface hard with a cloth before they go near the pan — a wet chop steams instead of searing.', grade: 'inferred' },
+          { text: 'Salt the chops both sides and leave them out of the cold for half an hour. Dry the surface hard with a cloth before they go near the pan. A wet chop steams instead of searing.', grade: 'inferred' },
           { text: 'Crack the coriander and cumin in a mortar. Cracked, not ground, so they stay as bits you can find. Stir into the honey with the crushed garlic and a spoon of oil.', grade: 'reconstructed' },
           { text: 'Get the pan properly hot and add the oil. Stand the chops on their fat edge first and hold them there until the rind renders and colours, a couple of minutes, then lay them flat.', grade: 'inferred' },
           { text: 'Sear four to five minutes a side. Tip the dates into the fat at the halfway turn so they soften and take colour without burning.', grade: 'reconstructed' },
-          { text: 'Take the pan off the heat before the glaze goes anywhere near it. Spoon the honey mixture over both sides and swirl the pan — residual heat is enough to melt it into the crust. Honey on a live pan is black in twenty seconds.', grade: 'inferred' },
+          { text: 'Take the pan off the heat before the glaze goes anywhere near it. Spoon the honey mixture over both sides and swirl the pan. Residual heat is enough to melt it into the crust. Honey on a live pan is black in twenty seconds.', grade: 'inferred' },
           { text: 'Rest five minutes. Spoon the pan syrup and the dates back over to serve.', grade: 'inferred' },
         ],
       },
@@ -2717,7 +2717,7 @@ export const recipes = [
     grade: 'reconstructed',
     featured: false,
     summary:
-      'The most defensible everyday dish here — everything in the pot is attested, and this is what most people actually ate.',
+      'The most defensible everyday dish here. Everything in the pot is attested, and this is what most people ate.',
     intro:
       'Leeks softened in oil, then coriander seed and garlic, then barley and lentils in broth until the pot goes thick and muddy. Mint and crumbled sheep cheese over the top at the table. Nothing here needed inventing. Grain, pulse, allium, herb and cheese are most of the Bronze Age diet, and on an ordinary evening this is what they became.',
     sourceText: {
@@ -2752,9 +2752,9 @@ export const recipes = [
       {
         name: 'The pot',
         steps: [
-          { text: 'Sweat the leeks slowly in the oil with a pinch of salt until they slump and go sweet — ten minutes at least. Do not colour them; this dish wants them soft, not caramelised.', grade: 'reconstructed' },
+          { text: 'Sweat the leeks slowly in the oil with a pinch of salt until they slump and go sweet, ten minutes at least. Do not colour them; this dish wants them soft, not caramelised.', grade: 'reconstructed' },
           { text: 'Add the garlic and the crushed coriander seed and cook until you can smell both.', grade: 'reconstructed' },
-          { text: 'Add the barley and the broth. Bring up and simmer twenty minutes, lid on. Barley takes appreciably longer than lentils — putting both in together is how you end up with chalky grain in soft pulse.', grade: 'inferred' },
+          { text: 'Add the barley and the broth. Bring up and simmer twenty minutes, lid on. Barley takes appreciably longer than lentils. Putting both in together is how you end up with chalky grain in soft pulse.', grade: 'inferred' },
           { text: 'Add the lentils and simmer another thirty to thirty-five minutes, until the barley is tender and the lentils have begun to break down and thicken the pot. Top up with broth if it tightens too far.', grade: 'reconstructed' },
           { text: 'Salt only now. Salting pulses at the start slows them down.', grade: 'inferred' },
           { text: 'Off the heat, beat in the raw oil. Top each bowl with chopped mint and crumbled cheese. The mint and the salt of the cheese are doing the job a squeeze of lemon would do now, and neither is optional.', grade: 'reconstructed' },
@@ -2816,11 +2816,11 @@ export const recipes = [
       {
         name: 'The dough',
         steps: [
-          { text: 'Mix flour and salt, add the water, bring it together into a firm dough. Knead two minutes — no more. This is not a bread that wants gluten development.', grade: 'inferred' },
+          { text: 'Mix flour and salt, add the water, bring it together into a firm dough. Knead two minutes and no more. This is not a bread that wants gluten development.', grade: 'inferred' },
           { text: 'Cover and rest twenty minutes. The rest does the work kneading would have done, and it is what lets you roll thin without the dough springing back.', grade: 'inferred' },
-          { text: 'Divide into six. Roll each as thin as you can get it without tearing — thinner than feels right.', grade: 'reconstructed' },
+          { text: 'Divide into six. Roll each as thin as you can get it without tearing, which is thinner than feels right.', grade: 'reconstructed' },
           { text: 'Heat a dry pan or griddle until a flick of water skitters and vanishes. No oil in the pan.', grade: 'inferred' },
-          { text: 'Lay one on. Thirty to sixty seconds, until the top goes from wet to matt and blisters lift. Flip. It should balloon — press the edge with a cloth if it needs encouraging.', grade: 'reconstructed' },
+          { text: 'Lay one on. Thirty to sixty seconds, until the top goes from wet to matt and blisters lift. Flip. It should balloon. Press the edge with a cloth if it needs encouraging.', grade: 'reconstructed' },
           { text: 'Stack them under a cloth as they come off; they steam each other soft. Eat within the hour. This bread is at its best about four minutes old.', grade: 'inferred' },
         ],
       },
@@ -2846,7 +2846,7 @@ export const recipes = [
     time: '2 hr 30 min',
     grade: 'reconstructed',
     summary:
-      'The bird Egyptian tomb walls show more than any other, and one of the very few dishes you have actually recovered as food rather than as a picture of food.',
+      'The bird Egyptian tomb walls show more than any other, and one of the few dishes you have recovered as food instead of as a picture of food.',
     intro:
       'Among the provisions sealed into Tutankhamun’s tomb were boxes of prepared poultry, one of them cut in the shape of a goose and containing a goose. That is unusual: most Egyptian food reaches us as a picture of food. Geese are also everywhere on the tomb walls — netted, herded, counted, plucked, spitted — and force-feeding to fatten the liver is depicted as far back as the Old Kingdom, so these were birds raised for richness rather than caught wild. The method is the part nobody recorded, which is why this is graded a reconstruction: a long slow roast to render the fat, figs and honey in the cavity because both are attested Egyptian flavourings.',
     sourceText: {
@@ -2914,7 +2914,7 @@ export const recipes = [
     time: '1 hr 30 min',
     grade: 'reconstructed',
     summary:
-      'Issued by the hundred jars to the men who cut the royal tombs — the most ordinary food on this site, and the best documented as something people were actually given.',
+      'Issued by the hundred jars to the men who cut the royal tombs. The most ordinary food on this site, and the best documented as something people were actually given.',
     intro:
       'The men who cut the royal tombs could write, and what they mostly wrote down was what they were owed and when it failed to turn up. Deir el-Medina is the rarest thing in Egyptology for exactly that reason: a village that kept its own receipts. The ostraca record rations in detail, and under the Ramesside kings shelled beans went out by the hundred jars. This is not banquet food and it is not tomb-wall aspiration — every other Egyptian dish here comes from what somebody wanted to be seen eating for eternity. This one comes off a payroll.',
     sourceText: {
@@ -2979,7 +2979,7 @@ export const recipes = [
     time: '2 hr 15 min',
     grade: 'reconstructed',
     summary:
-      'Meat baked slowly in olive oil and honey — a named Hittite dish and the clearest evidence that this kitchen liked sweetness against meat.',
+      'Meat baked slowly in olive oil and honey. A named Hittite dish, and the clearest evidence that this kitchen liked sweetness against meat.',
     intro:
       'Two kitchens a few hundred miles apart, disagreeing about sweetness. The Mesopotamian tablets sour their meat pots with beer and soured milk and never once sweeten them; the Hittite corpus names a dish that does. Happena is glossed as a casserole of meat, olive oil and honey — and three ingredients attached to a name is unusually generous by Hittite standards, where a great many foods are named and almost none described. Cooked slowly and covered, the honey goes dark and faintly resinous rather than sweet. The name and the three ingredients are attested. The method is ours.',
     sourceText: {
@@ -3010,7 +3010,7 @@ export const recipes = [
           { text: 'Pour over the oil, then the honey, then the wine. The oil should come at least a third of the way up the meat.', grade: 'attested' },
           { text: 'Cover tightly and bake for two hours without opening it. Nothing here needs turning or basting.', grade: 'reconstructed' },
           { text: 'Take the lid off for a final fifteen minutes to let the top colour and the honey catch.', grade: 'reconstructed' },
-          { text: 'Skim the oil off the surface and keep it — it is now spiced, sweetened and worth more than the wine was.', grade: 'inferred' },
+          { text: 'Skim the oil off the surface and keep it. It is now spiced, sweetened and worth more than the wine was.', grade: 'inferred' },
         ],
       },
     ],
@@ -3077,10 +3077,10 @@ export const recipes = [
         steps: [
           { text: 'Render the sheep fat slowly in a heavy pot until you have a shallow pool of it and the solids have gone golden. Lift the solids out and keep them.', grade: 'reconstructed' },
           { text: 'Brown the mutton hard on both sides, in batches, so the pot never cools enough to steam. Set the meat aside.', grade: 'reconstructed' },
-          { text: 'Put the onions in with a good pinch of salt and cook them slowly until they collapse and sweeten — fifteen minutes at least, and longer will not hurt.', grade: 'reconstructed' },
+          { text: 'Put the onions in with a good pinch of salt and cook them slowly until they collapse and sweeten. Fifteen minutes at least, and longer will not hurt.', grade: 'reconstructed' },
           { text: 'Add the garlic and HALF the leeks, return the meat, and pour in water to come two thirds up. Bring it to a bare tremble, cover, and leave it for two hours.', grade: 'reconstructed' },
           { text: 'Stir in the barley and the SECOND half of the leeks. Cook uncovered for another forty minutes, until the barley is soft and the broth has thickened around it.', grade: 'reconstructed' },
-          { text: 'Off the heat, stir the honey through — one spoon, so it rounds the pot rather than sweetening it. Salt properly now, not before.', grade: 'reconstructed' },
+          { text: 'Off the heat, stir the honey through. One spoon, enough to round the pot without sweetening it. Salt properly now, not before.', grade: 'reconstructed' },
           { text: 'Grate the sheep cheese over, scatter the reserved fat solids, and let it sit ten minutes before serving.', grade: 'reconstructed' },
         ],
       },
@@ -3131,7 +3131,7 @@ export const recipes = [
     time: '30 min',
     grade: 'reconstructed',
     summary:
-      'Lamb liver and heart, grilled — the fastest dish on the site, and the one that best explains what sacrifice actually smelled like.',
+      'Lamb liver and heart, grilled. The fastest dish on the site, and the one that best explains what sacrifice smelled like.',
     intro:
       'The liver was read before it was eaten. Hittite and Babylonian priests both took omens from sheep livers — clay teaching models, marked up for instruction, survive from across the Near East — and then the organ went on the coals like anything else. Both things are true at once, and the second is the one people forget. Heart and liver appear together in the Hittite food texts under this name. Grilled hard and fast, both are excellent: liver wants to be pink inside and is ruined at any doneness past that, heart is lean and dense and behaves far more like a steak than most people expect.',
     sourceText: {
@@ -3158,7 +3158,7 @@ export const recipes = [
         name: 'The skewers',
         steps: [
           { text: 'Trim the liver of its membrane and any tubes. Split the hearts, cut out the hard white sinew at the top, and cube both.', grade: 'reconstructed' },
-          { text: 'Toss with the oil and the crushed coriander. Salt it now — this is a short cook and there is no time for salt to travel.', grade: 'reconstructed' },
+          { text: 'Toss with the oil and the crushed coriander. Salt it now. This is a short cook and there is no time for salt to travel.', grade: 'reconstructed' },
           { text: 'Thread onto skewers, alternating with onion petals, and get the coals as hot as they will go.', grade: 'inferred' },
           { text: 'Grill three minutes a side and no more. Liver past pink turns to chalk and there is no recovering it.', grade: 'reconstructed' },
           { text: 'Rest two minutes, scatter the torn mint over, and eat straight off the skewer with bread.', grade: 'inferred' },
@@ -3192,7 +3192,7 @@ export const recipes = [
     time: '1 hr',
     grade: 'reconstructed',
     summary:
-      'A mash — that is what the word means — of chickpeas, with raw cucumber over the top. The oldest ancestor of a very familiar thing.',
+      'A mash of chickpeas, which is what the word means, with raw cucumber over the top. The oldest ancestor of a familiar thing.',
     intro:
       'You will think you know what this is. Put that down for a minute. Beruwa is the Hittite word for mashed food, and the texts name a version with chickpea and a version with cucumber; putting them in one bowl is our doing rather than theirs. There is no sesame paste in it and no citrus — no evidence for either here — and the texture stays deliberately coarse. What it is instead is a warm crushed chickpea dish with oil worked through it and cold cucumber over the top, and that cold-against-warm is the whole architecture of the dish.',
     sourceText: {
@@ -3221,7 +3221,7 @@ export const recipes = [
         steps: [
           { text: 'Simmer the drained chickpeas in fresh unsalted water for fifty minutes, until they crush easily between finger and thumb.', grade: 'reconstructed' },
           { text: 'Drain, keeping a mugful of the cooking water.', grade: 'reconstructed' },
-          { text: 'Crush them in a mortar or with the back of a spoon — coarsely. This is a mash, not a purée, and a food processor makes the wrong thing.', grade: 'attested' },
+          { text: 'Crush them coarsely, in a mortar or with the back of a spoon. This is a mash, not a purée, and a food processor makes the wrong thing.', grade: 'attested' },
           { text: 'Work in the oil, the raw garlic, the ground coriander and the salt, loosening with the cooking water until it is thick but soft.', grade: 'inferred' },
           { text: 'Spread it warm in a shallow bowl and scatter the raw diced cucumber, onion and mint over the top. Do not stir them in.', grade: 'reconstructed' },
         ],
@@ -3256,7 +3256,7 @@ export const recipes = [
     time: '45 min, plus marinating',
     grade: 'reconstructed',
     summary:
-      'Grilled meat on skewers, cooked on a purpose-built portable grill — the best-evidenced cooking method in the Aegean, because the equipment survives.',
+      'Grilled meat on skewers, cooked on a purpose-built portable grill. The best-evidenced cooking method in the Aegean, because the equipment survives.',
     intro:
       'Most Bronze Age cooking has to be inferred from ingredients. This one is inferred from hardware, which is better. At Akrotiri, excavators found ceramic firedogs with paired notches cut along the top to seat skewers and a line of holes through the base to feed the coals air. From Mycenae, Gla and Pylos come rectangular trays that sat beneath the skewers to catch the fat — and experimental work found they only performed properly with the coals inside them, which makes the whole assembly portable. You carried the fire with you. What went on the skewers, none of us wrote down.',
     sourceText: {
@@ -3284,7 +3284,7 @@ export const recipes = [
         name: 'The skewers',
         steps: [
           { text: 'Toss the meat with the oil, the crushed seeds, the honey and the salt. Leave it an hour, or overnight if you can.', grade: 'reconstructed' },
-          { text: 'Thread onto skewers, packed close rather than spaced — the pieces protect each other from drying.', grade: 'inferred' },
+          { text: 'Thread onto skewers, packed close and not spaced out. The pieces protect each other from drying.', grade: 'inferred' },
           { text: 'Get the coals grey-hot and, if you have a tray, put the coals IN it. The replication work found that is how the apparatus was meant to run.', grade: 'attested' },
           { text: 'Rest the skewers across the notches so the meat sits clear of the coals with the fat falling between. Turn every two minutes.', grade: 'attested' },
           { text: 'Twelve to fifteen minutes total for kid, less for lamb. It should be well coloured outside and pink at the centre.', grade: 'reconstructed' },
@@ -3328,7 +3328,7 @@ export const recipes = [
     time: '10 min',
     grade: 'reconstructed',
     summary:
-      'Barley meal, grated goat cheese and wine, stirred together and drunk — restorative, strange, and the one recipe here that comes from a poem.',
+      'Barley meal, grated goat cheese and wine, stirred together and drunk. Restorative, strange, and the one recipe here that comes from a poem.',
     intro:
       'In the eleventh book of the Iliad a wounded man is handed a drink: Pramnian wine, goat cheese grated into it with a bronze rasp, white barley meal scattered over the top. It is offered as a restorative, and the same mixture surfaces later as the ritual drink of the Eleusinian Mysteries. Homer is the weakest evidence on this site and it is worth being blunt about why — the poems were fixed in writing centuries after the world they describe, and epic preserves objects and customs unevenly. What keeps it here is that every component is independently named on the Linear B tablets, the palace accounts kept four hundred years earlier, so the ingredients are period-correct even where the drink as described is not securely so.',
     sourceText: {
@@ -3353,7 +3353,7 @@ export const recipes = [
         name: 'The cup',
         steps: [
           { text: 'Toast the barley flour in a dry pan until it smells of bread and darkens a shade. Let it cool.', grade: 'inferred' },
-          { text: 'Grate the cheese as finely as you can. The bronze rasp in the poem is doing real work — coarse cheese will not disperse.', grade: 'attested' },
+          { text: 'Grate the cheese as finely as you can. The bronze rasp in the poem is doing real work. Coarse cheese will not disperse.', grade: 'attested' },
           { text: 'Stir the cheese into the wine until it breaks up and clouds it.', grade: 'attested' },
           { text: 'Scatter the barley meal over the surface and stir it through with the honey and salt.', grade: 'attested' },
           { text: 'Drink it while it is still moving. Left to stand it separates, and the poem does not say to strain it.', grade: 'reconstructed' },
@@ -3394,7 +3394,7 @@ export const recipes = [
     time: '3 hr',
     grade: 'reconstructed',
     summary:
-      'The roast at the centre of a Canaanite drinking society — a feast you know the social shape of in detail and the cooking of not at all.',
+      'The roast at the centre of a Canaanite drinking society. You know the social shape of that feast in detail and the cooking of it not at all.',
     intro:
       'Membership roll, patron deity, leased houses and vineyards, a room kept for the banquets: the marzeaḥ was a drinking association with property. The Ugaritic texts lay it out as an institution — who belonged, what it owned, what it cost — and never once as a menu. The ground fills in a little. Temple precincts at Hazor and other Canaanite sites give up the burnt bones of cattle and sheep, and the pottery from them leans heavily toward bowls, chalices and goblets. So: the animal, the setting, the drinking vessels, the occasion. Nothing whatever about the seasoning. What follows is a Levantine roast built from that pantry and staged for the evening the texts describe.',
     sourceText: {
@@ -3426,7 +3426,7 @@ export const recipes = [
           { text: 'Sear the shoulder on all sides in a heavy pot in the remaining oil.', grade: 'reconstructed' },
           { text: 'Pour in the wine and the juice of one pomegranate, cover, and cook at 150°C for two and a half hours until the meat gives at the bone.', grade: 'reconstructed' },
           { text: 'Take the lid off, add the olives, and give it twenty minutes to colour and for the liquid to fall to a glaze.', grade: 'inferred' },
-          { text: 'Scatter the seeds of the second pomegranate over at the table, raw. Serve it with wine and let people tear at it — which, the texts are clear, is the entire point.', grade: 'inferred' },
+          { text: 'Scatter the seeds of the second pomegranate over at the table, raw. Serve it with wine and let people tear at it, which the texts are clear is the point.', grade: 'inferred' },
         ],
       },
     ],
