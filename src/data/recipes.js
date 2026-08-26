@@ -90,7 +90,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'silqu',
-        text: 'Rendered here as beetroot on Bottéro’s reading. The word is also a plausible candidate for chard, which is the same species domesticated for leaf rather than root, and some editors prefer it. The dish works either way; it does not taste the same either way. We cook it as beet and say so.',
+        text: 'Rendered here as beetroot on Bottéro’s reading. The word is also a plausible candidate for chard, which is the same species domesticated for leaf instead of root, and some editors prefer it. The dish works either way; it does not taste the same either way. We cook it as beet and say so.',
       },
       {
         term: 'šuḫutinnû',
@@ -98,11 +98,11 @@ export const recipes = [
       },
       {
         term: 'kurrat',
-        text: 'A perennial leek grown for its cut greens rather than its shank, still cultivated in Egypt and the Levant. Where it cannot be had, the green tops of young leeks are the nearest living thing.',
+        text: 'A perennial leek grown for its cut greens and not its shank, still cultivated in Egypt and the Levant. Where it cannot be had, the green tops of young leeks are the nearest living thing.',
       },
       {
         term: 'beer',
-        text: 'Barley beer, unhopped — hops are a medieval intervention and have no business here. A cloudy unfiltered wheat or barley beer with no bitterness is the closest supermarket approximation.',
+        text: 'Barley beer, unhopped. Hops are a medieval intervention and have no business here. A cloudy unfiltered wheat or barley beer with no bitterness is the closest supermarket approximation.',
       },
     ],
     substitutions: [
@@ -186,7 +186,7 @@ export const recipes = [
           { text: 'Add the water and the barley. Simmer for thirty minutes, until the barley is tender.', grade: 'inferred' },
           { text: 'Stir in the crushed garlic and most of the coriander leaf and give it two minutes more.', grade: 'attested' },
           {
-            text: 'Off the fire, scatter the sifted bread crumb across the surface — the tablet says over the pot, before removing it — and stir it through. It will thicken as it stands.',
+            text: 'Off the fire, scatter the sifted bread crumb across the surface, which the tablet specifies is done over the pot before removing it, and stir it through. It will thicken as it stands.',
             grade: 'attested',
           },
           { text: 'Finish with the rest of the coriander leaf, raw.', grade: 'attested' },
@@ -200,7 +200,7 @@ export const recipes = [
       },
       {
         term: 'bappiru',
-        text: 'A dried, twice-baked barley bread that doubled as the base for beer. Nothing modern is quite it: a dense sourdough rye or barley loaf, dried hard in a low oven and then pounded and sieved, is close enough in behaviour — it thickens, and it carries a sour yeasty note that a fresh crumb will not.',
+        text: 'A dried, twice-baked barley bread that doubled as the base for beer. Nothing modern is quite it. A dense sourdough rye or barley loaf, dried hard in a low oven and then pounded and sieved, is close enough in behaviour: it thickens, and it carries a sour yeasty note that a fresh crumb will not.',
       },
     ],
     substitutions: [
@@ -282,7 +282,7 @@ export const recipes = [
             grade: 'inferred',
           },
           {
-            text: 'Temper the blood with a ladle of the hot broth, then stir it back through. Return to a bare heat and stir until it thickens — it must never boil again.',
+            text: 'Temper the blood with a ladle of the hot broth, then stir it back through. Return to a bare heat and stir until it thickens. It must never boil again.',
             grade: 'reconstructed',
           },
           {
@@ -300,18 +300,18 @@ export const recipes = [
       },
       {
         term: 'Blood',
-        text: 'Genuinely awkward for a modern shopper, and genuinely what the tablet says. Fresh blood is a butcher’s order in most places. Black pudding — which is blood, fat and grain already set — crumbled into the pot off the heat gets you most of the way and is on any supermarket shelf. Declared as a substitution rather than quietly swapped.',
+        text: 'Awkward for a modern shopper, and exactly what the tablet says. Fresh blood is a butcher’s order in most places. Black pudding is blood, fat and grain already set, and crumbled into the pot off the heat it gets you most of the way from any supermarket shelf. Declared as a substitution, not quietly swapped.',
       },
       {
         term: 'Why dill',
-        text: 'Dill appears in this entry and nowhere else in the corpus, and the entry is flagged as foreign. It remains a signature of Iranian cooking and is uncommon in Iraqi cooking — which is a small, precise piece of evidence that the tablet meant what it said about where the dish came from.',
+        text: 'Dill appears in this entry and nowhere else in the corpus, and the entry is flagged as foreign. It remains a signature of Iranian cooking and is uncommon in Iraqi cooking, which is a small and precise piece of evidence that the tablet meant what it said about where the dish came from.',
       },
     ],
     substitutions: [
       {
         from: 'Blood',
         to: 'Black pudding, 150 g, crumbled in off the heat',
-        text: 'Not identical — the pudding brings its own fat and oats — but it is the version most people can actually cook.',
+        text: 'Not identical, since the pudding brings its own fat and oats, but it is the version most people can cook.',
       },
       { from: 'Soured milk', to: 'Thin live yoghurt, or kefir', text: 'It wants to be pourable, not spoonable.' },
     ],
@@ -391,7 +391,7 @@ export const recipes = [
       },
       {
         term: 'purslane',
-        text: 'A fat, low, sprawling succulent that grows out of rock cracks and gets treated as a weed nearly everywhere it grows. It is lemony, faintly salty, and it squeaks. It is also one of very few green plants at its best in the dead heat of late summer, when everything that came up in spring has gone to seed and turned bitter. If nobody near you sells it, watercress or lamb’s lettuce will stand in — you are after crispness and a sour edge, not that exact leaf.',
+        text: 'A fat, low, sprawling succulent that grows out of rock cracks and gets treated as a weed nearly everywhere it grows. It is lemony, faintly salty, and it squeaks. It is also one of very few green plants at its best in the dead heat of late summer, when everything that came up in spring has gone to seed and turned bitter. If nobody near you sells it, watercress or lamb’s lettuce will stand in. You are after crispness and a sour edge, not that exact leaf.',
       },
       {
         term: 'sumac',
@@ -399,12 +399,12 @@ export const recipes = [
       },
       {
         term: 'What not to gather',
-        text: 'Since this dish invites you to go and pick things, two warnings that matter in exactly this landscape. Bitter almonds are not sweet almonds — they carry enough amygdalin to do real harm, and the only clue is the taste, so spit out any almond that is bitter and do not persevere out of politeness. And oleander grows all across the Mediterranean in precisely the dry stony places this food comes from, is beautiful, and will kill you: every part of it, fresh or dried, including the smoke off it. Nothing here should be foraged by a beginner without a local guide and a proper book. Buying the lot is not cheating.',
+        text: 'Since this dish invites you to go and pick things, two warnings that matter in exactly this landscape. Bitter almonds are not sweet almonds. They carry enough amygdalin to do real harm, the only clue is the taste, and you should spit out any almond that is bitter instead of persevering out of politeness. And oleander grows all across the Mediterranean in precisely the dry stony places this food comes from, is beautiful, and will kill you: every part of it, fresh or dried, including the smoke off it. Nothing here should be foraged by a beginner without a local guide and a proper book. Buying the lot is not cheating.',
       },
     ],
     substitutions: [
       { from: 'Purslane', to: 'Watercress, lamb’s lettuce, or young spinach with extra sumac', text: 'The job is crisp texture and acidity. Anything limp is the wrong choice however green it looks.' },
-      { from: 'Terebinth nuts', to: 'Pistachios, or pine nuts', text: 'Terebinth is a Pistacia, so a pistachio is a close cousin rather than a substitute. Pine nuts are milder, and were on the same ship.' },
+      { from: 'Terebinth nuts', to: 'Pistachios, or pine nuts', text: 'Terebinth is a Pistacia, so a pistachio is a close cousin and not really a substitute. Pine nuts are milder, and were on the same ship.' },
       { from: 'Soured sheep milk', to: 'Full-fat Greek yoghurt, loosened with a spoon of water', text: 'Avoid anything low-fat. It is thin and sour without being rich, and it gives you a bowl that tastes like an apology.' },
     ],
     sources: ['Uluburun wreck botanical assemblage', 'Regional Late Bronze Age archaeobotany', 'Second-millennium correspondence on pastoral groups'],
@@ -488,23 +488,23 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'Graded inferred rather than reconstructed, which is a step up from most things here, because the ingredients are not merely plausible — dried fish, onion, sesame oil, cumin, coriander and cracked grain are all documented commodities moving through exactly these towns in exactly this period, in quantity. What is missing is the instruction. The tiny culinary corpus that survives is palace cooking, and this is not palace cooking. So: real ingredients, real proportions for the region, and a method that is mine.',
+        text: 'Graded inferred instead of reconstructed, which is a step up from most things here, because the ingredients are not merely plausible. Dried fish, onion, sesame oil, cumin, coriander and cracked grain are all documented commodities moving through exactly these towns in exactly this period, in quantity. What is missing is the instruction. The tiny culinary corpus that survives is palace cooking, and this is not palace cooking. So: real ingredients, real proportions for the region, and a method that is mine.',
       },
       {
         term: 'sesameoil',
-        text: 'Buy the pale, light-coloured sesame oil, not the dark brown toasted kind sold for East Asian cooking. The dark one is pressed from roasted seed and will take over everything it touches; the light one is a straightforward neutral cooking oil with a faint nuttiness, which is what is wanted. This matters more than it sounds, because it is the single line dividing the Mesopotamian kitchen from the Levantine one — the river valley grows sesame, the coast grows olives, and you can hear the border in the cooking.',
+        text: 'Buy the pale, light-coloured sesame oil, not the dark brown toasted kind sold for East Asian cooking. The dark one is pressed from roasted seed and will take over everything it touches; the light one is a straightforward neutral cooking oil with a faint nuttiness, which is what is wanted. This matters more than it sounds, because it is the single line dividing the Mesopotamian kitchen from the Levantine one. The river valley grows sesame, the coast grows olives, and you can hear the border in the cooking.',
       },
       {
         term: 'whichfish',
-        text: 'Salt cod is the easiest thing to buy that behaves the right way, and every fishmonger and most Portuguese, Spanish and Caribbean grocers have it. It is not a river fish and it is not from anywhere near the Euphrates. What it shares with the original is the thing that matters: it was preserved hard so it could travel, and it needs a long patient soak to come back. Dried Nile perch does the same job if you can find it. Smoked mackerel does not — it is already cooked, already oily, and it will fall to pieces.',
+        text: 'Salt cod is the easiest thing to buy that behaves the right way, and every fishmonger and most Portuguese, Spanish and Caribbean grocers have it. It is not a river fish and it is not from anywhere near the Euphrates. What it shares with the original is the thing that matters: it was preserved hard so it could travel, and it needs a long patient soak to come back. Dried Nile perch does the same job if you can find it. Smoked mackerel does not. It is already cooked, already oily, and it will fall to pieces.',
       },
       {
         term: 'Why onions this long',
-        text: 'Twenty-five minutes feels absurd for onions in a dish this plain, and it is exactly why the dish works. Preserved fish gives you salt and body but almost no sweetness, so if the onions are merely translucent the pot tastes flat and one-note. Taken all the way to collapsing gold they supply the sugar the fish cannot, and the two halves finally add up. If you have ten minutes rather than forty, make something else.',
+        text: 'Twenty-five minutes feels absurd for onions in a dish this plain, and it is exactly why the dish works. Preserved fish gives you salt and body but almost no sweetness, so if the onions are merely translucent the pot tastes flat and one-note. Taken all the way to collapsing gold they supply the sugar the fish cannot, and the two halves finally add up. If you have ten minutes and not forty, make something else.',
       },
     ],
     substitutions: [
-      { from: 'Salt cod', to: 'Dried Nile perch, or unsalted white fish plus 1 tsp salt', text: 'Fresh fish makes a perfectly nice supper but a different dish — you lose the firm flaking texture that being dried and rehydrated gives, which is half of what this is.' },
+      { from: 'Salt cod', to: 'Dried Nile perch, or unsalted white fish plus 1 tsp salt', text: 'Fresh fish makes a perfectly nice supper but a different dish. You lose the firm flaking texture that drying and rehydrating give, which is half of what this is.' },
       { from: 'Sesame oil', to: 'A neutral oil such as sunflower, or olive oil', text: 'Olive oil tastes good here and is what a Levantine cook would reach for, so use it without guilt. It just makes the dish a coastal one instead of a river one.' },
       { from: 'Bulgur', to: 'Coarse cracked barley, or pearl barley given ten minutes longer', text: 'Barley is the more likely grain of the two and slightly the better one, being chewier against soft fish. Bulgur is faster and easier to buy.' },
     ],
@@ -574,11 +574,11 @@ export const recipes = [
       },
       {
         term: 'kashk',
-        text: 'Dried soured curd: milk fermented, drained, salted, shaped and dried hard, so that it keeps for months without a cellar and rehydrates into something between yoghurt and cheese. It is still made across the region under a family of related names, and it is the single cleverest ingredient in this world — a way of carrying a dairy herd in a saddlebag. Buy it as kashk or dried qurut; failing that, see the substitutions.',
+        text: 'Dried soured curd: milk fermented, drained, salted, shaped and dried hard, so that it keeps for months without a cellar and rehydrates into something between yoghurt and cheese. It is still made across the region under a family of related names, and it is the cleverest ingredient in this world, being a way of carrying a dairy herd in a saddlebag. Buy it as kashk or dried qurut; failing that, see the substitutions.',
       },
       {
         term: 'The donkey is the technology',
-        text: 'It is easy to read a trade route as a line on a map and miss that the line is made of animals. A donkey carries perhaps eighty kilos, walks maybe twenty-five kilometres a day, and must be fed and watered whether or not it is carrying anything. That arithmetic decides what is worth moving overland at all — which is why copper and tin and textiles go by donkey and grain does not, and why the sea always wins when the sea is an option.',
+        text: 'It is easy to read a trade route as a line on a map and miss that the line is made of animals. A donkey carries perhaps eighty kilos, walks maybe twenty-five kilometres a day, and must be fed and watered whether or not it is carrying anything. That arithmetic decides what is worth moving overland at all, which is why copper and tin and textiles go by donkey and grain does not, and why the sea always wins when the sea is an option.',
       },
     ],
     substitutions: [
@@ -607,7 +607,7 @@ export const recipes = [
       'Four lines is what YBC 4644 gives a stew. YBC 8958 spends dozens on a handful of bird dishes: the broth, the dough, the lining of the vessel, the order of assembly, what the finished thing should look like when it reaches the table. It is a recipe in the modern sense, written a thousand years before Homer, and it is broken in precisely the places you would most want it whole. Long stretches of the method are gone. That the dough encloses the birds is a reading, the one that makes sense of the surviving instructions, and what follows is a working reconstruction and not a translation.',
     sourceText: {
       kind: 'paraphrase',
-      text: 'The entry directs the cook to prepare the birds and a seasoned broth, to make a dough, to line and cover a vessel with it, and to assemble the birds within — with further instruction on garnish and on presentation. Substantial passages are lost.',
+      text: 'The entry directs the cook to prepare the birds and a seasoned broth, to make a dough, to line and cover a vessel with it, and to assemble the birds within, with further instruction on garnish and on presentation. Substantial passages are lost.',
       attribution: 'YBC 8958 — summarised. The tablet is the most detailed and the most damaged of the three.',
     },
     ingredientGroups: [
@@ -722,7 +722,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Mari',
-        text: 'The Mari archives are one of the places this dish is issued by name, and the palace there booked out dates, fat and pistachios together for it. That is why the nut in the list below is pistachio rather than almond: Mari sits inside the pistachio zone, and the middle Euphrates is where the archive evidence for nuts in mersu is thickest.',
+        text: 'The Mari archives are one of the places this dish is issued by name, and the palace there booked out dates, fat and pistachios together for it. That is why the nut in the list below is pistachio and not almond: Mari sits inside the pistachio zone, and the middle Euphrates is where the archive evidence for nuts in mersu is thickest.',
       },
       {
         term: 'Standing',
@@ -799,7 +799,7 @@ export const recipes = [
           },
           { text: 'Add the salt, the onion and the leek. Hold at a bare tremble for forty minutes.', grade: 'attested' },
           {
-            text: 'Add the soaked pulse and the cumin, and cook until it is tender — forty minutes for broad beans, a little less for chickpeas. Top up with water if the pot goes dry.',
+            text: 'Add the soaked pulse and the cumin, and cook until it is tender, about forty minutes for broad beans and a little less for chickpeas. Top up with water if the pot goes dry.',
             grade: 'inferred',
           },
           {
@@ -812,7 +812,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'kanāšu',
-        text: 'An unresolved plant name, and the reason this entry is graded reconstructed rather than attested. The published readings gloss it as a LEGUME, and one summary of the tablet renders the entry as lamb with grain and mint — so this page treats it as a pulse. An earlier version of this page guessed a leafy green instead. That was the wrong branch of a genuinely open question, and the correction is recorded here rather than quietly made.',
+        text: 'An unresolved plant name, and the reason this entry is graded reconstructed instead of attested. The published readings gloss it as a LEGUME, and one summary of the tablet renders the entry as lamb with grain and mint, so this page treats it as a pulse. An earlier version of this page guessed a leafy green instead. That was the wrong branch of an open question, and the correction is recorded here instead of quietly made.',
       },
     ],
     substitutions: [
@@ -882,7 +882,7 @@ export const recipes = [
         name: 'The broth',
         steps: [
           {
-            text: 'Boil the water and throw in the fat. Nothing is browned first — the tablet has a verb for searing and does not use it here.',
+            text: 'Boil the water and throw in the fat. Nothing is browned first. The tablet has a verb for searing and does not use it here.',
             grade: 'attested',
           },
           {
@@ -974,7 +974,7 @@ export const recipes = [
             grade: 'inferred',
           },
           {
-            text: 'Stack the leaves and stems in on top, cover again, and give them six or seven minutes — the stems should still have a little bite.',
+            text: 'Stack the leaves and stems in on top, cover again, and give them six or seven minutes. The stems should still have a little bite.',
             grade: 'inferred',
           },
           {
@@ -982,7 +982,7 @@ export const recipes = [
             grade: 'attested',
           },
           {
-            text: 'Spoon the strained yoghurt over at the table rather than stirring it into the pot. The dish is deep red and the white on top is half the pleasure of it.',
+            text: 'Spoon the strained yoghurt over at the table instead of stirring it into the pot. The dish is deep red and the white on top is half the pleasure of it.',
             grade: 'reconstructed',
           },
         ],
@@ -991,11 +991,11 @@ export const recipes = [
     apparatus: [
       {
         term: 'silqu',
-        text: 'One of the safer plant identifications in the corpus: beet. Whether a given entry means the root, the leaf or both is usually not recoverable, and in practice a Babylonian cook would have had the whole plant in front of them and used all of it — which is what this does.',
+        text: 'One of the safer plant identifications in the corpus: beet. Whether a given entry means the root, the leaf or both is usually not recoverable, and in practice a Babylonian cook would have had the whole plant in front of them and used all of it, which is what this does.',
       },
     ],
     substitutions: [
-      { from: 'Beet leaves', to: 'Chard, or the tops sold on bunched beetroot', text: 'Botanically the same species. Chard is simply beet bred for leaf.' },
+      { from: 'Beet leaves', to: 'Chard, or the tops sold on bunched beetroot', text: 'Botanically the same species. Chard is beet bred for leaf.' },
       { from: 'Sheep fat', to: 'Olive oil', text: 'Changes the dish toward the coast, and is no less period-correct for it.' },
     ],
     sources: [
@@ -1082,7 +1082,7 @@ export const recipes = [
             grade: 'reconstructed',
           },
           {
-            text: 'Off the heat, scatter the coriander leaf. Serve with bread, as a dish in its own right rather than beside meat — which is what its standing in the letters implies.',
+            text: 'Off the heat, scatter the coriander leaf. Serve with bread, as a dish in its own right and not beside meat, which is what its standing in the letters implies.',
             grade: 'inferred',
           },
         ],
@@ -1091,7 +1091,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'What the archive proves',
-        text: 'That this food existed, mattered enough to write letters about, arrived in spring, and was worth a king’s displeasure when it came late or poor. That is genuinely more than you know about most dishes here. It is also not a recipe, and the method below is a modern steppe treatment rather than a reconstruction of a Babylonian one — hence the grading.',
+        text: 'That this food existed, mattered enough to write letters about, arrived in spring, and was worth a king’s displeasure when it came late or poor. That is more than you know about most dishes here. It is also not a recipe, and the method below is a modern steppe treatment and not a reconstruction of a Babylonian one, which is what the grading reflects.',
       },
       {
         term: 'kamʾatu',
@@ -1102,7 +1102,7 @@ export const recipes = [
       {
         from: 'Desert truffles',
         to: 'Chestnut mushrooms and king oyster, halved, 500 g',
-        text: 'Not the same thing and not pretending to be. Aim for firm texture and mildness — a European truffle is the one substitution that would be actively wrong, because its whole character is an aroma these do not have.',
+        text: 'Not the same thing and not pretending to be. Aim for firm texture and mildness. A European truffle is the one substitution that would be plainly wrong, because its whole character is an aroma these do not have.',
       },
       {
         from: 'Clarified butter',
@@ -1188,7 +1188,7 @@ export const recipes = [
             grade: 'inferred',
           },
           {
-            text: 'Stir in the rocket and let it wilt into the hot grain off the heat — it should keep its pepper.',
+            text: 'Stir in the rocket and let it wilt into the hot grain off the heat. It should keep its pepper.',
             grade: 'attested',
           },
           {
@@ -1210,7 +1210,7 @@ export const recipes = [
       },
     ],
     substitutions: [
-      { from: 'Persian shallot', to: 'Banana shallots, or two ordinary onions', text: 'A stand-in for a stand-in — the ancient term is not securely identified either.' },
+      { from: 'Persian shallot', to: 'Banana shallots, or two ordinary onions', text: 'A stand-in for a stand-in, since the ancient term is not securely identified either.' },
       { from: 'Blood', to: 'Leave it out', text: 'The one ingredient here most people will skip, and the dish survives it.' },
     ],
     sources: [
@@ -1282,7 +1282,7 @@ export const recipes = [
         name: 'The pot',
         steps: [
           {
-            text: 'If you have the extremities, singe them over an open flame until the hair is gone and the skin tightens. If you are working from jointed shoulder, skip this — it is the one step a supermarket has already done for you, badly.',
+            text: 'If you have the extremities, singe them over an open flame until the hair is gone and the skin tightens. If you are working from jointed shoulder, skip it. That is the one step a supermarket has already done for you, badly.',
             grade: 'attested',
           },
           { text: 'Bring the water to a boil and throw in the fat.', grade: 'attested' },
@@ -1310,7 +1310,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Two meats',
-        text: 'Adding mutton to kid is a deliberate seasoning decision, not economy. Young goat is mild to the point of being characterless in a long braise; a smaller quantity of older, stronger meat gives the pot something to be. The same logic runs through the tablet, which repeatedly builds flavour by combination rather than by spice.',
+        text: 'Adding mutton to kid is a deliberate seasoning decision, not economy. Young goat is mild to the point of being characterless in a long braise; a smaller quantity of older, stronger meat gives the pot something to be. The same logic runs through the tablet, which repeatedly builds flavour by combination instead of by spice.',
       },
       {
         term: 'Singeing',
@@ -1394,7 +1394,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'emmer',
-        text: 'Triticum dicoccum, and not interchangeable with modern bread wheat. It is hulled, lower in gluten, and behaves quite differently in the hand. Substituting modern wheat produces a good loaf and not this loaf.',
+        text: 'Triticum dicoccum, and not interchangeable with modern bread wheat. It is hulled, lower in gluten, and behaves differently in the hand. Substituting modern wheat produces a good loaf and not this loaf.',
       },
       {
         term: 'leaven',
@@ -1476,11 +1476,11 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'No Egyptian text describes a porridge. What the texts describe is grain, issued by volume, to people, daily — and your archaeology gives you the grain, the pots and the querns. A dish this simple does not need a recipe to have existed; it needs a pot and somebody hungry, and Egypt had both in enormous quantity. This is a reconstruction with a very high prior.',
+        text: 'No Egyptian text describes a porridge. What the texts describe is grain issued by volume, to people, daily, and your archaeology gives you the grain, the pots and the querns. A dish this simple does not need a recipe to have existed; it needs a pot and somebody hungry, and Egypt had both in enormous quantity. This is a reconstruction with a very high prior.',
       },
       {
         term: 'emmer',
-        text: 'Emmer, not bread wheat. It is a hulled wheat — the grain does not thresh free of its husk — which makes it a nuisance to process and is exactly why the modern world abandoned it. Egypt grew it for three thousand years anyway. Spelt is its closest supermarket relative; coarse bulgur is the easiest substitute and is cracked durum, which is not the same wheat but behaves like it.',
+        text: 'Emmer, not bread wheat. It is a hulled wheat, meaning the grain does not thresh free of its husk, which makes it a nuisance to process and is exactly why the modern world abandoned it. Egypt grew it for three thousand years anyway. Spelt is its closest supermarket relative; coarse bulgur is the easiest substitute and is cracked durum, which is not the same wheat but behaves like it.',
       },
       {
         term: 'What a ration actually was',
@@ -1542,7 +1542,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'The ingredient is securely attested for Egypt over two thousand years. The confection is a reading of a painted sequence — a sound reading, and still a reading.',
+        text: 'The ingredient is securely attested for Egypt over two thousand years. The confection is a reading of a painted sequence. A sound reading, and still a reading.',
       },
     ],
     substitutions: [
@@ -1615,23 +1615,23 @@ export const recipes = [
       },
       {
         term: 'The reversion of offerings',
-        text: 'The god was served and then the food came back out, to be divided among priests and temple staff. This is attested administratively, not just assumed — a temple was among other things a very large catering operation, and its offering table was the point at which the economy turned back into dinner. It is also the least pious and most human fact in Egyptian religion, and my favourite.',
+        text: 'The god was served and then the food came back out, to be divided among priests and temple staff. This is attested administratively and not merely assumed. A temple was among other things a very large catering operation, and its offering table was the point at which the economy turned back into dinner. It is also the least pious and most human fact in Egyptian religion, and my favourite.',
       },
       {
         term: 'Cooked to be looked at',
-        text: 'This is the only dish on the site whose method is driven by appearance. Whole rather than jointed, glazed rather than sauced, arranged rather than served — because the first thing that happens to it is that somebody sets it down in front of a statue and steps back. Once you accept that constraint the cooking follows from it, and the odd thing is that it produces a better bird than aiming straight at flavour would.',
+        text: 'This is the only dish on the site whose method is driven by appearance. Whole and not jointed, glazed and not sauced, arranged and not served, because the first thing that happens to it is that somebody sets it down in front of a statue and steps back. Once you accept that constraint the cooking follows from it, and the odd thing is that it produces a better bird than aiming straight at flavour would.',
       },
       {
         term: 'fowl',
-        text: 'Duck rather than goose deliberately: the goose is already on this site, roasted with figs, and it is the bird Egyptian tomb walls show most. Both were kept and both were offered; ducks appear in enormous numbers in fowling scenes and in the offering lists.',
+        text: 'Duck and not goose, deliberately: the goose is already on this site, roasted with figs, and it is the bird Egyptian tomb walls show most. Both were kept and both were offered; ducks appear in enormous numbers in fowling scenes and in the offering lists.',
       },
       {
         term: 'offering',
-        text: 'Wine is on the offering lists as itself, poured for the god. Using it in the glaze rather than the cup is mine, not theirs.',
+        text: 'Wine is on the offering lists as itself, poured for the god. Using it in the glaze instead of the cup is mine, not theirs.',
       },
     ],
     substitutions: [
-      { from: 'Duck', to: 'Goose, or a large chicken', text: 'Goose is period-correct and fattier and wants longer. Chicken is not — chickens arrive in Egypt properly later — and it will still work, but it is the one substitution here that changes what the dish is claiming.' },
+      { from: 'Duck', to: 'Goose, or a large chicken', text: 'Goose is period-correct and fattier and wants longer. Chicken is not, since chickens arrive in Egypt properly later. It will still work, but it is the one substitution here that changes what the dish is claiming.' },
       { from: 'Honey', to: 'Date syrup', text: 'Also attested, slightly darker, slightly less floral. Behaves the same under heat.' },
     ],
     sources: ['Egyptian offering lists', 'Temple daily ritual texts', 'Fowling and offering scenes in New Kingdom tombs'],
@@ -1752,7 +1752,7 @@ export const recipes = [
       },
       {
         term: 'Safety',
-        text: 'Wild fermentation in an open vessel is how this was done and carries the risks it has always carried. Use scrupulously clean equipment, ferment warm and fast, and discard anything that smells wrong rather than interesting.',
+        text: 'Wild fermentation in an open vessel is how this was done and carries the risks it has always carried. Use scrupulously clean equipment, ferment warm and fast, and discard anything that smells wrong instead of interesting.',
       },
     ],
     substitutions: [
@@ -1813,7 +1813,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'leaven-hatti',
-        text: 'Whether the thick loaf was leavened is genuinely open. Hittite texts distinguish bread types by thickness and use but not, legibly, by leavening. We publish a leavened version because it produces a bread consistent with the described handling, and we would not defend the choice hard.',
+        text: 'Whether the thick loaf was leavened is an open question. Hittite texts distinguish bread types by thickness and use but not, legibly, by leavening. We publish a leavened version because it produces a bread consistent with the described handling, and we would not defend the choice hard.',
       },
       {
         term: 'The count',
@@ -1955,23 +1955,23 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'The ingredients are attested and the pan is inference — good inference, because the archaeology of this island is overwhelmingly metallurgical and a flat sheet of copper is a cheap object in a place that makes copper. What nobody wrote down is what a Cypriot cook did with one. This is a technique reconstructed from a material, which is a different kind of guess from the usual one.',
+        text: 'The ingredients are attested and the pan is inference. Good inference, because the archaeology of this island is overwhelmingly metallurgical and a flat sheet of copper is a cheap object in a place that makes copper. What nobody wrote down is what a Cypriot cook did with one. This is a technique reconstructed from a material, which is a different kind of guess from the usual one.',
       },
       {
         term: 'This is not halloumi',
-        text: 'This is not halloumi, whatever the temptation to say that it is. Halloumi as a named, brined, mint-layered cheese is documented from the medieval period, not the Bronze Age, and claiming otherwise would be exactly the sort of thing this site exists to avoid. What IS attested here is sheep and goat dairying, fresh curd cheese, and a metal surface hot enough to brown it. Any firm fresh cheese that holds its shape in a hot pan does the same job — halloumi is simply the easiest one to buy, and there is no harm in using it as long as nobody claims it is three thousand years old.',
+        text: 'This is not halloumi, whatever the temptation to say that it is. Halloumi as a named, brined, mint-layered cheese is documented from the medieval period, not the Bronze Age, and claiming otherwise would be exactly the sort of thing this site exists to avoid. What IS attested here is sheep and goat dairying, fresh curd cheese, and a metal surface hot enough to brown it. Any firm fresh cheese that holds its shape in a hot pan does the same job. Halloumi is the easiest one to buy, and there is no harm in using it as long as nobody claims it is three thousand years old.',
       },
       {
         term: 'Why metal changes the dish',
-        text: 'Clay holds heat and gives it up slowly, which is why everything else on this site is a stew, a braise or a long bake. Metal takes heat fast and hands it over instantly, which buys you the Maillard reaction — the browning that clay cooking simply cannot reach. Every fried and seared dish in the world descends from somebody having a hot metal surface to hand. On Alašiya, that happened early, for industrial reasons that had nothing to do with dinner.',
+        text: 'Clay holds heat and gives it up slowly, which is why everything else on this site is a stew, a braise or a long bake. Metal takes heat fast and hands it over instantly, which buys you the Maillard reaction, the browning that clay cooking cannot reach. Every fried and seared dish in the world descends from somebody having a hot metal surface to hand. On Alašiya, that happened early, for industrial reasons that had nothing to do with dinner.',
       },
       {
         term: 'An undeciphered island',
-        text: 'Cypro-Minoan, the script of this island, has never been read. There are a few hundred inscriptions, no bilingual of any use, and no agreement on what language is underneath. So of every kitchen on this site, this is the one whose own words for its own food are completely lost — we have the furnaces, the slag, the bones and the pots, and not one readable sentence.',
+        text: 'Cypro-Minoan, the script of this island, has never been read. There are a few hundred inscriptions, no bilingual of any use, and no agreement on what language is underneath. So of every kitchen on this site, this is the one whose own words for its own food are completely lost. We have the furnaces, the slag, the bones and the pots, and not one readable sentence.',
       },
     ],
     substitutions: [
-      { from: 'Firm fresh sheep cheese', to: 'Halloumi, or a firm feta, or paneer', text: 'You want something that browns rather than melts. Anything that slumps in the pan is the wrong cheese, whatever it is called.' },
+      { from: 'Firm fresh sheep cheese', to: 'Halloumi, or a firm feta, or paneer', text: 'You want something that browns instead of melting. Anything that slumps in the pan is the wrong cheese, whatever it is called.' },
       { from: 'Wild bitter greens', to: 'Chard, spinach with a squeeze of bitterness, or cavolo nero', text: 'Bitter is doing a job against the salt and the fat. Spinach alone is too mild and goes watery; if it is all you have, cook it harder and salt it later.' },
     ],
     sources: ['Amarna letters (the Alašiya correspondence)', 'Late Cypriot metallurgical site reports', 'Cypro-Minoan inscription corpus'],
@@ -2045,11 +2045,11 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'Nobody wrote down what a ship’s crew ate — least of all the crew. This is inference from a cargo hold and a firebox — good inference, I would argue, because the constraints are so tight that they leave very few possible answers. Cook it because it works on a small heat with almost no equipment, which is exactly why it would have.',
+        text: 'Nobody wrote down what a ship’s crew ate, least of all the crew. This is inference from a cargo hold and a firebox, and good inference, because the constraints are so tight that they leave very few possible answers. Cook it because it works on a small heat with almost no equipment, which is exactly why it would have.',
       },
       {
         term: 'Fire on a wooden ship',
-        text: 'The one thing that will certainly kill everyone aboard a vessel of wood, linen and pitch is an open flame. So the galley is a contained clay firebox, sand-lined, holding a small charcoal fire — a single ring, essentially, and a hot one that cannot spread. Everything about this dish follows from that: one pot, nothing that needs two heats at once, and everything that can be served cold served cold.',
+        text: 'The one thing that will certainly kill everyone aboard a vessel of wood, linen and pitch is an open flame. So the galley is a contained clay firebox, sand-lined, holding a small charcoal fire. A single ring, essentially, and a hot one that cannot spread. Everything about this dish follows from that: one pot, nothing that needs two heats at once, and everything that can be served cold served cold.',
       },
       {
         term: 'cargo',
@@ -2057,7 +2057,7 @@ export const recipes = [
       },
       {
         term: 'Alašiya',
-        text: 'The kingdom the Amarna letters name as the source of Egypt’s copper, and identified with Cyprus by nearly everyone — nearly. It is the single best-attested trade relationship in this world and its name is still, strictly, an argument.',
+        text: 'The kingdom the Amarna letters name as the source of Egypt’s copper, and identified with Cyprus by nearly everyone. Nearly. It is the best-attested trade relationship in this world and its name is still, strictly, an argument.',
       },
     ],
     substitutions: [
@@ -2122,7 +2122,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'cedar',
-        text: 'Cedar oil is attested in the jars and is omitted from this formula deliberately. Modern cedarwood oil is a distilled essential oil, is not the ancient material, and is not safe to drink. Where an attested ingredient cannot be reproduced safely, we leave it out and say why, rather than dropping it from the list quietly.',
+        text: 'Cedar oil is attested in the jars and is omitted from this formula deliberately. Modern cedarwood oil is a distilled essential oil, is not the ancient material, and is not safe to drink. Where an attested ingredient cannot be reproduced safely, we leave it out and say why, instead of dropping it from the list quietly.',
       },
       {
         term: 'terebinth',
@@ -2189,7 +2189,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'The pantry is attested to the last item; the dish is ours. Cooking only what reached you on tablets would give a wildly false picture of what we actually ate — which was mostly pulses and grain, and mostly unrecorded.',
+        text: 'The pantry is attested to the last item; the dish is ours. Cooking only what reached you on tablets would give a wildly false picture of what we ate, which was mostly pulses and grain, and mostly unrecorded.',
       },
     ],
     substitutions: [],
@@ -2257,7 +2257,7 @@ export const recipes = [
       },
       {
         term: 'marathuwo',
-        text: 'The Linear B word for fennel. It is also, by a long and much-loved chain, the origin of the place name Marathon — the field of fennel.',
+        text: 'The Linear B word for fennel. It is also, by a long and much-loved chain, the origin of the place name Marathon, the field of fennel.',
       },
     ],
     substitutions: [
@@ -2346,23 +2346,23 @@ export const recipes = [
       },
       {
         term: 'The word for fennel',
-        text: 'Linear B writes it ma-ra-tu-wo — and, by a long and much-loved chain, that is the origin of the place name Marathon: the field of fennel. It grows wild along this coast down to the tideline, which is a large part of why this dish makes sense here and would make less sense inland.',
+        text: 'Linear B writes it ma-ra-tu-wo, and by a long and much-loved chain that is the origin of the place name Marathon, the field of fennel. It grows wild along this coast down to the tideline, which is a large part of why this dish makes sense here and would make less sense inland.',
       },
       {
         term: 'Why no fish on the tablets',
-        text: 'There is no fish on the Knossos tablets, which tells you about the scribes rather than the diet. Palace accounting recorded what the palace owned and moved. A fish landed at Amnisos in the morning and eaten there at noon passed through no storeroom and needed no clerk. The evidence is in the bones, the hooks and the net weights instead.',
+        text: 'There is no fish on the Knossos tablets, which tells you about the scribes and not the diet. Palace accounting recorded what the palace owned and moved. A fish landed at Amnisos in the morning and eaten there at noon passed through no storeroom and needed no clerk. The evidence is in the bones, the hooks and the net weights instead.',
       },
       {
         term: 'Why garlic is only inferred',
-        text: 'Carbonised garlic has come out of Akrotiri on Thera, so it was certainly in Aegean kitchens. There is no secure Linear B word for it, which is why it is marked inferred rather than attested — the plant is proven, the paperwork is not.',
+        text: 'Carbonised garlic has come out of Akrotiri on Thera, so it was certainly in Aegean kitchens. There is no secure Linear B word for it, which is why it is marked inferred and not attested. The plant is proven; the paperwork is not.',
       },
       {
         term: 'Two songs',
-        text: 'Idaia at Amnisos does not count minutes, because there is nothing to count them with. She plays until the fish is done, and the fish is done in two songs. Lyres are genuinely part of this world — a seven-stringed one is painted on the Hagia Triada sarcophagus and another is on the wall at Pylos. The timing is hers.',
+        text: 'Idaia at Amnisos does not count minutes, because there is nothing to count them with. She plays until the fish is done, and the fish is done in two songs. Lyres are part of this world. A seven-stringed one is painted on the Hagia Triada sarcophagus and another is on the wall at Pylos. The timing is hers.',
       },
     ],
     substitutions: [
-      { from: 'Sea bream', to: 'Sea bass, red mullet, or any whole round fish of about 500 g', text: 'All of these are Mediterranean and all of them cook in about the same time. Avoid oily fish here — mackerel and sardines fight the fennel rather than sitting under it.' },
+      { from: 'Sea bream', to: 'Sea bass, red mullet, or any whole round fish of about 500 g', text: 'All of these are Mediterranean and all of them cook in about the same time. Avoid oily fish here. Mackerel and sardines fight the fennel instead of sitting under it.' },
       { from: 'Fennel bulb', to: 'Fennel bulb plus a teaspoon of fennel seed', text: 'Modern bulb fennel is a much later selection. The seed pushes it back toward what a wild plant would have given you.' },
     ],
     sources: ['Knossos spice tablets', 'Amnisos harbour tablets (a-mi-ni-so)', 'Akrotiri fisherman fresco and Aegean fish faunal assemblages', 'Hagia Triada sarcophagus'],
@@ -2488,7 +2488,7 @@ export const recipes = [
       },
       {
         term: 'Safety',
-        text: 'Bog myrtle should be avoided in pregnancy. Wild fermentation carries its usual risks — clean vessels, warm room, and discard anything that smells wrong.',
+        text: 'Bog myrtle should be avoided in pregnancy. Wild fermentation carries its usual risks. Clean vessels, a warm room, and discard anything that smells wrong.',
       },
     ],
     substitutions: [
@@ -2560,7 +2560,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'Sorghum, dairy and the griddle are all attested for Kerma. The souring method and the assembly are reconstructed from what these materials do and from the long continuity of sorghum-and-dairy cooking in the region — a continuity that is suggestive and is not evidence.',
+        text: 'Sorghum, dairy and the griddle are all attested for Kerma. The souring method and the assembly are reconstructed from what these materials do and from the long continuity of sorghum-and-dairy cooking in the region. That continuity is suggestive and it is not evidence.',
       },
     ],
     substitutions: [
@@ -2622,7 +2622,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'salt-ce',
-        text: 'Central Europe had rock salt on an industrial scale — the Austrian workings at Hallstatt were being mined in the Bronze Age, centuries before the Iron Age culture that took its name from the site. The place most associated with the early Celts was a going concern long before there were any.',
+        text: 'Central Europe had rock salt on an industrial scale. The Austrian workings at Hallstatt were being mined in the Bronze Age, centuries before the Iron Age culture that took its name from the site. The place most associated with the early Celts was a going concern long before there were any.',
       },
     ],
     substitutions: [
@@ -2693,7 +2693,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'The pan',
-        text: 'Cast iron is the practical modern stand-in and it is not period — the Bronze Age had bronze pans, clay griddles and hot stones. Bronze conducts faster and holds less heat, so a Late Bronze cook would have worked hotter and quicker than you will. It is the one anachronism here, and it is a tool rather than an ingredient.',
+        text: 'Cast iron is the practical modern stand-in and it is not period. The Bronze Age had bronze pans, clay griddles and hot stones. Bronze conducts faster and holds less heat, so a Late Bronze cook would have worked hotter and quicker than you will. It is the one anachronism here, and it is a tool and not an ingredient.',
       },
     ],
     substitutions: [],
@@ -2764,14 +2764,14 @@ export const recipes = [
     apparatus: [
       {
         term: 'The cheese',
-        text: 'Feta as a protected name is modern; brined sheep cheese as a food is not. Aegean tablets count cheese as a palace commodity, and a salty brined sheep curd is entirely at home here. Use sheep feta rather than cow if you have the choice — closer in fat, and in funk.',
+        text: 'Feta as a protected name is modern; brined sheep cheese as a food is not. Aegean tablets count cheese as a palace commodity, and a salty brined sheep curd is entirely at home here. Use sheep feta and not cow if you have the choice. It is closer in fat, and in funk.',
       },
     ],
     substitutions: [
       {
         from: 'Lamb or mutton bone broth',
         to: 'Water, or a broth made from the leek trimmings',
-        text: 'Makes the pot meat-free. An everyday household would have used whatever liquid was to hand, and water is as period-plausible here as bone broth — you lose body, so be firmer with the salt and the raw oil at the end.',
+        text: 'Makes the pot meat-free. An everyday household would have used whatever liquid was to hand, and water is as period-plausible here as bone broth. You lose body, so be firmer with the salt and the raw oil at the end.',
       },
     ],
     sources: ['Linear B commodity tablets', 'Aegean Late Bronze storeroom archaeobotany'],
@@ -2879,7 +2879,7 @@ export const recipes = [
           { text: 'Rub the salt, crushed coriander and cumin over and inside the bird.', grade: 'inferred' },
           { text: 'Fill the cavity with the figs and the onion, and spoon in the honey.', grade: 'reconstructed' },
           {
-            text: 'Set the bird on a rack over a deep tray and roast low — 150°C — for two hours, pouring off the rendered fat every forty minutes. Keep the fat; it is the best cooking fat in this entire pantry.',
+            text: 'Set the bird on a rack over a deep tray and roast low, at 150°C, for two hours, pouring off the rendered fat every forty minutes. Keep the fat; it is the best cooking fat in this entire pantry.',
             grade: 'reconstructed',
           },
           { text: 'Raise the heat hard for the last twenty minutes to crisp the skin.', grade: 'reconstructed' },
@@ -2890,7 +2890,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'What is actually attested',
-        text: 'The bird, its importance, its deliberate fattening, and its presence as prepared food in a sealed tomb. Not the seasoning and not the method. Figs and honey are both attested Egyptian flavourings, so they are a reasonable choice rather than a documented one — which is the difference between this entry and the Babylonian ones.',
+        text: 'The bird, its importance, its deliberate fattening, and its presence as prepared food in a sealed tomb. Not the seasoning and not the method. Figs and honey are both attested Egyptian flavourings, so they are a reasonable choice and not a documented one, which is the difference between this entry and the Babylonian ones.',
       },
     ],
     substitutions: [
@@ -2952,7 +2952,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Why this one is here',
-        text: 'Every other Egyptian entry on this site comes from a tomb — which means it comes from what someone wanted to be seen eating for eternity. This comes from a payroll. It is the corrective the Egyptian shelf needs, and the reason it is worth cooking something this plain.',
+        text: 'Every other Egyptian entry on this site comes from a tomb, which means it comes from what somebody wanted to be seen eating for eternity. This comes from a payroll. It is the corrective the Egyptian shelf needs, and the reason it is worth cooking something this plain.',
       },
     ],
     substitutions: [
@@ -3088,11 +3088,11 @@ export const recipes = [
     apparatus: [
       {
         term: 'Standing',
-        text: 'The Ḫattuša archive is the largest thing of ours you have ever recovered and there is not one recipe in it. Everything here is inference from what the tablets DO record — what animals cost, what people were issued, what was carried into a temple — plus the one thing the Hittite kitchen is genuinely known for, which is putting sweetness next to meat. Cook it because it works, not because it is proven.',
+        text: 'The Ḫattuša archive is the largest thing of ours you have ever recovered and there is not one recipe in it. Everything here is inference from what the tablets DO record: what animals cost, what people were issued, what was carried into a temple. To that add the one thing the Hittite kitchen is known for, which is putting sweetness next to meat. Cook it because it works, not because it is proven.',
       },
       {
         term: 'Why the sheep is written in Sumerian',
-        text: 'UDU is a Sumerian sign, and Hittite scribes used it constantly while writing Hittite — you read the sign as "sheep" and say your own word for it, the way we read & and say "and". A Hittite tablet is a mosaic of Sumerian logograms, Akkadian spellings and Hittite grammar, all at once. It is why the archive took so long to read and it is not a sign of borrowing: nobody at Ḫattuša thought they were writing Sumerian.',
+        text: 'UDU is a Sumerian sign, and Hittite scribes used it constantly while writing Hittite. You read the sign as "sheep" and say your own word for it, the way we read & and say "and". A Hittite tablet is a mosaic of Sumerian logograms, Akkadian spellings and Hittite grammar, all at once. It is why the archive took so long to read and it is not a sign of borrowing: nobody at Ḫattuša thought they were writing Sumerian.',
       },
       {
         term: 'Which allium, exactly',
@@ -3108,7 +3108,7 @@ export const recipes = [
       },
     ],
     substitutions: [
-      { from: 'Mutton neck', to: 'Lamb neck, or shoulder cut into large pieces', text: 'Neck is the right cut and the cheap one — plenty of bone and connective tissue, which is what makes the broth. Shoulder works and costs more. Leg does not: too lean, and it goes dry before it goes tender.' },
+      { from: 'Mutton neck', to: 'Lamb neck, or shoulder cut into large pieces', text: 'Neck is the right cut and the cheap one, with plenty of bone and connective tissue, which is what makes the broth. Shoulder works and costs more. Leg does not: too lean, and it goes dry before it goes tender.' },
       { from: 'Sheep-tail fat', to: 'Fat trimmed from the meat, or olive oil', text: 'Tail fat is the period-correct cooking fat across most of this world and it is worth asking a butcher for. Failing that, trim the neck itself; oil is the last resort and the pot is a little thinner for it.' },
       { from: 'Hard sheep cheese', to: 'Pecorino, or a dry feta', text: 'You want salt and funk, not creaminess. Anything young and mild will disappear into the broth.' },
     ],
@@ -3230,7 +3230,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'Not hummus',
-        text: 'Worth stating plainly, because the resemblance is strong enough to mislead. There is no sesame paste and no citrus here — neither is evidenced for this dish — and the texture is deliberately coarse. What the Hittites had was the chickpea, the oil, the garlic and the mortar. That is most of the way there, and it is not the same dish.',
+        text: 'Worth stating plainly, because the resemblance is strong enough to mislead. There is no sesame paste and no citrus here, neither being evidenced for this dish, and the texture is deliberately coarse. What the Hittites had was the chickpea, the oil, the garlic and the mortar. That is most of the way there, and it is not the same dish.',
       },
     ],
     substitutions: [
@@ -3299,7 +3299,7 @@ export const recipes = [
       },
       {
         term: 'What is not attested',
-        text: 'The marinade. Every seasoning listed is a Linear B ingredient, and the palace tablets record all of them being issued — but the tablets are inventories, not recipes, and nobody wrote down what those people put on their meat. The equipment is the hard evidence; the flavouring is a reasonable guess from the pantry.',
+        text: 'The marinade. Every seasoning listed is a Linear B ingredient, and the palace tablets record all of them being issued. But the tablets are inventories, not recipes, and nobody wrote down what those people put on their meat. The equipment is the hard evidence; the flavouring is a reasonable guess from the pantry.',
       },
     ],
     substitutions: [
@@ -3363,7 +3363,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'How to take this one',
-        text: 'The weakest evidence on the site, and flagged as such. Homer describes a world several centuries before the poems were fixed in writing, and epic preserves objects and customs unevenly. What makes it worth including is that every ingredient is independently attested in Linear B — wine, goat cheese, barley — so the components are period-correct even if the drink as described is not securely so.',
+        text: 'The weakest evidence on the site, and flagged as such. Homer describes a world several centuries before the poems were fixed in writing, and epic preserves objects and customs unevenly. What makes it worth including is that every ingredient is independently attested in Linear B, wine and goat cheese and barley alike, so the components are period-correct even if the drink as described is not securely so.',
       },
       {
         term: 'What it tastes like',
@@ -3433,7 +3433,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'What the evidence actually is',
-        text: 'Social, not culinary. You know the marzeaḥ existed, who joined it, what it owned and that it centred on drinking and eating meat together — I know because I was in one. You know from the bones which animals were killed and from the pottery how much of the assemblage was for drinking. Everything on the ingredient list beyond the meat, the oil and the salt is a Levantine pantry choice rather than an attested one — which is why this is a reconstruction and says so.',
+        text: 'Social, not culinary. You know the marzeaḥ existed, who joined it, what it owned, and that it centred on drinking and eating meat together. I know because I was in one. You know from the bones which animals were killed and from the pottery how much of the assemblage was for drinking. Everything on the ingredient list beyond the meat, the oil and the salt is a Levantine pantry choice and not an attested one, which is why this is a reconstruction and says so.',
       },
     ],
     substitutions: [
