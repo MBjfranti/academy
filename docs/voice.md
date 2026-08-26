@@ -248,3 +248,119 @@ in body prose is the budget.**
     grep -nE "because why would|the part nobody|never gets written down" src/data/*.js
 
 Then ask of each hit: *fact, flourish, or world?* Only the flourish goes.
+
+---
+
+# The voice
+
+Sections 7-12 catalogue tics. They were symptoms of one decision, and the decision was
+wrong, so this part supersedes them: keep the greps, ignore the framing.
+
+## 13. Bourdain's job, not Bourdain's voice
+
+The persona was built on Anthony Bourdain, and it worked for the JOB — go there, eat with
+the people who actually cook, take them seriously, prefer the ordinary meal to the palace
+one, admit what you do not know. All of that stays. It is the best thing about this site.
+
+The VOICE was the mistake. Bourdain's register runs on irony, self-deprecation, deflation
+and the confiding aside, and every tic in §7-§12 falls out of it automatically. The
+deflating tag is what irony does to the end of a sentence. The performed candour exists
+because a swaggering voice has to keep PROVING it is being straight with you. "Nobody
+thinks to X" is the confiding aside, flattering the reader into the narrator's confidence.
+Patch them one at a time and they grow back, because the persona keeps generating them.
+
+It was also wrong for the man. **Yadinu is a retired palace provisioning scribe** — eleven
+years counting jars into a store. Literate, numerate, trained to be accurate, accustomed to
+writing for people who will act on what he writes. The swagger was always fighting his own
+biography.
+
+## 14. The voice: the correspondent
+
+**The writer recedes and the world fills the frame.** Yadinu is the instrument, not the
+subject. He is there, he is a person, and he has opinions — but the reader's attention
+should be on the canal, the market and the woman selling dates, not on him having feelings
+about them.
+
+Four properties:
+
+**OBSERVED.** Concrete nouns, real measurements, things that can be seen and counted. A
+path worn a hand's depth into limestone. Silt stacked on a bank, drying grey. Thirty people
+on rugs and the food going round twice. Detail does the work adjectives were doing.
+
+**RESTRAINED.** No adjective is doing a job a noun could do. Nothing is deflated, nothing is
+insisted upon. Paragraphs end when the observation ends, not on a beat.
+
+**HUMANE.** The attention IS the warmth. Noticing that a woman selling dates has never seen
+the tree they came from is affection, expressed as accuracy rather than as commentary. This
+is where the love of common folk lives now: not in saying he admires these people, but in
+looking at them closely enough that the admiration is obvious.
+
+**UNHURRIED.** Long sentences of description are fine. The rhythm comes from clause
+structure — subordination and cadence — not from punctuation tricks, fragments or triples.
+
+### Influences
+
+Norman Lewis, *Naples '44*, above all — a wartime diary of a shattered city that is
+constantly funny and never once cracks a joke. Colin Thubron for landscape and restraint.
+Martha Gellhorn's reporting for the discipline of never becoming the subject. Patience Gray
+for the food itself, since she wrote about the cooking of poor places with total seriousness
+and no condescension whatsoever.
+
+### Humour
+
+**Seasoning, not register.** It lives in what people do and say, reported flat and left
+alone. "He asked mine twice and got it wrong both times." Kuparra spending an evening
+throwing stones at geese and never once hitting one. The narrator does not point at the
+joke, does not land it, and does not follow it with a reaction. A comic fact stated plainly
+is funnier than a comic fact presented as funny — and it is the only kind of humour that
+does not age into a mannerism.
+
+Roughly one or two beats per piece. If a paragraph is trying to be funny, it is doing it
+wrong; if a person in it is funny, it is doing it right.
+
+## 15. How an observational voice carries an argument
+
+This is the one real weakness of the choice, and it must be worked at rather than ignored.
+Several reports have a thesis — the wall and the canal are one institution; a trade route is
+two industries with a handover in the middle. A voice that only describes will lose them.
+
+Five techniques, in order of preference:
+
+1. **Arrange, do not assert.** Put the facts in the order that makes the conclusion
+   inevitable and then stop. The reader arriving at it themselves is worth more than being
+   told, and it is the only way a restrained voice can be emphatic.
+
+2. **Close on juxtaposition.** Set two facts in one sentence and let the join do the
+   argument: *"…everyone went home along a lit street, inside a wall, on ground watered by
+   a channel that will need digging out again in the spring."* Nothing is claimed. The
+   claim is unavoidable.
+
+3. **Let the concrete stand for the abstract.** Men standing knee-deep in wet silt, lifting
+   it out in baskets, carries the whole corvée argument without the word.
+
+4. **Put the claim in somebody's mouth.** If a thing must be said outright, let a person who
+   lives there say it, in reported speech. Then it is still observation.
+
+5. **One earned sentence.** A piece may state its conclusion once, flatly, late, and short.
+   Once. If a report needs two, the arrangement has failed and should be rebuilt.
+
+The evidence grading does not have to fight this at all: it lives in the `standing` box,
+which is furniture and can be plain-spoken without touching the body.
+
+### The risk to watch
+
+Coldness. If a piece has no person in it, this voice has nothing to be warm about and will
+read as a survey. Every report needs somebody in it doing something — that is also the JOB
+(§13), so the two requirements point the same way.
+
+## 16. Rewriting an existing piece
+
+A paragraph at a time, asking three things:
+
+1. **Is the writer the subject of this sentence when the world should be?**
+2. **Is any adjective doing a job a noun could do better?**
+3. **Does this paragraph end on an observation, or on a beat?**
+
+Word count should stay roughly level. Much shorter means the tics were carrying content and
+it has been cut rather than fixed; much longer means explanation has been added that the
+arrangement should have handled.
