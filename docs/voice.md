@@ -364,3 +364,66 @@ A paragraph at a time, asking three things:
 Word count should stay roughly level. Much shorter means the tics were carrying content and
 it has been cut rather than fixed; much longer means explanation has been added that the
 arrangement should have handled.
+
+## 17. Somebody has to answer back
+
+Before this section the corpus contained no direct speech at all. Named people appeared
+thirty-six times across the reports and not one of them said a word in their own voice;
+everything came through Yadinu's paraphrase. That is why the site read as a monologue, and
+it is the specific reason the correspondent voice was at risk of reading cold.
+
+**Every report needs a second person in it who talks back.** Not an interviewee. Somebody
+with a position of their own who thinks Yadinu is wrong about something and says so.
+
+### What they push back on
+
+Pick a real disagreement, not a decorative one. The good seams:
+
+- **The cooking.** They think his method is wrong. On a food site this is the most useful
+  disagreement available, and two cooks disagreeing is honest.
+- **His interest in technique.** He wants to talk about the pan; they are feeding nine
+  people. Kuparra: *"It is a pan."*
+- **The premise of the whole site.** He believes it is a loss that the ordinary went
+  unrecorded. A cook may reasonably think that is a strange thing to care about, or may
+  take it seriously and then tell him he is writing down the wrong part — *"Nobody
+  remembers a pan."* Leave that charge standing. It is a fair one.
+- **His class.** He is a retired palace clerk taking notes on working people. Somebody is
+  entitled to find that funny.
+
+### Rules
+
+**They win sometimes.** Often, in fact. If the counterpoint always loses it is a foil, and
+a foil is worse than a monologue because it pretends not to be one.
+
+**Never mean, on either side.** This is friction between people who end up liking each
+other. Yadinu does not score points and is not wounded; he is corrected, and reports the
+correction.
+
+**It replaces self-deprecation.** §11a keeps the lines where Yadinu is dry about himself,
+but he no longer needs to undercut himself for balance — somebody else is doing it, from
+outside, with better information.
+
+### Invented people are allowed to be vivid
+
+Most of these people are invented, and the `standing` box says so. That licence should be
+spent: wild opinions, strong prejudices about other people's cooking, obsessive local
+expertise, a grudge, a superstition, a joke that does not translate.
+
+**Use the language barrier.** Akkadian is the lingua franca of this world and almost nobody
+in it speaks Akkadian first. Two people from different places are usually meeting in a third
+language that belongs to neither, which is historically true and endlessly usable:
+
+- It makes everyone terser, and terseness reads as force. Half of Kuparra's manner is not
+  temperament, it is vocabulary.
+- Somebody reaches for a word they do not have and uses the wrong one on purpose.
+- A joke lands sideways, or does not land, and nobody explains it.
+- Yadinu gets a name wrong, is laughed at, and is not told the right one.
+
+Never write this as a comic foreigner. The joke is never that somebody speaks badly — it is
+that two competent adults are doing business in a language neither owns, and managing.
+
+### Formatting
+
+Direct speech in typographic double quotes, inside the single-quoted data strings. Keep
+attribution plain — *she said*, and usually nothing else. No adverbs on the tag. Let the
+line carry it.
