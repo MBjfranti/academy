@@ -13,8 +13,8 @@ export default function Writers() {
             <p className="writers__kicker">The bylines</p>
             <h1>Four writers, four parts of the Bronze Age</h1>
             <p>
-              Each writer is a reconstructed person grounded in records from one region.
-              Their lives are invented. Their work, food, places, and constraints come from evidence.
+              Each writer belongs to one region and one trade. Their work, food, places and
+              constraints come from the record. Their lives belong to this site.
             </p>
           </header>
 

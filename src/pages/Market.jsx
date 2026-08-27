@@ -1,5 +1,7 @@
 import { useState, useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { AISLES, items, search } from '../data/market'
+import { MARKET_GROUPS } from '../data/marketGroups'
 import { accentByKey } from '../data/accents'
 import { aisleArt, moderns } from '../data/imagery'
 import Modal from '../components/Modal'
@@ -13,6 +15,17 @@ const VERDICT = {
 }
 
 const RANK = { no: 0, careful: 1, yes: 2 }
+
+const VERDICT_FILTERS = [
+  { key: 'all', label: 'Yes + careful' },
+  { key: 'yes', label: 'Yes only' },
+  { key: 'careful', label: 'Careful only' },
+]
+
+const SORTS = [
+  { key: 'shelf', label: 'Shelf order' },
+  { key: 'az', label: 'A–Z' },
+]
 
 /* THE MARKET — "can I buy this?", answered.
 
@@ -36,10 +49,32 @@ const RANK = { no: 0, careful: 1, yes: 2 }
    something that is not really divided — and it made search lie. */
 
 export default function Market() {
-  const [q, setQ] = useState('')
-  const [aisle, setAisle] = useState('produce')
   const [panel, setPanel] = useState(false)
   const [detail, setDetail] = useState(null)
+  const [params, setParams] = useSearchParams()
+
+  const q = params.get('q') ?? ''
+  const wantedAisle = params.get('aisle') ?? 'produce'
+  const aisle = AISLES.some((a) => a.key === wantedAisle) ? wantedAisle : 'produce'
+  const groups = MARKET_GROUPS[aisle] ?? []
+  const wantedGroup = params.get('group') ?? 'all'
+  const group = groups.some((g) => g.key === wantedGroup) ? wantedGroup : 'all'
+  const wantedVerdict = params.get('show') ?? 'all'
+  const verdict = VERDICT_FILTERS.some((v) => v.key === wantedVerdict) ? wantedVerdict : 'all'
+  const sort = params.get('sort') === 'az' ? 'az' : 'shelf'
+
+  /* Market is used with one hand and interrupted often. Put the whole browse state in the
+     URL so returning from a recipe, a message or a locked phone restores the same shelf. */
+  const setView = (patch) => {
+    const next = { q, aisle, group, verdict, sort, ...patch }
+    const query = {}
+    if (next.q) query.q = next.q
+    if (next.aisle !== 'produce') query.aisle = next.aisle
+    if (next.group !== 'all') query.group = next.group
+    if (next.verdict !== 'all') query.show = next.verdict
+    if (next.sort !== 'shelf') query.sort = next.sort
+    setParams(query, { replace: true })
+  }
 
   const results = useMemo(() => search(q), [q])
 
@@ -55,14 +90,69 @@ export default function Market() {
     )
   }, [results])
 
-  const shown = useMemo(() => items.filter((i) => i.aisle === aisle && i.verdict !== 'no'), [aisle])
+  const aisleItems = useMemo(
+    () => items.filter((i) => i.aisle === aisle && i.verdict !== 'no'),
+    [aisle],
+  )
+
+  const verdictItems = useMemo(
+    () => aisleItems.filter((i) => verdict === 'all' || i.verdict === verdict),
+    [aisleItems, verdict],
+  )
+
+  const groupCounts = useMemo(
+    () =>
+      Object.fromEntries(
+        groups.map((g) => [g.key, verdictItems.filter((i) => g.names.includes(i.name)).length]),
+      ),
+    [groups, verdictItems],
+  )
+
+  const shown = useMemo(() => {
+    const inGroup =
+      group === 'all'
+        ? verdictItems
+        : verdictItems.filter((i) => groups.find((g) => g.key === group)?.names.includes(i.name))
+    return sort === 'az' ? [...inGroup].sort((a, b) => a.name.localeCompare(b.name)) : inGroup
+  }, [group, groups, sort, verdictItems])
+
+  const sections = useMemo(() => {
+    if (sort === 'az') return [{ key: 'az', label: group === 'all' ? 'A–Z' : groups.find((g) => g.key === group)?.label, items: shown }]
+
+    if (group !== 'all') {
+      return [{ key: group, label: groups.find((g) => g.key === group)?.label, items: shown }]
+    }
+
+    const byName = new Map(shown.map((item) => [item.name, item]))
+    return groups
+      .map((g) => ({ ...g, items: g.names.map((name) => byName.get(name)).filter(Boolean) }))
+      .filter((section) => section.items.length > 0)
+  }, [group, groups, shown, sort])
+
+  const pickVerdict = (nextVerdict) => {
+    if (group === 'all') return setView({ verdict: nextVerdict })
+    const chosen = groups.find((g) => g.key === group)
+    const survives = aisleItems.some(
+      (item) => chosen?.names.includes(item.name) && (nextVerdict === 'all' || item.verdict === nextVerdict),
+    )
+    setView({ verdict: nextVerdict, group: survives ? group : 'all' })
+  }
+
   const allAvoid = useMemo(() => items.filter((i) => i.verdict === 'no'), [])
 
   const current = AISLES.find((a) => a.key === aisle)
   const sign = aisleArt[aisle]
+  const aisleCounts = useMemo(
+    () =>
+      Object.fromEntries(
+        AISLES.map((a) => [a.key, items.filter((i) => i.aisle === a.key && i.verdict !== 'no').length]),
+      ),
+    [],
+  )
 
   return (
     <div className="page">
+      <h1 className="sr-only">Market</h1>
       <div className="seek">
         <div className="wrap">
           <label className="ask">
@@ -72,13 +162,13 @@ export default function Market() {
             <input
               type="text"
               value={q}
-              onChange={(e) => setQ(e.target.value)}
+              onChange={(e) => setView({ q: e.target.value })}
               placeholder="Can I buy this?"
               aria-label="Search any ingredient"
               autoComplete="off"
             />
             {q && (
-              <button className="ask__clear" onClick={() => setQ('')} aria-label="Clear search">
+              <button className="ask__clear" onClick={() => setView({ q: '' })} aria-label="Clear search">
                 ✕
               </button>
             )}
@@ -102,8 +192,8 @@ export default function Market() {
             {found.length === 0 ? (
               <div className="empty">
                 <p>
-                  Nothing listed for “{q}”. If it is not here, assume it needs checking — most
-                  things in a modern shop are younger than they look.
+                  Nothing listed for “{q}”. Check anything absent from this list. Most things
+                  in a modern shop are younger than they look.
                 </p>
                 <img
                   className="fresco"
@@ -122,17 +212,39 @@ export default function Market() {
         </div>
       ) : (
         <>
-          <nav className="subnav" aria-label="Aisles">
+          <nav className="subnav marketaisles" aria-label="Aisles">
             <div className="wrap subnav__in">
               {AISLES.map((a) => (
-                <button key={a.key} aria-pressed={aisle === a.key} onClick={() => setAisle(a.key)}>
+                <button
+                  key={a.key}
+                  aria-pressed={aisle === a.key}
+                  onClick={() => setView({ aisle: a.key, group: 'all' })}
+                >
                   {a.label}
                 </button>
               ))}
             </div>
           </nav>
 
-          <div className="note">
+          <div className="marketaisle">
+            <div className="wrap">
+              <label>
+                <span className="sr-only">Aisle</span>
+                <select
+                  value={aisle}
+                  onChange={(e) => setView({ aisle: e.target.value, group: 'all' })}
+                >
+                  {AISLES.map((a) => (
+                    <option value={a.key} key={a.key}>
+                      {a.label} · {aisleCounts[a.key]}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div className="note marketnote">
             <div className="wrap note__in">
               {sign && (
                 <img
@@ -150,30 +262,69 @@ export default function Market() {
             </div>
           </div>
 
+          <section className="markettools" aria-label="Filter and sort this aisle">
+            <div className="wrap markettools__in">
+              <div className="marketgroups" role="group" aria-label="Ingredient group">
+                <button aria-pressed={group === 'all'} onClick={() => setView({ group: 'all' })}>
+                  All <i>{verdictItems.length}</i>
+                </button>
+                {groups.map((g) => (
+                  <button
+                    key={g.key}
+                    aria-pressed={group === g.key}
+                    disabled={groupCounts[g.key] === 0}
+                    onClick={() => setView({ group: g.key })}
+                  >
+                    {g.label} <i>{groupCounts[g.key]}</i>
+                  </button>
+                ))}
+              </div>
+
+              <div className="marketoptions">
+                <label>
+                  <span>Show</span>
+                  <select value={verdict} onChange={(e) => pickVerdict(e.target.value)}>
+                    {VERDICT_FILTERS.map((v) => (
+                      <option value={v.key} key={v.key}>{v.label}</option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  <span>Sort</span>
+                  <select value={sort} onChange={(e) => setView({ sort: e.target.value })}>
+                    {SORTS.map((s) => (
+                      <option value={s.key} key={s.key}>{s.label}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+            </div>
+          </section>
+
           <div className="page__scroll">
             <div className="wrap">
-              <ul className="tiles">
-                {shown.map((item) => (
-                  <li className={`tile tile--${item.verdict}`} key={item.name}>
-                    <button className="tile__open" onClick={() => setDetail(item)}>
-                      <h3>
-                        {item.name}
-                        {item.verdict === 'careful' && <span className="tile__flag">!</span>}
-                      </h3>
-                      <p>{item.note}</p>
-                      {Array.isArray(item.cultures) && item.cultures.length > 0 && (
-                        <span className="tile__tags">
-                          {item.cultures.map((k) => (
-                            <span className="tile__sig" key={k}>
-                              {accentByKey[k]?.name}
-                            </span>
-                          ))}
-                        </span>
-                      )}
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <p className="marketcount" aria-live="polite">
+                Showing {shown.length} {shown.length === 1 ? 'ingredient' : 'ingredients'} in {current?.label}
+              </p>
+              {sections.length > 0 ? (
+                <div className="marketledger">
+                  {sections.map((section) => (
+                    <section className="marketsection" key={section.key}>
+                      <h2>{section.label}</h2>
+                      <ul>
+                        {section.items.map((item) => (
+                          <MarketRow item={item} onOpen={setDetail} key={item.name} />
+                        ))}
+                      </ul>
+                    </section>
+                  ))}
+                </div>
+              ) : (
+                <div className="marketempty">
+                  <p>No ingredients match these filters.</p>
+                  <button onClick={() => setView({ group: 'all', verdict: 'all' })}>Show the whole aisle</button>
+                </div>
+              )}
             </div>
           </div>
         </>
@@ -238,7 +389,7 @@ export default function Market() {
             )}
             {Array.isArray(detail.cultures) && detail.cultures.length > 0 && (
               <p className="detail__meta">
-                Everyone had access to it — but it reads most strongly as{' '}
+                Everyone could get it. It reads most strongly as{' '}
                 {detail.cultures
                   .map((k) => accentByKey[k]?.name)
                   .filter(Boolean)
@@ -256,6 +407,35 @@ export default function Market() {
         )}
       </Modal>
     </div>
+  )
+}
+
+function MarketRow({ item, onOpen }) {
+  const cultures = Array.isArray(item.cultures)
+    ? item.cultures.map((key) => accentByKey[key]?.name).filter(Boolean)
+    : []
+
+  return (
+    <li className={`marketrow marketrow--${item.verdict}`}>
+      <button
+        onClick={() => onOpen(item)}
+        aria-label={`${VERDICT[item.verdict].word}: ${item.name}. Open details`}
+      >
+        <span className="marketrow__mark" aria-hidden="true">
+          {VERDICT[item.verdict].mark}
+        </span>
+        <span className="marketrow__body">
+          <span className="marketrow__name">{item.name}</span>
+          <span className="marketrow__note">{item.note}</span>
+        </span>
+        {(cultures.length > 0 || item.tier) && (
+          <span className="marketrow__meta">
+            {cultures.length > 0 ? cultures.join(' · ') : item.tier === 'elite' ? 'Feast food' : 'Everyday'}
+          </span>
+        )}
+        <span className="marketrow__chev" aria-hidden="true">›</span>
+      </button>
+    </li>
   )
 }
 

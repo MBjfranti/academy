@@ -114,6 +114,24 @@ export const dishCards = {
     concept: 'Kid braised in blood',
     tags: ['Goat', 'Stew', 'Rich'],
   },
+  'dried-river-fish-with-onions-terqa': {
+    meal: 'evening',
+    mins: 45,
+    concept: 'Dried fish, soft onions',
+    tags: ['Fish', 'One pot', 'Everyday'],
+  },
+  'field-pot-for-thirty': {
+    meal: 'evening',
+    mins: 75,
+    concept: 'Chickpeas, barley and leek',
+    tags: ['Pulses', 'Grain', 'One pot', 'Vegetarian'],
+  },
+  'shoulder-for-the-road': {
+    meal: 'feast',
+    mins: 210,
+    concept: 'Slow-roast mutton shoulder',
+    tags: ['Lamb', 'Roast', 'Slow', 'Feast'],
+  },
 
   // ── Egypt ────────────────────────────────────────────────────────────────
   'emmer-loaves-in-conical-moulds': {
@@ -182,6 +200,12 @@ export const dishCards = {
     mins: 60,
     concept: 'Cumin lentils in oil',
     tags: ['Pulses', 'Vegetarian', 'Quick'],
+  },
+  'hillside-greens-with-soured-milk': {
+    meal: 'midday',
+    mins: 15,
+    concept: 'Wild greens, soured milk',
+    tags: ['Greens', 'Vegetarian', 'No cooking', 'Quick'],
   },
 
   // ── The Aegean ───────────────────────────────────────────────────────────

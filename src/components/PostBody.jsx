@@ -76,11 +76,7 @@ export default function PostBody({ post }) {
         </figure>
       )}
 
-      {/* FLAT, not a div per paragraph. Wrapping each paragraph and its figure in a block
-          made every block a new formatting context, which meant a floated inset could only
-          wrap the one paragraph it was boxed with — so a short paragraph beside a tall
-          photograph left a column of dead paper underneath it. Emitted flat, the float does
-          what a float is for and the prose runs past it. */}
+      {/* Keep the body flat so headings, figures and pull quotes share one editorial flow. */}
       <div className="prose">
         {post.body.map((para, i) => {
           const here = figures.filter((f) => f.at === i)
@@ -103,15 +99,10 @@ export default function PostBody({ post }) {
                   sea and says everything else follows from it. */}
               {post.showMapAfter === i && <WorldMap />}
               {here.map((f) => {
-                // Insets alternate sides down the article. Counting the insets themselves
-                // rather than using the paragraph index keeps the alternation regular
-                // however unevenly they are spaced through the text.
-                const nth = figures.filter((g) => g.size === 'inset').indexOf(f)
-                const side = f.size === 'inset' ? (nth % 2 ? ' fig--right' : ' fig--left') : ''
+                // Reports use only two scales. Unknown legacy values fall back to the
+                // reading column instead of reviving the old floated inset treatment.
+                const size = f.size === 'wide' ? 'wide' : 'col'
                 /* CROP IS EDITORIAL, so it lives on the figure rather than in the CSS.
-                   These photographs are wide scenes with a lot going on, and shown whole
-                   at inset width they all reduce to the same busy brown rectangle.
-
                    THREE VALUES, and they map onto what a hand does: `crop` is the shape of
                    the window, `zoom` is how close, `pan` is where — in percent of the
                    FRAME, which is what makes the drag in CropTool one-to-one. An earlier
@@ -125,7 +116,7 @@ export default function PostBody({ post }) {
                    laid out and the replaced content never painted. */
                 const [px, py] = f.pan ?? [0, 0]
                 return (
-                  <figure className={`fig fig--${f.size ?? 'col'}${side}`} key={f.name}>
+                  <figure className={`fig fig--${size}`} key={f.name}>
                     {f.crop ? (
                       <span
                         className={`fig__crop${editable ? ' fig--editable' : ''}`}

@@ -742,18 +742,6 @@
   letter-spacing: 0.02em;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* ── the browse-by control ──────────────────────────────────────────────
    Sits on the instruction line rather than in a row of its own, because a second full
    row of tabs is exactly the "clicking around" this is supposed to avoid. It changes what
@@ -764,6 +752,28 @@
   gap: 0.28rem;
   flex-wrap: wrap;
   flex: 0 0 auto;
+}
+
+.recipe-note {
+  justify-content: space-between;
+}
+
+.recipe-note > p {
+  flex: 1 1 26rem;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .recipe-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .recipe-note > p {
+    flex-basis: auto;
+    text-align: left;
+  }
 }
 
 .facetsw__l {

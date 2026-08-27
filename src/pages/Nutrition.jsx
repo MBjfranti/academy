@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import {
   NUTRIENTS,
   totalsFor,
@@ -46,10 +47,22 @@ const shortfallsIn = (totals) =>
   NUTRIENTS.filter((n) => n.basis === 'goal' && n.ref && totals[n.key] / n.ref < 0.8)
 
 export default function Nutrition() {
-  const [view, setView] = useState('day')
-  const [coastal, setCoastal] = useState(false)
-  const [wine, setWine] = useState(true)
-  const [basis, setBasis] = useState('week')
+  const [params, setParams] = useSearchParams()
+  const wantedView = params.get('view') ?? 'day'
+  const view = VIEWS.some((v) => v.key === wantedView) ? wantedView : 'day'
+  const coastal = params.get('day') === 'coastal'
+  const wine = params.get('wine') !== 'none'
+  const basis = params.get('basis') === 'day' ? 'day' : 'week'
+
+  const setState = (patch) => {
+    const next = { view, coastal, wine, basis, ...patch }
+    const query = {}
+    if (next.view !== 'day') query.view = next.view
+    if (next.coastal) query.day = 'coastal'
+    if (!next.wine) query.wine = 'none'
+    if (next.basis !== 'week') query.basis = next.basis
+    setParams(query, { replace: true })
+  }
 
   const { totals: dayT } = useMemo(
     () => totalsFor(dayItems({ coastal, wine })),
@@ -63,10 +76,11 @@ export default function Nutrition() {
 
   return (
     <div className="page">
+      <h1 className="sr-only">Nutrition</h1>
       <nav className="subnav" aria-label="Sections">
         <div className="wrap subnav__in">
           {VIEWS.map((v) => (
-            <button key={v.key} aria-pressed={view === v.key} onClick={() => setView(v.key)}>
+            <button key={v.key} aria-pressed={view === v.key} onClick={() => setState({ view: v.key })}>
               {v.label}
             </button>
           ))}
@@ -74,13 +88,15 @@ export default function Nutrition() {
       </nav>
 
       <div className="note">
-        <div className="wrap note__in">
+        <div className="wrap note__in nutbar">
           {/* The line has to describe whatever the view is actually showing. On "The
               numbers" that is the basis switch, not the day — saying "one representative
               day" above a week-average table is the kind of mismatch nobody reads twice
               and everybody half-believes. */}
           <p>
-            {view === 'week' || (view === 'numbers' && basis === 'week') ? (
+            {view === 'caveats' ? (
+              <>The assumptions, limits and least reliable numbers in this model.</>
+            ) : view === 'week' || (view === 'numbers' && basis === 'week') ? (
               <>
                 Seven days from the same pantry, {Math.round(weekT.kcal)} kcal a day on average.
               </>
@@ -89,26 +105,29 @@ export default function Nutrition() {
                 One representative day, {Math.round(dayT.kcal)} kcal, built only from this pantry.
               </>
             )}
-            {short.length > 0 && (
+            {view !== 'caveats' && short.length > 0 && (
               <b> Short on {short.map((n) => n.label).join(', ')}.</b>
             )}
           </p>
           {view === 'day' && (
             <div className="nutbar__switches">
-              <button aria-pressed={coastal} onClick={() => setCoastal((v) => !v)}>
-                {coastal ? 'Coastal · fish' : 'Inland · lamb'}
+              <button aria-pressed={!coastal} onClick={() => setState({ coastal: false })}>
+                Inland · lamb
               </button>
-              <button aria-pressed={wine} onClick={() => setWine((v) => !v)}>
+              <button aria-pressed={coastal} onClick={() => setState({ coastal: true })}>
+                Coastal · fish
+              </button>
+              <button aria-pressed={wine} onClick={() => setState({ wine: !wine })}>
                 {wine ? 'With wine' : 'Water only'}
               </button>
             </div>
           )}
           {view === 'numbers' && (
             <div className="nutbar__switches">
-              <button aria-pressed={basis === 'week'} onClick={() => setBasis('week')}>
+              <button aria-pressed={basis === 'week'} onClick={() => setState({ basis: 'week' })}>
                 Week average
               </button>
-              <button aria-pressed={basis === 'day'} onClick={() => setBasis('day')}>
+              <button aria-pressed={basis === 'day'} onClick={() => setState({ basis: 'day' })}>
                 Single day
               </button>
             </div>
@@ -196,8 +215,8 @@ function WeekView() {
         <section>
           <h4>Does fish change the answer?</h4>
           <p className="nut__caveat">
-            Two fish days is the assumption the whole week rests on, and the one we are least
-            sure of — so here is what happens if it is wrong. It is not a small effect.
+            Two fish days anchor the week. This table shows how the scarce nutrients move
+            when that assumption changes.
           </p>
           <table className="fishtbl">
             <thead>
@@ -225,8 +244,8 @@ function WeekView() {
             </tbody>
           </table>
           <p className="nut__caveat">
-            Vitamin D stays low whichever way you run it. That one was sunlight then and is
-            fortification now, and no amount of fish in this corpus fixes it.
+            Vitamin D stays low in every case. Sunlight carried the burden then;
+            fortification often carries it now.
           </p>
         </section>
 
@@ -242,9 +261,8 @@ function WeekView() {
               into something a reader can feel. */}
           <p className="nut__caveat">
             Average across seven days: {Math.round(avg.kcal)} kcal, {fmtN('fibre', avg.fibre)} g
-            fibre, {fmtN('protein', avg.protein)} g protein. That fibre figure is not a
-            triumph of ancient wisdom; it is what happens when nothing in the pantry has had
-            the fibre taken out of it yet.
+            fibre, {fmtN('protein', avg.protein)} g protein. The fibre comes from an unrefined
+            pantry. Little has been milled away.
           </p>
         </section>
       </div>
@@ -309,18 +327,16 @@ function NumbersTable({ totals, basis, wine }) {
       <div className="notes">
         <h4>How to read this</h4>
         <p className="nut__caveat">
-          Three kinds of reference value, and they do not mean the same thing.{' '}
-          <b>Goals</b> — fibre, calcium, the vitamins — are minimums to reach, and a percentage
-          is meaningful. <b>Limits</b> — sodium and saturated fat — are ceilings, so they read
-          &ldquo;within&rdquo; or &ldquo;over&rdquo; rather than as a percentage; being at 100%
-          of a ceiling is sitting on it, not achieving it. <b>Energy, carbohydrate and total
-          fat</b> are context and are not scored at all.
+          The table uses three kinds of reference value. <b>Goals</b> set minimums for fibre,
+          calcium and the vitamins, so the percentage shows how close the diet comes.{' '}
+          <b>Limits</b> set ceilings for sodium and saturated fat. They read
+          &ldquo;within&rdquo; or &ldquo;over&rdquo;. <b>Energy, carbohydrate and total fat</b>{' '}
+          provide context and carry no score.
         </p>
         <p className="nut__caveat">
-          <b>Omega-3 is two rows, not one.</b> ALA is the plant form, from walnuts, olive oil
-          and sesame. EPA and DHA are the marine form. Conversion of ALA to EPA runs roughly
-          5–10%, and to DHA under 1%, so a large ALA figure does not cover an EPA+DHA
-          shortfall — which is exactly why they are scored separately here.
+          <b>Omega-3 takes two rows.</b> Walnuts, olive oil and sesame supply the plant form,
+          ALA. Fish supplies the marine forms, EPA and DHA. The body converts roughly 5–10%
+          of ALA to EPA and less than 1% to DHA. The table therefore scores them separately.
         </p>
         <p className="nut__caveat">
           ◆ {PHYTATE_NOTE} ? marks iodine, which most food databases barely measure, so its
@@ -334,10 +350,9 @@ function NumbersTable({ totals, basis, wine }) {
           ))}
         </ul>
         <p className="nut__caveat">
-          The honest ranking is three-way: a deliberately designed modern whole-food diet
-          first, this pantry a close second, a typical ultra-processed pattern clearly third.
-          &ldquo;Modern diet&rdquo; on its own is not a comparator — someone eating salmon,
-          lentils and olive oil is also eating a modern diet.
+          A planned modern whole-food diet leads this comparison. This pantry follows it,
+          then the typical ultra-processed pattern. &ldquo;Modern diet&rdquo; alone says too
+          little: salmon, lentils and olive oil also make a modern diet.
         </p>
       </div>
     </div>
@@ -372,14 +387,13 @@ function Caveats() {
         </p>
         <p>
           <b>Iodine.</b> Barely measured in most food tables, so the total is a floor rather than
-          a reading. Sea salt does not help — flake salt is under 1 µg a pinch against roughly
-          70 µg for iodised. Fish and dairy do all the work, and even two fish days a week only
-          reach about 39% of the target.
+          a reading. A pinch of flake salt carries less than 1 µg against roughly 70 µg in
+          iodised salt. Fish and dairy carry the total. Even two fish days a week reach about
+          39% of the target.
         </p>
         <p>
-          <b>Vitamin D.</b> The one genuine, unfixable weakness. It stays near 18% of target
-          across the whole week whatever we do with the fish, because in this period it came
-          from sunlight rather than from food.
+          <b>Vitamin D.</b> Food leaves the week near 18% of target, even with fish. Sunlight
+          carried most of the burden in this period.
         </p>
         <img
           className="fresco"

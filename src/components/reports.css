@@ -109,9 +109,9 @@
 
    THIS RULE IS LOAD-BEARING AND WAS ONCE DELETED BY ACCIDENT, when the front-page block it
    happened to live inside was rewritten. Six rules below depend on it; with it missing they
-   all fall back to `max-width: none`, the prose column jumps to the full 940px while the
-   paragraphs stay capped at 66ch, and floated insets strand themselves in the gap. If the
-   article layout ever looks like that again, look here first. */
+   all fall back to `max-width: none` and the prose column jumps to the full 940px while the
+   paragraphs stay capped at 66ch. If the article layout ever looks like that again, look
+   here first. */
 .lead,
 .postbody {
   --measure: 42rem;
@@ -357,12 +357,7 @@
 /* THE COLUMN IS CENTRED; THE TEXT INSIDE IT IS NOT. The measure lives on the container
    rather than on each paragraph, which is the whole trick: a centred block of left-ragged
    type sits on the same axis as the headline above it, where capping each paragraph
-   individually left the column pinned to the left edge with the headline floating over it.
-
-   It also has to be the container and not the children, because FLOATS ignore auto
-   margins. An inset floated inside a full-width .prose goes to the far edge of the lead
-   column and separates from the text it is supposed to be wrapping; floated inside a
-   centred .prose it lands on the measure, where it belongs. */
+   individually left the column pinned to the left edge with the headline floating over it. */
 .prose {
   max-width: var(--measure);
   margin-inline: auto;
@@ -372,9 +367,7 @@
 }
 
 /* `max-width: none` overrides the global 66ch cap in index.css, which was capping
-   paragraphs at 619px inside a 672px column. The two disagreeing is what made a right
-   float hang 53px past the end of the text it was supposed to be wrapping: the float
-   aligns to the column, the words stopped short of it. One measure, both. */
+   paragraphs at 619px inside a 672px column. One measure keeps the rag consistent. */
 .prose p {
   margin: 0 0 1.15em;
   max-width: none;
@@ -393,14 +386,6 @@
   font-size: 1.18rem;
   line-height: 1.6;
   color: var(--ink);
-}
-
-/* The last float has to be cleared by something, or it hangs below the end of the
-   article and out of the bottom of the modal. */
-.prose::after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 /* ── kickers, headlines, standfirsts ─────────────────────────────────────
@@ -521,15 +506,11 @@
 }
 
 /* ── figures ─────────────────────────────────────────────────────────────
-   THREE WIDTHS, and the choice is editorial rather than technical.
+   TWO WIDTHS, and the choice is editorial rather than technical.
 
    `wide`   breaks out past the measure. The hero, and anything that is the point of the
             paragraph rather than an illustration of it.
    `col`    fills the measure.
-   `inset`  about half the column, floated, with the text running past it. This is the one
-            that makes a page stop looking like a document: a picture the prose flows
-            around is part of the article, and a picture on its own line is an interruption.
-            They alternate sides down the piece.
 
    EVERY FIGURE HAS A CAPTION and every image has alt text, and they are not the same
    thing. Alt describes the picture for a reader who cannot see it. The caption says
@@ -558,13 +539,7 @@
   background: var(--paper-2);
 }
 
-/* `.fig .fig__crop img`, not `.fig__crop img`. The extra class is deliberate and it is
-   load-bearing: `.fig--inset img` sets a 300px cap at the SAME specificity, so which of
-   the two wins came down to source order — and it was clipping the image to 300px inside
-   a 353px frame, leaving a band of bare background under it. This block briefly existed
-   twice by accident, and the duplicate happened to sit after the cap, which is the only
-   reason it looked fixed; deleting the duplicate silently un-fixed it. Winning on
-   specificity instead means no future edit can reorder this back into being broken. */
+/* The crop wrapper owns the frame; the image fills that frame. */
 .fig .fig__crop img {
   position: absolute;
   inset: 0;
@@ -601,6 +576,15 @@
   margin-bottom: 2.2rem;
 }
 
+/* Feature photographs leave the reading measure and use the article measure. The text
+   remains narrow enough to read; the image gets room to carry place, crowd and weather. */
+.prose > .fig--wide {
+  width: min(940px, calc(100vw - 2rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 /* A 2:3 portrait at full column width is taller than most screens. The heroes are
    landscape and need no help; a portrait used wide gets capped and cropped from the top
    third, where the face is. */
@@ -613,40 +597,6 @@
   object-position: center 26%;
 }
 
-/* 34%, not 42%. At the old width a left float left about 41 characters beside it —
-   below the floor stated in the measure note above, and the exact reason the mobile
-   breakpoint unfloats insets. Narrower keeps the text readable at ~48 characters and
-   costs the picture very little. */
-.fig--inset {
-  width: min(44%, 340px);
-  margin-bottom: 1.1rem;
-}
-
-/* The photographs are 2:3, so at this width they come in near 480px tall — taller than
-   the two or three paragraphs that are supposed to run beside them, which left a column
-   of blank paper under the text. Cropped to roughly square they are flanked properly by
-   the one or two paragraphs actually beside them. From 20% down, because the head is high
-   in every frame. */
-.fig--inset img {
-  max-height: 300px;
-  object-fit: cover;
-  object-position: center 20%;
-}
-
-/* Clearing means two insets never end up shoulder to shoulder in the same band of text,
-   which is what happens when two paragraphs in a row each carry one. */
-.fig--left {
-  clear: both;
-  float: left;
-  margin-right: 1.5rem;
-}
-
-.fig--right {
-  clear: both;
-  float: right;
-  margin-left: 1.5rem;
-}
-
 /* ── the front-page hero ─────────────────────────────────────────────────
    FULL WIDTH OF THE LEAD COLUMN, and cropped high. Two separate decisions:
 
@@ -657,10 +607,6 @@
    CROP FROM 15%, not the middle. Photographs put their subject in the upper third far
    more often than not — faces, horizons, the thing being held up — so a centred crop on a
    wide banner reliably takes the top off the interesting part and leaves the table. */
-.fig--inset figcaption {
-  font-size: 0.72rem;
-}
-
 /* A caption runs the width of the picture it belongs to. It was capped at 52ch, which
    under a full-bleed hero left it wrapping to three short lines against a very wide image
    and reading as a stray note rather than as part of the figure. */
@@ -669,16 +615,7 @@
   max-width: none;
 }
 
-/* Floating a 320px picture inside a 66ch column leaves a gutter too narrow to read in, so
-   below this width every inset goes back to being a full-width figure. */
 @media (max-width: 700px) {
-  .fig--inset {
-    float: none;
-    width: 100%;
-    max-width: var(--measure);
-    margin-left: 0;
-    margin-right: 0;
-  }
   .fig--wide img {
     max-height: 300px;
   }

@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { dishBySlug } from '../data/dishes'
 import DishDetail from '../components/DishDetail'
 import BackLink from '../components/BackLink'
+import Breadcrumbs from '../components/Breadcrumbs'
 import '../components/cards.css'
 import '../components/imagery.css'
 import '../components/dish.css'
@@ -18,7 +19,13 @@ export default function Dish() {
     <div className="page">
       <div className="page__scroll">
         <div className="wrap">
-          <BackLink to="/recipes">All dishes</BackLink>
+          <div className="detailnav">
+            <BackLink to="/recipes">All recipes</BackLink>
+            <Breadcrumbs
+              items={[{ to: '/', label: 'Home' }, { to: '/recipes', label: 'Recipes' }]}
+              current={dish?.name ?? 'Not found'}
+            />
+          </div>
           {dish ? (
             <DishDetail dish={dish} />
           ) : (

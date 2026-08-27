@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { staples, basics } from '../data/fundamentals'
 import { rules } from '../data/rules'
 import { counts } from '../data/market'
@@ -27,17 +27,17 @@ import '../components/cards.css'
 
 const VIEWS = [
   { key: 'stock', label: 'Keep in stock' },
-  { key: 'rules', label: 'Six rules' },
+  { key: 'rules', label: 'Six habits' },
   { key: 'make', label: 'Four bases' },
   { key: 'accents', label: 'Accents' },
 ]
 
 const NOTE = {
-  stock: 'Twelve things. With this cupboard behind you, most of the era is a night in rather than a shopping trip.',
-  rules: 'Six things to actually do. Get these and the rest is detail.',
-  make: 'The four worth being able to make without thinking about them. Pick one to see how.',
+  stock: 'Twelve staples carry most of the cooking on this site. Keep them in, then buy the fresh food.',
+  rules: 'Six habits carry this cooking. Learn them once and use them everywhere.',
+  make: 'Four bases recur across the kitchens. Pick one for the method.',
   accents:
-    'There is really only one Bronze Age kitchen. These are the swaps that tilt any dish towards one corner of it.',
+    'One shared kitchen runs beneath all five regions. These swaps pull a dish towards one of them.',
 }
 
 // Every transparent cutout we have, as a pool to deal from for the rule modals.
@@ -92,7 +92,10 @@ const tableCards = tables.map((t) => ({
 }))
 
 export default function Pantry() {
-  const [view, setView] = useState('stock')
+  const [params, setParams] = useSearchParams()
+  const wantedView = params.get('view') ?? 'stock'
+  const view = VIEWS.some((v) => v.key === wantedView) ? wantedView : 'stock'
+  const setView = (next) => setParams(next === 'stock' ? {} : { view: next }, { replace: true })
   const [staple, setStaple] = useState(null)
   const [rule, setRule] = useState(null)
   const [accent, setAccent] = useState(null)
@@ -106,6 +109,7 @@ export default function Pantry() {
 
   return (
     <div className="page">
+      <h1 className="sr-only">Pantry</h1>
       <nav className="subnav" aria-label="Sections">
         <div className="wrap subnav__in">
           {VIEWS.map((v) => (

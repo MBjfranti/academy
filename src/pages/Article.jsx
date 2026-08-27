@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { reportBySlug } from '../data/fieldReports'
 import PostBody from '../components/PostBody'
 import BackLink from '../components/BackLink'
+import Breadcrumbs from '../components/Breadcrumbs'
 import '../components/reports.css'
 
 /* ONE POST, AT ITS OWN URL.
@@ -16,12 +17,18 @@ export default function Article() {
     <div className="page">
       <div className="page__scroll">
         <div className="wrap">
-          <BackLink to="/">Reports</BackLink>
+          <div className="detailnav">
+            <BackLink to="/reports">All reports</BackLink>
+            <Breadcrumbs
+              items={[{ to: '/', label: 'Home' }, { to: '/reports', label: 'Reports' }]}
+              current={post?.title ?? 'Not found'}
+            />
+          </div>
           {post ? (
             <PostBody post={post} />
           ) : (
             <p className="missing">
-              No such report. <Link to="/">Back to the front page</Link>.
+              No such report. <Link to="/reports">See all reports</Link>.
             </p>
           )}
         </div>

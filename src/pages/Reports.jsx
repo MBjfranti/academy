@@ -49,8 +49,8 @@ const DOORS = [
   },
   {
     to: '/nutrition',
-    label: 'Nutrition guide',
-    line: 'A week, measured honestly',
+    label: 'Measure the diet',
+    line: 'One day and one week',
   },
 ]
 
@@ -79,6 +79,7 @@ export default function Reports() {
 
   return (
     <div className="page">
+      <h1 className="sr-only">Reports</h1>
       <div className="page__scroll">
         <div className="wrap">
           <div className="bar">

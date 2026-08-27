@@ -61,14 +61,14 @@ export const FACETS = [
   {
     key: 'meal',
     label: 'Meal',
-    note: 'Grouped by how the food behaves rather than by any ancient timetable — nobody here ate breakfast, lunch and dinner as we mean them.',
+    note: 'The groups describe how the food behaves at the table: morning food, an evening pot, a feast.',
     options: () => MEALS,
     match: (dish, key) => meta(dish).meal === key,
   },
   {
     key: 'time',
     label: 'Time',
-    note: 'How long it actually takes at the hob. Soaking, salting and fermenting are not counted — those are waiting, not work.',
+    note: 'Time at the hob. Soaking, salting and fermenting wait on their own.',
     options: () => TIME_BANDS.map((b) => ({ key: b.key, label: b.label })),
     match: (dish, key) => {
       const band = TIME_BANDS.find((b) => b.key === key)
@@ -78,7 +78,7 @@ export const FACETS = [
   {
     key: 'diet',
     label: 'Diet',
-    note: 'Read off the tags, so it always agrees with what each card says.',
+    note: 'The card tags supply these groups.',
     options: () => DIETS.map((d) => ({ key: d.key, label: d.label })),
     match: (dish, key) => {
       const d = DIETS.find((x) => x.key === key)

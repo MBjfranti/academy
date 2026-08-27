@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { byId, byline } from '../data/authors'
 import { fieldReports, img } from '../data/fieldReports'
 import BackLink from '../components/BackLink'
+import Breadcrumbs from '../components/Breadcrumbs'
 import hideBroken from '../components/hideBroken'
 import '../components/writers.css'
 
@@ -14,7 +15,10 @@ export default function Writer() {
       <div className="page">
         <div className="page__scroll">
           <div className="wrap writers">
-            <BackLink to="/writers">Writers</BackLink>
+            <div className="detailnav">
+              <BackLink to="/writers">All writers</BackLink>
+              <Breadcrumbs items={[{ to: '/', label: 'Home' }, { to: '/writers', label: 'Writers' }]} current="Not found" />
+            </div>
             <p className="missing">No such writer. <Link to="/writers">Meet the four writers</Link>.</p>
           </div>
         </div>
@@ -30,7 +34,13 @@ export default function Writer() {
     <div className="page">
       <div className="page__scroll">
         <div className="wrap writers">
-          <BackLink to="/writers">Writers</BackLink>
+          <div className="detailnav">
+            <BackLink to="/writers">All writers</BackLink>
+            <Breadcrumbs
+              items={[{ to: '/', label: 'Home' }, { to: '/writers', label: 'Writers' }]}
+              current={byline(author.id)}
+            />
+          </div>
 
           <article className="writer-profile">
             <figure className="writer-profile__portrait">

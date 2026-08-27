@@ -40,7 +40,7 @@ const article = {
     {
       at: 27,
       name: 'night-ledger',
-      size: 'inset',
+      size: 'col',
       alt: 'Yadinu writes caravan expenses on a clay tablet by firelight with a bronze bell and resting donkey behind him',
       caption: 'The author enters water, fodder and one repaired strap.',
     },

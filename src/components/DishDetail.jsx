@@ -175,13 +175,13 @@ export default function DishDetail({ dish }) {
           )}
           <p className="dish__gloss dish__gloss--warn">
             <b>Invented</b>
-            Not a historical recipe. Nobody in the Bronze Age ate this. Every ingredient in it
-            is something the Market says you may buy, which is the only rule it follows.
+            A modern recipe built from this larder. Every ingredient passes the Market; the
+            dish and its method belong to this site.
           </p>
         </section>
       ) : (
         <section className="dish__apparatus">
-          <h2>How much of this do we actually know?</h2>
+          <h2>How much do we know?</h2>
 
           {provenance[dish.slug] && (
             <p className="dish__gloss">

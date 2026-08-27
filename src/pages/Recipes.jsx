@@ -83,6 +83,7 @@ export default function Recipes() {
 
   return (
     <div className="page">
+      <h1 className="sr-only">Recipes</h1>
       {/* The section switch. Deliberately the first and largest control on the page:
           everything below it changes meaning depending on which side you are on, and a
           reader must never be in any doubt which they are looking at. */}
@@ -129,16 +130,7 @@ export default function Recipes() {
       </nav>
 
       <div className="note">
-        <div className="wrap note__in">
-          <p>
-            {isInvented
-              ? `Modern meals rebuilt from this larder. Nothing here is ancient — but every ingredient passes the Market.`
-              : cult
-                ? `${cult.where}. ${cult.tagline}`
-                : chosen
-                  ? `${list.length} ${list.length === 1 ? 'dish' : 'dishes'}. ${facetByKey[activeFacet].note}`
-                  : `${dishes.length} dishes. Pick one to see how it is made.`}
-          </p>
+        <div className="wrap note__in recipe-note">
           <div className="facetsw" role="group" aria-label="Group the dishes by">
             <span className="facetsw__l">Browse by</span>
             {axes.map((f) => (
@@ -147,6 +139,15 @@ export default function Recipes() {
               </button>
             ))}
           </div>
+          <p>
+            {isInvented
+              ? `Modern meals built from this larder. Every ingredient passes the Market.`
+              : cult
+                ? `${cult.where}. ${cult.tagline}`
+                : chosen
+                  ? `${list.length} ${list.length === 1 ? 'dish' : 'dishes'}. ${facetByKey[activeFacet].note}`
+                  : `${dishes.length} dishes. Pick one to see how it is made.`}
+          </p>
         </div>
       </div>
 
