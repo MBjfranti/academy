@@ -7,6 +7,12 @@
 - Nawal Nasrallah, [“New Flavors for the Oldest Recipes”](https://archive.aramcoworld.com/issue/201206/new.flavors.for.the.oldest.recipes.htm), for experimental interpretation, the absence of quantities, and the reading of recipe 23 as lamb with grain and mint.
 - Medical and lexical occurrences compare another red plant with *kanašu*. They establish that the word names a plant without securely identifying it.
 
+## Voice boundary
+
+Balāṭu lives in 1226 BC and cannot cite modern scholarship. Where the article refers to
+competing readings of *kanašu*, they are readings he was taught or has argued with, not
+published ones. The bibliography below is the site's, not his.
+
 ## Editorial rule
 
 Never silently translate *kanašu*. The article may test a pulse reading, but no successful pot can prove the noun.

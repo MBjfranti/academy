@@ -241,6 +241,7 @@
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+  line-height: 1.55;
   color: var(--ink-3);
   max-width: none;
   margin: 0;
@@ -298,7 +299,7 @@
 .card__body {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.38rem;
   min-width: 0;
 }
 
@@ -308,8 +309,11 @@
 
 .card__title {
   font-family: var(--display);
-  font-size: 1.02rem;
-  line-height: 1.2;
+  /* Was 1.02rem, which made a serif headline look like a caption beside the lead. The
+     card and the lead are the same object at two sizes, so the type has to agree. */
+  font-size: 1.28rem;
+  line-height: 1.22;
+  letter-spacing: -0.003em;
   color: var(--ink);
   transition: color 0.14s;
 }
@@ -320,9 +324,9 @@
 }
 
 .card__stand {
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: var(--ink-3);
+  font-size: 0.93rem;
+  line-height: 1.52;
+  color: var(--ink-2);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -368,8 +372,15 @@
 
 /* `max-width: none` overrides the global 66ch cap in index.css, which was capping
    paragraphs at 619px inside a 672px column. One measure keeps the rag consistent. */
+/* ONE FULL LINE BETWEEN PARAGRAPHS. This was 1.15em against a 1.7 line-height, so the gap
+   came to about two thirds of a line and the column read grey and crowded. Setting the
+   margin equal to the line-height puts a whole blank line between paragraphs, which is what
+   the magazines this site is measured against do: National Geographic runs 18px type on a
+   32px line with a 32px paragraph gap, so their whole page sits on one 32px rhythm.
+
+   In `em` rather than `rem` so the relationship survives the larger opening paragraph. */
 .prose p {
-  margin: 0 0 1.15em;
+  margin: 0 0 1.7em;
   max-width: none;
 }
 
@@ -574,6 +585,96 @@
   clear: both;
   max-width: 100%;
   margin-bottom: 2.2rem;
+}
+
+/* ── two photographs, side by side ───────────────────────────────────────
+   MATCHED HEIGHT, FREE WIDTH. The pair is set to one shared height and each picture keeps
+   its own aspect ratio, so a portrait and a landscape can sit together without either being
+   cropped to suit the other. Normalising the width instead is the obvious move and it is
+   the wrong one: it makes a tall picture enormous and a wide one a strip.
+
+   The band breaks outside the reading measure, wider than a single wide figure, because two
+   pictures need the room and because the break is the point. */
+.fig--pair {
+  clear: both;
+  max-width: none;
+  margin-bottom: 2.4rem;
+}
+
+.prose > .fig--pair {
+  width: min(1180px, calc(100vw - 2rem));
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.fig__pairrow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* The height is the constant. `width: auto` on the image lets each one take the width its
+   own proportions ask for, and `min-width: 0` stops a very wide picture from forcing the
+   row past the band. */
+.fig__pairrow > * {
+  height: clamp(15rem, 26vw, 26rem);
+  width: auto;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+
+.fig__pairrow img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+/* A placeholder defaults to filling its column. Inside a pair the height is the constant,
+   so the box has to take its width from its own ratio instead. */
+.fig__pairrow .fig__hole {
+  width: auto;
+}
+
+/* Below the point where two pictures each become too small to read, they stack and the
+   height constraint is dropped so each returns to its natural shape. */
+@media (max-width: 700px) {
+  .fig__pairrow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fig__pairrow > * {
+    height: auto;
+    width: 100%;
+  }
+
+  .fig__pairrow img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* ── the box where a photograph is going to be ───────────────────────────
+   A planned frame draws its own hole at the right shape, so an article can be laid out and
+   judged before its pictures exist. A missing image that collapses to nothing tells you
+   nothing about whether the spacing works. */
+.fig__hole {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  border: 1px dashed var(--line-2);
+  border-radius: 8px;
+  background: var(--paper-2);
+}
+
+.fig__holeLabel {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  opacity: 0.7;
 }
 
 /* Feature photographs leave the reading measure and use the article measure. The text

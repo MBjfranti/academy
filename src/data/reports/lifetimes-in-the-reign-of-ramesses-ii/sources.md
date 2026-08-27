@@ -13,3 +13,15 @@ The article exists in 1226 BC. Ramesses II is alive. His death, the accession of
 ## Declared reconstruction
 
 Henut’s apprenticeship, family, Meret, and their dialogue are invented.
+
+## Added for the expanded version
+
+- Rations at Set Maat issued in grain by volume, graded by rank and household, rather than in
+  silver, so that the timing of an issue mattered as much as its size.
+- Work stoppages at the workmen's village when rations ran late, recorded in the community's
+  own documents.
+- Recorded reasons for absence from the royal tomb crews: illness, brewing, offering to a
+  god, embalming a relative, a scorpion sting, building one's own house, and in one case a
+  beating administered by a wife.
+- Unusually high literacy at the workmen's village, and the volume of private letters,
+  contracts and complaints its inhabitants left behind.

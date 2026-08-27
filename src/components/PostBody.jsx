@@ -1,9 +1,8 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { img, reportImg, bcDate } from '../data/fieldReports'
 import { byId, byline } from '../data/authors'
 import WorldMap from './WorldMap'
-import CropTool from './CropTool'
 import hideBroken from './hideBroken'
 
 /* ONE ARTICLE, RENDERED ONCE.
@@ -48,17 +47,42 @@ export function Byline({ post }) {
   )
 }
 
+/* A SINGLE FIGURE'S PICTURE, or the box where one is going to be.
+
+   PLANNED FRAMES RENDER AS EMPTY BOXES. An article is laid out before its photographs
+   exist, and a missing picture that simply collapses tells you nothing about whether the
+   spacing works. So a figure marked `placeholder` draws its own hole at the right aspect
+   ratio, and the layout can be judged with the pictures still unmade. */
+function Frame({ img: f, post }) {
+  const ratio = f.ratio ?? f.crop ?? '3 / 2'
+
+  if (f.placeholder) {
+    return (
+      <span className="fig__hole" style={{ aspectRatio: ratio }} aria-hidden="true">
+        <span className="fig__holeLabel">{f.name}</span>
+      </span>
+    )
+  }
+
+  const [px, py] = f.pan ?? [0, 0]
+  if (f.crop) {
+    return (
+      <span className="fig__crop" style={{ aspectRatio: f.crop }}>
+        <img src={reportImg(post, f.name)} alt={f.alt}
+             style={{ transform: `translate(${px}%, ${py}%) scale(${f.zoom ?? 1})` }}
+             loading="lazy" decoding="async" onError={hideBroken} />
+      </span>
+    )
+  }
+  return (
+    <img src={reportImg(post, f.name)} alt={f.alt}
+         loading="lazy" decoding="async" onError={hideBroken} />
+  )
+}
+
 export default function PostBody({ post }) {
   const figures = post.figures ?? []
   const pulls = post.pulls ?? []
-
-  /* THE CROP TOOL IS DEV-ONLY. Framing a photograph is eyeball work and editing numbers in
-     a data file to do it is a twenty-second round trip per guess, so in dev a figure is
-     clickable and opens an editor that writes the result straight back to the data. The
-     whole thing — component, stylesheet, click handler — drops out of a production build,
-     because `import.meta.env.DEV` is a compile-time constant. */
-  const editable = import.meta.env.DEV
-  const [editing, setEditing] = useState(null)
 
   return (
     <article className="postbody">
@@ -70,8 +94,7 @@ export default function PostBody({ post }) {
 
       {post.hero && (
         <figure className="fig fig--wide">
-          <img src={reportImg(post, post.hero.name)} alt={post.hero.alt}
-               loading="eager" decoding="async" onError={hideBroken} />
+          <Frame img={post.hero} post={post} />
           <figcaption>{post.hero.caption}</figcaption>
         </figure>
       )}
@@ -99,53 +122,34 @@ export default function PostBody({ post }) {
                   sea and says everything else follows from it. */}
               {post.showMapAfter === i && <WorldMap />}
               {here.map((f) => {
-                // Reports use only two scales. Unknown legacy values fall back to the
-                // reading column instead of reviving the old floated inset treatment.
-                const size = f.size === 'wide' ? 'wide' : 'col'
-                /* CROP IS EDITORIAL, so it lives on the figure rather than in the CSS.
-                   THREE VALUES, and they map onto what a hand does: `crop` is the shape of
-                   the window, `zoom` is how close, `pan` is where — in percent of the
-                   FRAME, which is what makes the drag in CropTool one-to-one. An earlier
-                   model used object-position for framing and transform-origin for zoom;
-                   two mechanisms both shifted the picture and neither could be driven
-                   straight from a pointer delta.
+                /* THREE SHAPES. `col` sits in the reading measure. `wide` runs the full
+                   width of the article. `pair` is the National Geographic move: two
+                   photographs set to a MATCHED HEIGHT with their widths left alone, so each
+                   keeps its own aspect ratio, in a band that breaks outside the measure.
+                   Normalising the height rather than the width is the whole trick — it is
+                   what stops a portrait and a landscape beside each other looking like an
+                   accident.
 
-                   THE RATIO GOES ON A WRAPPER, NOT ON THE <img>. Setting `aspect-ratio`
-                   directly on the image alongside the sheet's `height: auto` produced a
-                   box of exactly the right size containing nothing at all — the element
-                   laid out and the replaced content never painted. */
-                const [px, py] = f.pan ?? [0, 0]
+                   CROP IS EDITORIAL, so it lives on the figure rather than in the CSS.
+                   `crop` is the shape of the window, `zoom` is how close, `pan` is where, in
+                   percent of the frame. The ratio goes on a wrapper and never on the <img>:
+                   setting `aspect-ratio` on the image alongside `height: auto` laid out a
+                   box of exactly the right size containing nothing at all. */
+                if (f.pair) {
+                  return (
+                    <figure className="fig fig--pair" key={f.name ?? f.pair[0].name}>
+                      <span className="fig__pairrow">
+                        {f.pair.map((p) => <Frame img={p} post={post} key={p.name} />)}
+                      </span>
+                      {f.caption && <figcaption>{f.caption}</figcaption>}
+                    </figure>
+                  )
+                }
+                const size = f.size === 'wide' ? 'wide' : 'col'
                 return (
                   <figure className={`fig fig--${size}`} key={f.name}>
-                    {f.crop ? (
-                      <span
-                        className={`fig__crop${editable ? ' fig--editable' : ''}`}
-                        style={{ aspectRatio: f.crop }}
-                        onClick={editable ? () => setEditing(f) : undefined}
-                      >
-                        <img
-                          src={reportImg(post, f.name)}
-                          alt={f.alt}
-                          style={{
-                            transform: `translate(${px}%, ${py}%) scale(${f.zoom ?? 1})`,
-                          }}
-                          loading="lazy"
-                          decoding="async"
-                          onError={hideBroken}
-                        />
-                      </span>
-                    ) : (
-                      <img
-                        className={editable ? 'fig--editable' : undefined}
-                        src={reportImg(post, f.name)}
-                        alt={f.alt}
-                        onClick={editable ? () => setEditing(f) : undefined}
-                        loading="lazy"
-                        decoding="async"
-                        onError={hideBroken}
-                      />
-                    )}
-                    <figcaption>{f.caption}</figcaption>
+                    <Frame img={f} post={post} />
+                    {f.caption && <figcaption>{f.caption}</figcaption>}
                   </figure>
                 )
               })}
@@ -215,7 +219,6 @@ export default function PostBody({ post }) {
           ))}
         </nav>
       )}
-      {editing && <CropTool figure={editing} postSlug={post.slug} onClose={() => setEditing(null)} />}
     </article>
   )
 }

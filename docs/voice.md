@@ -1,3 +1,15 @@
+> ## SUPERSEDED ON THE CENTRAL POINT
+>
+> This file describes narrators who are **spirits of the Bronze Age talking to a modern
+> reader**, who "know your archaeology" and address you as "you". **That conceit was
+> abandoned.** The four writers live in 1226 BC, know only what a person alive then could
+> know, and never address a modern reader. Anniwiya knows a song she has heard performed,
+> not a written Iliad. Henut does not know that Ramesses dies.
+>
+> Read `docs/article-pattern.md` first. It is measured from the eight published articles
+> and it wins wherever this file disagrees. The craft sections here on tics, cadence and
+> the second voice are still good; the premise is not.
+
 # The voice
 
 > **This file described one narrator, and the site now has four.** Read it anyway — almost

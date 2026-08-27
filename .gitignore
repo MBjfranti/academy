@@ -43,3 +43,8 @@ __pycache__/
 # than overwriting it, and process_images.py's non-recursive walk of images/_raw then
 # stops seeing it. Kept on disk, not in history.
 images/_raw/AlreadyProcessed/
+
+# Generated image candidates. The chosen frame is committed as <name>.webp; the raw PNG
+# candidates behind it are working files, several MB each, and stay local. See
+# docs/article-pattern.md, "Candidates, then selection".
+public/img/reports/**/*-candidate-*.png

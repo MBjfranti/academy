@@ -1,0 +1,319 @@
+/* The front page: one piece of writing and a rail of two things to do.
+
+   The lead itself is styled by reports.css, which this file loads alongside rather than
+   duplicating. Everything here is the two-column frame and the rail panels. */
+
+.home {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+/* One column below 900px, and the rail falls under the article because it is second in the
+   markup. No reordering: the reading order and the visual order agree at every width. */
+@media (max-width: 900px) {
+  .home {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+}
+
+/* THE LEAD IS RESHAPED FOR THIS PAGE. On the index it is a side-by-side box because a grid
+   of cards has to stay in view underneath it. Here nothing follows it, so side-by-side just
+   left the bottom two thirds of the page empty. Stacked, with the picture running the full
+   width of the column, it reads as a front page and fills the viewport.
+
+   16:9 rather than the index's 3:2: at this width 3:2 pushed the headline below the fold,
+   which is the one thing a front page cannot do. */
+.home__main .lead {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.home__main .lead__fig img {
+  aspect-ratio: 16 / 9;
+}
+
+.home__main .lead__title {
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+}
+
+.home__main .lead__stand {
+  font-size: 1.05rem;
+}
+
+/* The picture is doing the work above the fold, so the opening paragraph is a taste rather
+   than a preview of the whole piece. */
+.home__main .lead__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.more__all {
+  margin: 0.9rem 0 0;
+  font-family: var(--ui);
+  font-size: 0.86rem;
+}
+
+.more__all a {
+  color: var(--copper);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.more__all a:hover,
+.more__all a:focus-visible {
+  border-bottom-color: currentColor;
+}
+
+/* ── the second tier ────────────────────────────────────────────────── */
+
+/* The hero answers "what is this?". This answers "is there more?", which is the next
+   question a first-time reader asks and the only one the front page was not answering. */
+.more {
+  margin-top: 1.8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.more__head {
+  margin: 0 0 0.9rem;
+  font-family: var(--ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Three across beside the rail. `cards` in reports.css is sized for a full-width page, and
+   this column is narrower, so the track count is set here rather than inherited. */
+.cards--home {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .cards--home {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .cards--home {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ── the rail ───────────────────────────────────────────────────────── */
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* THE HEADING IS A CARVED LABEL, not a heading. These are standing slots that will say the
+   same thing tomorrow, so the label wants the weight of a sign and none of the weight of a
+   headline. Copper on the tinted ground is the site's own accent, and it is what stops the
+   rail reading as two empty boxes beside a photograph. */
+.panel__head {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+/* A small square of the copper, set on the baseline, so the label has an anchor at its
+   left edge and the two panels read as a set. */
+.panel__head::before {
+  content: '';
+  flex: none;
+  width: 0.38rem;
+  height: 0.38rem;
+  background: var(--copper);
+  transform: rotate(45deg);
+}
+
+.panel__body {
+  display: block;
+  padding: 0.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.panel__body:hover .panel__name,
+.panel__body:focus-visible .panel__name {
+  color: var(--copper);
+}
+
+/* The painted plate is a drawing on cream plaster. On a white card it floated; on the
+   tinted ground with a hairline it reads as an object sitting on a surface. */
+.panel__plate {
+  display: block;
+  margin-bottom: 0.6rem;
+  padding: 0.4rem;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.panel__pic {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.panel__name {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.3rem;
+  line-height: 1.18;
+  color: var(--ink);
+}
+
+.panel__anc {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--translit);
+  font-size: 0.9rem;
+  color: var(--copper);
+}
+
+.panel__line {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.panel__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-3);
+}
+
+.tag {
+  padding: 0.12rem 0.4rem;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--ink-2);
+  letter-spacing: 0.08em;
+}
+
+/* ── ingredients ────────────────────────────────────────────────────── */
+
+.ings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ing + .ing {
+  border-top: 1px solid var(--line);
+}
+
+.ing__link {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ing__link:hover .ing__name,
+.ing__link:focus-visible .ing__name {
+  color: var(--copper);
+}
+
+/* The aisle plaque, on its own tinted ground. Every item has an aisle, so every row gets
+   one and the panel never goes half-illustrated. */
+.ing__plaque {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  padding: 0.35rem;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.ing__plaque .cutout {
+  max-height: 100%;
+  width: auto;
+}
+
+.ing__txt {
+  min-width: 0;
+}
+
+.ing__aisle {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--copper);
+}
+
+.ing__name {
+  display: block;
+  margin-top: 0.1rem;
+  font-family: var(--display);
+  font-size: 1.12rem;
+  line-height: 1.18;
+  color: var(--ink);
+}
+
+/* Market notes run to several sentences. On the front page the note is a taste of the
+   argument, not the argument, so it is clamped rather than truncated in the data. */
+.ing__note {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}

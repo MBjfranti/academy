@@ -58,8 +58,14 @@ The old corpus averaged around 150 words a paragraph and its worst ran past 200.
 that is four full screens without a break, and a reader scrolling one of those is not
 reading it.
 
-**Three to five sentences. Around 80 words. One idea.** A paragraph carries a single
-observation, a single argument or a single step, and it stops when that is done.
+**Three or four sentences. Around 37 words. One idea.** A paragraph carries a single
+observation, a single argument or a single step, and it stops when that is done. Sentences
+average **ten words**, and the longest in a piece should stay under thirty.
+
+> **These numbers were measured, not guessed.** This file originally asked for 80-word
+> paragraphs, written before a single article existed. The eight published pieces run at
+> half that: 37-word paragraphs of ten-word sentences. See `docs/article-pattern.md`, which
+> holds the full measured shape and wins wherever it disagrees with this file.
 
 A one-sentence paragraph is allowed and effective when it turns the piece. Twice a piece at
 most, or it becomes a drumbeat.

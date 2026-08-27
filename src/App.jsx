@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import Home from './pages/Home'
 import Reports from './pages/Reports'
 import Pantry from './pages/Pantry'
 import Market from './pages/Market'
@@ -8,18 +9,21 @@ import Dish from './pages/Dish'
 import Article from './pages/Article'
 import NotFound from './pages/NotFound'
 import Nutrition from './pages/Nutrition'
-import Voices from './pages/Voices'
 import Writers from './pages/Writers'
 import Writer from './pages/Writer'
 
-/* The home page is Yadinu's posts. The Pantry moved to /pantry to make room, which is
-   the right way round: someone arriving cold should meet the writing first and the
-   twelve-jar cupboard second. */
+/* `/` is the front door: the latest report, and a rail carrying the day's recipe and two
+   of the day's ingredients. The reports index moved to `/reports`, which is where the back
+   link on every report already pointed and where it had been 404ing.
+
+   The order still holds: someone arriving cold meets the writing first and the tools
+   second. */
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<Reports />} />
+        <Route index element={<Home />} />
+        <Route path="reports" element={<Reports />} />
         <Route path="pantry" element={<Pantry />} />
         <Route path="market" element={<Market />} />
         <Route path="recipes" element={<Recipes />} />
@@ -31,10 +35,6 @@ export default function App() {
         <Route path="writers" element={<Writers />} />
         <Route path="writers/:id" element={<Writer />} />
         <Route path="nutrition" element={<Nutrition />} />
-        {/* Working page, deliberately not in the top bar: four candidate voices
-            set in the site's own article typography, which is the only place a
-            voice can honestly be judged. */}
-        <Route path="voices" element={<Voices />} />
         {/* A real not-found, not a second copy of the home page. */}
         <Route path="*" element={<NotFound />} />
       </Route>

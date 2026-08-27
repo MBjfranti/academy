@@ -4,6 +4,11 @@
 - Neo-Babylonian temple archives document food-preparing prebends, commodity issues, sacrificial meat, and shares distributed among temple personnel.
 - YBC 8958 is an Old Babylonian culinary tablet of about two hundred lines with seven detailed bird preparations. It includes serving directions, substitutions, and a note on keeping leftover broth.
 - Divine seating, precedence, and portions expressed political and theological hierarchy.
+- The prebend, Babylonian *isqu*, "share": a legal title to perform a temple office on stated
+  days and to draw the income attached to it. Prebends were inherited from father to son and
+  also sold for silver, with prices attested across many texts. Divisible offices, the daily
+  repetitive work of baking, brewing, herding, oil-pressing and gatekeeping, could be split
+  into fractions by dividing the period of duty, so that a man might hold a part of a month.
 
 ## Chronology note
 

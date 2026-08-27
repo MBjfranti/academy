@@ -26,7 +26,7 @@ function readTheme() {
 }
 
 const TABS = [
-  { to: '/', end: true, label: 'Reports' },
+  { to: '/reports', label: 'Reports' },
   { to: '/pantry', label: 'Pantry' },
   { to: '/market', label: 'Market' },
   { to: '/recipes', label: 'Recipes' },
