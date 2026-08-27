@@ -572,6 +572,17 @@
   border-left: 2px solid var(--line-2);
 }
 
+/* A PORTRAIT IN THE COLUMN NEEDS A CEILING. With only a width set, a 2:3 photograph in the
+   672px reading column came out over a thousand pixels tall and towered over every other
+   figure in the piece. Capping the height and freeing the width keeps it the same visual
+   size as its neighbours and crops nothing: the picture simply shrinks and centres. */
+.fig--col img {
+  max-height: 720px;
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
 .fig--col {
   clear: both;
   /* Past the measure on purpose. Text stops at 42rem for readability; a photograph has no
@@ -607,33 +618,29 @@
   transform: translateX(-50%);
 }
 
+/* THE HEIGHT LIVES ON THE ROW, NOT ON THE CHILDREN. Putting it on the children failed
+   twice over: `.fig img { height: auto }` outspecifies `.fig__pairrow > *`, so the clamp
+   never applied, and a child `height: 100%` resolves against an indefinite parent and
+   collapses. A definite height here makes both work, and the children simply fill it. */
 .fig__pairrow {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   gap: 1rem;
-}
-
-/* The height is the constant. `width: auto` on the image lets each one take the width its
-   own proportions ask for, and `min-width: 0` stops a very wide picture from forcing the
-   row past the band. */
-.fig__pairrow > * {
   height: clamp(15rem, 26vw, 26rem);
-  width: auto;
-  min-width: 0;
-  flex: 0 1 auto;
 }
 
-.fig__pairrow img {
+/* The height is the constant and the width is free, so each picture keeps its own
+   proportions. `min-width: 0` stops a very wide one forcing the row past the band. */
+.fig__pairrow > *,
+.fig__pairrow img,
+.fig__pairrow .fig__hole {
   height: 100%;
   width: auto;
+  max-width: none;
+  min-width: 0;
+  flex: 0 1 auto;
   object-fit: cover;
-}
-
-/* A placeholder defaults to filling its column. Inside a pair the height is the constant,
-   so the box has to take its width from its own ratio instead. */
-.fig__pairrow .fig__hole {
-  width: auto;
 }
 
 /* Below the point where two pictures each become too small to read, they stack and the
@@ -642,14 +649,12 @@
   .fig__pairrow {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .fig__pairrow > * {
     height: auto;
-    width: 100%;
   }
 
-  .fig__pairrow img {
+  .fig__pairrow > *,
+  .fig__pairrow img,
+  .fig__pairrow .fig__hole {
     height: auto;
     width: 100%;
   }
@@ -935,6 +940,156 @@
   object-position: center 15%;
 }
 /* Where to go next: the dish this came out of, and any post worth reading beside it. */
+/* ── the sign that closes a piece ────────────────────────────────────────
+   A generous band of nothing, then one character in the writer's own script, set right in
+   the copper the writers speak in. The space is doing as much work as the sign: the body
+   needs to be over before the standing box starts, or the two read as one column. */
+.endmark {
+  max-width: var(--measure);
+  margin: 3.4rem auto 0;
+  /* The sign sits ABOVE the rule: it closes the writer's text, and the rule beneath it is
+     what separates that from the apparatus below. Putting the sign under the line made it
+     read as a label belonging to the standing box. */
+  padding-bottom: 1.9rem;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  line-height: 1;
+}
+
+/* Large enough to read as a mark rather than a stray glyph, and set in the copper because
+   this is the writer signing off rather than the site labelling something. The ancient
+   faces run small on the em, so this is larger than it looks. */
+/* Stacked and centred: the opening sign or signs large, then two clear lines of nothing,
+   then the name and the place in their own script and last in ours. The gap is the point —
+   the initial has to read as a mark closing the piece rather than as the first character of
+   the line beneath it. */
+/* The in-world date carries an explanation on hover, so it gets the help cursor the rest of
+   the script marks use. */
+.byline__when-cal {
+  cursor: help;
+  border-bottom: 1px dotted var(--line-2);
+}
+
+.endmark__initials {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.endmark__initial {
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--copper);
+}
+
+/* A writer with two scripts gets both, and the second is set slightly back so the pair
+   reads as one mark rather than as two competing ones. */
+.endmark__initial + .endmark__initial {
+  font-size: 2.5rem;
+  opacity: 0.75;
+}
+
+.endmark__lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 2.6em;
+}
+
+.endmark__name,
+.endmark__place {
+  display: block;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: var(--copper);
+  cursor: help;
+}
+
+.endmark__name {
+  font-size: 1.35rem;
+}
+
+/* The place sits under the name, quieter, the way "of Ugarit" trails a byline. */
+.endmark__place {
+  font-size: 1.05rem;
+  opacity: 0.72;
+}
+
+/* The origin script, where a writer has one, leads the pair at a smaller size. */
+.endmark__name--origin {
+  font-size: 1.15rem;
+  opacity: 0.8;
+}
+
+/* EGYPTIAN IN QUADRATS, read left to right. Each block is a square of fixed height; the
+   signs inside it share that height between them. A block holding one sign gives it the
+   whole square, a block holding two gives each rather more than half so the pair still fills
+   the space the way a scribe would have filled it. This is the one place on the site where
+   the grouping is real rather than a linear transcription, and it is real because the data
+   says which signs share a block. */
+.endmark--quadrats {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.14em;
+  letter-spacing: 0;
+}
+
+.quadrat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1em;
+  line-height: 1;
+}
+
+/* A lone sign fills its block. */
+.quadrat--1 > span {
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* Two signs share one. Slightly over half each, with the leading negative space pulled out,
+   because a stacked pair set at exactly half reads as two small signs rather than one block. */
+.quadrat--2 > span {
+  font-size: 0.62em;
+  line-height: 0.86;
+}
+
+/* Our alphabet, quiet, under theirs. Small caps rather than a heading, because this is a
+   signature and not a title. */
+.endmark__roman {
+  display: block;
+  margin-top: 1.1rem;
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+@media (max-width: 560px) {
+  .endmark {
+    margin-top: 2.6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .endmark__initial {
+    font-size: 2.6rem;
+  }
+
+  .endmark__lines {
+    margin-top: 2.2em;
+  }
+
+  .endmark__name {
+    font-size: 1.15rem;
+  }
+}
+
 /* WHAT IS ATTESTED AND WHAT IS INVENTED.
    Set as furniture at the end of the article rather than as a paragraph inside it. It has
    to read as a different KIND of text from the essay above — the piece speaking about
@@ -943,7 +1098,10 @@
    itself as a banner. */
 .standing {
   max-width: var(--measure);
-  margin: 2rem auto 0;
+  /* Was 2rem, which put the apparatus close enough to the last paragraph that the piece
+     seemed to carry on in a smaller voice. The end mark now sits in the gap and this keeps
+     clear underneath it. */
+  margin: 1.6rem auto 0;
   padding: 1rem 1.15rem;
   border-left: 3px solid var(--copper);
   background: var(--paper-2);

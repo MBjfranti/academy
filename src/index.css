@@ -227,6 +227,14 @@ main {
 .page__scroll {
   flex: 1;
   min-height: 0;
+  /* CONTAINS ABSOLUTELY POSITIONED DESCENDANTS, which is not decoration. `.sr-only` is
+     `position: absolute` with `top: auto`, so without a positioned ancestor its containing
+     block is the initial one — the html box — and it contributes its static position to the
+     document's scrollable overflow. A screen-reader line near the foot of a long article
+     therefore gave `<html>` a scroll height of nine thousand pixels and put a second
+     scrollbar beside the real one. The element is clipped to 1px and paints nothing; it was
+     the overflow that leaked, not the text. */
+  position: relative;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;

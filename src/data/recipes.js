@@ -1900,7 +1900,7 @@ export const recipes = [
     grade: 'inferred',
     summary: 'The other half of the Egyptian ration, and a dish whose textbook method was overturned by looking down a microscope.',
     intro:
-      'For most of the twentieth century the story was settled: bake loaves, crumble them into water, let the mash ferment. Tidy, plausible, built on a reading of the tomb scenes, and printed in every older book on Egypt. Then the residues from the brewing installations went under a microscope and the grain structures did not match. What they showed was a two-part process, malted grain and unmalted with one part heated and one not, combined and fermented. Closer to brewing than to soaked bread. Bread and beer shared a bakery and a workforce; they did not share a loaf. Both methods are given below, because knowing that a reconstruction can be wrong is most of the point.',
+      'For most of the twentieth century the story was settled: bake loaves, crumble them into water, let the mash ferment. It was tidy, it was built on a reading of the tomb scenes, and it was printed in every older book on Egypt. Then residues from the brewing installations went under a microscope and the grain structures refused to match. They showed two fractions, one malted and one not, one heated and one not, combined and fermented. Bread and beer shared a bakery and a workforce. They did not share a loaf. The method below is the one the residues support.',
     sourceText: {
       kind: 'paraphrase',
       text: 'Microscopic examination of desiccated residues from Egyptian brewing vessels shows two distinct grain fractions — one malted, one not, one heated, one not — combined and fermented. The crumbled-bread model is not supported by the residues.',
@@ -1922,10 +1922,10 @@ export const recipes = [
       {
         name: 'The brew',
         steps: [
-          { text: 'To malt: steep the grain 24 hours, drain, and keep it damp and covered for two to three days, turning daily, until the shoots run about the length of the grain. Dry it hard in a low oven. This is the step the old model left out entirely.', grade: 'attested' },
+          { text: 'To malt: steep the grain 24 hours, drain, and keep it damp and covered for two to three days, turning daily, until the shoots run about the length of the grain. Dry it hard in a low oven.', grade: 'attested' },
           { text: 'Crack the malted grain coarsely. Set half of it aside cold and uncooked.', grade: 'attested' },
           { text: 'Cook the unmalted grain with three litres of water to a thick gruel, then let it cool to blood heat. Heat kills the enzymes, which is why only this half is cooked.', grade: 'attested' },
-          { text: 'Stir the raw malted grain into the cooled gruel with the remaining water. Hold it warm for two hours. The uncooked malt converts the cooked starch. That two-part logic is the whole discovery.', grade: 'inferred' },
+          { text: 'Stir the raw malted grain into the cooled gruel with the remaining water. Hold it warm for two hours. The uncooked malt converts the starch in the cooked half, which is why the two halves are treated differently.', grade: 'inferred' },
           { text: 'Strain through cloth, pressing hard. Add the salt.', grade: 'inferred' },
           { text: 'Leave the liquid in an open vessel in a warm room. It will take wild yeast within a day and work hard for two or three. Add crushed dates on the second day if you want it sweeter and stronger.', grade: 'reconstructed' },
           { text: 'Drink it cloudy, young and slightly sour, through a reed if you are being thorough. It does not keep and was never meant to.', grade: 'inferred' },
@@ -1935,7 +1935,7 @@ export const recipes = [
     apparatus: [
       {
         term: 'malt',
-        text: 'The correction at the centre of this entry. If you brew this from crumbled bread you are reproducing a twentieth-century hypothesis, not a Bronze Age drink.',
+        text: 'Sprouting the grain is the step that separates this from the older reconstruction. Brew it from crumbled bread and what you have made is a twentieth-century hypothesis.',
       },
       {
         term: 'Safety',
@@ -1944,6 +1944,11 @@ export const recipes = [
     ],
     substitutions: [
       { from: 'Home-malted grain', to: 'Commercial pale malt, cracked', text: 'Loses the emmer and keeps the process. A reasonable first attempt.' },
+      {
+        from: 'Brewing any of it',
+        to: 'Half sour beer, half wheat beer, poured at room temperature',
+        text: 'The honest shortcut. A Berliner Weisse or a gose cut fifty-fifty with a German hefeweizen, left to come up to the temperature of the room, lands close to the target: cloudy, wheat-heavy, yeasty, faintly sour and warm. Warm is the part people get wrong and the part that matters most, because nothing here was ever chilled. It teaches you nothing about malting and it tells you, in one glass, what the ration actually tasted like.',
+      },
     ],
     sources: ['Microscopic analysis of New Kingdom brewing residues', 'Amarna and Giza bakery-brewery excavations'],
   },

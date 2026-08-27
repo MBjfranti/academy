@@ -4,7 +4,33 @@
 
 - *Iliad*, especially Books 1, 6, 9, 11 and 24, treated as evidence for a later form of an oral tradition. Book 1 links honour to the captive prize; Book 6 sets Hector’s pursuit of *kleos* against Andromache’s clear account of the city’s fall and her coming enslavement.
 - Pylos Linear B ration series concerning women and children identified by place of origin.
-- Hittite diplomatic texts concerning Wilusa and Millawanda.
+- Hittite diplomatic texts concerning Wilusa and Millawanda, and specifically the two that
+  Anniwiya's biography is built out of.
+
+  **The Tawagalawa Letter (CTH 181)**, from a Hittite king generally identified as Hattusili
+  III to a king of Ahhiyawa, around the middle of the thirteenth century. Millawanda is
+  Ahhiyawan subject territory in it, the Ahhiyawan king's brother is resident there, and the
+  warlord Piyamaradu operates out of it after a failed rising in the Lukka lands. Its subject,
+  for our purposes, is **people being moved**: Lukka people appealing for asylum, others
+  appealing to the Hittite king to be spared deportation.
+
+  **The Milawata Letter (CTH 182)**, from a Hittite king, probably Tudhaliya IV, to a western
+  Anatolian client ruler, around 1240 BC. By now Millawanda has moved out of the Ahhiyawan
+  orbit. It deals with the Milawata border, an exchange of hostages between four towns, and
+  the reinstatement of Walmu as king of Wilusa.
+
+  Together they give exactly what this article needs and what Anniwiya's life is made from: a
+  city that changes hands between a Greek-speaking power and Hatti inside a generation, and a
+  documented traffic in captives, hostages and deportees moving across that water. The Milawata
+  letter sits about fourteen years before the site's present year. The article invents her; it
+  does not invent the mechanism that displaced her.
+
+  The Milawata letter also happens to name Wilusa and Millawanda in one document, which is the
+  join this piece rests on: the woman from Miletus with an opinion about the song of Troy.
+
+  A cross-reference worth keeping in view: the Lukka lands that Piyamaradu raises in the
+  Tawagalawa letter are the same Lukka the column is marching toward in
+  `guests-on-the-lukka-road`.
 - Archaeology of Late Bronze Age Troy and the western Anatolian coast.
 - Scholarship on oral-formulaic composition, performance, and the chronology of the Homeric poems.
 

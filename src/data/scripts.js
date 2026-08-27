@@ -27,6 +27,16 @@
 // (U+13430–U+1343F), so Noto renders them as tofu and NewGardiner as blank ems. Everything
 // here is therefore written LINEARLY, sign after sign, which is how Egyptological
 // transliteration is printed anyway.
+//
+// THE WRITER'S MARK IS THE EXCEPTION, AND IT IS SET IN REAL QUADRATS. The two Egyptian names
+// there carry an explicit `quadrats` array: one string per block, its signs stacked inside.
+// The browser composes nothing — the grouping is stated in the data and drawn with a grid, so
+// the format controls are never needed. That is why it works where the general case cannot.
+//
+// The grouping itself is a judgement. Which signs share a block is governed by their shapes:
+// a tall sign takes a block alone, a flat loaf tucks under the sign it follows. The
+// arrangements below are plausible and idiomatic rather than copied from a specific
+// inscription, and each gloss says which blocks were chosen.
 
 /** Which script each region in provenance.js is written in. */
 export const REGION_SCRIPT = {
@@ -52,6 +62,11 @@ export const SCRIPTS = {
     label: 'Linear B',
     note: 'Mycenaean Greek syllabary. Each sign is a syllable, and the spellings below are attested on the tablets.',
     font: 'var(--script-linearb)',
+  },
+  anatolian: {
+    label: 'Anatolian hieroglyphs',
+    note: 'The script of Luwian, written in Anatolia on seals and monuments. Used here for one name only.',
+    font: 'var(--script-anatolian)',
   },
   ugaritic: {
     label: 'Ugaritic',
@@ -127,6 +142,16 @@ export const WORDS = {
 
   /* All six are attested on Linear B tablets — the Mycenaean palace records are largely
      inventories, so the surviving vocabulary is unusually food-heavy. */
+  anatolian: [
+    {
+      signs: '\u{145F7}\u{145D0}\u{144BB}\u{144F1}',
+      t: 'a-ni-wi-ia',
+      of: ['A450', 'A411', 'A160', 'A210'],
+      author: 'anniwiya', role: 'origin',
+      gloss: 'a-ni-wi-ia in Luwian hieroglyphic, the script of the country she was taken from',
+    },
+  ],
+
   linearb: [
     { signs: '\u{10036}\u{1004A}', t: 'tu-ro₂', gloss: 'cheese', of: ['B069 TU', 'B068 RO2'] },
     { signs: '\u{10013}\u{10016}\u{1001C}', t: 'ku-mi-no', gloss: 'cumin', of: ['B081 KU', 'B073 MI', 'B052 NO'] },
@@ -155,10 +180,150 @@ export const WORDS = {
   ],
 }
 
+/* THE WRITER'S NAME, at the foot of an article.
+ *
+ * Each writer's name as a scribe of their own place would actually have written it, not a
+ * letter-for-letter substitution. It closes the piece the way a colophon closes a tablet,
+ * and it is the only place on the site where a script stands for a person rather than a
+ * foodstuff.
+ *
+ * WHAT IS SOLID AND WHAT IS NOT, per writer, is carried in each `gloss`. Two of the four
+ * names are ordinary words in their own language — balāṭu is "life", ḥnwt is "lady" — and
+ * spell themselves. The other two lose information on the way in: Ugaritic writes no vowels,
+ * so ydn fixes only the consonants, and Linear B writes no double consonants and no final
+ * ones. None of that is a defect in the reconstruction; it is what those scripts do.
+ *
+ * Same shape as WORDS above, deliberately: `of` carries the Unicode sign NAMES so
+ * `build_scripts.py` re-derives the literal rather than trusting it, and so the subsetter
+ * keeps the glyph. Two of these four already shipped inside existing words — YOD inside
+ * `yn`, V028 inside `hnqt` — and two are new.
+ *
+ * NOT stored in WORDS, because `wordForRegion` picks from there for the dish marks, and a
+ * dish captioned "the letter Y" would be nonsense.
+ *
+ * ANNIWIYA CARRIES TWO SCRIPTS, and she is the only one who does. She was born in
+ * Millawanda in western Anatolia and works inside a Greek palace administration, so her
+ * name exists in cuneiform, the script her own country wrote, and in Linear B, the script
+ * of the people who count her. Her place line is `mi-ra-ti-ja`, "the Milesian women",
+ * because that is the only form in which the record holds her at all.
+ *
+ * ANATOLIAN HIEROGLYPHS CARRY A WEAKER GUARANTEE THAN EVERYTHING ELSE HERE, and the
+ * difference is worth stating rather than burying.
+ *
+ * For every other script on this site the Unicode name encodes the reading — CUNEIFORM SIGN
+ * BA, LINEAR B SYLLABLE B008 A — so `build_scripts.py` rebuilds the string from the names and
+ * fails if a literal and its name disagree. The Anatolian block is numbered by Laroche sign
+ * number alone: A450, A411, A160, A210. The name says which sign it is and says nothing at
+ * all about what that sign says.
+ *
+ * So the four Luwian signs below are verified to be the signs named, and their PHONETIC
+ * VALUES rest on the published sign list rather than on anything this repository can check.
+ * a = L.450 and ni = L.411 are corroborated across sources; wi = L.160 and ia = L.210 are
+ * taken from a single syllabary table. Treat the reading as sourced, not as proven.
+ */
+export const AUTHOR_MARKS = {
+  ugaritic: [
+    {
+      signs: '\u{1038A}\u{10384}\u{10390}',
+      t: 'ydn',
+      of: ['YOD', 'DELTA', 'NUN'],
+      author: 'yadinu', role: 'name',
+      gloss: 'ydn. Ugaritic writes no vowels, so the consonants are fixed and Yadinu is one reading of them among several',
+    },
+    {
+      signs: '\u{1039C}\u{10382}\u{10397}\u{1039A}',
+      t: 'ủgrt',
+      of: ['U', 'GAMLA', 'RASHA', 'TO'],
+      author: 'yadinu', role: 'place',
+      gloss: 'ủgrt, the city writing its own name',
+    },
+  ],
+
+  egyptian: [
+    {
+      signs: '\u{1339B}\u{13216}\u{13171}\u{133CF}\u{13050}',
+      t: 'ḥnwt',
+      of: ['V028', 'N035', 'G043', 'X001', 'B001'],
+      author: 'henut', role: 'name',
+      quadrats: ['\u{1339B}', '\u{13216}', '\u{13171}\u{133CF}', '\u{13050}'],
+      gloss: 'ḥnwt, "lady, mistress", closed by the seated-woman sign that marks a woman’s name. Grouped into four quadrats, with the loaf tucked beneath the quail chick',
+    },
+    {
+      signs: '\u{13283}\u{133CF}\u{13419}\u{1309D}\u{133CF}',
+      t: 'st-mꜣꜥt',
+      of: ['O034', 'X001', 'AA011', 'D036', 'X001'],
+      author: 'henut', role: 'place',
+      quadrats: ['\u{13283}\u{133CF}', '\u{13419}', '\u{1309D}\u{133CF}'],
+      gloss: 'st-mꜣꜥt, the Place of Truth, which is what the workmen’s village called itself. Three quadrats: the bolt over its loaf, the plinth, then the arm over its loaf',
+    },
+  ],
+
+  cuneiform: [
+    {
+      signs: '\u{12040}\u{121B7}\u{12305}',
+      t: 'ba-la-ṭu',
+      of: ['BA', 'LA', 'TU'],
+      author: 'balatu', role: 'name',
+      gloss: 'ba-la-ṭu, spelled out in syllables. The word balāṭu means "life"',
+    },
+    {
+      signs: '\u{12157}\u{1202D}\u{1228F}',
+      t: 'KÁ.DINGIR.RA',
+      of: ['KA', 'AN', 'RA'],
+      author: 'balatu', role: 'place',
+      gloss: 'KÁ.DINGIR.RA, "gate of the god", the ordinary written form of Bābili',
+    },
+  ],
+
+  anatolian: [
+    {
+      signs: '\u{145F7}\u{145D0}\u{144BB}\u{144F1}',
+      t: 'a-ni-wi-ia',
+      of: ['A450', 'A411', 'A160', 'A210'],
+      author: 'anniwiya', role: 'origin',
+      gloss: 'a-ni-wi-ia in Luwian hieroglyphic, the script of the country she was taken from',
+    },
+  ],
+
+  linearb: [
+    {
+      signs: '\u{10000}\u{1001B}\u{10039}\u{1000A}',
+      t: 'a-ni-wi-ja',
+      of: ['B008 A', 'B030 NI', 'B040 WI', 'B057 JA'],
+      author: 'anniwiya', role: 'name',
+      gloss: 'a-ni-wi-ja. Linear B writes no double consonants, so Anniwiya and Aniwiya are the same four signs',
+    },
+    {
+      signs: '\u{10016}\u{10028}\u{10034}\u{1000A}',
+      t: 'mi-ra-ti-ja',
+      of: ['B073 MI', 'B060 RA', 'B037 TI', 'B057 JA'],
+      author: 'anniwiya', role: 'place',
+      gloss: 'mi-ra-ti-ja, "the Milesian women", which is how the Pylos tablets name her group rather than her',
+    },
+  ],
+}
+
+/** Everything one writer signs off with: name, place, and any second script they own. */
+export function markForAuthor(id) {
+  const out = { name: null, place: null, origin: null }
+  for (const [script, rows] of Object.entries(AUTHOR_MARKS)) {
+    for (const r of rows) {
+      if (r.author !== id) continue
+      out[r.role] = { ...r, script, meta: SCRIPTS[script] }
+    }
+  }
+  if (!out.name) return null
+  out.initial = [...out.name.signs][0]
+  out.script = out.name.script
+  out.meta = out.name.meta
+  return out
+}
+
 /** Every codepoint the site will ever render in an ancient script, per script. */
 export function codepointsFor(script) {
   const cps = new Set()
   for (const w of WORDS[script] ?? []) for (const ch of w.signs) cps.add(ch.codePointAt(0))
+  for (const w of AUTHOR_MARKS[script] ?? []) for (const ch of w.signs) cps.add(ch.codePointAt(0))
   return [...cps].sort((a, b) => a - b)
 }
 

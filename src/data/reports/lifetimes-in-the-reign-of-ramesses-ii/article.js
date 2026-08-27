@@ -19,10 +19,10 @@ const article = {
     {
       at: 27,
       name: 'absence-ostracon',
-      placeholder: true,
+      caption: 'Ill. Brewing. Embalming his brother. Bitten by a scorpion. The scribe adds no comment. Every tenth day the crews come home and the village fills up again.',
       pair: [
-        { name: 'absence-ostracon', placeholder: true, ratio: '3 / 2' },
-        { name: 'ten-day-return', placeholder: true, ratio: '4 / 5' },
+        { name: 'absence-ostracon', alt: 'A flat pale limestone flake covered in quick cursive Egyptian administrative writing in faded black and red ink, listing names in a ragged column' },
+        { name: 'ten-day-return', alt: 'A file of workmen carrying tool baskets comes back over a desert ridge at the end of their working days, reading as dark shapes against a bright sky' },
       ],
     },
     {

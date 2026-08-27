@@ -69,9 +69,11 @@
    disjoint and astral, so a browser fetches the cuneiform face only when a cuneiform sign
    is on screen — open an Aegean dish and only Linear B downloads, 2.4 KB.
 
-   No Anatolian hieroglyphs. Hittite was written in cuneiform; the Anatolian script belongs
-   to Luwian monumental inscriptions, not to the kitchen tablets this site draws on.
-   Shipping it would look right and be wrong. */
+   ANATOLIAN HIEROGLYPHS ARE SHIPPED FOR EXACTLY ONE THING: Anniwiya's own name. Hittite was
+   written in cuneiform, and tagging a Hittite dish with the Anatolian script would look right
+   and be wrong, so no recipe uses it. But Anniwiya was born in Millawanda and her language was
+   Luwian, and Luwian hieroglyphic is the script her own country wrote her name in. That is a
+   correct use of it and the only one on the site. */
 
 @font-face {
   font-family: 'Script Cuneiform';
@@ -95,6 +97,13 @@
 }
 
 @font-face {
+  font-family: 'Script Anatolian';
+  src: url('/fonts/noto-anatolian-subset.woff2') format('woff2');
+  unicode-range: U+14400-1467F;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Script Ugaritic';
   src: url('/fonts/noto-ugaritic-subset.woff2') format('woff2');
   unicode-range: U+10380-1039F;
@@ -109,4 +118,5 @@
   --script-egyptian: 'Script Egyptian', var(--ui);
   --script-linearb: 'Script LinearB', var(--ui);
   --script-ugaritic: 'Script Ugaritic', var(--ui);
+  --script-anatolian: 'Script Anatolian', var(--ui);
 }

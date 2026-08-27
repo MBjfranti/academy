@@ -47,6 +47,10 @@ FACES = {
     "egyptian": ("NotoSansEgyptianHieroglyphs-Regular.ttf", "noto-egyptian", "EGYPTIAN HIEROGLYPH "),
     "linearb": ("NotoSansLinearB-Regular.ttf", "noto-linearb", "LINEAR B SYLLABLE "),
     "ugaritic": ("NotoSansUgaritic-Regular.ttf", "noto-ugaritic", "UGARITIC LETTER "),
+    # Anatolian is the one face whose Unicode names cannot verify a reading. See the note in
+    # scripts.js: the names carry Laroche sign numbers only, so this check proves the
+    # codepoint is the sign we named and cannot prove that sign says what we claim.
+    "anatolian": ("NotoSansAnatolianHieroglyphs-Regular.ttf", "noto-anatolian", "ANATOLIAN HIEROGLYPH "),
 }
 
 
@@ -60,13 +64,17 @@ def parse_words() -> dict[str, list[dict]]:
     text = DATA.read_text(encoding="utf-8")
     out: dict[str, list[dict]] = {}
     for script in FACES:
-        m = re.search(rf"\b{script}: \[(.*?)\n  \],", text, re.S)
-        if not m:
+        # EVERY block for this script, not just the first. scripts.js now carries two:
+        # WORDS for the dish marks, and AUTHOR_MARKS for the sign that closes an article.
+        # Reading only the first would silently leave the writers' signs out of the subset,
+        # which is exactly the tofu this script exists to prevent.
+        blocks = re.findall(rf"\b{script}: \[(.*?)\n  \],", text, re.S)
+        if not blocks:
             continue
         rows = []
         for entry in re.finditer(
             r"\{\s*signs:\s*'((?:[^'\\]|\\.)*)'.*?t:\s*'((?:[^'\\]|\\.)*)'.*?of:\s*\[(.*?)\]",
-            m.group(1),
+            "\n".join(blocks),
             re.S,
         ):
             # scripts.js writes astral signs as ES6 \u{1F...} escapes, which the

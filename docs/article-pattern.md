@@ -371,34 +371,101 @@ paragraph gap, so their page sits on a single 32px rhythm. Ours now does the sam
 No indents anywhere. The measure lives on the container rather than on each paragraph, so a
 centred column of left-ragged type sits on the same axis as the headline above it.
 
-### The National Geographic block
+### The National Geographic register is a floor, not a formula
 
-Naming the style does not produce the style. "Photorealistic National Geographic-style
-observational reportage" is a genre label, and a genre label returns clean, evenly lit,
-neatly arranged historical stock illustration every time. **The register has to be specified
-as technique.** Paste this whole block into `Style/medium`, verbatim:
+The first version of this section prescribed one recipe — available light, shallow depth of
+field, motion blur, imperfect framing — and applied it to every frame in every article. That
+is wrong about the thing it is imitating. **National Geographic runs several distinct
+photographic modes.** What they share is that the picture is good, not that it was taken the
+same way.
+
+Applying one recipe to ten frames produces ten versions of one photograph. The evidence is in
+this corpus: the two best images on the site, `reed-birds` and `smoke-share`, are both
+silhouettes, and both only exist because the generic block was overridden for them. Under the
+standard rules neither should have been shot that way.
+
+So the spec is now a **floor** every frame must clear, and a **mode** each frame chooses.
+
+#### The floor
+
+Non-negotiable, whatever the mode:
+
+- **The light is doing something.** A direction, a single source, a backlight, a hard edge.
+  Flat even illumination is the one universal failure, and it is what makes a frame read as
+  an illustration.
+- **One subject, and the eye knows where to go.** Whether by focus, by contrast or by shape.
+- **Nothing is arranged for the camera.** Nobody looks down the lens, nobody poses, nobody
+  performs an emotion.
+- **Real texture.** Dust, grease, wear, sweat, smoke, weather.
+- **It earns its place.** The picture shows something the prose cannot, or it is decoration.
+
+#### The modes
+
+Pick one per frame, and vary them across an article. A brief may name it in a `mode` field.
+
+**`reportage`** — the working default. Available light, one plane sharp and the rest falling
+away, motion blur on somebody moving, a body cropped by the frame edge, foreground mass close
+to the lens. For process, crowds, hands, a thing being done. *Examples: `ration-tally`,
+`liver-skewers`, the Delta `hero`.*
+
+**`silhouette`** — the subject collapses to shape against a bright ground: fire, sky, dust,
+smoke, water, a lit doorway, a pale wall. Detail goes; outline carries everything. Extreme
+contrast, blown highlights, near-black subject. Shallow focus and motion blur are *optional
+here and often wrong* — a silhouette wants edge, not softness. For mass, atmosphere, weather,
+a figure against a place. *Examples: `reed-birds`, `smoke-share`.*
+
+**`specimen`** — one object, given room, lit to be read. Centred or near it, still, clean
+ground, no reportage grammar at all. The Nat Geo feature this site was measured against opens
+with exactly this: a bead dress on a stand, full height, nothing else in the frame. For an
+artefact that is the article's subject: a tablet, a cup, a jar, a tool. *Example: the
+`allocation-tablet` half of the Pylos pair.*
+
+**`portrait`** — a person, still, at conversational distance, looking away or at their work.
+Sharper and more composed than reportage. Half the face in shadow is usually the whole shot.
+*Example: `commander`.*
+
+**`landscape`** — the country is the subject and a figure is small in it, or absent. This was
+previously banned outright, on the grounds that a small figure in a wide landscape reads as a
+diorama. That is true of a *flat* wide landscape. With hard directional light, real
+atmosphere and a foreground that means something, it is a mode rather than a mistake. Use it
+sparingly and never for a scene about people. *Example: `road-west`.*
+
+#### Vary the mode across an article
+
+Ten frames in one mode is the same fault as ten frames of one composition. A good set runs
+something like: a `reportage` hero, two or three more `reportage` in the body, one
+`silhouette`, one `specimen` for whatever object the piece turns on, one `portrait` of the
+second voice. The `pair` layout is a good place to put a `specimen` beside a `reportage`,
+because the contrast between the two modes is part of what makes the pairing work.
+
+#### The block, per mode
+
+`Style/medium` still takes a verbatim block. Which one depends on the mode.
+
+**reportage:**
 
 > unstaged documentary reportage in the National Geographic register, shot on location on a
-> 35mm prime in available light. STRONG DIRECTIONAL LIGHT with real contrast and deep
-> shadow: hard sun raking across the frame, or backlighting the dust, never flat even
-> illumination. SHALLOW depth of field, one plane sharp and everything else falling away
-> soft. Visible airborne dust lit from behind. MOTION BLUR on at least one moving person.
-> Imperfect framing: subject off centre, a body cropped by the frame edge, figures
-> overlapping and occluding one another. Real grime, sweat and dust on skin, cloth worn and
-> dirty. Fine film grain. Nobody looks at the camera and nobody is arranged for it. A real
-> photograph, never a painting, a render, a fantasy still or a clean illustration.
+> 35mm prime in available light. STRONG DIRECTIONAL LIGHT with real contrast and deep shadow.
+> SHALLOW depth of field, one plane sharp and everything else falling away soft. MOTION BLUR
+> on at least one moving person. Imperfect framing: subject off centre, a body cropped by the
+> frame edge, figures overlapping. Real grime and wear. Fine film grain. Nobody looks at the
+> camera. A real photograph, never a painting, a render or a clean illustration.
 
-**Flat light is the whole problem.** This was proved on one article. `liver-skewers` had the
-register immediately and `hero` and `ration-tally` did not, from prompts that were otherwise
-identical in shape. The difference was in `Lighting/mood`: the food frame specified one hot
-source against a dark cool field, and the other two specified "hard flat high-noon light" and
-"clear dry late-afternoon light". Flat light returns a flat picture, however good the rest of
-the prompt is.
+**silhouette:**
 
-So `Lighting/mood` must always name **a direction and a contrast ratio**, not just a time of
-day and a colour temperature. Raking across the frame. Backlighting the dust. Half the frame
-in deep shade and half blown out. One hot source against cool dusk. A frame with no shadow in
-it has no photograph in it.
+> National Geographic silhouette photography. The subject is BACKLIT against a bright ground
+> and reads as a dark shape with a rimmed edge, detail collapsing into outline. Extreme
+> contrast: the ground blown to white, the subject near black. Shape and gesture carry the
+> frame, not surface detail. Keep the edges crisp. Fine film grain. A real photograph, never a
+> painting, a render or a clean illustration.
+
+**specimen:**
+
+> National Geographic object photography. One object, isolated and given room, lit to be read
+> rather than dramatised: a single raking source that rakes the surface and describes its
+> texture, on a plain uncluttered ground that falls away dark. The object is sharp end to end
+> and fills the frame. Still, deliberate, no motion. A real photograph of a real object, never
+> a painting, a render, a museum display case or a catalogue cut-out.
 
 ### The model
 
@@ -440,7 +507,7 @@ Composition/framing: cinematic 3:2 landscape (or 2:3 portrait); horizon level; <
                      right third, caught mid-gesture
 Lighting/mood:       <the light the article actually states>; <palette>; <mood>; NOT golden
                      hour, NOT orange, NOT warm low sun
-Style/medium:        <the National Geographic block below, verbatim>
+Style/medium:        <the block for this frame's MODE, verbatim>
 Period accuracy:     bronze rather than iron; handwoven wool and linen; mud brick, timber
                      and stone; no classical Greek or Roman architecture, no plate armour,
                      no modern objects, no text, logo or watermark
@@ -491,6 +558,7 @@ like a set, and a set that is uniformly warm and wide looks like a diorama.
 
 | brief field | prompt field |
 | --- | --- |
+| `mode` (per frame) | which `Style/medium` block, and how `Lighting/mood` is written |
 | `rule` (per article) | `Constraints` |
 | `avoid` (per frame) | `Avoid` |
 | `preferredEvidence` | `Primary request` |

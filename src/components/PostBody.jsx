@@ -2,8 +2,10 @@ import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { img, reportImg, bcDate } from '../data/fieldReports'
 import { byId, byline } from '../data/authors'
+import { culturalDate } from '../data/calendars'
 import WorldMap from './WorldMap'
 import hideBroken from './hideBroken'
+import EndMark from './EndMark'
 
 /* ONE ARTICLE, RENDERED ONCE.
  *
@@ -26,6 +28,26 @@ import hideBroken from './hideBroken'
    the region label and the byline sit in opposite corners of the layout, so a piece by
    Henut wearing Yadinu's face would have looked entirely normal. It reads from authors.js
    now, and a post with no valid `author` renders no byline at all rather than guessing. */
+/* WHEN, AS THE WRITER WOULD HAVE SAID IT.
+ *
+ * "27 August 1226 BC" is a modern convention end to end: a Julian month name and a year
+ * counted back from an event none of these four had heard of. Each of them had a real way of
+ * dating a thing, and the four ways are not equivalent — Egypt counts a regnal year, Babylon
+ * a lunar month and a king's year, Ugarit borrows Babylon's months, and Mycenaean Greece can
+ * name a month and cannot name a year at all. See `calendars.js`.
+ *
+ * The modern date stays on the element as a title, because it is the only handle a reader has
+ * for placing the piece against anything else they know. */
+function WhenLine({ post }) {
+  const when = culturalDate(post.region, post.date)
+  if (!when) return <>{bcDate(post.date)}</>
+  return (
+    <span title={`${when.note} In our reckoning, about ${bcDate(post.date)}.`} className="byline__when-cal">
+      {when.text}
+    </span>
+  )
+}
+
 export function Byline({ post }) {
   const a = byId[post.author]
   if (!a) return null
@@ -40,7 +62,7 @@ export function Byline({ post }) {
           <Link to={`/writers/${a.id}`}>{byline(a.id)}</Link> <span>{a.trade}</span>
         </p>
         <p className="byline__when">
-          {post.place} · {bcDate(post.date)}
+          {post.place} · <WhenLine post={post} />
         </p>
       </div>
     </div>
@@ -164,6 +186,8 @@ export default function PostBody({ post }) {
           )
         })}
       </div>
+
+      <EndMark author={post.author} />
 
       {/* WHAT IS ATTESTED AND WHAT IS INVENTED, pulled out of the body and set at the end.
           It used to run as an ordinary paragraph, which cost the piece twice: the essay
