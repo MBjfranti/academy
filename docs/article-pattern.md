@@ -1,5 +1,10 @@
 # The article pattern
 
+> **Read `article-structure.md` first.** This file holds the measured shape: counts,
+> lengths, densities. That one holds how the piece is built: the zoom between ground and
+> altitude, chain versus tour, explanation versus aphorism. A draft can satisfy every number
+> here and still be badly made, and when that happens the fault is always in the other file.
+
 Derived by measuring the eight published articles, not by proposing anything. Where this
 contradicts `style.md`, this wins: `style.md` was written before any of these existed and
 guessed at numbers the corpus has now settled.

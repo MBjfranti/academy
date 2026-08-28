@@ -179,6 +179,40 @@ if (run('--para')) {
       if (words > PARA_DEFECT) say(DATA, 0, `paragraph DEFECT ${words}w`, where(`body[${i}]`))
       else if (words > PARA_FAULT) say(DATA, 0, `paragraph fault ${words}w`, where(`body[${i}]`))
     })
+
+    /* APHORISM CREEP. Ported back from the National Geographic exercise, where the same
+       detector was built and proved out.
+     *
+     * This is the fault a reader has to catch by hand today, and it has been caught by hand
+     * twice: "we're trying to be too quippy and fancy" and "explain what the hell you're
+     * talking about". Both times the shape was identical. A paragraph ends on a short,
+     * numberless, quoteless sentence that lands a beat where the explanation should be:
+     * "Here is where the sums close." "That is the whole function, and the function works."
+     *
+     * It gestures at an insight and leaves the reader to reconstruct it, which most readers
+     * will not do, so the prose sounds confident and transmits nothing.
+     *
+     * Deliberately reported as a COUNT rather than per-line. One or two closing beats in a
+     * piece is seasoning and the corpus wants them. It is the density that is the defect, so
+     * the threshold scales with the length of the piece. See docs/article-structure.md §3. */
+    const bodyParas = post.body?.filter((para) => typeof para === 'string') ?? []
+    const beats = []
+    bodyParas.forEach((para, i) => {
+      const ss = splitSentences(para)
+      if (ss.length < 2) return // a one-sentence paragraph is a legitimate turn
+      const last = ss[ss.length - 1]
+      const n = last.split(/\s+/).filter(Boolean).length
+      const prev = ss[ss.length - 2].split(/\s+/).filter(Boolean).length
+      const isBeat =
+        n <= 12 && prev > n && !/\d/.test(last) && !/[“”"]/.test(last) && !/^(“|")/.test(last.trim())
+      if (isBeat) beats.push({ i, last: last.trim() })
+    })
+    const allow = Math.max(2, Math.round(bodyParas.length / 18))
+    if (beats.length > allow) {
+      say(DATA, 0, `aphorism creep — ${beats.length} paragraphs end on a beat, allow ~${allow}`,
+        where(`body[${beats.slice(0, 4).map((b) => b.i).join(',')}...]`))
+      beats.slice(0, 6).forEach((b) => console.log(`        · body[${b.i}] "${b.last}"`))
+    }
   }
 }
 

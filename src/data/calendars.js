@@ -67,9 +67,11 @@ const MYCENAEAN = [
 const MYCENAEAN_BARE = new Set(['me-tu-wo ne-wo'])
 
 /* HER OWN COUNT, and the one number in this file that belongs to a biography rather than to
-   a calendar. Ten years at a quern and four in the oil workshop, per docs/personas.md. It
-   lives here as a constant so that realigning her age or her arrival changes one line. */
-const ANNIWIYA_YEARS_AT_PYLOS = 14
+   a calendar. Eight years at a quern and four weighing oil, per docs/personas.md. She was
+   landed here at sixteen and is twenty-eight now, which is what the photographs of her
+   show. It lives here as a constant so that realigning her age or her arrival changes one
+   line. */
+const ANNIWIYA_YEARS_AT_PYLOS = 12
 
 const ORDINALS = [
   '', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth',

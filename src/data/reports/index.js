@@ -9,8 +9,10 @@ import fourDaysOutOfUgarit from './four-days-out-of-ugarit/article.js'
 import theReusedBricksOfBabylon from './the-reused-bricks-of-babylon/article.js'
 import theGeeseOfTheDelta from './the-geese-of-the-delta/article.js'
 import guestsOnTheLukkaRoad from './guests-on-the-lukka-road/article.js'
+import thePurpleAndTheMidden from './the-purple-and-the-midden/article.js'
 
 const reports = [
+  thePurpleAndTheMidden,
   theReusedBricksOfBabylon,
   theGeeseOfTheDelta,
   guestsOnTheLukkaRoad,

@@ -1077,7 +1077,7 @@ export const recipes = [
             grade: 'attested',
           },
           {
-            text: 'Crumble in the malt cake. Squeeze the onion, the leek and the garlic together to their juices and add them with the milk. Bring to a bare tremble.',
+            text: 'Crumble in the malt cake and drop in the whole cumin. Squeeze the onion, the leek and the garlic together to their juices and add them with the milk. Bring to a bare tremble.',
             grade: 'attested',
           },
           {
@@ -1085,7 +1085,7 @@ export const recipes = [
             grade: 'inferred',
           },
           {
-            text: 'Lift the birds out, joint them, and plunge the pieces back into the stock to braise for a few minutes more. The tablet is specific about this two-stage move and it is what separates the dish from a plain boiled bird.',
+            text: 'Lift the birds out, joint them, and plunge the pieces back into the stock to braise for a few minutes more. Sprinkle the ground coriander over them as they go back in. The tablet is specific about this two-stage move and it is what separates the dish from a plain boiled bird.',
             grade: 'attested',
           },
         ],
@@ -2426,6 +2426,7 @@ export const recipes = [
           { ancient: 'mi-ta', modern: 'Mint, fresh, to finish', qty: '1 small bunch', grade: 'attested' },
           { ancient: 'me-ri', modern: 'Honey', qty: '1 tbsp', grade: 'attested' },
           { ancient: '—', modern: 'Salt', qty: 'to taste', grade: 'inferred' },
+          { ancient: 'u-do', modern: 'Water', qty: 'to come halfway up the meat', grade: 'inferred' },
           { ancient: 'tu-ro₂', modern: 'Hard sheep cheese, to grate over', qty: '60 g', grade: 'attested' },
         ],
       },
@@ -3125,6 +3126,7 @@ export const recipes = [
           { ancient: 'šꜣms', modern: 'Coriander seed, ground', qty: '2 tsp', grade: 'attested' },
           { ancient: 'jrṯt', modern: 'Cumin seed, ground', qty: '2 tsp', grade: 'attested' },
           { ancient: 'ḥmꜣt', modern: 'Salt', qty: '2 tsp', grade: 'attested' },
+          { ancient: 'mw', modern: 'Water, for boiling the beans', qty: 'to cover', grade: 'inferred' },
           { ancient: 'smw', modern: 'Fresh coriander leaf, chopped', qty: '1 bunch', grade: 'inferred' },
         ],
       },
@@ -3197,7 +3199,7 @@ export const recipes = [
       {
         name: 'The pot',
         steps: [
-          { text: 'Salt the meat and let it sit for half an hour while the oven comes to 150°C.', grade: 'reconstructed' },
+          { text: 'Salt the meat, work the crushed coriander over it, and let it sit for half an hour while the oven comes to 150°C.', grade: 'reconstructed' },
           { text: 'Lay the onion across the base of a heavy lidded pot and the meat on top of it, so the meat is lifted clear of the liquid.', grade: 'reconstructed' },
           { text: 'Pour over the oil, then the honey, then the wine. The oil should come at least a third of the way up the meat.', grade: 'attested' },
           { text: 'Cover tightly and bake for two hours without opening it. Nothing here needs turning or basting.', grade: 'reconstructed' },
@@ -3400,6 +3402,7 @@ export const recipes = [
           { ancient: 'Ì.GIŠ', modern: 'Olive oil', qty: '6 tbsp', grade: 'attested' },
           { ancient: 'SUM.SIKIL', modern: 'Garlic, crushed', qty: '4 cloves', grade: 'attested' },
           { ancient: 'MUN', modern: 'Salt', qty: '2 tsp', grade: 'attested' },
+          { ancient: 'A', modern: 'Water, for the chickpeas — a mugful is kept back to loosen the mash', qty: 'to cover', grade: 'inferred' },
           { ancient: 'ŠE.LÚ.SAR', modern: 'Coriander seed, ground', qty: '2 tsp', grade: 'inferred' },
           { ancient: 'ÚKUŠ', modern: 'Cucumber, diced small', qty: '1 large', grade: 'attested' },
           { ancient: 'SUM', modern: 'Onion, diced very small', qty: '1 small', grade: 'inferred' },
@@ -3475,7 +3478,7 @@ export const recipes = [
       {
         name: 'The skewers',
         steps: [
-          { text: 'Toss the meat with the oil, the crushed seeds, the honey and the salt. Leave it an hour, or overnight if you can.', grade: 'reconstructed' },
+          { text: 'Toss the meat with the oil, the crushed coriander and fennel, the whole cumin, the honey and the salt. Leave it an hour, or overnight if you can.', grade: 'reconstructed' },
           { text: 'Thread onto skewers, packed close and not spaced out. The pieces protect each other from drying.', grade: 'inferred' },
           { text: 'Get the coals grey-hot and, if you have a tray, put the coals IN it. The replication work found that is how the apparatus was meant to run.', grade: 'attested' },
           { text: 'Rest the skewers across the notches so the meat sits clear of the coals with the fat falling between. Turn every two minutes.', grade: 'attested' },

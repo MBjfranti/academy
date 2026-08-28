@@ -438,7 +438,7 @@ Millawanda changed hands three years later, the way it always did, between the H
 and the king she was born to. Her husband's house fell with it. She crossed the water a
 second time at eighteen, and this time she went as property.
 
-**Then ten years at a grinding stone in the palace at Pylos.** A saddle quern, on her knees,
+**Then eight years at a grinding stone in the palace at Pylos.** A saddle quern, on her knees,
 from first light, to a fixed quota. They fed her for it: wheat and figs, measured, with an
 allowance for each of her two children, who appear beside her on the same tablet.
 
@@ -491,7 +491,7 @@ fine white seam of old scar through the left eyebrow.
 
 **Her body carries the other half of her story, and the contrast with her face is the point
 of the picture.** Small, lithe and very upright, athletic rather than thin, with notably
-strong shoulders, arms and forearms on a slight frame. Ten years at a quern built those and
+strong shoulders, arms and forearms on a slight frame. Eight years at a quern built those and
 four years away have not taken them off. Capable hands, broad across the palm. Her resting
 expression is level, direct and faintly amused, and she does not smile in order to be
 agreeable, which is most of the effect.

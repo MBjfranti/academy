@@ -76,12 +76,12 @@ export const authors = [
     trade: 'a king’s daughter, then a grinder, then a weigher of oil',
     beat: 'The Aegean and western Anatolia',
     regions: ['aegean'],
-    age: 32,
-    line: 'Born a king’s daughter, married across the water, and ten years at a quern recorded as a number and a measure of grain.',
+    age: 28,
+    line: 'Born a king’s daughter, married across the water, and eight years at a quern recorded as a number and a measure of grain.',
     portrait: 'avatar',
     face: 'face',
     bio: [
-      'Anniwiya was born in a Mycenaean king’s house and married across the sea to Millawanda. War returned her to Pylos as property. Ten years at a grinding stone taught her to read palace grandeur from the floor.',
+      'Anniwiya was born in a Mycenaean king’s house and married across the sea to Millawanda. War returned her to Pylos as property. Eight years at a grinding stone taught her to read palace grandeur from the floor.',
       'She now weighs and seals scented oil for export. Men once treated her beauty as diplomatic property. She writes about appetite, ceremony, and the price hidden inside an attractive story.',
     ],
     basis:

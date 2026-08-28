@@ -370,7 +370,7 @@ BALATU_WORLD = (
 # without personal names, which is precisely her point.
 
 ANNIWIYA_FACE = (
-    "ANNIWIYA. A woman of THIRTY-TWO, young and unmistakably in her early thirties, and she "
+    "ANNIWIYA. A woman of TWENTY-EIGHT, young and unmistakably in her late twenties, and she "
     "is BEAUTIFUL: the kind of face a city argues over and a poem gets written about. This "
     "is the single most important thing about her appearance and it must be obvious in "
     "every frame. Cast her as a genuinely beautiful woman. "
@@ -566,7 +566,7 @@ BALATU_PORTRAIT = (
 )
 
 ANNIWIYA_PORTRAIT = (
-    "Anniwiya of Millawanda, a woman of 32, and strikingly beautiful. She is XANTHE: tawny "
+    "Anniwiya of Millawanda, a woman of 28, and strikingly beautiful. She is XANTHE: tawny "
     "gold hair, honey at the root and lightening to pale wheat where sun and salt have "
     "caught it, worn in one heavy plait over the shoulder. Her complexion is fair and warm, "
     "cream rather than olive, freckled across the nose. Large pale green-hazel eyes, a long "
